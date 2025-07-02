@@ -162,6 +162,9 @@ body a {
   color: #1586d1;
 }
 
+.container {
+  margin-top: 10px;
+}
 
 /* body style */
 body .passage {
@@ -452,7 +455,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 }
 
 .histmc {
-  background-image: url("images/mc-ore-iron.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/mc-ore-iron.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -499,6 +502,13 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   font-size: 12pt;
   margin: 5px;
   padding: 8px;
+}
+
+.mined {
+  background-image: radial-gradient(rgba(255, 252, 240, 0.1), rgba(255, 222, 128, 0.3)), url("images/ps-background1.jpg");
+  background-repeat: repeat;
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .score {
@@ -662,7 +672,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row portal-intro&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;We can call Virginia the first successful English colony in North America if we use the term &quot;successful&quot; lightly. The old Virginia Company went bankrupt. People starved and died in high numbers - most of them were young indentured servants. There were hardly any women. The wealthy planter elite owned vast plantations and monopolized government and access to land. In 1676, a wealthy newcomer named Nathaniel Bacon united a wide swath of the colony in violent rebellion against Governor Berkeley. They demanded an end to unfair taxation and corrupt government, and launched a brutal war of territorial expansion against the neighboring tribes. The governor regained control within a year, but the rebellion marked a major turning point for the southern colonies. It taught the wealthy planters to fear a population of discontented laborers. They soon built a labor force of African slaves rather than European indentured servants.&lt;/p&gt;
+&lt;p&gt;We can call Virginia the first successful English colony in North America if we use the term &quot;successful&quot; lightly. The old Virginia Company went bankrupt. People starved and died in high numbers - most of them were young indentured servants. There were hardly any women. The wealthy planter elite owned vast estates and monopolized government and access to land. In 1676, a wealthy newcomer named Nathaniel Bacon united a wide swath of the colony in violent rebellion against Governor Berkeley and the status quo. They demanded an end to unfair taxation and corrupt government, and launched a brutal war of territorial expansion against the neighboring tribes. Berkeley regained control within a year, but the rebellion marked a major turning point for the southern colonies. It taught the wealthy planters to fear a population of discontented laborers. They soon built a labor force of African slaves rather than European indentured servants.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img src=&quot;images/map-virginia.jpg&quot; alt=&quot;map showing location of Jamestown&quot; width=&quot;90%&quot;&gt;
@@ -670,6 +680,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
+&lt;h1&gt;Your story begins:&lt;/h1&gt;
 &lt;p&gt;You awake to a cold morning. It&#39;s pitch black in your small, windowless chamber, but you know it&#39;s nearly dawn. A dog barks in the distance and you fight against sleep. There&#39;s work to do.&lt;/p&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -710,7 +721,6 @@ console.log(tooltipList)
 
 &lt;&lt;elseif ($bed is &quot;getup&quot;) and ($serv is &quot;feed&quot;)&gt;&gt;
 &lt;&lt;set $score to $score +5&gt;&gt;
-[[Go back |morning]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -726,11 +736,11 @@ console.log(tooltipList)
 
 &lt;p&gt;You duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
-&lt;p&gt;You call for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known sailors all your life near the London docks. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
+&lt;p&gt;You call for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. They&#39;ve been at sea for weeks, and the simple act of standing on solid ground is a full assault on their senses. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/dock.jpg&quot; alt=&quot;ship with full sails and dinghy alongside&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Illustration from a sailor&#39;s journal (England, c. 1700). From University of Reading.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;Illustration from an English sailor&#39;s journal, c. 1700. From &lt;a href=&quot;https://www.rmg.co.uk/stories/maritime-history/library-archive/digitisation-caird-library&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -750,7 +760,6 @@ console.log(tooltipList)
 
 
 &lt;&lt;elseif ($bed is &quot;getup&quot;) and ($serv isnot &quot;feed&quot;)&gt;&gt;
-[[Go back |serv-choice]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -764,11 +773,11 @@ console.log(tooltipList)
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;After a quick breakfast, you duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
-&lt;p&gt;You duck your head back in the door and shout for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known sailors all your life near the London docks. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
+&lt;p&gt;You duck your head back in the door and shout for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/dock.jpg&quot; alt=&quot;ship with full sails and dinghy alongside&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Illustration from a sailor&#39;s journal (England, c. 1700). From University of Reading.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;Illustration from an English sailor&#39;s journal, c. 1700. From &lt;a href=&quot;https://www.rmg.co.uk/stories/maritime-history/library-archive/digitisation-caird-library&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -788,7 +797,6 @@ console.log(tooltipList)
 
 
 &lt;&lt;elseif $bed is &quot;lazy&quot;&gt;&gt;
-[[Go back |serv-choice]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -802,11 +810,11 @@ console.log(tooltipList)
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;After a quick breakfast, you duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
-&lt;p&gt;You duck your head back in the door and shout for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known sailors all your life near the London docks. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
+&lt;p&gt;You duck your head back in the door and shout for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/dock.jpg&quot; alt=&quot;ship with full sails and dinghy alongside&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Illustration from a sailor&#39;s journal (England, c. 1700). From University of Reading.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;Illustration from an English sailor&#39;s journal, c. 1700. From &lt;a href=&quot;https://www.rmg.co.uk/stories/maritime-history/library-archive/digitisation-caird-library&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2617,10 +2625,14 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 
-&lt;p&gt;Mine for knowledge by exploring the branches in the mineshaft below. Look for insights into the situation of servants and apprentices in early Virginia, and their relationships with their masters. Save useful items to your inventory. You will need to use some of this evidence to make your choice and continue with the story.&lt;/p&gt;
-&lt;p&gt;Tip: For a high score, save items from multiple sources, primary as well as secondary (when available).&lt;/p&gt;
+&lt;p&gt;Mine for knowledge by exploring the branches in the mineshaft below. Look for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Insights into the situation of servants and apprentices in early Virginia,&lt;/li&gt;
+&lt;li&gt;The relationship between servants or apprentices and their masters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;When you&#39;ve gathered enough evidence, use the &quot;Leave the Mine&quot; button to return to the story. Then, use the materials saved in your inventory to craft your choice.&lt;/p&gt;
+&lt;p&gt;When you&#39;re done mining, choose &quot;Leave the Mine&quot; to return to the story. Then, use the materials saved in your inventory to craft your choice.&lt;/p&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
@@ -2641,16 +2653,17 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 &lt;/map&gt;
 
 
-&lt;&lt;link &quot;Indentured servant&#39;s letter (Virginia, 1629)&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Source&quot;).wikiPassage(&quot;frethorne&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt; 
+[[frethorne]]
 
-&lt;&lt;link &quot;Indentured servant&#39;s letter (Maryland, 1756)&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Source&quot;).wikiPassage(&quot;spriggs&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[spriggs]]
 
-&lt;&lt;link &quot;Apprentice&#39;s contract (New York, 1742)&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Source&quot;).wikiPassage(&quot;contract&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[contract]]
+
 &lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="serv-choice" tags="" position="1100,500" size="100,100">&lt;&lt;if ndef $serv&gt;&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="serv-choice" tags="" position="1100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row scenario center&quot;&gt;
+&lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
 
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;p&gt;What will you do to help John the apprentice and Thomas the indentured servant, and restore productivity in your workshop? Each choice appears with supporting evidence you have mined. For a high score, choose the option with the most supporting evidence.&lt;/p&gt;
@@ -2658,81 +2671,96 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 
 &lt;div class=&quot;card-group&quot;&gt;
 &lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;card-body&quot; id=&quot;choose&quot;&gt;
-      &lt;h2 class=&quot;white&quot;&gt;Have breakfast.&lt;/h2&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;h2 class=&quot;card-text white&quot;&gt;Have breakfast.&lt;/h2&gt;
+      &lt;p class=&quot;card-text&quot;&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
+&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $freth1Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
       &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
-            &lt;div class=&quot;card-body evidence&quot;&gt;
-            &lt;h2&gt;Have breakfast&lt;/h2&gt;
+            &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h2&gt;Your choice: Have breakfast.&lt;/h2&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
-      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;
-      &lt;p class=&quot;card-text&quot;&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
-      &lt;hr&gt;
-      &lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      
+    
+    &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;h2 class=&quot;card-text white&quot;&gt;Violence.&lt;/h2&gt;
+      &lt;p class=&quot;card-text&quot;&gt;Grab the servant and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/p&gt;
+&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
 		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;evidence&quot;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
                 &lt;/div&gt;
+                &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $freth1Save&gt;&gt;
-                &lt;div class=&quot;evidence&quot;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
                 &lt;/div&gt;
+                &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
+      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;beat&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
+            &lt;div class=&quot;card-body evidence&quot;&gt;
+            &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Voilence.&lt;/h2&gt;
+            &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
+            &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+
     
-    &lt;div class=&quot;card&quot;&gt;
-&lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;beat&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
-      &lt;h5 class=Violence.&lt;/h5&gt;
-      &lt;p class=&quot;card-text&quot;&gt;Grab the servant and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/p&gt;
-      &lt;p&gt;Evidence Mined:&lt;/p&gt;
-          &lt;i id=&quot;beat1&quot; src=&quot;images/gold-icon.ico&quot; alt=&quot;gold ore&quot;&gt;
-          &lt;i id=&quot;beat2&quot; src=&quot;images/gold-icon.ico&quot; alt=&quot;gold ore&quot;&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    
-    &lt;div class=&quot;card&quot;&gt;
-&lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;explain&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-    &lt;div class=&quot;card-body&quot;&gt;
-      &lt;h5 class=Minimal intervention&lt;/h5&gt;
+      &lt;h2 class=&quot;card-text white&quot;&gt;Minimal intervention.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Ignore the servant. He&#39;s hopeless. There&#39;s really no way to motivate him and no point in trying to educate him. Explain the apprentice&#39;s mistake with the nails and tell him to start over.&lt;/p&gt;
-      &lt;p&gt;Evidence Mined:&lt;/p&gt;
-          &lt;i id=&quot;explain1&quot; src=&quot;images/gold-icon.ico&quot; alt=&quot;gold ore&quot;&gt;
-          &lt;i id=&quot;explain2&quot; src=&quot;images/gold-icon.ico&quot; alt=&quot;gold ore&quot;&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
+&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $freth1Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
+            &lt;div class=&quot;card-body evidence&quot;&gt;
+            &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Minimal intervention&lt;/h2&gt;
+            &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
+            &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+    
   &lt;/div&gt;
 
-
-
-
-
-
-&lt;h2&gt;How will you deal with this problem and restore productivity to your workshop?&lt;/h2&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$serv&quot; &quot;feed&quot;&gt;&gt; Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/label&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$serv&quot; &quot;beat&quot;&gt;&gt; Grab the servant and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/label&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$serv&quot; &quot;explain&quot;&gt;&gt; Ignore the servant. He&#39;s hopeless. There&#39;s really no way to motivate him and no point in trying to educate him. Explain the apprentice&#39;s mistake with the nails and tell him to start over.&lt;/label&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;Use Items from your Inventory&lt;/h2&gt;
-&lt;p&gt;Finish crafting this choice by adding the evidence that helped you understand the situation of servants in early Virginia and their relationship to their masters. Open the chest to access the items saved in your inventory.&lt;/p&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest.png&quot; alt=&quot;closed wooden chest&quot; width=&quot;50%&quot;&gt;&#39; &quot;inv-serv&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
-
-
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="31" name="legacy" tags="Luck" position="450,1150" size="100,100">A rich relative has died and left you a small fortune. Yay.
+&lt;&lt;else&gt;&gt;
+&lt;p&gt;This choice has been made.&lt;/p&gt;
+&lt;p&gt;Move [[ahead |dock]] or [[go back |morning]].&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="legacy" tags="Luck" position="450,1150" size="100,100">A rich relative has died and left you a small fortune. Yay.
 </tw-passagedata><tw-passagedata pid="32" name="inventory" tags="" position="100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row inv-outer row-cols-1 row-cols-md-3 g-4&quot;&gt;
@@ -2965,12 +2993,12 @@ SOURCES: JACKSON
 
 &lt;p&gt;Authors:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Abigail Queen (Lecturer, Department of History): Project management, game design, content creation, coding&lt;/li&gt;
-&lt;li&gt;Trinity Stuckey (Senior, Department of History): Research, content creation, graphic design&lt;/li&gt;
-&lt;li&gt;Orlando Trujillo-Oritz (Junior, Department of Computer Science) Game design, coding&lt;/li&gt;
-&lt;li&gt;Where indicated, we used OpenAI Claude 4 and ChatGPT 4 to create draft summaries of source texts.&lt;/li&gt;
+&lt;li&gt;Abigail Queen (Lecturer, Department of History): Project management, game design, research, content creation, coding&lt;/li&gt;
+&lt;li&gt;Trinity Stuckey (Student, Department of History): Research, content creation, graphic design&lt;/li&gt;
+&lt;li&gt;Orlando Trujillo-Oritz (Student, Department of Computer Science): Coding&lt;/li&gt;
+&lt;li&gt;Where indicated, we used OpenAI Claude 4 and ChatGPT 4 in the process of creating modernized versions of source texts.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Our work was supported by a Research, Scholarship, and Creative Activities  grant from Cal Poly Humboldt.&lt;/p&gt;
+&lt;p&gt;Our work was supported by a &lt;a href=&quot;https://pmc.humboldt.edu/portal/research-scholarship-and-creative-activities-program-rsca-ay-2122&quot; target=&quot;_blank&quot;&gt;Research, Scholarship, and Creative Activities&lt;/a&gt; grant from Cal Poly Humboldt.&lt;/p&gt;
 &lt;hr&gt;
 
 &lt;p&gt;We built this game using the Twine interactive fiction platform and the SugarCube story format, with help from the following resources:&lt;/p&gt;
@@ -2983,20 +3011,24 @@ SOURCES: JACKSON
 &lt;/ul&gt;
 
 &lt;hr&gt;
-&lt;p&gt;Images are fair use open source educational files or free downloads from the following creators:&lt;/p&gt;
+&lt;p&gt;Images credits: Fair use open source and educational files:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;From &lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;Momentmal, lunar-sea-art, AlanFrijns, ELG21, FaceGuy&lt;/li&gt;
-&lt;li&gt;From &lt;a href=&quot;https://unsplash.com&quot; target=&quot;_blank&quot;&gt;Unsplash.com: &lt;/a&gt;annie-spratt, Max Tcvetkov, Sabina Sturzu, Leonardo Ramos, Jason Hogan&lt;/li&gt;
-&lt;li&gt;Others to be posted...&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;lunar-sea-art, AlanFrijns, ELG21, FaceGuy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot; target=&quot;_blank&quot;&gt;Unsplash.com: &lt;/a&gt;annie-spratt, Max Tcvetkov, Sabina Sturzu&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://minecraft.fandom.com/wiki/Block#List_of_blocks&quot; target=&quot;_blank&quot;&gt;Minecraft Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
 &lt;h2&gt;Works Cited&lt;/h2&gt;
 &lt;h3&gt;Primary Sources&lt;/h3&gt;
 
-&#39;June 1643: An Ordinance for the Regulating of Printing.&#39;, in Acts and Ordinances of the Interregnum, 1642-1660. Edited by C H Firth, R S Rait (London, 1911), British History Online, accessed June 29, 2025, https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp184-186.
+&lt;p&gt;&#39;June 1643: An Ordinance for the Regulating of Printing.&#39;, in Acts and Ordinances of the Interregnum, 1642-1660. Edited by C H Firth, R S Rait (London, 1911), British History Online, accessed June 29, 2025, https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp184-186.&lt;/p&gt;
  
-&lt;h3&gt;Secondary Sources&lt;/h3&gt;</tw-passagedata><tw-passagedata pid="36" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;div class=&quot;container header&quot;&gt;
+&lt;h3&gt;Secondary Sources&lt;/h3&gt;
+
+</tw-passagedata><tw-passagedata pid="36" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if passage() !== &quot;start&quot;&gt;&gt;
+
+&lt;div class=&quot;container header&quot;&gt;
 
 &lt;div class=&quot;row passageheader center&quot;&gt;
 &lt;h1 class=&quot;white&quot;&gt;&amp;#9733;TIMECRAFT&amp;#9733; (placeholder text)&lt;/h1&gt;
@@ -3012,7 +3044,9 @@ SOURCES: JACKSON
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="400,100" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
+&lt;/div&gt;
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="400,100" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
 &lt;&lt;set $score to 0&gt;&gt;
 &lt;&lt;set $psg to &quot;&quot;&gt;&gt;
 &lt;&lt;set $wealth to 0&gt;&gt;
@@ -3035,7 +3069,6 @@ SOURCES: JACKSON
 &lt;&lt;elseif $bed is &quot;lazy&quot;&gt;&gt;
 &lt;&lt;set $score to $score -6&gt;&gt;
 &lt;&lt;set $wealth to $wealth -60&gt;&gt;
-[[Go back |jackson]]
 
 &lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row hero-morning&quot;&gt;
@@ -3088,7 +3121,6 @@ SOURCES: JACKSON
 &lt;&lt;elseif $bed is &quot;getup&quot;&gt;&gt;
 &lt;&lt;set $score to $score +5&gt;&gt;
 &lt;&lt;set $wealth to $wealth +5&gt;&gt;
-[[Go back |jackson]]
 
 &lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row hero-morning&quot;&gt;
@@ -3141,23 +3173,22 @@ SOURCES: JACKSON
 &lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="40" name="frethorne" tags="Source" position="400,400" size="100,100">&lt;div class=&quot;container main&quot;&gt;
-&lt;&lt;return&gt;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="frethorne" tags="Source" position="400,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Letter from an indentured servant (Virginia, 1629)&lt;/h1&gt;
+&lt;p&gt;This text has been modernized by the authors with help from Claude AI, using the edition at &lt;a href=&quot;https://historymatters.gmu.edu/d/6475&quot; target=&quot;_blank&quot;&gt;“History Matters&quot;&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
-&lt;p&gt;This text has been modernized by the authors with help from Claude AI, using the edition at “History Matters&quot; (George Mason University).&lt;/p&gt;
+
 &lt;hr&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the situation of servants and apprentices in early Virginia, and their relationships with their masters. Choose a link to save the item to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
+&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -3184,25 +3215,24 @@ SOURCES: JACKSON
 &lt;p&gt;Whatever you send, even something small, promise I’ll handle it responsibly. I&#39;ll give it to the merchants toward paying off my contract. If I die before help arrives, I&#39;ve asked Goodman Jackson to inform you, which he&#39;s promised to do. When writing, address letters to Goodman Jackson, the gunsmith, at Jamestown.&lt;/p&gt;
 &lt;p&gt;Dear father, please don&#39;t forget me - have mercy on my miserable situation. I know you&#39;d weep if you saw me now. I have only one set of clothes (an odd assortment, but I keep it as neat as possible). For God&#39;s sake, take pity on me. … Your reply will be life or death for me.&lt;/p&gt;
 &lt;/div&gt; 
-&lt;&lt;return&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="spriggs" tags="Source" position="400,500" size="100,100">&lt;div class=&quot;container main&quot;&gt;
-&lt;&lt;return&gt;&gt;
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="spriggs" tags="Source" position="400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-lg-11&quot;&gt;
+&lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Letter from an indentured servant&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Maryland, 1756&lt;/p&gt;
+&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://historymatters.gmu.edu/d/5796&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-1&quot;&gt;
+&lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;em&gt;Digital History&lt;/em&gt;.&lt;/p&gt;
+
 &lt;hr&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Choose a link to save the text to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
+&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -3231,35 +3261,33 @@ SOURCES: JACKSON
 &lt;p&gt;Your undutiful and disobedient child,&lt;/p&gt;
 &lt;p&gt;Elizabeth Sprigs&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;return&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="contract" tags="Source" position="400,600" size="100,100">&lt;div class=&quot;container main&quot;&gt;
-&lt;&lt;return&gt;&gt;
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="contract" tags="Source" position="400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-lg-11&quot;&gt;
+&lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Indenture Contract&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;New York, 1742&lt;/p&gt;
+&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition from the &lt;a href=&quot;https://www.gilderlehrman.org/history-resources/spotlight-primary-source/indenture-agreement-1742&quot; target=&quot;_blank&quot;&gt;Gilder Lehman Institute of American History.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-1&quot;&gt;
+&lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition from the Gilder Lehman Institute of American History.&lt;/p&gt;
 &lt;hr&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Choose a link to save the text to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
+&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/indenture-contract.jpg&quot; alt=&quot;servants and slaves processing tobacco&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;The indenture contract binding John Reid to serve Robert Livingston as an apprentice for five years. From the Gilder Lehman Institute of American History.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;The indenture contract binding John Reid to serve Robert Livingston as an apprentice for five years. From the &lt;a href=&quot;https://www.gilderlehrman.org/history-resources/spotlight-primary-source/indenture-agreement-1742&quot; target=&quot;_blank&quot;&gt;Gilder Lehman Institute of American History.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;An indenture contract was the standard form of employment for the laboring classes in seventeenth-century Europe. Sailors, servants, and apprentices signed such contracts. The term of service varried by trade (for instance, it was usually one or two years for household servants, and 5 years for sailors). The employer was legally bound to provide things like food, shelter, protection, tools, and regular wages, while the servant pledged to serve and obey. Indentured servants coming to the American colonies typically served for 5 to 7 years without regular pay, in exchange for passage across the Atlantic.&lt;/p&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;To become a tradesman like a carpenter or a smith, you had to learn by working in your family&#39;s shop or by serving as an apprentice. Apprenticeship contracts were carefully negotiated, legally binding agreements. Typically, the master was required to teach the apprentice and provide housing and food and protection, while the apprentice was required to serve and obey.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3270,7 +3298,7 @@ SOURCES: JACKSON
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;p&gt;Indenture of Apprenticeship (November 1, 1742)&lt;/p&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;John Reid, with his father’s consent, voluntarily binds himself as an apprentice to Robert Livingston Jr. for a term of five years.&quot;&gt;&gt;&lt;&lt;set $indenture1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;John Reid, with his father’s consent, voluntarily binds himself as an apprentice to Robert Livingston Jr. for a term of five years.&quot;&gt;&gt;&lt;&lt;set $indenture1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The apprentice agrees to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Serve faithfully and obey all lawful commands&quot;&gt;&gt;&lt;&lt;set $indenture2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
@@ -3289,7 +3317,10 @@ SOURCES: JACKSON
 &lt;/ul&gt;
 &lt;p&gt;Both parties bind themselves to these terms, signed and sealed on November 1, 1742, in the sixteenth year of His Majesty’s reign.&lt;/p&gt; 
 &lt;/div&gt;
-&lt;&lt;return&gt;&gt;
+
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
+
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="comments" tags="" position="100,700" size="100,100">&lt;&lt;if $psg is frethorne&gt;&gt;
 &lt;&lt;textarea &quot;$frethc&quot; `$frethc ?? &#39;&#39;`&gt;&gt;
 
@@ -3314,7 +3345,7 @@ SOURCES: JACKSON
     &lt;&lt;link &#39;&lt;img src=&quot;images/module-algonquian.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;watercolor of Native Americans fishing with traditional tools&quot;&gt;&#39; &quot;portals&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h5 class=&quot;card-title&quot;&gt;[[Powhatan |portals]]&lt;/h5&gt;
-      &lt;p class=&quot;card-text&quot;&gt;Virginia, 1610: You are the leader of a powerful Algonquian confederacy when the Virginia Company builds a base at Jamestown.&lt;/p&gt;
+      &lt;p class=&quot;card-text&quot;&gt;Virginia, 1610: You are the leader of a powerful Algonquian confederacy when the Virginia Company arrives.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   
