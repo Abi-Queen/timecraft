@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="37" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="9377B8F3-9771-45E9-B446-D9FA9351FF67" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#ui-bar {
+	<tw-storydata name="index" startnode="36" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="9377B8F3-9771-45E9-B446-D9FA9351FF67" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#ui-bar {
   display: none;
 }
 
@@ -142,12 +142,6 @@ margin-left: 3.5em;
   align-items: center;
   list-style: none;
   color: white;
-}
-
-.footer {
-  background-color: white;
-  padding: 5px;
-  border-top: 2px black solid;
 }
 
 .passagefooter ul {
@@ -282,6 +276,18 @@ textarea {
   background-color: #5d5d5d;
 }
 
+.chest:hover {
+  padding: 8px;
+}
+
+.chest {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px #FFDE80;
+  padding: 3px;
+  margin: 3px;
+  background-color: #FFDE80;
+}
+
 .link-button {
   font-size: 18pt;
   text-align: center;
@@ -315,7 +321,6 @@ textarea {
 
 .card-body {
   background-color: #33312e;
-;
 } 
 
 .card-title {
@@ -543,7 +548,30 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 .white {
   color: white;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// import bootstrap
+
+.sticker {
+  border: 2px black solid;
+  border-radius: 40px; 
+  box-shadow: inset 0px 0px 5px 5px #000;
+  margin: 5px;
+}
+
+.stickerbox {
+  box-shadow: inset 0px 0px 5px 5px #000;
+  background-image: radial-gradient(#eef8f9, #678388);
+}
+
+.imagemap {
+  width: 100%;
+}
+
+.chest-inside {
+  background-image: radial-gradient(#fffcf0, #bebebd);
+  padding: 5px;
+  margin: 5px;
+}
+
+  </style><script role="script" id="twine-user-script" type="text/twine-javascript">// import bootstrap
 importStyles( "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css")
 
 importScripts(
@@ -561,7 +589,8 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 console.log(tooltipList) 
 
-</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;&lt;set $wealth to 1000&gt;&gt;
+//import jquery for image maps
+!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;&lt;set $wealth to 1000&gt;&gt;
 &lt;&lt;set $score to 10&gt;&gt;
 
 &lt;&lt;set $capt to &quot;&quot;&gt;&gt;
@@ -659,10 +688,7 @@ console.log(tooltipList)
 &lt;&lt;set $printc to &quot;&quot;&gt;&gt;
 
 
-[[Go back |portals]] 
-
 &lt;div class=&quot;container&quot;&gt;
-
 &lt;div class=&quot;row hero-jackson&quot;&gt;
 &lt;div class=&quot;row transbox-hero&quot;&gt;
 &lt;h1&gt;Virginia, 1676&lt;/h1&gt;
@@ -733,7 +759,7 @@ console.log(tooltipList)
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Peace has been restored. Your shop is perfumed with bacon and ringing with the happy sounds of industry.&lt;/p&gt;
-
+ 
 &lt;p&gt;You duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
 &lt;p&gt;You call for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. They&#39;ve been at sea for weeks, and the simple act of standing on solid ground is a full assault on their senses. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
@@ -2091,7 +2117,22 @@ how much do you sell?
 none set $wealth to +40 
 
 how have your fortunes changed with these trades? [[trade-buy]]
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;&lt;set $spend to 0&gt;&gt;
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;div class=&quot;row center evidence&quot;&gt;
+&lt;h2&gt;Quality of materials&lt;/h2&gt;
+&lt;p&gt;While mining the sources, did you save only high quality materials? Or did you collect some invalid interpretations?&lt;/p&gt;
+&lt;&lt;if $servWrong&gt;&gt;
+&lt;p&gt;Oops.  (Score -5):
+&lt;&lt;if $servWrong1Save&gt;&gt;&lt;p&gt;&lt;&lt;print $servWrong1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $servWrong2Save&gt;&gt;&lt;p&gt;&lt;&lt;print $servWrong2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;p&gt;Score -5&lt;/p&gt;
+&lt;&lt;elseif ($freth1Save) or ($freth2Save) or ($freth3Save)&gt;&gt;
+&lt;p&gt;Good job! Your inventory contains only high quality interpretations.&lt;/p&gt;
+&lt;p&gt;Score +5&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+
+
+&lt;&lt;set $spend to 0&gt;&gt;
 &lt;&lt;set $wealth to $wealth-$spend&gt;&gt;
 
 &lt;&lt;if $copperQ gt 1&gt;&gt;
@@ -2644,24 +2685,22 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;img src=&quot;images/mineshaft-morning.jpg&quot; width=&quot;100%&quot; class=&quot;inset-border&quot; alt=&quot;clickable minecraft shafts&quot; usemap=&quot;#image-map&quot; &gt;
+&lt;img src=&quot;images/mineshaft-morning.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Indentured servant&#39;s letter (Virginia, 1629)&quot; data-passage=&quot;frethorne&quot; tab-index=&quot;0&quot; role=&quot;link&quot; coords=&quot;749,463,1247,778&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indentured servant&#39;s letter (Maryland, 1756)&quot; data-passage=&quot;spriggs&quot; tab-index=&quot;0&quot; role=&quot;link&quot; coords=&quot;955,1455,1449,1767&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice&#39;s contract, 1742&quot; data-passage=&quot;contract&quot; tab-index=&quot;0&quot; role=&quot;link&quot; coords=&quot;3328,817,3977,1144&quot;  shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Indentured servant&#39;s letter (Virginia, 1629)&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;749,471,1243,782&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Indentured servant&#39;s letter (Maryland, 1756)&quot; data-passage=&quot;spriggs&quot; role=&quot;link&quot; coords=&quot;955,1444,1445,1763&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Apprentice&#39;s contract, 1742&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;3324,825,3965,1132&quot;  shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
 
-
+(remove these links when image map works)
 [[frethorne]]
 
 [[spriggs]]
 
 [[contract]]
-
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="serv-choice" tags="" position="1100,500" size="100,100">&lt;&lt;if ndef $serv&gt;&gt;
-&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="serv-choice" tags="" position="1100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
 
@@ -2691,6 +2730,7 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
             &lt;div class=&quot;row center evidence&quot;&gt;
             &lt;h2&gt;Your choice: Have breakfast.&lt;/h2&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
+            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -2719,6 +2759,7 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
             &lt;div class=&quot;card-body evidence&quot;&gt;
             &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Voilence.&lt;/h2&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
+            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -2747,6 +2788,7 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
             &lt;div class=&quot;card-body evidence&quot;&gt;
             &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Minimal intervention&lt;/h2&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
+            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -2756,200 +2798,53 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
   &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;This choice has been made.&lt;/p&gt;
-&lt;p&gt;Move [[ahead |dock]] or [[go back |morning]].&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="legacy" tags="Luck" position="450,1150" size="100,100">A rich relative has died and left you a small fortune. Yay.
-</tw-passagedata><tw-passagedata pid="32" name="inventory" tags="" position="100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row inv-outer row-cols-1 row-cols-md-3 g-4&quot;&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner&quot;&gt;
-        &lt;&lt;if $frethc&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $frethcselect to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $freth1&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth1select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-       &lt;&lt;if $freth2&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $freth2&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth2select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $freth3&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $freth3&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth3select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $freth4 is true&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $freth4&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth4select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row inv-outer row-cols-1 row-cols-md-3 g-4&quot;&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner&quot;&gt;
-        &lt;&lt;if $spriggsc&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggscselect to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs1&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs1select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-       &lt;&lt;if $spriggs2&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs2&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs2select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs3&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs3select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs4 is true&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs4&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs4select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row inv-outer row-cols-1 row-cols-md-3 g-4&quot;&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner&quot; id=&quot;shipsc&quot;&gt;
-        &lt;&lt;if $spriggsc&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;17th-Century Ships&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $shipscselect to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#shipsc&quot;&gt;&gt;&lt;&lt;Selected&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs1&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs1select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-       &lt;&lt;if $spriggs2&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs2&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs2select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs3&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Servant&#39;s Letter, 1756)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs3select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body&quot;&gt;
-        &lt;&lt;if $spriggs4 is true&gt;&gt;
-        &lt;h5 class=&quot;card-title&quot;&gt;Servant&#39;s Letter, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text&quot;&gt;&quot;&lt;&lt;print $spriggs4&gt;&gt;&quot; (Servant&#39;s Letter, 1629)&lt;/p&gt;
-        &lt;p class=&quot;card-link&quot;&gt;&lt;&lt;link &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs4select to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="PassageDone" tags="Utilities" position="100,400" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="legacy" tags="Luck" position="450,1150" size="100,100">A rich relative has died and left you a small fortune. Yay.
+</tw-passagedata><tw-passagedata pid="32" name="PassageDone" tags="Utilities" position="100,400" size="100,100">&lt;&lt;script&gt;&gt;
 let tooltipTriggerList = document.querySelectorAll(&#39;[data-bs-toggle=&quot;tooltip&quot;]&#39;);
 let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =&gt; new bootstrap.Tooltip(tooltipTriggerEl));
 &lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="34" name="StoryInit" tags="Utilities" position="100,500" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
+
+&lt;&lt;script&gt;&gt;
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;FFDE80&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.3,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;bebebd&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="StoryInit" tags="Utilities" position="100,500" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
 
 &lt;&lt;set $score to 0&gt;&gt;
 
 &lt;&lt;set $wealth to 0&gt;&gt;
 
-&lt;&lt;set $psg to &quot;&quot;&gt;&gt;
+&lt;&lt;set $inventory to []&gt;&gt;
 
+&lt;&lt;set $stickers to [
+&quot;&lt;img src=&#39;stickers/abolition.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of African man wearing loincloth kneeling in chains with clasped hands raised in supplication&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/abolitionwoman.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of African woman wearing loincloth kneeling in chains with clasped hands raised in supplication below text, Am I not a sister and a woman&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/albany.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of snake cut in sections with labels NE, NY and text or DIE&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/andrewking.jpg&#39; class=&#39;sticker&#39; alt=&#39;drawing of Andrew jackson wearing royal robes and crown and holding rolled paper labeled veto&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/barton.jpg&#39; class=&#39;sticker&#39; alt=&#39;black and white photo of woman smiling in dark dress seated with elbow on table next to ornate clock&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/bearflag.png&#39; class=&#39;sticker&#39; alt=&#39;black and white photo of flag with star and bear and text CALIFORNIA REPUBLIC&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/bicycle.jpg&#39; class=&#39;sticker&#39; alt=&#39;black and white photo of woman in skirt and hat riding motorized bicycle&#39;&gt;&quot;
+]&gt;&gt;
 
 SOURCES: JACKSON
 &lt;&lt;set $freth1 to &quot;Since arriving, I&#39;ve had nothing but peas and watery gruel to eat. ... Four men must share one small penny loaf of bread.&quot;&gt;&gt;
@@ -2987,7 +2882,7 @@ SOURCES: JACKSON
 &lt;&lt;set $milton4 to &quot;Knowledge itself is not corrupting: only our use of it can be. Books are like food: some are nourishing, others harmful, but it&#39;s up to each person&#39;s judgment and discipline. Even bad books can help wise readers understand, refute, and guard against error.&quot;&gt;&gt;
 &lt;&lt;set $milton5 to &quot;People can be seduced by anything - conversation, music, art. So, will we censor all of life? That’s absurd.&quot;&gt;&gt;
 &lt;&lt;set $milton6 to &quot;In Italy, they said censorship had drained their culture of brilliance, leaving only flattery and nonsense in print.&quot;&gt;&gt;
-&lt;&lt;set $milton7 to &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="about" tags="" position="100,200" size="100,100">[[Back to the start page |portals]] 
+&lt;&lt;set $milton7 to &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="about" tags="" position="100,300" size="100,100">[[Back to the start page |portals]] 
 
 &lt;h1&gt;Credits and References&lt;/h1&gt;
 
@@ -3003,18 +2898,17 @@ SOURCES: JACKSON
 
 &lt;p&gt;We built this game using the Twine interactive fiction platform and the SugarCube story format, with help from the following resources:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://twinery.org/&quot; target=&quot;_blank&quot;&gt;Twinery.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.motoslave.net/sugarcube/2/docs/&quot; target=&quot;_blank&quot;&gt;SugarCube2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.motoslave.net/tweego/&quot; target=&quot;_blank&quot;&gt;Tweego Compiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://twinery.org/&quot; target=&quot;_blank&quot;&gt;Twine Documentation: Twinery.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.motoslave.net/sugarcube/2/docs/&quot; target=&quot;_blank&quot;&gt;SugarCube2 Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://manonamora.itch.io/twine-sugarcube-guide&quot; target=&quot;_blank&quot;&gt;SugarCube Guide by ManonAmora&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLlXuD3kyVEr5JmCL3GbEAd0jPsDVcuge7&quot; target=&quot;_blank&quot;&gt;SugarCube2 tutorials by Dan Cox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/mikewesthad/twine-resources/blob/master/demos/html-maps/readme.md#highlighting-the-map&quot; target=&quot;_blank&quot;&gt;Twine Image Maps Tutorial by Michael Hadley&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
 &lt;p&gt;Images credits: Fair use open source and educational files:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;lunar-sea-art, AlanFrijns, ELG21, FaceGuy&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://unsplash.com&quot; target=&quot;_blank&quot;&gt;Unsplash.com: &lt;/a&gt;annie-spratt, Max Tcvetkov, Sabina Sturzu&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://minecraft.fandom.com/wiki/Block#List_of_blocks&quot; target=&quot;_blank&quot;&gt;Minecraft Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -3022,34 +2916,39 @@ SOURCES: JACKSON
 &lt;h2&gt;Works Cited&lt;/h2&gt;
 &lt;h3&gt;Primary Sources&lt;/h3&gt;
 
-&lt;p&gt;&#39;June 1643: An Ordinance for the Regulating of Printing.&#39;, in Acts and Ordinances of the Interregnum, 1642-1660. Edited by C H Firth, R S Rait (London, 1911), British History Online, accessed June 29, 2025, https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp184-186.&lt;/p&gt;
+&lt;p&gt;&#39;June 1643: An Ordinance for the Regulating of Printing.&#39;, in &lt;em&gt;Acts and Ordinances of the Interregnum, 1642-1660.&lt;/em&gt; Edited by C H Firth, R S Rait (London, 1911), British History Online, accessed June 29, 2025, https://www.british-history.ac.uk/no-series/acts-ordinances-interregnum/pp184-186.&lt;/p&gt;
  
 &lt;h3&gt;Secondary Sources&lt;/h3&gt;
 
-</tw-passagedata><tw-passagedata pid="36" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if passage() !== &quot;start&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="35" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
 
 &lt;div class=&quot;container header&quot;&gt;
 
 &lt;div class=&quot;row passageheader center&quot;&gt;
-&lt;h1 class=&quot;white&quot;&gt;&amp;#9733;TIMECRAFT&amp;#9733; (placeholder text)&lt;/h1&gt;
-&lt;h2 class=&quot;white&quot;&gt;Name: $PlayerName&lt;/h2&gt;
-&lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;[[Restart |start]]&lt;/li&gt;
+&lt;li&gt;&lt;&lt;link &quot;Restart&quot; &quot;start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;&lt;return&gt;&gt;&lt;/li&gt;
-&lt;li&gt;Quit&lt;/li&gt;
-&lt;li&gt;Save&lt;/li&gt;
+&lt;li&gt;&quot;Quit or Save&quot; (need link)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h1 class=&quot;white&quot;&gt;&amp;#9733;TIMECRAFT&amp;#9733; (placeholder text)&lt;/h1&gt;
+&lt;br&gt;
+&lt;h2 class=&quot;white&quot;&gt;Name: $PlayerName&lt;/h2&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
 &lt;li class=&quot;evidence&quot;&gt;Score: $score&lt;/li&gt;
 &lt;li class=&quot;evidence&quot;&gt;Wealth: &amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;&lt;link &quot;&lt;img src=&#39;images/mc-chest-icon.png&#39; alt=&#39;closed wooden chest&#39; class=&#39;chest&#39;&gt;&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Treasure Chest&quot;).wikiPassage(&quot;chest&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="start" tags="" position="400,100" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="start" tags="" position="400,100" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
 &lt;&lt;set $score to 0&gt;&gt;
-&lt;&lt;set $psg to &quot;&quot;&gt;&gt;
 &lt;&lt;set $wealth to 0&gt;&gt;
+&lt;&lt;set $inventory to []&gt;&gt;
 
 &lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row hero-start&quot;&gt;
@@ -3059,10 +2958,10 @@ SOURCES: JACKSON
 &lt;p&gt;To begin, enter the name you will use on this journey:&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textbox &quot;$PlayerName&quot; &quot;&quot; &quot;portals&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="38" name="accident" tags="Luck" position="550,1150" size="100,100">Your apprentice forgets to close the powder cask while he is shaping nails. A spark lands on the powder. The explosion kills you and your apprentice and your neighbors.
+</tw-passagedata><tw-passagedata pid="37" name="accident" tags="Luck" position="550,1150" size="100,100">Your apprentice forgets to close the powder cask while he is shaping nails. A spark lands on the powder. The explosion kills you and your apprentice and your neighbors.
 
 [[Restart the Virginia time travel portal |virginia]]
-</tw-passagedata><tw-passagedata pid="39" name="morning" tags="" position="1100,300" size="100,100">&lt;&lt;if $bed is &quot;&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="morning" tags="" position="1100,300" size="100,100">&lt;&lt;if $bed is &quot;&quot;&gt;&gt;
 [[Make a choice |jackson]]
 
 
@@ -3173,7 +3072,7 @@ SOURCES: JACKSON
 &lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="40" name="frethorne" tags="Source" position="400,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="39" name="frethorne" tags="Source" position="400,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Letter from an indentured servant (Virginia, 1629)&lt;/h1&gt;
@@ -3216,7 +3115,7 @@ SOURCES: JACKSON
 &lt;p&gt;Dear father, please don&#39;t forget me - have mercy on my miserable situation. I know you&#39;d weep if you saw me now. I have only one set of clothes (an odd assortment, but I keep it as neat as possible). For God&#39;s sake, take pity on me. … Your reply will be life or death for me.&lt;/p&gt;
 &lt;/div&gt; 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="spriggs" tags="Source" position="400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="spriggs" tags="Source" position="400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Letter from an indentured servant&lt;/h1&gt;
@@ -3262,7 +3161,7 @@ SOURCES: JACKSON
 &lt;p&gt;Elizabeth Sprigs&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="contract" tags="Source" position="400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="contract" tags="Source" position="400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Indenture Contract&lt;/h1&gt;
@@ -3321,7 +3220,7 @@ SOURCES: JACKSON
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="comments" tags="" position="100,700" size="100,100">&lt;&lt;if $psg is frethorne&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="comments" tags="" position="100,800" size="100,100">&lt;&lt;if $psg is frethorne&gt;&gt;
 &lt;&lt;textarea &quot;$frethc&quot; `$frethc ?? &#39;&#39;`&gt;&gt;
 
 &lt;&lt;elseif $psg is spriggs&gt;&gt;
@@ -3332,7 +3231,12 @@ SOURCES: JACKSON
 
 &lt;&lt;/if&gt;&gt; 
 
-</tw-passagedata><tw-passagedata pid="44" name="portals" tags="" position="400,225" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="43" name="portals" tags="" position="400,225" size="100,100">&lt;&lt;set $score to 0&gt;&gt;
+&lt;&lt;set $wealth to 0&gt;&gt;
+&lt;&lt;set $inventory to []&gt;&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+Temp: &lt;&lt;link &quot;Testing inventory and treasure chest&quot; &quot;stickers&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h1&gt;Welcome, $PlayerName!&lt;/h1&gt;
@@ -3505,7 +3409,7 @@ SOURCES: JACKSON
 &lt;p&gt;See the [[About page |about]] for information about the game&#39;s creators and the materials we used.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="hall" tags="" position="800,2400" size="100,100">&lt;&lt;set $wealth to 10&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="hall" tags="" position="800,2400" size="100,100">&lt;&lt;set $wealth to 10&gt;&gt;
 [[Go back |portals]]
 
 &lt;div class=&quot;container&quot;&gt;
@@ -3549,7 +3453,7 @@ SOURCES: JACKSON
 
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="ships" tags="Source" position="600,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="ships" tags="Source" position="600,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
 
 &lt;div class=&quot;container main&quot;&gt;
 
@@ -3640,7 +3544,7 @@ SOURCES: JACKSON
 
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="capt-mine" tags="" position="1300,500" size="100,100">[[Go back |morning]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="capt-mine" tags="" position="1300,500" size="100,100">[[Go back |morning]]
 
 &lt;div class=&quot;container mine&quot;&gt;
 
@@ -3676,7 +3580,7 @@ SOURCES: JACKSON
 &lt;/div&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="capt-choice" tags="" position="1300,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="capt-choice" tags="" position="1300,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 
@@ -3703,7 +3607,7 @@ SOURCES: JACKSON
 
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="49" name="articles" tags="Source" position="600,600" size="100,100">source text to be posted ... </tw-passagedata><tw-passagedata pid="50" name="inv-capt" tags="" position="1300,700" size="100,100">[[Go back |dock]]
+</tw-passagedata><tw-passagedata pid="48" name="articles" tags="Source" position="600,600" size="100,100">source text to be posted ... </tw-passagedata><tw-passagedata pid="49" name="inv-capt" tags="" position="1300,700" size="100,100">[[Go back |dock]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -4135,336 +4039,7 @@ SOURCES: JACKSON
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="inv-serv" tags="" position="1100,600" size="100,100">[[Go back |dock]]
-
-&lt;div class=&quot;container&quot;&gt;
-
-&lt;h1&gt;This is how you have chosen to deal with your servant and apprentice:&lt;/h1&gt;
-&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;p&gt; Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
-&lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt;&lt;p&gt; Grab the servant and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/p&gt;
-&lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;&lt;p&gt; Ignore the servant. He&#39;s hopeless. There&#39;s really no way to motivate him and no point in trying to educate him. Explain the apprentice&#39;s mistake with the nails and tell him to start over.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md center&quot;&gt;
-&lt;img src=&quot;images/mc-chest-open.png&quot; alt=&quot;open wooden chest&quot; width=&quot;90%&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md center&quot;&gt;
-&lt;h1&gt;Add evidence&lt;/h1&gt;
-&lt;p&gt;Finish crafting this choice by adding evidence from your inventory. Select some of the items that informed your decision.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row inv-outer row-cols-1 row-cols-md-3 g-4&quot;&gt;
-
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;frethc&quot;&gt;
-      &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Frethorne, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $frethcSelect to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#frethc&quot;&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;&lt;set $score to $score +2&gt;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;freth1&quot;&gt;
-        &lt;&lt;if $freth1Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Frethorne, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth1Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#freth1&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-   &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;freth2&quot;&gt;
-        &lt;&lt;if $freth2Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Frethorne, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $freth2&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth2Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#freth2&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;Score +0
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-    &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;freth3&quot;&gt;
-        &lt;&lt;if $freth3Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Frethorne, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $freth3&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth3Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#freth3&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-    &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;freth4&quot;&gt;
-        &lt;&lt;if $freth4Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Frethorne, 1629&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $freth4&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $freth1Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#freth4&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;spriggsc&quot;&gt;
-      &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Spriggs, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggscSelect to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#spriggsc&quot;&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;&lt;set $score to $score +2&gt;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;spriggs1&quot;&gt;
-        &lt;&lt;if $spriggs1Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Spriggs, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs1Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#spriggs1&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;spriggs2&quot;&gt;
-        &lt;&lt;if $spriggs2Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Spriggs, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $spriggs2&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs2Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#spriggs2&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;Score +0
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; &lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt; Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;spriggs3&quot;&gt;
-        &lt;&lt;if $spriggs3Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Spriggs, 1756&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $spriggs3Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#spriggs3&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; &lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt; &lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
- 
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;indenturec&quot;&gt;
-      &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Contract, 1742&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (comments by $PlayerName)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $indenturecSelect to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#indenturec&quot;&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;&lt;set $score to $score +2&gt;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
- 
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;indenture1&quot;&gt;
-        &lt;&lt;if $indenture1Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Contract, 1742&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $indenture1&gt;&gt;&quot; (Contract, 1742)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $indenture1Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#indenture1&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  
- &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;indenture2&quot;&gt;
-        &lt;&lt;if $indenture2Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Contract, 1742&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $indenture2&gt;&gt;&quot; (Contract, 1742)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $indenture2Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#indenture2&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;Score +0
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
- 
- &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;indenture9&quot;&gt;
-        &lt;&lt;if $indenture9Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Contract, 1742&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $indenture9&gt;&gt;&quot; (Contract, 1742)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $indenture9Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#indenture9&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt; &lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt; Score +0
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score -2&gt;&gt; Score -2
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt; 
- 
-  &lt;div class=&quot;col&quot;&gt;
-    &lt;div class=&quot;card h-100&quot;&gt;
-      &lt;div class=&quot;card-body inv-inner center&quot; id=&quot;indenture10&quot;&gt;
-        &lt;&lt;if $indenture10Save&gt;&gt;
-        &lt;h5 class=&quot;card-title inv-text&quot;&gt;Contract, 1742&lt;/h5&gt;
-        &lt;p class=&quot;card-text inv-text&quot;&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Contract, 1742)&lt;/p&gt;
-        &lt;p&gt;&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $indenture10Select to &quot;true&quot;&gt;&gt;&lt;&lt;replace &quot;#indenture10&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-        &lt;div class=&quot;evidence&quot;&gt;
-&lt;p&gt;Item Value: Score +2 &amp;#9733; &amp;#9733;&lt;/p&gt;
-&lt;p&gt;Choice-Evidence Alignment: 
-	&lt;&lt;if $serv is &quot;feed&quot;&gt;&gt; &lt;&lt;set $score to $score +2&gt;&gt; Score +2 &amp;#9733; &amp;#9733;
-        &lt;&lt;elseif $serv is &quot;beat&quot;&gt;&gt;&lt;&lt;set $score to $score -2&gt;&gt; Score -2
-        &lt;&lt;elseif $serv is &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score -2&gt;&gt; Score -2
-        &lt;&lt;/if&gt;&gt;
-        &lt;/p&gt;
-        &lt;/div&gt;
-        &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-        &lt;&lt;/if&gt;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt; 
-  &lt;/div&gt;
-  
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue On |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="press-choice" tags="" position="1700,1000" size="100,100">
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="press-choice" tags="" position="1700,1000" size="100,100">
 choice 1 
 set $gov to ask
 Profess loyalty to the king and the colony and the governor personally. Remind him that you are a good royalist with nothing but contempt for rebellion.  This is well known from council meetings. You command the best-armed and most loyal militia unit in the colony. Having established your status, you soften your tone and show respect. You pledge to print nothing disloyal, seditious, rebellious, or heretical. You humbly beg the governor to consider the value of a printing press as a tool for: 
@@ -4479,7 +4054,7 @@ checkboxes: he has no right to arrest you because you haven&#39;t done anything 
 choice 3 
 $set gov to lie
 Lie. Capitulate and apologize. Pledge to return the press to the ship immediately. Assure the governor that you had no intention of publishing any seditious or disloyal or improper matter
-</tw-passagedata><tw-passagedata pid="53" name="inv-press" tags="" position="1700,1100" size="100,100">[[Go back |dock]]
+</tw-passagedata><tw-passagedata pid="51" name="inv-press" tags="" position="1700,1100" size="100,100">[[Go back |dock]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -4911,7 +4486,7 @@ Lie. Capitulate and apologize. Pledge to return the press to the ship immediatel
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="coffee" tags="Source" position="800,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="coffee" tags="Source" position="800,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-11&quot;&gt;
@@ -4955,7 +4530,7 @@ Lie. Capitulate and apologize. Pledge to return the press to the ship immediatel
 &lt;p&gt;God save the king.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="press-mine" tags="" position="1700,900" size="100,100">[[Go back |press]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="press-mine" tags="" position="1700,900" size="100,100">[[Go back |press]]
 
 &lt;div class=&quot;container mine&quot;&gt;
 
@@ -4991,7 +4566,7 @@ Lie. Capitulate and apologize. Pledge to return the press to the ship immediatel
 &lt;/div&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="milton" tags="Source" position="800,800" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="milton" tags="Source" position="800,800" size="100,100">&lt;div class=&quot;container main&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -5049,7 +4624,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;/div&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="berkeley-portraits" tags="Source" position="800,900" size="100,100">&lt;div class=&quot;container source&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="berkeley-portraits" tags="Source" position="800,900" size="100,100">&lt;div class=&quot;container source&quot;&gt;
 
 &lt;div class=&quot;container main&quot;&gt;
 
@@ -5163,7 +4738,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;hr&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="licensing-order" tags="Source" position="800,600" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="licensing-order" tags="Source" position="800,600" size="100,100">&lt;div class=&quot;container main&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -5226,6 +4801,43 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;h3&gt;Concluding Remarks&lt;/h3&gt;
 &lt;p&gt;This order must be immediately printed and published so everyone is aware of it, and so that violators have no excuse.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="chest" tags="Utilities" position="100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+
+&lt;&lt;run $inventory.shuffle()&gt;&gt;
+$inventory
+
+&lt;p&gt;(To do: Get theses to display in a bootstrap grid)&lt;/p&gt;
+
+
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="58" name="stickers" tags="Utilities" position="100,900" size="100,100">&lt;div class=&quot;sticker-box&quot; id=&quot;stickerbox&quot;&gt;
+&lt;h1&gt;Choose a new sticker for your treasure chest:&lt;/h1&gt;
+&lt;br&gt;
+
+&lt;&lt;run $stickers.shuffle()&gt;&gt;
+&lt;&lt;for _entry range $stickers&gt;&gt;
+&lt;&lt;link &quot;_entry&quot;&gt;&gt;
+&lt;&lt;run $inventory.push(_entry)&gt;&gt;
+&lt;&lt;run $stickers.delete(_entry)&gt;&gt;
+&lt;&lt;replace &quot;#stickerbox&quot;&gt;&gt;
+&lt;div class=&quot;sticker-box center&quot;&gt;
+&lt;p&gt;Well done!&lt;/p&gt;
+&lt;p(add animated stars or something)&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/for&gt;&gt; 
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="59" name="quitsave" tags="Utilities" position="100,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;&lt;link &quot;Back to the game&quot;&gt;&gt;&lt;&lt;return&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+list options: 
+end game now (load end page)
+save and quit: load built in quit or save or game save menu
+view game saves: load built in saved games menu
 
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
