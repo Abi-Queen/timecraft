@@ -108,6 +108,11 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   display: none;
 }
 
+#ui-dialog-titlebar, #ui-dialog-body{
+  background-color: white; 
+  border: 1px solid black;
+}
+
 #story {
 margin-left: 3.5em;
 }
@@ -551,6 +556,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 .stickerbox {
   box-shadow: inset 0px 0px 5px 5px #000;
   background-image: radial-gradient(#eef8f9, #678388);
+  box-shadow: inset 0px 0px 5px 5px #000;
 }
 
 .imagemap {
@@ -558,9 +564,15 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 }
 
 .chest-inside {
-  background-image: radial-gradient(#fffcf0, #bebebd);
-  padding: 5px;
-  margin: 5px;
+  background-image: radial-gradient(#fffcf0, #FFDE80);
+  min-height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: inset 0px 0px 5px 5px #806f40;
 }
 
   </style><script role="script" id="twine-user-script" type="text/twine-javascript">// import bootstrap
@@ -2720,6 +2732,75 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
           &lt;&lt;if $freth1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $freth3Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $freth3&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $freth4Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $freth4&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $spriggs1Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+         &lt;&lt;if $spriggs3Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $indenture1Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture1&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $indenture3Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture3&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $indenture9Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture9&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+         &lt;&lt;if $indenture10Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
@@ -2746,15 +2827,42 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $freth1Save&gt;&gt;
+           &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $spriggs2Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs2&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $spriggs3Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+         &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+         &lt;&lt;if $indenture10Save&gt;&gt;
+                &lt;div class=&quot;mined-neg&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
       &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;beat&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
-            &lt;div class=&quot;card-body evidence&quot;&gt;
-            &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Voilence.&lt;/h2&gt;
+            &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h2&gt;Your choice: Violence.&lt;/h2&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
             &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -2775,17 +2883,50 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $freth1Save&gt;&gt;
+           &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
-            &lt;div class=&quot;card-body evidence&quot;&gt;
-            &lt;h2 class=&quot;card-title&quot;&gt;Your choice: Minimal intervention&lt;/h2&gt;
-            &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
+          &lt;&lt;if $spriggs1Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $spriggs3Save&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
+                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          &lt;&lt;if $indenture9Save&gt;&gt;
+                &lt;div class=&quot;mined-neg&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture9&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+                    &lt;&lt;if $indenture10Save&gt;&gt;
+                &lt;div class=&quot;mined-neg&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score + 5&gt;&gt;
+            &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h2&gt;Your choice: Minimal intervention.&lt;/h2&gt;
+            &lt;p&gt;Score +5 &amp;#9733; &amp;#9733;&lt;/p&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -4812,12 +4953,13 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;p&gt;This order must be immediately printed and published so everyone is aware of it, and so that violators have no excuse.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="chest" tags="Utilities" position="100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="chest" tags="Utilities" position="100,700" size="100,100">&lt;div class=&quot;container chest-inside&quot;&gt;
 
 &lt;&lt;run $inventory.shuffle()&gt;&gt;
 $inventory
 
 &lt;p&gt;(To do: Get theses to display in a bootstrap grid)&lt;/p&gt;
+&lt;p&gt;(To do: Get the sticker they actually chose to push to inventory array, instead of a random one)&lt;/p&gt;
 
 
 &lt;/div&gt;
