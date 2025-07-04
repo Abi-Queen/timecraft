@@ -156,10 +156,6 @@ body a {
   color: #1586d1;
 }
 
-.container {
-  margin-top: 10px;
-}
-
 /* body style */
 body .passage {
   font-size: 117%;
@@ -243,11 +239,11 @@ body .passage {
 }
 
 .hero-start {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/gothic.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/gothic.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  height: 550px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -360,25 +356,21 @@ textarea {
 
 .transbox-hero {
   text-align: center;
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   font-weight: bold;
   font-size: 1.3em;
 }
 
 .hero-jackson {
-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/flintlock-pistol-1645-close.jpg");  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/flintlock-pistol-1645-close.jpg");
+  box-shadow: inset 0px 0px 5px 5px #000;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  height: 550px;
+  min-height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: inset 0px 0px 5px 5px #000;
 }
 
 .hero-hall {
@@ -689,8 +681,9 @@ console.log(tooltipList)
 
 
 &lt;div class=&quot;container&quot;&gt;
+
 &lt;div class=&quot;row hero-jackson&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;div class=&quot;transbox-hero&quot;&gt;
 &lt;h1&gt;Virginia, 1676&lt;/h1&gt;
 &lt;p&gt;You are a smith in Jamestown.&lt;/p&gt;
 &lt;/div&gt;
@@ -2117,7 +2110,11 @@ how much do you sell?
 none set $wealth to +40 
 
 how have your fortunes changed with these trades? [[trade-buy]]
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;div class=&quot;row center evidence&quot;&gt;
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">  display: flex;
+  flex-direction: column;
+  
+  
+&lt;div class=&quot;row center evidence&quot;&gt;
 &lt;h2&gt;Quality of materials&lt;/h2&gt;
 &lt;p&gt;While mining the sources, did you save only high quality materials? Or did you collect some invalid interpretations?&lt;/p&gt;
 &lt;&lt;if $servWrong&gt;&gt;
@@ -2935,10 +2932,9 @@ SOURCES: JACKSON
 &lt;h3&gt;Secondary Sources&lt;/h3&gt;
 
 </tw-passagedata><tw-passagedata pid="35" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;container header&quot;&gt;
-
-&lt;div class=&quot;row passageheader center&quot;&gt;
+&lt;div class=&quot;row header passageheader center&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;&lt;link &quot;Restart&quot; &quot;start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;&lt;return&gt;&gt;&lt;/li&gt;
@@ -2958,7 +2954,6 @@ SOURCES: JACKSON
 &lt;/div&gt;
 
 &lt;/div&gt;
-
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="start" tags="" position="400,100" size="100,100">&lt;&lt;set $PlayerName to &quot;&quot;&gt;&gt;
 &lt;&lt;set $score to 0&gt;&gt;
 &lt;&lt;set $wealth to 0&gt;&gt;
@@ -2971,6 +2966,8 @@ SOURCES: JACKSON
 &lt;p&gt;Venture into the past and make some history.&lt;/p&gt;
 &lt;p&gt;To begin, enter the name you will use on this journey:&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textbox &quot;$PlayerName&quot; &quot;&quot; &quot;portals&quot;&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="37" name="accident" tags="Luck" position="550,1150" size="100,100">Your apprentice forgets to close the powder cask while he is shaping nails. A spark lands on the powder. The explosion kills you and your apprentice and your neighbors.
 
