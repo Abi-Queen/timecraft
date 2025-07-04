@@ -567,7 +567,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 }
 
 .imagemap {
-  width: 100%;
+  height: 500px;
 }
 
 .chest-inside {
@@ -582,7 +582,40 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   box-shadow: inset 0px 0px 5px 5px #806f40;
 }
 
-  </style><script role="script" id="twine-user-script" type="text/twine-javascript">// import bootstrap
+@media (max-width: 576px) {
+  .hero-start, .hero-jackson, .hero-morning, .hero-dock, .hero-virginia {
+    height: 200px; 
+    background-size: cover;
+  }
+  
+  .header {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+  .header li {
+    font-size: 10pt;
+  }
+  
+    .header li .evidence {
+    font-size: 10pt;
+  }
+  
+  .chest {
+    width: 30px;
+  }
+  
+  .header h1 {
+    font-size: 16pt;
+  }
+  
+  .header h2 {
+    font-size: 12pt;
+  }
+  
+}
+  
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// import bootstrap
 importStyles( "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css")
 
 importScripts(
@@ -3109,21 +3142,20 @@ SOURCES: JACKSON
 &lt;h3&gt;Secondary Sources&lt;/h3&gt;
 
 </tw-passagedata><tw-passagedata pid="35" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
-&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;container header&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;header passageheader center&quot;&gt;
+&lt;div class=&quot;passageheader center&quot;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;&lt;link &quot;Restart&quot; &quot;start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;&lt;return&gt;&gt;&lt;/li&gt;
 &lt;li&gt;&quot;Quit or Save&quot; (need link)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
+&lt;hr&gt;
 &lt;h1 class=&quot;white&quot;&gt;&amp;#9733;TIMECRAFT&amp;#9733; (placeholder text)&lt;/h1&gt;
 &lt;br&gt;
 &lt;h2 class=&quot;white&quot;&gt;Name: $PlayerName&lt;/h2&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;hr&gt;
 &lt;ul&gt;
 &lt;li class=&quot;evidence&quot;&gt;Score: $score&lt;/li&gt;
 &lt;li class=&quot;evidence&quot;&gt;Wealth: &amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/li&gt;
