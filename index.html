@@ -558,6 +558,13 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   border-radius: 40px; 
   box-shadow: inset 0px 0px 5px 5px #000;
   margin: 5px;
+  height: 50px;
+}
+
+#stickerbox {
+  box-shadow: inset 0px 0px 5px 5px #000;
+  background-image: radial-gradient(#eef8f9, #678388);
+  box-shadow: inset 0px 0px 5px 5px #000;
 }
 
 .stickerbox {
@@ -572,14 +579,10 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 
 .chest-inside {
   background-image: radial-gradient(#fffcf0, #FFDE80);
-  min-height: 100px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   box-shadow: inset 0px 0px 5px 5px #806f40;
+  display: flex;
+  align-content: space-around;
+  padding: 5px; 
 }
 
 @media (max-width: 576px) {
@@ -3049,7 +3052,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $inventory to []&gt;&gt;
 
 &lt;&lt;set $stickers to [
-&quot;&lt;img src=&#39;stickers/abolition.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of African man wearing loincloth kneeling in chains with clasped hands raised in supplication&#39; height=&#39;32px&#39;&gt;&quot;, 
+&quot;&lt;img src=&#39;stickers/abolition.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of African man wearing loincloth kneeling in chains with clasped hands raised in supplication&#39; width=&#39;32px&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/abolitionwoman.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of African woman wearing loincloth kneeling in chains with clasped hands raised in supplication below text, Am I not a sister and a woman&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/albany.jpg&#39; class=&#39;sticker&#39; alt=&#39;graphic of snake cut in sections with labels NE, NY and text or DIE&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/andrewking.jpg&#39; class=&#39;sticker&#39; alt=&#39;drawing of Andrew jackson wearing royal robes and crown and holding rolled paper labeled veto&#39;&gt;&quot;, 
@@ -3059,7 +3062,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &quot;&lt;img src=&#39;stickers/bison.jpg&#39; class=&#39;sticker&#39; alt=&#39;painting of bison&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/bisonhunt.jpg&#39; class=&#39;sticker&#39; alt=&#39;painting of Native American on horseback with bow hunting bison&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/bloomers.jpg&#39; class=&#39;sticker&#39; alt=&#39;line drawing of women smoking and wearing Victorian style bloomers&#39;&gt;&quot;,
-&quot;&lt;img src=&#39;stickers/bordman.jpg&#39; class=&#39;sticker&#39; alt=&#39;painting of 18th-century gentleman in wig and gold silk waistcoat leaning on a writing desk&#39;&gt;&quot;,, 
+&quot;&lt;img src=&#39;stickers/bordman.jpg&#39; class=&#39;sticker&#39; alt=&#39;painting of 18th-century gentleman in wig and gold silk waistcoat leaning on a writing desk&#39;&gt;&quot;, 
 &quot;&lt;img src=&#39;stickers/boxing.jpg&#39; class=&#39;sticker&#39; alt=&#39;drawing of shirtless men boxing&#39;&gt;&quot;,
 &quot;&lt;img src=&#39;stickers/cavalier.png&#39; class=&#39;sticker&#39; alt=&#39;portait of smiling man in mustache and lace collar with ornate silk clothing&#39;&gt;&quot;,
 &quot;&lt;img src=&#39;stickers/coffee.jpg&#39; class=&#39;sticker&#39; alt=&#39;line drawing cartoon of men in wigs drinking coffee, reading, arguing&#39;&gt;&quot;,
@@ -3680,19 +3683,20 @@ SOURCES: JACKSON
 
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="ships" tags="Source" position="600,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
-
-&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="ships" tags="Source" position="600,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
-&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;div class=&quot;col-md-10&quot;&gt;
 &lt;h1&gt;Seventeenth-Century Depictions of Ships and Ships&#39; Captains (English and Dutch, 1610 - 1680)&lt;/h1&gt;
-&lt;p&gt;Look for insights into the behaviors and character of ship captains in the seventeenth-century Atlantic system. Choose checkboxes to save items to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;div class=&quot;col-md-2&quot;&gt;
 &lt;img class=&quot;center img-fluid&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot;&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for insights into the behaviors and character of ship captains in the seventeenth-century Atlantic system. Choose checkboxes to save items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;hr&gt;
@@ -3769,9 +3773,8 @@ SOURCES: JACKSON
 &lt;/ul&gt;
 &lt;/div&gt;
 
-
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="capt-mine" tags="" position="1300,500" size="100,100">[[Go back |morning]]
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="capt-mine" tags="" position="1300,500" size="100,100">[[Go back |morning]]
 
 &lt;div class=&quot;container mine&quot;&gt;
 
@@ -5031,20 +5034,18 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="chest" tags="Utilities" position="100,700" size="100,100">&lt;div class=&quot;container chest-inside&quot;&gt;
 
-&lt;&lt;run $inventory.shuffle()&gt;&gt;
-$inventory
+&lt;div class=&quot;row center&quot;&gt;
+&lt;p&gt;$inventory&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;(To do: Get theses to display in a bootstrap grid)&lt;/p&gt;
-&lt;p&gt;(To do: Get the sticker they actually chose to push to inventory array, instead of a random one)&lt;/p&gt;
+&lt;p&gt;(To do: Get the sticker the player chose to push to inventory array, instead of a random one)&lt;/p&gt;
 
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="58" name="stickers" tags="Utilities" position="100,900" size="100,100">&lt;div class=&quot;sticker-box&quot; id=&quot;stickerbox&quot;&gt;
-&lt;h1&gt;Choose a new sticker for your treasure chest:&lt;/h1&gt;
-&lt;br&gt;
-
-&lt;&lt;run $stickers.shuffle()&gt;&gt;
-&lt;&lt;for _entry range $stickers&gt;&gt;
+</tw-passagedata><tw-passagedata pid="58" name="stickers" tags="Utilities" position="100,900" size="100,100">&lt;div class=&quot;row&quot; id=&quot;stickerbox&quot;&gt;
+&lt;h1&gt;Choose a sticker for your treasure chest&lt;/h1&gt;
+&lt;&lt;set _stickerselection to $stickers.randomMany(6)&gt;&gt;
+&lt;&lt;for _entry range _stickerselection&gt;&gt;
 &lt;&lt;link &quot;_entry&quot;&gt;&gt;
 &lt;&lt;run $inventory.push(_entry)&gt;&gt;
 &lt;&lt;run $stickers.delete(_entry)&gt;&gt;
@@ -5055,7 +5056,10 @@ $inventory
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;&lt;/for&gt;&gt; 
+&lt;&lt;/for&gt;&gt;
+&lt;/div&gt;
+
+
 
 &lt;/div&gt;
 
