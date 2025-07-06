@@ -452,6 +452,17 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   justify-content: space-around;
 }
 
+.hero-gov {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/hero-flintlock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .choice {
   background-color: #33312e;
   border: 1px solid black;
@@ -993,35 +1004,13 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You can make it, but the quality would be poor and it would take a long time.&quot;&gt;&lt;&lt;link &quot;Casks of saltpeter&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;Barrels of gunpowder&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;numberbox &quot;$saltpeterQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + (50*$saltpeterQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
+&lt;p&gt;None are left. The captain general at the fort bought them all.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You are not aware of any sources in Virginia, yet.&quot;&gt;&lt;&lt;link &quot;Casks of sulfur&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;numberbox &quot;$sulfurQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + (50*$sulfurQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1033,10 +1022,9 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;hr&gt;
 
-
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Nobody in Virginia is manufacturing paper yet. This is the only way to get it.&quot;&gt;&lt;&lt;link &quot;Crates of paper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Nobody in Virginia is manufacturing paper yet.&quot;&gt;&lt;&lt;link &quot;Crates of paper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;numberbox &quot;$paperQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + (50*$paperQ))&gt;&gt;
@@ -1068,7 +1056,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You often use copper in your shop. Looking ahead, copper plates are often used for printing images. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Bars of copper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You often use copper in your shop. Thinking ahead, copper plates are often used for printing images. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Bars of copper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;numberbox &quot;$copperQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + (50*$copperQ))&gt;&gt;
@@ -1227,7 +1215,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot; id=&quot;trade&quot;&gt;
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;The standard small arms for infantry. You can make these yourself, but there may be good reasons to buy some, too.&quot;&gt;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Old fashioned, but cheap and easy to operate. The new flintlocks are better but half again more expensive and much harder to make. You can make matchlocks easily. Is there a reason to buy some, too?&quot;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
@@ -1244,6 +1232,16 @@ console.log(tooltipList)
 &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class=&quot;row hr center&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;These have all but replaced the old fashioned matchlocks of the Civil War days. But they&#39;re expensive, hard to make, and supply is always short.&quot;&lt;&lt;link &quot;Flintlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;The captain has some of these, but none are for sale. The whole shipment is for the soldiers at the fort. &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1267,31 +1265,11 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You can make it, but the quality would be poor and it would take a long time.&quot;&gt;&lt;&lt;link &quot;Casks of saltpeter&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You need this to test the guns you make and repair, and for militia drills.&quot;&gt;&lt;&lt;link &quot;Barrels of gunpowder&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;100 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$saltpeterQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$saltpeterQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You are not aware of any sources in Virginia, yet.&quot;&gt;&lt;&lt;link &quot;Casks of sulfur&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$sulfurQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$sulfurQ))&gt;&gt;
+&lt;&lt;numberbox &quot;$gunpowderQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (100*$gunpowderQ))&gt;&gt;
 &lt;&lt;replace #budget&gt;&gt;
 &lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
@@ -1387,7 +1365,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You use a lot of iron in your shop. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You use a lot of iron in your shop. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Iron bars&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
@@ -1507,7 +1485,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Your stomach rejects this idea, but you know it can keep people alive in hard times. Is it worth buying now?&quot;&gt;&lt;&lt;link &quot;Barrels of salt cod&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;20 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;It&#39;s not your favorite snack, but this can keep people alive in hard times. Is it worth buying some?&quot;&gt;&lt;&lt;link &quot;Barrels of salt cod&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;20 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
@@ -1665,6 +1643,16 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;These have all but replaced the old fashioned matchlocks of the Civil War days. But they&#39;re expensive, hard to make, and supply is always short.&quot;&lt;&lt;link &quot;Flintlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;The captain has some of these, but none are for sale. The whole shipment is for the soldiers at the fort. &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row hr center&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;It&#39;s easy to buy these from your neighbors. Is there a reason to buy these from England?&quot;&gt;&lt;&lt;link &quot;Crates of candles&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;10 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1681,43 +1669,13 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You can make it, but the quality would be poor and it would take a long time.&quot;&gt;&lt;&lt;link &quot;Casks of saltpeter&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;Barrels of gunpowder&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$saltpeterQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$saltpeterQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
+&lt;p&gt;None are left. They were all bought by the captain general at the fort.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Key ingredient in gunpowder. You are not aware of any sources in Virginia, yet.&quot;&gt;&lt;&lt;link &quot;Casks of sulfur&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$sulfurQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$sulfurQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1728,7 +1686,6 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1792,7 +1749,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You use a lot of iron in your shop. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You use a lot of iron in your shop. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Iron bars&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
@@ -2021,24 +1978,25 @@ console.log(tooltipList)
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="flintlock" tags="" position="1800,700" size="100,100">[[Go back |shop]]
 &lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row hero-shop&quot;&gt;
+&lt;div class=&quot;row hero-flintlock&quot;&gt;
 &lt;div class=&quot;row transbox-hero&quot;&gt;
 &lt;h1&gt;A New Pattern&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
-&lt;p&gt;You let out your breath in relief as you recognize an African who had helped you load supplies yesterday. He&#39;s the captain&#39;s servant, or possibly a slave, you aren&#39;t sure. He hands a small wooden crate to the servant and passes you a folded note. You:&lt;/p&gt;
+&lt;p&gt;You let out your breath in relief as you recognize an African who had helped you load supplies yesterday. He&#39;s the ship captain&#39;s servant, or possibly a slave, you aren&#39;t sure. He hands a small wooden crate to the servant and passes you a folded note.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot; id=&quot;choice&quot;&gt;
+&lt;p&gt;You:&lt;/p&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Thank him and ask him to sit at the bench, telling your servant to get him a cup of ale and some bacon and bread from breakfast while you read the note.&lt;/p&gt;
+&lt;p&gt;Thank him and ask him to sit at the bench, telling Thomas to get him a cup of ale and some bacon and bread from breakfast while you read the note.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $slave to &quot;friend&quot;&gt;&gt;
 &lt;&lt;replace #choice&gt;&gt;
 &lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;The African thanks you in Spanish and then tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press.&lt;/p&gt;
+&lt;p&gt;The African thanks you in Spanish and sits down and gratefully accepts the food. He tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press.&lt;/p&gt;
 &lt;p&gt;You share a hearty expletive with the group, setting off a wave of chuckles. John and Tom cluster close around you, chores forgotten in their curiosity.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -2047,34 +2005,31 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;The captain&#39;s note says: &quot;You may take pleasure in examining the enclosed. Olaudah will stay with you until you are finished, and will return it to me. I look forward to the pleasure of your company this evening when I hope we will effect some repairs to my ship.&quot;&lt;/p&gt;
-
-&lt;p&gt;Filled with curiosity, you open the wooden crate. Nested in folds of rough wool cloth is a very new-looking musket. Lifting it out, you notice there&#39;s something odd about it. The  very new you see floods you with excitement. The rest of the world disappears.&lt;/p&gt;
+&lt;p&gt;The captain&#39;s note says: &lt;em&gt;You may take pleasure in examining the enclosed. Olaudah will stay with you until you are finished, and will return it to me. I look forward to the pleasure of your company this evening when I hope we will effect some repairs to my ship.&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;image: matchlock&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Caption&lt;/p&gt;
+&lt;p&gt;Filled with curiosity, you open the wooden crate. Nested in folds of rough wool cloth is a very new musket. Lifting it out, you notice there&#39;s something odd about it. As understanding dawns, you feel giddy with excitement and the rest of the world disappears. Olaudah laughs from across the room: &quot;Yes, we thought you would like to see this.&quot; You smile and begin explaining to John: This is a new pattern. &lt;em&gt;The&lt;/em&gt; new pattern. You point to the flourishing initials stamped into the metal behind the hammer: the mark of a leading master of the London Gunmaker&#39;s Company who supply the army. The captain general at the fort up there probably received a crate of these today. The lock is something new - not exactly the French lock, but not exactly the old English firelock, either. You glance at Olaudah and he nods, adding that they all look like this. Captain Gardner was able to buy one for himself just before leaving Greenwich. This is the new pattern for the army.&lt;/p&gt;
+&lt;p&gt;You can see why. This lock is simpler than the old one, easier to make and operate. You can make this here. Given enough fuel for the forge, you can make lots of them, and fast.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;image: flintlock&lt;/p&gt;
-&lt;p class=&quot;caption&quot;&gt;Caption&lt;/p&gt;
+&lt;img class=&quot;border&quot; src=&quot;images/gunmaker-mark.jpg&quot; alt=&quot;close view of gun lock metal with stamps and decorative flourishes&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Gun maker&#39;s marks on an English pistol, c. 1730. Weaver and Godwin, &quot;Thomas Green: Gunmaker&quot; (&lt;em&gt;Arms and Armour&lt;/em&gt;, 2023).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;You thank Olaudah again and settle down at your workbench. With measuring tape and fine charcoal pencils you begin drawing a minutely detailed schematic of the new pattern. You&#39;re lost in the task and nearly jump out of your skin when there&#39;s a thunderous knock on the door.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button [[Continue |governor]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You need to make some detailed sketches. ... 
-
-But you also need to do something about the governor - right now. You tell your servants to if $press is not hide keep working on assembling the press if $press is hide stash the press in the secret storeroom as fast as possible 
-
-Meanwhile, you clear a space on the workbench, fetch paper and ink, and make a detailed sketch with the measurements and notes you need to make this new musket yourself. Then, you re-package the musket carefully in its crate and write a note of thanks. As a gesture of friendship for the captain, you add a gift of:
-
-a fine lock and key you made last week (very valuable, and a proof of your skill) set $gift to lock
-
-a box of best-quality nails (always useful on a trade ship) set $gift to nails
-
-the lock and a big box of nails, only wishing it could be more. set $gift to big
-
-A thunder of knocking startles you all, and [[the door slams open |governor]]. 
 </tw-passagedata><tw-passagedata pid="6" name="governor" tags="" position="1600,700" size="100,100">[[Go back |shop]]
 &lt;div class=&quot;container&quot;&gt;
 
@@ -2169,7 +2124,20 @@ how much do you sell?
 none set $wealth to +40 
 
 how have your fortunes changed with these trades? [[trade-buy]]
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">Option 2: Works to display 6 stickers at random but nothing is added to the inventory array (or deleted from the stickers array, prob) bc obvs ... 
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">But you also need to do something about the governor - right now. You tell your servants to if $press is not hide keep working on assembling the press if $press is hide stash the press in the secret storeroom as fast as possible 
+
+Meanwhile, you clear a space on the workbench, fetch paper and ink, and make a detailed sketch with the measurements and notes you need to make this new musket yourself. Then, you re-package the musket carefully in its crate and write a note of thanks. As a gesture of friendship for the captain, you add a gift of:
+
+a fine lock and key you made last week (very valuable, and a proof of your skill) set $gift to lock
+
+a box of best-quality nails (always useful on a trade ship) set $gift to nails
+
+the lock and a big box of nails, only wishing it could be more. set $gift to big
+
+A thunder of knocking startles you all, and the door slams open (link to gov)
+
+
+Option 2: Works to display 6 stickers at random but nothing is added to the inventory array (or deleted from the stickers array, prob) bc obvs ... 
 
 To do: How to capture the value of the selected sticker so it can be deleted from stickers and added to inventory? 
 
@@ -2531,17 +2499,25 @@ you continue experimenting with new weapons and tactics; you write and print a f
 
 if $mi
 
-end game [[jackson-end]]</tw-passagedata><tw-passagedata pid="12" name="jackson-end" tags="" position="1400,1550" size="100,100">end game message: if $jackson-end is fail, defeat, victory
+end game</tw-passagedata><tw-passagedata pid="12" name="jackson-end" tags="" position="900,300" size="100,100">div: Choose an ending:
 
-stats
+1. happily ever after
+2. die of dysentery
+3. something else
+4. write your own (textarea)
+submit = reload page, disappear this div 
 
-print story
+Display stats and treasure chest
 
-print to pdf btn
+Print story w images and evidence and selected ending and works cited
 
-start over and try diff choices [[jackson]] 
+print to pdf instructions
 
-try the other roles: [[virginia]] Lady B and Hall</tw-passagedata><tw-passagedata pid="13" name="trade-buy" tags="" position="2000,825" size="100,100">nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
+play again to try new choices or try out another character
+
+
+
+</tw-passagedata><tw-passagedata pid="13" name="trade-buy" tags="" position="2000,825" size="100,100">nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
 
 print trade sell: how much of these trades will you take in various forms?
 
@@ -2738,7 +2714,7 @@ if $rebels-print-colony is good
 if $rebels-print-court is fail
 if $rebels-print-colony is fail
 
-end game [[jackson-end]] </tw-passagedata><tw-passagedata pid="27" name="sick" tags="Luck" position="350,1150" size="100,100">You die in a smallpox outbreak. 
+end game </tw-passagedata><tw-passagedata pid="27" name="sick" tags="Luck" position="350,1150" size="100,100">You die in a smallpox outbreak. 
 
 [[Restart the Virginia time travel portal |virginia]]
 </tw-passagedata><tw-passagedata pid="28" name="virginia-mob1" tags="Mobs" position="350,1250" size="100,100">At random on timer, mobs appear and moves across the screen and disappear
