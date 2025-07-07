@@ -452,8 +452,8 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   justify-content: space-around;
 }
 
-.hero-gov {
-background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/hero-flintlock.jpg");
+.hero-result {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/hero-result.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -939,6 +939,7 @@ console.log(tooltipList)
 &lt;&lt;if $capt is &quot;&quot;&gt;&gt;
 [[Make a choice |dock]]
 
+
 &lt;&lt;elseif $capt is &quot;command&quot;&gt;&gt;
 &lt;&lt;set $wealthstart to $wealth&gt;&gt;
 [[Go back |dock]]
@@ -1190,6 +1191,7 @@ console.log(tooltipList)
 
 
 
+
 &lt;&lt;elseif $capt is &quot;friend&quot;&gt;&gt;
 &lt;&lt;set $wealthstart to $wealth&gt;&gt;
 [[Go back |dock]]
@@ -1203,7 +1205,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
-&lt;p&gt;The captain gratefully accepts, and you send your apprentice jogging up toward the fort, with instructions to stop at your shop and send the servant down with fresh bacon, bread, and beer. Settling down to wait, the group takes a seat on some empty tobacco barrels and pass the time in friendly conversation:&lt;/p&gt;
+&lt;p&gt;The captain&#39;s name is Thomas Gardner. He gratefully accepts your offer, and you send John jogging up toward the fort, with instructions to stop at your shop and send the servant down with fresh bacon, bread, and beer. Settling down to wait, the group takes a seat on some empty tobacco barrels and pass the time in friendly conversation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You share the latest news about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;The captain knows about Nathaniel Bacon&#39;s challenge to Governor Berkeley&#39;s regime, and he&#39;s curious to hear the latest. You tell him that Bacon has a bad reputation as a liar and a pompous fool, but old Governor Berekeley is losing friends fast. In your opinion, it started with the governor&#39;s new rules about trading with the tribes. He suddenly made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes. The captain rolls his eyes and shakes his head, and you nod and chuckle, adding that the governor has levied heavy new taxes to pay for these forts - a tax that can &lt;span class=&quot;bi&quot;&gt;only&lt;/span&gt; by paid in tobacco.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;The captain shares what he&#39;s heard of the royal court&#39;s view of Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The captain laughs as he delivers his news: There&#39;s a huge new tax on tobacco! Ha ha! Oh, how the wigged and powdered gentlemen will howl. You both share some unkind remarks about the upper classes. The captain grows thoughtful and asks you, as a friend, to keep this news about the tobacco tax private for now. The governor will find out today, in any case, and then everyone will know. You agree. Obviously, this will give the captain a signfiicant advantage today when the wealthy plantation owners come to buy supplies, imagining their tobacco is worth significantly more than it really is, thanks to this new tax.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
@@ -2062,18 +2064,118 @@ console.log(tooltipList)
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot;  src=&quot;images/press.jpg&quot; alt=&quot;simple wooden printing press&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;A colonial printing press c. 1720. From the &lt;a href=&quot;https://americanhistory.si.edu/collections/object/nmah_882271&quot; target-&quot;_blank&quot;&gt;National Museum of American History&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;A colonial printing press c. 1720. From &lt;a href=&quot;https://americanhistory.si.edu/collections/object/nmah_882271&quot; target-&quot;_blank&quot;&gt;National Museum of American History&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;The door slams open, nearly flattening Tom. The governor storms into the room, flanked by his clerk and a couple of soldiers from the garrison. He&#39;s not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised (he asserts) by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars, &quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to perish in the howling wilderness!&quot;&lt;/p&gt;
+&lt;p&gt;The door slams open, nearly flattening Tom. The governor storms into the room, flanked by his clerk and a couple of soldiers from the garrison. Governor Berkeley is not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars, &quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to the howling wilderness!&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You&#39;ve been thinking about this for weeks, and you have some ideas on how to handle the governor. Fortunately, Bacon&#39;s Rebellion has him at a disadvantage, but also extremely defensive. And your brain is a little paralyzed from the yelling. It keeps repeating, &quot;Babylonical confusion,&quot; and you&#39;re in dire danger of giggling ... which could actually be deadly in this moment.&quot;&lt;/p&gt;
+&lt;p&gt;You&#39;ve been thinking about this for weeks, and you have a plan. Fortunately, Bacon&#39;s Rebellion has him at a disadvantage, but it also makes him extremely defensive. But it&#39;s hard to think after all the yelling. Your brain keeps repeating, &quot;Babylonical confusion,&quot; which you find hilarious.&lt;/p&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;h2&gt;Here are a few options. You&#39;ll need to mine for knowledge from history before you can craft this choice (choose the pickaxe below to head for the mine).&lt;/h2&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;What will you choose?&lt;/h2&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$gov&quot; &quot;defy&quot;&gt;&gt;Defiance.&lt;/span&gt; Refuse to obey. Insist that as a free and law-abiding English citizen, you have every right to use a printing press. He has no authority to stop you.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$gov&quot; &quot;lie&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Lie.&lt;/span&gt; Feign disappointment. Humbly apologize. Promise to deliver the press back to the ship by nightfall. Once the governor leaves, disassemble the press and stowe it in pieces in your storeroom. Tomorrow, you will build a false wall in the bedchamber and work the press from inside the secret space.&lt;/label&gt;&lt;/li&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$gov&quot; &quot;ask&quot;&gt;&gt; Assure the governor that, as a loyal royalist, you share his concerns about the insidious potential of the printing press as an instrument of evil. Mention the happy news that you are now able to produce the newest army firelocks, in quantity, and that you would be pleased to supply the garrison or the governor&#39;s household at very reasonable prices. During these sad times of treasonous rebellion, you are eager to offer your services to the king&#39;s loyal government. Finally, ask the governor to permit you to address the council with your request to operate a press.&lt;&lt;set $score to $score +5&gt;&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;&lt;else&gt;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$gov&quot; &quot;ask&quot;&gt;&gt; Assure the governor that, as a loyal royalist, you share his concerns about the insidious potential of the printing press as an instrument of evil. Ask that he allow you to address the council with your request to operate a press.&lt;&lt;set $score to $score + 5&gt;&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button [[Continue |result]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="7" name="result" tags="" position="2000,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+
+&lt;div class=&quot;row hero-result&quot;&gt;
+&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;h1&gt;The Next Day&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;&lt;if ($gov is &quot;lie&quot;) and ($serv isnot &quot;feed&quot;) and ($capt isnot &quot;friend&quot;)&gt;&gt;
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;The governor is mollified. When he leaves, you and the servants store the press in pieces underneath your store of scrap iron and timber. You load a few rocks into the original crate for weight and nail it closed. By nightfall, the crates have been returned to the ship.&lt;/p&gt;
+&lt;p&gt;The next day, Tom and John betray your secret to friends and neighbors. They feel no great loyalty to you, and good servants are in high demand. It won&#39;t take them long to sign a contracts with new masters.&lt;/p&gt;
+&lt;p&gt;Gossip spreads like wildfire. Before you&#39;ve printed a single page, the governor&#39;s clerk is bursting through your door again, followed by the captain general and soldiers from the fort. You&#39;re arrested, thrown in jail, and convicted of sedition and fraud. The council decides to exile you from the colony (though, mercifully, not to brand or whip you). They pass a new &quot;Act Concerning Printing,&quot; banning all printing presses. You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;&gt;
+
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;What will you do now?&lt;/h2&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;rebel&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Rebellion:&lt;/span&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, but they can&#39;t take your skills. The rebels will welcome you.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;leave&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Go home: &lt;/span&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;wilderness&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;The Howling Wilderness:&lt;/span&gt; Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Find a defensible spot near good water and fertile land, and plant your own homestead. Trade with the local tribes. Virginia law prescribes the death penalty for anyone who teaches an Indian to use a gun. What if ... ?&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button [[Continue |jackson-end]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;&lt;else if $gov is &quot;defy&quot;&gt;&gt;
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;The governor is well within his authority when he orders your arrest for sedition. The soldiers march you up to the fort and throw you in jail. The next day, the council orders you fined and exiled (but, mercifully, not whipped or branded). The printing press is smashed and burned. A new &quot;Act Concerning Printing&quot; is passed, explicitly banning all printing presses.&lt;/p&gt;
+&lt;p&gt;You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
+
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;rebel&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Rebellion:&lt;/span&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, but they can&#39;t take your skills. The rebels will welcome you.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;leave&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Leave: &lt;/span&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;wilderness&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;The Howling Wilderness:&lt;/span&gt; Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Find a defensible spot near good water and fertile land, and plant your own homestead. Trade with the local tribes. Virginia law prescribes the death penalty for anyone who teaches an Indian to use a gun. What if ... ?&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button [[Continue |jackson-end]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+&lt;&lt;else if $gov is &quot;ask&quot;&gt;&gt;
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially with thousands of other colonists following Nathaniel Bacon in open, violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;And the implied threat in your news about the new firelocks is not lost on the old man: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets ....Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;&lt;/if&gt;&gt; &lt;/p&gt;
+&lt;p&gt;Berkeley asserts his authority by commanding you to present your case to the council in 4 days, and leaves. When he&#39;s gone, you turn to the servants and lead the group in nearly hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate.&lt;/p&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;&lt;p&gt;You send Tom next door to invite your friend, the artist, to join the celebration. He has a violin and a pretty servant girl ... you and John laugh at Tom&#39;s sudden haste in running to fetch them. You sit down to finish the sketch of the new musket and send it back to the ship for Captain Gardner, along with the other bottle of wine.&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. Peoplel think this ritual of yours is shockingly unhealthy and dangerous. Youv&#39;e heard more than one whisper of &quot;sorcery&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Rome after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at your workbench, you stoke the fire, start breakfast, and make enough noise to wake John and Tom ... they aren&#39;t used to wine and this will be an unpleasant morning for them.&lt;/p&gt;
+
+&lt;p&gt;Settling down with charcoal and a clean sanded plank, you begin listing the arguments that will convince the countil to grant you the first printing license in the English colonies.&lt;/p&gt;
+
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;p&gt;What are some of the points you will make at the upcoming council meeting? Here are a few options.&lt;/h2&gt;
+&lt;ul&gt;
 &lt;hr&gt;
 &lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
 &lt;hr&gt;
@@ -2094,62 +2196,32 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;/div&gt;
+
+&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="7" name="trade-sell" tags="" position="2000,700" size="100,100">Over the next days, you carry on w work, council mtgs, militia drills. trade your new goods with neighbors and visitors who pass through the settlement. 
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;p&gt;Here are a few options. You&#39;ll need to mine for knowledge from history before you can craft this choice (choose the pickaxe below to head for the mine).&lt;/h2&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
+&lt;/hr&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;Before making a choice, grab the pickaxe to mine for knowledge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;press-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-if $press is ask, gov shows up to check on press, ask to print 
 
-if $press is lie and $serv is beat, gov catches and you have to leave
-
-if $capt is friend, offer new gunmaking tech in exchange for loan or license to print or new serv (choose male or female) 
-
-Trade: 
-news of the massive drop in tobacco prices, and the high new tobacco duties has spread fast. poor yeomen are desperate to sell off assets to make the tax and pay their debts and keep their land. even upper gentry are more amenable to a trade than they usually are.  
-
-if $muskets or swords
-because of Bacon&#39;s Rebellion, the fort and wealthy planters will want all the: 
-matchlock muskets
-swords
-how much do you sell?
-50% set $wealth to +100 set $trade-sell to +100
-100% set $wealth to +200 set $trade-sell to +200
-0 set $wealth to +150
-
-if $saltpeter or ... 
-you keep the following items because nobody else can use them, anyhow:
-saltpeter 
-sulfur
-lead
-paper
-copper
-iron
-set $wealth to +400
-
-With the steep drop in tobacco prices, and an equally steep increase in taxes to build forts - payable only in tobacco - most of the yeomen farmers and gentry are broke. Very few will be in a position to buy luxury goods like: 
-printed materials (illustrations, books, essays, periodicals, novels, poems, plays)
-French wine
-silk
-spices: cinnamon, nutmeg, pepper
-coffee
-sugar
-paper
-you can maybe sell half of what you bought. Do you, or do you keep it for now? Hope the economy will stabilize in the future?  
-sell 50% set $wealth to +50  set $trade-sell to +50
-sell 10% set $wealth to +10 set $trade-sell to +10
-sell none set $wealth to +40
-
-you&#39;re able to find buyers for the essentials: 
-rum
-wool
-salt cod
-cheese
-how much do you sell?
-100% set $wealth to +50
-50% set $wealth to +25
-none set $wealth to +40 
-
-how have your fortunes changed with these trades? [[trade-buy]]
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">But you also need to do something about the governor - right now. You tell your servants to if $press is not hide keep working on assembling the press if $press is hide stash the press in the secret storeroom as fast as possible 
+But you also need to do something about the governor - right now. You tell your servants to if $press is not hide keep working on assembling the press if $press is hide stash the press in the secret storeroom as fast as possible 
 
 Meanwhile, you clear a space on the workbench, fetch paper and ink, and make a detailed sketch with the measurements and notes you need to make this new musket yourself. Then, you re-package the musket carefully in its crate and write a note of thanks. As a gesture of friendship for the captain, you add a gift of:
 
@@ -2421,7 +2493,7 @@ if $gov is lie and $serv is beat or ignore
 
 if $gov is lie and $serv is feed
 
-</tw-passagedata><tw-passagedata pid="9" name="press" tags="" position="1700,800" size="100,100">if $gov is argue or defy
+</tw-passagedata><tw-passagedata pid="9" name="press" tags="" position="1600,1000" size="100,100">if $gov is argue or defy
 set $power to +50
 
 With relief, you note the governor&#39;s softened posture. He&#39;s listening with attention rather than shouting abuse. You feel less like a schoolboy about to receive a whipping, and more like the important citizen you are. There&#39;s a welcome and lengthening silence. At last, he nods and squares his shoulders, re-asserting command. He says this is a serious matter. The decision must be made with the advice of the council. 
@@ -2542,7 +2614,10 @@ play again to try new choices or try out another character
 
 
 
-</tw-passagedata><tw-passagedata pid="13" name="trade-buy" tags="" position="2000,825" size="100,100">nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
+</tw-passagedata><tw-passagedata pid="13" name="trade-buy" tags="" position="2300,700" size="100,100">&lt;p&gt;Over the next days, you carry on w work, council mtgs, militia drills. trade your new goods with neighbors and visitors who pass through the settlement. 
+
+
+nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
 
 print trade sell: how much of these trades will you take in various forms?
 
@@ -2561,7 +2636,56 @@ set $horse tooltip yes, can graze in x for use
 set $male indentured servant tooltip sure but female would be better bc you have a male one
 set $female indentured servant tooltip yes please for sure absolutely 
 
-[[preparing]] </tw-passagedata><tw-passagedata pid="14" name="council-decision" tags="" position="2100,1550" size="100,100">It&#39;s the day of the big council mtg 
+[[preparing]] 
+
+Trade: 
+news of the massive drop in tobacco prices, and the high new tobacco duties has spread fast. poor yeomen are desperate to sell off assets to make the tax and pay their debts and keep their land. even upper gentry are more amenable to a trade than they usually are.  
+
+if $muskets or swords
+because of Bacon&#39;s Rebellion, the fort and wealthy planters will want all the: 
+matchlock muskets
+swords
+how much do you sell?
+50% set $wealth to +100 set $trade-sell to +100
+100% set $wealth to +200 set $trade-sell to +200
+0 set $wealth to +150
+
+if $saltpeter or ... 
+you keep the following items because nobody else can use them, anyhow:
+saltpeter 
+sulfur
+lead
+paper
+copper
+iron
+set $wealth to +400
+
+With the steep drop in tobacco prices, and an equally steep increase in taxes to build forts - payable only in tobacco - most of the yeomen farmers and gentry are broke. Very few will be in a position to buy luxury goods like: 
+printed materials (illustrations, books, essays, periodicals, novels, poems, plays)
+French wine
+silk
+spices: cinnamon, nutmeg, pepper
+coffee
+sugar
+paper
+you can maybe sell half of what you bought. Do you, or do you keep it for now? Hope the economy will stabilize in the future?  
+sell 50% set $wealth to +50  set $trade-sell to +50
+sell 10% set $wealth to +10 set $trade-sell to +10
+sell none set $wealth to +40
+
+you&#39;re able to find buyers for the essentials: 
+rum
+wool
+salt cod
+cheese
+how much do you sell?
+100% set $wealth to +50
+50% set $wealth to +25
+none set $wealth to +40 
+
+
+
+</tw-passagedata><tw-passagedata pid="14" name="council-decision" tags="" position="2100,1550" size="100,100">It&#39;s the day of the big council mtg 
 
 if $press-secret is no
 your audience is primed; the benefits and power are evident and indeed proven here in real time; you win this one easily
@@ -4363,7 +4487,7 @@ SOURCES: JACKSON
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="press-choice" tags="" position="1700,1000" size="100,100">
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="press-choice" tags="" position="1600,1200" size="100,100">
 choice 1 
 set $gov to ask
 Profess loyalty to the king and the colony and the governor personally. Remind him that you are a good royalist with nothing but contempt for rebellion.  This is well known from council meetings. You command the best-armed and most loyal militia unit in the colony. Having established your status, you soften your tone and show respect. You pledge to print nothing disloyal, seditious, rebellious, or heretical. You humbly beg the governor to consider the value of a printing press as a tool for: 
@@ -4378,7 +4502,7 @@ checkboxes: he has no right to arrest you because you haven&#39;t done anything 
 choice 3 
 $set gov to lie
 Lie. Capitulate and apologize. Pledge to return the press to the ship immediately. Assure the governor that you had no intention of publishing any seditious or disloyal or improper matter
-</tw-passagedata><tw-passagedata pid="51" name="inv-press" tags="" position="1700,1100" size="100,100"></tw-passagedata><tw-passagedata pid="52" name="coffee" tags="Source" position="800,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+</tw-passagedata><tw-passagedata pid="51" name="inv-press" tags="" position="1600,1300" size="100,100"></tw-passagedata><tw-passagedata pid="52" name="coffee" tags="Source" position="800,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-11&quot;&gt;
@@ -4422,7 +4546,7 @@ Lie. Capitulate and apologize. Pledge to return the press to the ship immediatel
 &lt;p&gt;God save the king.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="press-mine" tags="" position="1700,900" size="100,100">[[Go back |press]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="press-mine" tags="" position="1600,1100" size="100,100">[[Go back |press]]
 
 &lt;div class=&quot;container mine&quot;&gt;
 
