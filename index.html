@@ -138,6 +138,13 @@ margin-left: 3.5em;
   font-size: 10pt;
   font-style: italic;
   text-align: center;
+  padding-top: -15px;
+}
+
+.rt {
+  font-size: 10pt;
+  font-style: italic;
+  text-align: right;
 }
 
 .header {
@@ -596,7 +603,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 }
 
 .imagemap {
-  height: 500px;
+  height: 100%;
 }
 
 .chest-inside {
@@ -606,6 +613,9 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   align-content: space-around;
   padding: 5px; 
 }
+
+
+
 
 @media (max-width: 576px) {
   .hero-start, .hero-jackson, .hero-morning, .hero-dock, .hero-virginia {
@@ -784,6 +794,8 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: English Flintlock Pistol, c. 1650. From &lt;a href=&quot;http://collection.nam.ac.uk/detail.php?acc=1964-06-9-4-1&quot; target=&quot;_blank&quot;&gt; National Army Museum&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;row portal-intro&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;We can call Virginia the first successful English colony in North America if we use the term &quot;successful&quot; lightly. The old Virginia Company went bankrupt. People starved and died in high numbers - most of them were young indentured servants. There were hardly any women. The wealthy planter elite owned vast estates and monopolized government and access to land. In 1676, a wealthy newcomer named Nathaniel Bacon united a wide swath of the colony in violent rebellion against Governor Berkeley and the status quo. They demanded an end to unfair taxation and corrupt government, and launched a brutal war of territorial expansion against the neighboring tribes. Berkeley regained control within a year, but the rebellion marked a major turning point for the southern colonies. It taught the wealthy planters to fear a population of discontented laborers. They soon built a labor force of African slaves rather than European indentured servants.&lt;/p&gt;
@@ -844,6 +856,8 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from Willaerts, Ships in the Estuary (Netherlands, 1640). From &lt;a href=&quot;https://www.rmg.co.uk/collections/objects/rmgc-object-11759&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich&lt;/a&gt;.&lt;/p&gt;
+
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Peace has been restored. Your shop is perfumed with bacon and ringing with the happy sounds of industry.&lt;/p&gt;
@@ -883,6 +897,8 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from Willaerts, Ships in the Estuary (Netherlands, 1640). From &lt;a href=&quot;https://www.rmg.co.uk/collections/objects/rmgc-object-11759&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich&lt;/a&gt;.&lt;/p&gt;
+
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;After a quick breakfast, you duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
@@ -920,6 +936,8 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from Willaerts, Ships in the Estuary (Netherlands, 1640). From &lt;a href=&quot;https://www.rmg.co.uk/collections/objects/rmgc-object-11759&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich&lt;/a&gt;.&lt;/p&gt;
+
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;After a quick breakfast, you duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
@@ -953,15 +971,16 @@ console.log(tooltipList)
 
 &lt;&lt;elseif $capt is &quot;command&quot;&gt;&gt;
 &lt;&lt;set $wealthstart to $wealth&gt;&gt;
-[[Go back |dock]]
 
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
 &lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;At the Dock&lt;/h1&gt;
+&lt;h1&gt;Trade&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from frontispiece of John Smith&#39;s &lt;em&gt;A True Relation of Such Occurrences and Accidents of Note as Hath Happened in Virginia&lt;/em&gt; (1608). From &lt;a href=&quot;https://virginiahistory.org/learn/virginia-company-london&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 
@@ -1205,7 +1224,6 @@ console.log(tooltipList)
 
 &lt;&lt;elseif $capt is &quot;friend&quot;&gt;&gt;
 &lt;&lt;set $wealthstart to $wealth&gt;&gt;
-[[Go back |dock]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -1214,6 +1232,8 @@ console.log(tooltipList)
 &lt;h1&gt;At the Dock&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from frontispiece of John Smith&#39;s &lt;em&gt;A True Relation of Such Occurrences and Accidents of Note as Hath Happened in Virginia&lt;/em&gt; (1608). From &lt;a href=&quot;https://virginiahistory.org/learn/virginia-company-london&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;p&gt;The captain&#39;s name is Thomas Gardner. He gratefully accepts your offer, and you send John jogging up toward the fort, with instructions to stop at your shop and send the servant down with fresh bacon, bread, and beer. Settling down to wait, the group takes a seat on some empty tobacco barrels and pass the time in friendly conversation:&lt;/p&gt;
@@ -1611,8 +1631,10 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+
+
+
 &lt;&lt;elseif $capt is &quot;ignore&quot;&gt;&gt;
-[[Go back |dock]]
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -1621,6 +1643,8 @@ console.log(tooltipList)
 &lt;h1&gt;At the Dock&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from frontispiece of John Smith&#39;s &lt;em&gt;A True Relation of Such Occurrences and Accidents of Note as Hath Happened in Virginia&lt;/em&gt; (1608). From &lt;a href=&quot;https://virginiahistory.org/learn/virginia-company-london&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 
@@ -2010,10 +2034,15 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Velazquez, Portrait of Juan de Pareja (Spain, c. 1650). From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437869&quot; target=&quot;_blank&quot;&gt; Metropolitain Museum of Art&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;p&gt;You let out your breath in relief as you recognize the African you met on the ship yesterday. He&#39;s Captain Gardner&#39;s servant ... or possibly a slave, you aren&#39;t sure. You remember his name: Olaudah. He hands Thomas a long, wooden crate and passes you a folded note. You thank him and offer some bacon and ale from breakfast, gesturing at the bench. He sits and tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press. The rumors have begun.&lt;/p&gt;
-&lt;p&gt;You share a hearty expletive with the group, setting off a wave of nervous chuckles. Everyone knows old Berkeley hates printers. John and Tom cluster close around you as you unfold the notin their curiosity.&lt;/p&gt;
-&lt;p&gt;The captain&#39;s note says: &lt;em&gt;You may like to examine the enclosed. Olaudah will return it to me when you are finished.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You share a hearty expletive with the group, setting off a wave of nervous chuckles. Everyone knows old Berkeley hates printers. John and Tom cluster close around you as you unfold the note. It says: &lt;em&gt;You may like to examine the enclosed. Olaudah will return it to me when you are finished.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;img class=&quot;border&quot; src=&quot;images/land-pattern-1702.jpg&quot; alt=&quot;musket&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;An early Land Pattern (later known as &quot;Brown Bess&quot;) flintlock musket, c. 1730. The standard weapon of the British army from the early 18th to mid 19th century. From &lt;a href=&quot;https://royalarmouries.org/collection/object/object-9151&quot; target=&quot;_blank&quot;&gt;Royal Armouries&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -2030,7 +2059,15 @@ console.log(tooltipList)
 &lt;p&gt;Everyone chuckles, but Tom surprises you by shaking his head: &quot;No, I won&#39;t need to if you can make friends with the Huguenots on the other side of the James. They found coal.&quot; Tom&#39;s brother is a servant at one of those Huguenot farms. You stare at him in amazement. This changes everything. With a local source of coal, your forge can run hot enough and long enough to supply the garrison forever. You&#39;ll be wanting a new forge, come to think of it. You might even be able to cast bronze ... Well, all that can wait. Right now, you need to take some careful measurements and sketch the design, so Olaudah can return the musket to Captain Garnder.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
 
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;img class=&quot;border&quot; src=&quot;images/diderot-lock.jpg&quot; alt=&quot;diagram of interior of gun lock mechanism&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Detail of diagram of a musket lock mechanism from Diderot&#39;s Encyclopedia, c. 1750. From &lt;a href=&quot;https://www.americanrevolutioninstitute.org/masterpieces-in-detail/diderot-encyclopedie/#&quot; target=&quot;blank&quot;&gt;American Revolution Institute&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Settling down at your workbench with a clean plank and fine charcoal pencils, you begin taking measurements and drawing a minutely detailed schematic of the new pattern. You&#39;re lost in the task and nearly jump out of your skin when there&#39;s a thunderous knock on the door.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -2893,6 +2930,7 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;img src=&quot;images/mineshaft-morning.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
+&lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
     &lt;area title=&quot;Indentured servant&#39;s letter (Virginia, 1629)&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;749,471,1243,782&quot; shape=&quot;rect&quot;&gt;
@@ -2910,7 +2948,6 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 [[indenture]]
 
 [[beverley]]
-&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="serv-choice" tags="" position="1100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
@@ -2920,18 +2957,25 @@ anachronism</tw-passagedata><tw-passagedata pid="29" name="serv-mine" tags="" po
 &lt;p&gt;Each choice appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
 &lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
 
+&lt;div class=&quot;row&quot;&gt;
+&lt;h2&gt;Your comments&lt;/h2&gt;
+&lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Frethorne&#39;s letter&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Contract, 1635)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Indenture Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Beverley&#39;s &lt;em&gt;History&lt;/em&gt;&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Apprenticeship Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Spriggs&#39; letter&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;card-group&quot;&gt;
 &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Have breakfast.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
+		  
           &lt;&lt;if $freth1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
@@ -3421,6 +3465,8 @@ SOURCES: JACKSON
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Sketch of a metalsmith&#39;s workshop from Diderot&#39;s Encyclopedia, c. 1750. From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Online Library of Liberty.&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;p&gt;You sink blissfully back into warm dreams. Your neighbor knocks to tell you that a ship has arrived in the harbor, but the noise don&#39;t rouse you, and he quickly hurries on his way.&lt;/p&gt;
 
@@ -3473,6 +3519,8 @@ SOURCES: JACKSON
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;rt&quot;&gt;Above: Sketch of a metalsmith&#39;s workshop from Diderot&#39;s Encyclopedia, c. 1750. From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Online Library of Liberty.&lt;/a&gt;&lt;/p&gt;
+
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;You stir the fire and add wood. You scoop water and oats into the pot and set it on the shelf a good distance from the flames. You cut chunks of bacon and set them on the shelf a bit closer to the flame.&lt;/p&gt;
@@ -3490,7 +3538,7 @@ SOURCES: JACKSON
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/diderot-nails.jpeg&quot; alt=&quot;sketch of workers making nails and types of nails&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Making nails, from Diderot&#39;s Encyclopedia (France, c. 1750). Citation.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;Making nails, from Diderot&#39;s Encyclopedia (France, c. 1750). From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Online Library of Liberty&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3923,15 +3971,15 @@ SOURCES: JACKSON
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Portrait of English Captains Cavendish, Hawkins, Drake (Early 17th-Century)&lt;/h2&gt;
-&lt;p&gt;From Royal Museums Greenwich&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.rmg.co.uk/collections/objects/rmgc-object-14077&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/ships1.jpg&quot; alt=&quot;group of three men in 17th-century clothing&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1PostureSave&quot; false true&gt;&gt; The captains&#39; upright posture and body langauge projects confidence and strength.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1FacesSave&quot; false true autocheck&gt;&gt; The captains&#39; facial expressions show good humor and intelligence.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1WrongSave&quot; false true&gt;&gt; The captains&#39; dress is fine and fashionable, with bright colors and expensive fabrics. It seems impractical for strenuous physical activity - probably an expression of the elite social status which exempted such men from manual labor.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ClothingSave&quot; false true&gt;&gt;The captains&#39; clothing appears sturdy (including leather and heavy fabrics) and functional, suited to the hard labor of life at sea. The simple cut and dark colors contrast with the flamboyant fashion displays of aristocrats and courtiers. Their clothing also indicates personal wealth (lace and rich embroidery). Ornaments like the earrings and strings of pearl represent wealth and success, as well as boldness in exploring dangerous and exotic places.&lt;/&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ItemsSave&quot; false true&gt;&gt; The captains touch or carry objects that symbolizing gobal adventure and experience, including armed conflict: a globe, swords, and a purse.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1PostureSave&quot; false true&gt;&gt; Upright posture and body langauge: confidence and strength.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1FacesSave&quot; false true autocheck&gt;&gt; Facial expressions: good humor and intelligence.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1WrongSave&quot; false true&gt;&gt; Dress: fine and fashionable. Bright colors and expensive fabrics. Impractical for strenuous physical activity. Expresses elite social status and exemption from manual labor.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ClothingSave&quot; false true&gt;&gt;Clothing shows personal wealth (e.g., lace, jewels, rich embroidery). Ornaments like the earrings and strings of pearl may represent boldness in exploring dangerous and exotic places.&lt;/&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ItemsSave&quot; false true&gt;&gt; The captains touch or carry objects symbolizing gobal adventure and experience, including armed conflict (e.g., globe, swords, and a purse).&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1YouthSave&quot; false true&gt;&gt; The captains appear middle aged and young. None are old. They appear physically strong and intelligent.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -3939,22 +3987,21 @@ SOURCES: JACKSON
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Vroom, Dutch Galleon Ramming Spanish Galleys (Netherlands, 1617)&lt;/h2&gt;
-&lt;p&gt;From Web Gallery of Art&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.wga.hu/frames-e.html?/html/v/vroom/hendrick/index.html&quot; target=&quot;_blank&quot;&gt;Web Gallery of Art&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/ships2.jpg&quot; alt=&quot;large ship ramming smaller ships amidst large waves&quot; width=&quot;90%&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2DangerSave&quot; false true&gt;&gt; Battle looks devastating and terrifying, with total destruction of the enemy ships and sailors. For a ship captain in this age of piracy and sea battles, the results of poor decisions could be catastrophic for the whole ship.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2WrongSave&quot; false true&gt;&gt; Battle seems to be experienced mostly at a distance, mitigated by technologically advanced weapons that kept individual seamen relatively insulated from physical danger.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2GroupSave&quot; false true&gt;&gt; Every sailor is risking his life and struggling for survival. A successful ship captain would need strong leadership skills to direct a group of mariners through deadly, desperate crises like this.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2TechSave&quot; false true&gt;&gt; The galleon&#39;s superior technology (weight and firepower) are a decisive advantage. The galleys being destroyed by the galleon are smaller. Because they have fewer cannons and fewer sails, they probably have more limited mobility, range of fire, speed, and maneuverability. Their tactical options would have been severely limited, compared to those of the galleon. The galleon&#39;s size and its number of complex sails would have given it speed and maneuverability, while it&#39;s bristling with cannons and can fire in any direction. Ship captains would have valued the technology, tools, and expertise on which their ship&#39;s survival depended.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2HierarchySave&quot; false true&gt;&gt; The ships are crowded. To execute an attack like this, they all needed to carry out specialized tasks and work together closely and under pressure. A successful captain would have a high tolerance for stress and danger, and an ability to manage a large team in very difficult situations. A captain would probably expect and appreciate clear hierarchies in which each person has a discrete set of roles and responsibilities.&lt;/label&gt;&lt;/li&gt; 
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2DangerSave&quot; false true&gt;&gt; Battle looks devastating and terrifying. Total destruction of the enemy ships and sailors. Captains&#39; poor decisions are deadly for everyone on board.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2WrongSave&quot; false true&gt;&gt; Battle seems to be experienced mostly at a distance, mitigated by technologically advanced weapons. Sailors are not in physical danger.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2GroupSave&quot; false true&gt;&gt; The ships are crowded and every sailor is risking his life and struggling for survival. To succeed, the group needs to perform specialized tasks and work together closely and under intense pressure. Captains would have a high tolerance for stress and danger, and an appreciation for clear chains of command in wich each person has a discrete set of roles and responsibilities. Captains needed strong leadership skills to direct a large group through deadly, desperate crises.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships2TechSave&quot; false true&gt;&gt; The galleon&#39;s superior technology (weight and firepower) are a decisive advantage. The smaller galleys have far fewer cannons and fewer sails - thus, less mobility, range of fire, speed. Captains would have valued the technology, tools, and expertise on which their ship&#39;s survival depended.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;Willaerts, Ships in the Estuary (Netherlands, 1640)&lt;/h2&gt;
-&lt;p&gt;From Web Gallery of Art&lt;/p&gt;
+&lt;p&gt;From Royal Museums Greenwich&lt;/p&gt;
 &lt;img src=&quot;images/ships3.jpg&quot; alt=&quot;ships of different sizes anchored and rowing in an estuary while people unload supplies at the shore&quot; width=&quot;90%&quot; class=&quot;border imc-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
@@ -4840,9 +4887,6 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;&lt;/for&gt;&gt;
-&lt;/div&gt;
-
-
 
 &lt;/div&gt;
 
