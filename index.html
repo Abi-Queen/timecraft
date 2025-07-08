@@ -452,6 +452,17 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   justify-content: space-around;
 }
 
+.hero-flintlock {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/hero-flintlock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .hero-result {
 background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/hero-result.jpg");
   background-repeat: no-repeat;
@@ -1991,8 +2002,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="flintlock" tags="" position="1800,700" size="100,100">[[Go back |shop]]
-&lt;div class=&quot;container&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="flintlock" tags="" position="1800,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-flintlock&quot;&gt;
 &lt;div class=&quot;row transbox-hero&quot;&gt;
@@ -2001,32 +2011,14 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
-&lt;p&gt;You let out your breath in relief as you recognize an African who had helped you load supplies yesterday. He&#39;s the ship captain&#39;s servant, or possibly a slave, you aren&#39;t sure. He hands a small wooden crate to the servant and passes you a folded note.&lt;/p&gt;
-
-&lt;div class=&quot;row choice&quot; id=&quot;choice&quot;&gt;
-&lt;p&gt;You:&lt;/p&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Thank him and offer him a seat at the bench, telling Thomas to get him a cup of ale and some bacon from breakfast while you read the note.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $slave to &quot;friend&quot;&gt;&gt;
-&lt;&lt;replace #choice&gt;&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;The African thanks you in Spanish and sits down and gratefully accepts the food. He tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press.&lt;/p&gt;
-&lt;p&gt;You share a hearty expletive with the group, setting off a wave of chuckles. John and Tom cluster close around you, chores forgotten in their curiosity.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The captain&#39;s note says: &lt;em&gt;You may take pleasure in examining the enclosed. Olaudah will stay with you until you are finished, and will return it to me. I look forward to the pleasure of your company this evening when I hope we will effect some repairs to my ship.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You let out your breath in relief as you recognize the African you met on the ship yesterday. He&#39;s Captain Gardner&#39;s servant ... or possibly a slave, you aren&#39;t sure. You remember his name: Olaudah. He hands Thomas a long, wooden crate and passes you a folded note. You thank him and offer some bacon and ale from breakfast, gesturing at the bench. He sits and tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press. The rumors have begun.&lt;/p&gt;
+&lt;p&gt;You share a hearty expletive with the group, setting off a wave of nervous chuckles. Everyone knows old Berkeley hates printers. John and Tom cluster close around you as you unfold the notin their curiosity.&lt;/p&gt;
+&lt;p&gt;The captain&#39;s note says: &lt;em&gt;You may like to examine the enclosed. Olaudah will return it to me when you are finished.&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Filled with curiosity, you open the wooden crate. Nested in folds of rough wool cloth is a very new musket. Lifting it out, you notice there&#39;s something odd about it. The lock is something new - not exactly the French model, but not exactly the old English one, either. As understanding dawns, the rest of the world disappears and you feel giddy with excitement. Olaudah laughs from across the room: &quot;Yes, we thought you would like to see this.&quot; You nod and begin explaining to John: &quot;This is a new pattern. &lt;em&gt;The&lt;/em&gt; new pattern. Captain Gardner just delivered these to the soldiers at the fort, and he&#39;s managed to get one for himself as well.&quot; You point to the flourishing initials stamped into the metal behind the hammer: the mark of a leading master of the London Gunmaker&#39;s Company who supply the army.&lt;/p&gt;
-&lt;p&gt;Turning back to the new lock, you see that it&#39;s simpler than the old one, easier to make and use. &quot;We can make this here. The London masters make them piece by piece, but we can make the whole thing. With enough fuel for the forge, you can make lots of them, and fast. It would be a lot better if we had our own coal. We&#39;ll burn through what we have here in a week. Poor Tom, get ready to go for more firewood!&quot;&lt;/p&gt;
+&lt;p&gt;Filled with curiosity, you carry the wooden crate to your workbench and open it. Nested in folds of rough wool cloth is a very new musket. Lifting it out, you notice something odd about it. The lock is new - not exactly French, not exactly English, but different. As understanding dawns, the rest of the world disappears and you feel giddy with excitement. Olaudah laughs from across the room: &quot;Yes, we thought you would like to see this.&quot; You nod and begin explaining to John: &quot;This is a new pattern. &lt;em&gt;The&lt;/em&gt; new pattern. I wager Captain Gardner just delivered a dozen of these to the garrison at the fort, and he&#39;s managed to get one for himself as well.&quot; You point to the flourishing initials stamped into the metal behind the hammer: the mark of a leading master of the London Gunmaker&#39;s Company who supply the army.&lt;/p&gt;
+&lt;p&gt;Turning back to the new lock, you see that it&#39;s simpler than the old one, easier to make and faster use. &quot;We can make this here,&quot; you tell John. &quot;The London masters make them separately - one shop makes barrels, one makes locks, and so on. But we can make the whole thing here. And with enough fuel for the forge, we can make lots of them, fast. It would be better if we had our own coal. We&#39;ll burn through what we have there in a week,&quot; - gesturing to the cordwood stacked neatly by size along one wall - &quot;Poor Tom! Get ready to chop more firewood!&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/gunmaker-mark.jpg&quot; alt=&quot;close view of gun lock metal with stamps and decorative flourishes&quot; width=&quot;90%&quot;&gt;
@@ -2035,7 +2027,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;&lt;if $serv isnot &quot;beat&quot;&gt;&gt;
-&lt;p&gt;Everyone chuckles, but Tom surprises you by shaking his head and adding, &quot;Fuel won&#39;t be a problem if you can make friends with those Huguenots on the north bank of the James. They found coal.&quot; You remember that Tom&#39;s brother is a servant at one of those Huguenot farms. So ... this changes everything. With a local source of coal, your forge can run hot enough and long enough to supply the garrison forever. You might even be able to cast bronze ... you shake your head and try to focus. You need to take some careful measurements and sketch the design, so Olaudah can return the musket to Captain Garnder.&lt;/p&gt;
+&lt;p&gt;Everyone chuckles, but Tom surprises you by shaking his head: &quot;No, I won&#39;t need to if you can make friends with the Huguenots on the other side of the James. They found coal.&quot; Tom&#39;s brother is a servant at one of those Huguenot farms. You stare at him in amazement. This changes everything. With a local source of coal, your forge can run hot enough and long enough to supply the garrison forever. You&#39;ll be wanting a new forge, come to think of it. You might even be able to cast bronze ... Well, all that can wait. Right now, you need to take some careful measurements and sketch the design, so Olaudah can return the musket to Captain Garnder.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;p&gt;Settling down at your workbench with a clean plank and fine charcoal pencils, you begin taking measurements and drawing a minutely detailed schematic of the new pattern. You&#39;re lost in the task and nearly jump out of your skin when there&#39;s a thunderous knock on the door.&lt;/p&gt;
@@ -2067,11 +2059,11 @@ console.log(tooltipList)
 &lt;p class=&quot;caption&quot;&gt;A colonial printing press c. 1720. From &lt;a href=&quot;https://americanhistory.si.edu/collections/object/nmah_882271&quot; target-&quot;_blank&quot;&gt;National Museum of American History&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;The door slams open, nearly flattening Tom. The governor storms into the room, flanked by his clerk and a couple of soldiers from the garrison. Governor Berkeley is not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars, &quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to the howling wilderness!&quot;&lt;/p&gt;
+&lt;p&gt;The door slams open, nearly flattening Tom. Governor Berkeley storms into the room, flanked by his clerk and a couple of soldiers from the garrison. Berkeley is not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars, &quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to the howling wilderness!&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;You&#39;ve been thinking about this for weeks, and you have a plan. Fortunately, Bacon&#39;s Rebellion has him at a disadvantage, but it also makes him extremely defensive. But it&#39;s hard to think after all the yelling. Your brain keeps repeating, &quot;Babylonical confusion,&quot; which you find hilarious.&lt;/p&gt;
+&lt;p&gt;You&#39;ve been thinking about this for weeks, and you have a plan. Fortunately, Bacon&#39;s Rebellion has Berkeley at a disadvantage, but it also makes him extremely defensive. But it&#39;s hard to think after all the yelling. Your brain keeps repeating, &quot;Babylonical confusion,&quot; which you find hilarious.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;What will you choose?&lt;/h2&gt;
@@ -2136,7 +2128,7 @@ console.log(tooltipList)
 
 
 
-&lt;&lt;else if $gov is &quot;defy&quot;&gt;&gt;
+&lt;&lt;elseif $gov is &quot;defy&quot;&gt;&gt;
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;p&gt;The governor is well within his authority when he orders your arrest for sedition. The soldiers march you up to the fort and throw you in jail. The next day, the council orders you fined and exiled (but, mercifully, not whipped or branded). The printing press is smashed and burned. A new &quot;Act Concerning Printing&quot; is passed, explicitly banning all printing presses.&lt;/p&gt;
 &lt;p&gt;You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
@@ -2163,13 +2155,21 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 
-&lt;&lt;else if $gov is &quot;ask&quot;&gt;&gt;
-&lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially with thousands of other colonists following Nathaniel Bacon in open, violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;And the implied threat in your news about the new firelocks is not lost on the old man: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets ....Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;&lt;/if&gt;&gt; &lt;/p&gt;
-&lt;p&gt;Berkeley asserts his authority by commanding you to present your case to the council in 4 days, and leaves. When he&#39;s gone, you turn to the servants and lead the group in nearly hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate.&lt;/p&gt;
-&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;&lt;p&gt;You send Tom next door to invite your friend, the artist, to join the celebration. He has a violin and a pretty servant girl ... you and John laugh at Tom&#39;s sudden haste in running to fetch them. You sit down to finish the sketch of the new musket and send it back to the ship for Captain Gardner, along with the other bottle of wine.&lt;/p&gt;&lt;&lt;/if&gt;&gt;
-
-&lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. Peoplel think this ritual of yours is shockingly unhealthy and dangerous. Youv&#39;e heard more than one whisper of &quot;sorcery&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Rome after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at your workbench, you stoke the fire, start breakfast, and make enough noise to wake John and Tom ... they aren&#39;t used to wine and this will be an unpleasant morning for them.&lt;/p&gt;
+&lt;&lt;elseif $gov is &quot;ask&quot;&gt;&gt;
+&lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially now, while thousands of other colonists have joined Nathaniel Bacon in violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;And the implied threat in your news about the new muskets is not lost on the old man: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets .... Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;/p&gt;
+&lt;p&gt;Berkeley asserts his authority by commanding you to present your case to the council in 4 days. His dignity affirmed, he turns and leaves, trailed by the clerk and soldiers.&lt;/p&gt;
+&lt;&lt;if ($serv is &quot;feed&quot;) and ($capt is &quot;friend&quot;)&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;When they&#39;re gone, you all nearly collapse in hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate. &lt;p&gt;You send Tom next door to invite your friend, the clothier, to join the celebration. He has a violin and a pretty servant girl ... you and John laugh at Tom&#39;s sudden haste in running to fetch them. You sit down to finish your sketch before sending the musket back to Captain Gardner with Olaudah, along with another bottle of wine.&lt;/p&gt;
+&lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. The good folk of Jamestown think this ritual of yours is shockingly unhealthy and dangerous. You&#39;ve heard more than one whisper of &quot;sorcerer&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Canterbury after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at the shop, you stoke the fire, start breakfast, and make enough noise to wake John and Tom (a lot of noise) ... they aren&#39;t used to wine, and this will be an unpleasant morning for them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+Image
+&lt;p class=&quot;caption&quot;&gt;Caption&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 
 &lt;p&gt;Settling down with charcoal and a clean sanded plank, you begin listing the arguments that will convince the countil to grant you the first printing license in the English colonies.&lt;/p&gt;
 
@@ -2199,24 +2199,21 @@ console.log(tooltipList)
 
 &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;p&gt;Here are a few options. You&#39;ll need to mine for knowledge from history before you can craft this choice (choose the pickaxe below to head for the mine).&lt;/h2&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
-&lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
-&lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
-&lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
-&lt;/hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Option &lt;/span&gt; Describe&lt;/li&gt;
-&lt;/ul&gt;
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">&lt;div class=&quot;row choice&quot; id=&quot;choice&quot;&gt;
+&lt;p&gt;You:&lt;/p&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Before making a choice, grab the pickaxe to mine for knowledge.&lt;/p&gt;
+&lt;p&gt;Thank him and offer him a seat at the bench, telling Thomas to get him a cup of ale and some bacon from breakfast while you read the note.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;press-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Select&quot;&gt;&gt;&lt;&lt;set $slave to &quot;friend&quot;&gt;&gt;
+&lt;&lt;replace #choice&gt;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;The African thanks you in Spanish and sits down and gratefully accepts the food. He tells you, partly in Spanish, partly in English, that the governor&#39;s clerk was at the dock early this morning, asking questions about the printing press. The rumors have begun.&lt;/p&gt;
+&lt;p&gt;You share a hearty expletive with the group, setting off a wave of chuckles. John and Tom cluster close around you, chores forgotten in their curiosity.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
