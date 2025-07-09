@@ -762,6 +762,14 @@ console.log(tooltipList)
 &lt;&lt;set $ships5MixingSave to false&gt;&gt;
 &lt;&lt;set $ships5MixingSelect to false&gt;&gt;
 
+&lt;&lt;set $coffeec to &quot;&quot;&gt;&gt;
+&lt;&lt;set $coffee1Save to false&gt;&gt;
+&lt;&lt;set $coffee1Select to false&gt;&gt;
+&lt;&lt;set $coffee2Save to false&gt;&gt;
+&lt;&lt;set $coffee2Select to false&gt;&gt;
+&lt;&lt;set $coffee3Save to false&gt;&gt;
+&lt;&lt;set $coffee3Select to false&gt;&gt;
+
 &lt;&lt;set $miltonc to &quot;&quot;&gt;&gt;
 &lt;&lt;set $milton1Save to false&gt;&gt;
 &lt;&lt;set $milton1Select to false&gt;&gt;
@@ -3326,6 +3334,7 @@ SOURCES: JACKSON
 &lt;&lt;set $ships4Cost to &quot;These ships are huge. Each one represents a fortune in men, guns and powder, rope, sails, timber. If the holds are full of trade goods, the amount of wealth each ship represents is staggering. A ship captain would be accustomed to carrying a heavy burden of responsibility for human lives and vast fortunes. They would have strong willpower.&quot;&gt;&gt;
 &lt;&lt;set $ships5Wrong to &quot;The dock looks like a dangerous place where people do not linger. They seem to visit the dock for a specific purpose and then leave as soon as possible. A ship captain arriving at the dock would want to move through the area quickly and safely.&quot;&gt;&gt;
 &lt;&lt;set $ships5Mixing to &quot;A diverse group interacts comfortably, including women and children, and men from very high and very low social strata (judging by the quality of their hats and clothing). A ship captain arriving at the dock would expect to engage in conversation or trade with a wide variety of people.&quot;&gt;&gt;
+
 &lt;&lt;set $milton1 to &quot;But that’s exactly why we must be careful. To destroy a good book is almost like killing a person. Killing a man ends the life of a rational being made in God’s image; but destroying a good book is like killing reason itself - an attack on the very image of God in human understanding.&quot;&gt;&gt;
 &lt;&lt;set $milton2 to &quot;we also may never recover a lost truth once it’s been rejected or destroyed—and that loss can bring harm to entire nations.&quot;&gt;&gt;
 &lt;&lt;set $milton3 to &quot;I will now explain how the greatest civilizations of the past dealt with these issues [presents examples from the Bible, ancient Greece, ancient Rome proving the superiority of a free press policy]&quot;&gt;&gt;
@@ -3333,6 +3342,10 @@ SOURCES: JACKSON
 &lt;&lt;set $milton5 to &quot;People can be seduced by anything - conversation, music, art. So, will we censor all of life? That’s absurd.&quot;&gt;&gt;
 &lt;&lt;set $milton6 to &quot;In Italy, they said censorship had drained their culture of brilliance, leaving only flattery and nonsense in print.&quot;&gt;&gt;
 &lt;&lt;set $milton7 to &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them.&quot;&gt;&gt;
+
+&lt;&lt;set $coffee1 to &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&quot;&gt;&gt;
+&lt;&lt;set $coffee2 to &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down.&quot;&gt;&gt;
+&lt;&lt;set $coffee3 to &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined&quot;&gt;&gt;
 
 &lt;&lt;set $anxious1 to &quot;&lt;span class=&#39;bi&#39;&gt;Their homes expressed power and wealth&lt;/span&gt;: &#39;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&#39;&quot;&gt;&gt;
 &lt;&lt;set $anxious2 to &quot;&lt;span class=&#39;bi&#39;&gt;Land ownership&lt;/span&gt;: &#39;William Byrd II... expanded his 26,000-acre inheritance to 180,000 acres by the time of his death in 1744.&#39;&quot;&gt;&gt;
@@ -4382,9 +4395,9 @@ image map with links to:
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;By the King (Charles II): A Proclamation for the Suppression of Coffee Houses (1675)&lt;/h2&gt;
-&lt;p&gt;It has become clear that the growing number of coffeehouses, along with the crowds of idle and discontented people who gather in them, have led to serious problems. These include tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&lt;/p&gt;
-&lt;p&gt;Therefore, His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down. Starting January 10th, no one is allowed to run a public coffeehouse or sell coffee, chocolate, sherbet, or tea for consumption on the premises. Anyone who does so will face serious consequences.&lt;/p&gt;
-&lt;p&gt;To enforce this, justices of the peace and city magistrates are ordered to cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined and may face the harshest legal penalties if they continue.&lt;/p&gt;
+&lt;p&gt;It has become clear that the growing number of coffeehouses, along with the crowds of idle and discontented people who gather in them, have led to serious problems. These include &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&quot;&gt;&gt;&lt;&lt;set $coffee1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Therefore, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down.&quot;&gt;&gt;&lt;&lt;set $coffee2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Starting January 10th, no one is allowed to run a public coffeehouse or sell coffee, chocolate, sherbet, or tea for consumption on the premises. Anyone who does so will face serious consequences.&lt;/p&gt;
+&lt;p&gt;To enforce this, justices of the peace and city magistrates are ordered to &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined&quot;&gt;&gt;&lt;&lt;set $coffee3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; and may face the harshest legal penalties if they continue.&lt;/p&gt;
 &lt;p&gt;God save the king.&lt;/p&gt;
 &lt;/div&gt;
 
