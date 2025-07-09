@@ -749,8 +749,6 @@ console.log(tooltipList)
 &lt;&lt;set $ships2GroupSelect to false&gt;&gt;
 &lt;&lt;set $ships2TechSave to false&gt;&gt;
 &lt;&lt;set $ships2TechSelect to false&gt;&gt;
-&lt;&lt;set $ships2HierarchySave to false&gt;&gt;
-&lt;&lt;set $ships2HierarchySelect to false&gt;&gt;
 &lt;&lt;set $ships3GunsSave to false&gt;&gt;
 &lt;&lt;set $ships3GunsSelect to false&gt;&gt;
 &lt;&lt;set $ships3TradeSave to false&gt;&gt;
@@ -759,8 +757,6 @@ console.log(tooltipList)
 &lt;&lt;set $ships3WrongSelect to false&gt;&gt;
 &lt;&lt;set $ships4CostSave to false&gt;&gt;
 &lt;&lt;set $ships4CostSelect to false&gt;&gt;
-&lt;&lt;set $ships4WrongSave to false&gt;&gt;
-&lt;&lt;set $ships4WrongSelect to false&gt;&gt;
 &lt;&lt;set $ships5WrongSave to false&gt;&gt;
 &lt;&lt;set $ships5WrongSelect to false&gt;&gt;
 &lt;&lt;set $ships5MixingSave to false&gt;&gt;
@@ -3321,23 +3317,22 @@ SOURCES: JACKSON
 &lt;&lt;set $beverley5 to &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;
 
 &lt;&lt;set $shipsc to false&gt;&gt;
-&lt;&lt;set $ships1Posture to &quot;The captains&#39; upright posture and body langauge projects confidence and strength.&quot;&gt;&gt;
-&lt;&lt;set $ships1Faces to &quot;The captains&#39; facial expressions show good humor and intelligence.&quot;&gt;&gt;
-&lt;&lt;set $ships1Wrong to &quot;The captains&#39; dress is fine and fashionable, with bright colors and expensive fabrics. It seems impractical for strenuous physical activity - probably an expression of the elite social status which exempted such men from manual labor.&quot;&gt;&gt;
-&lt;&lt;set $ships1Clothing to &quot;The captains&#39; clothing appears sturdy (including leather and heavy fabrics) and functional, suited to the hard labor of life at sea. The simple cut and dark colors contrast with the flamboyant fashion displays of aristocrats and courtiers. Their clothing also indicates personal wealth (lace and rich embroidery). Ornaments like the earrings and strings of pearl represent wealth and success, as well as boldness in exploring dangerous and exotic places.&quot;&gt;&gt;
-&lt;&lt;set $ships1Items to &quot;The captains touch or carry objects that symbolizing gobal adventure and experience, including armed conflict: a globe, swords, and a purse.&quot;&gt;&gt;
-&lt;&lt;set $ships1Youth to &quot;The captains appear middle aged and young. None are old. They appear physically strong and intelligent.&quot;&gt;&gt;
-&lt;&lt;set $ships2Danger to &quot;Battle looks devastating and terrifying, with total destruction of the enemy ships and sailors. For a ship captain in this age of piracy and sea battles, the results of poor decisions could be catastrophic for the whole ship.&quot;&gt;&gt;
-&lt;&lt;set $ships2Wrong to &quot;Battle seems to be experienced mostly at a distance, mitigated by technologically advanced weapons that kept individual seamen relatively insulated from physical danger.&quot;&gt;&gt;
-&lt;&lt;set $ships2Group to &quot;Every sailor is risking his life and struggling for survival. A successful ship captain would need strong leadership skills to direct a group of mariners through deadly, desperate crises like this.&quot;&gt;&gt;
-&lt;&lt;set $ships2Tech to &quot;The galleon&#39;s superior technology (weight and firepower) are a decisive advantage. The galleys being destroyed by the galleon are smaller. Because they have far fewer cannons and and fewer sails, they probably have more limited mobility, range of fire, speed, and maneuverability. Their tactical options would have been severely limited, compared to those of the galleon. The galleon&#39;s size and its number of complex sails would have given it speed and maneuverability, while it&#39;s bristling with cannons and can fire in any direction. Ship captains would have valued the technology, tools, and expertise on which their ship&#39;s survival depended.&quot;&gt;&gt;
-&lt;&lt;set $ships2Hierarchy to &quot;The ships are crowded. To execute an attack like this, they all needed to carry out specialized tasks and work together closely and under pressure. A successful captain would have a high tolerance for stress and danger, and an ability to manage a large team in very difficult situations. A captain would probably expect and appreciate clear hierarchies in which each person has a discrete set of roles and responsibilities.&quot;&gt;&gt;
-&lt;&lt;set $ships3Guns to &quot;It&#39;s obvious that the large ships with cannons represent a significant military power. They can threaten settlements or people near the shore. Ship captains arriving in a new place would expect to be treated with cautious respect, or even aggression and fear, by the people who live there.&quot;&gt;&gt;
-&lt;&lt;set $ships3Trade to &quot;The crowd of people streaming down to the shore from the settlement above reflect the population&#39;s eagerness to acquire valuable goods brought by the ships, and probably news as well. A captain would need to navigate these powerful desires each time he anchored at a port.&quot;&gt;&gt;
-&lt;&lt;set $ships3Wrong to &quot;People seem fearful of interacting with the ships, and keep well away from the shoreline.&quot;&gt;&gt;
-&lt;&lt;set $ships4Cost to &quot;These ships are huge. Each one represents a fortune in men, guns and powder, rope, sails, timber, including the massive mainmasts. If they carry trade goods in addition to all of that, the amoung of wealth each ship represents is staggering. A ship captain would be accustomed to carrying a heavy burden of responsibility for human lives and vast fortunes.&quot;&gt;&gt;
+&lt;&lt;set $ships1Posture to &quot;Upright posture and body langauge: confidence and strength.&quot;&gt;&gt;
+&lt;&lt;set $ships1Faces to &quot;&gt;&gt; Facial expressions: good humor and intelligence.&quot;&gt;&gt;
+&lt;&lt;set $ships1Wrong to &quot;&gt;&gt; Dress: fine and fashionable. Bright colors and expensive fabrics. Impractical for strenuous physical activity. Expresses elite social status and exemption from manual labor.&quot;&gt;&gt;
+&lt;&lt;set $ships1Clothing to &quot;Clothing shows personal wealth (e.g., lace, jewels, rich embroidery). Ornaments like the earrings and strings of pearl may represent boldness in exploring dangerous and exotic places.&quot;&gt;&gt;
+&lt;&lt;set $ships1Items to &quot;They touch or carry objects symbolizing gobal adventure and experience, including armed conflict (e.g., globe, swords, and a purse).&quot;&gt;&gt;
+&lt;&lt;set $ships1Youth to &quot;They are middle aged or young, not old. They appear physically strong and intelligent.&quot;&gt;&gt;
+&lt;&lt;set $ships2Danger to &quot;&gt;&gt; Battle looks devastating and terrifying. Total destruction of the enemy ships and sailors. Captains&#39; poor decisions are deadly for everyone on board.&quot;&gt;&gt;
+&lt;&lt;set $ships2Wrong to &quot;Battle seems to be experienced mostly at a distance, mitigated by technologically advanced weapons. Sailors are not in physical danger.&quot;&gt;&gt;
+&lt;&lt;set $ships2Group to &quot;The ships are crowded and every sailor is risking his life and struggling for survival. To succeed, the group needs to perform specialized tasks and work together closely and under intense pressure. Captains would have a high tolerance for stress and danger, and an appreciation for clear chains of command in wich each person has a discrete set of roles and responsibilities. Captains needed strong leadership skills to direct a large group through deadly, desperate crises.&quot;&gt;&gt;
+&lt;&lt;set $ships2Tech to &quot;The galleon&#39;s superior technology (weight and firepower) are a decisive advantage. The smaller galleys have far fewer cannons and fewer sails - thus, less mobility, range of fire, speed. Captains would have valued the technology, tools, and expertise on which their ship&#39;s survival depended.&quot;&gt;&gt;
+&lt;&lt;set $ships3Guns to &quot;&gt;&gt; The large ships with cannons represent a significant military power. They can threaten settlements or people near the shore. Ship captains arriving in a new place would be accustomed to navigating volatile social and political interactions.&quot;&gt;&gt;
+&lt;&lt;set $ships3Trade to &quot;People seem eager to interact with the ships, probably looking for trade goods and news. Captains would be adept at clear communication and fast decision-making.&quot;&gt;&gt;
+&lt;&lt;set $ships3Wrong to &quot;People seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust.&quot;&gt;&gt;
+&lt;&lt;set $ships4Cost to &quot;These ships are huge. Each one represents a fortune in men, guns and powder, rope, sails, timber. If the holds are full of trade goods, the amount of wealth each ship represents is staggering. A ship captain would be accustomed to carrying a heavy burden of responsibility for human lives and vast fortunes. They would have strong willpower.&quot;&gt;&gt;
 &lt;&lt;set $ships5Wrong to &quot;The dock looks like a dangerous place where people do not linger. They seem to visit the dock for a specific purpose and then leave as soon as possible. A ship captain arriving at the dock would want to move through the area quickly and safely.&quot;&gt;&gt;
-&lt;&lt;set $ships5Mixing to &quot;A diverse group interacts comfortably, including women and children, and men from very high and very low social strata (judging by the quality of their hats and clothing). A ship captain arriving at the dock would expect to engage in conversation or business with a wide variety of people.&quot;&gt;&gt;
+&lt;&lt;set $ships5Mixing to &quot;A diverse group interacts comfortably, including women and children, and men from very high and very low social strata (judging by the quality of their hats and clothing). A ship captain arriving at the dock would expect to engage in conversation or trade with a wide variety of people.&quot;&gt;&gt;
 &lt;&lt;set $milton1 to &quot;But that’s exactly why we must be careful. To destroy a good book is almost like killing a person. Killing a man ends the life of a rational being made in God’s image; but destroying a good book is like killing reason itself - an attack on the very image of God in human understanding.&quot;&gt;&gt;
 &lt;&lt;set $milton2 to &quot;we also may never recover a lost truth once it’s been rejected or destroyed—and that loss can bring harm to entire nations.&quot;&gt;&gt;
 &lt;&lt;set $milton3 to &quot;I will now explain how the greatest civilizations of the past dealt with these issues [presents examples from the Bible, ancient Greece, ancient Rome proving the superiority of a free press policy]&quot;&gt;&gt;
@@ -3953,8 +3948,8 @@ SOURCES: JACKSON
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1FacesSave&quot; false true autocheck&gt;&gt; Facial expressions: good humor and intelligence.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1WrongSave&quot; false true&gt;&gt; Dress: fine and fashionable. Bright colors and expensive fabrics. Impractical for strenuous physical activity. Expresses elite social status and exemption from manual labor.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ClothingSave&quot; false true&gt;&gt;Clothing shows personal wealth (e.g., lace, jewels, rich embroidery). Ornaments like the earrings and strings of pearl may represent boldness in exploring dangerous and exotic places.&lt;/&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ItemsSave&quot; false true&gt;&gt; The captains touch or carry objects symbolizing gobal adventure and experience, including armed conflict (e.g., globe, swords, and a purse).&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1YouthSave&quot; false true&gt;&gt; The captains appear middle aged and young. None are old. They appear physically strong and intelligent.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1ItemsSave&quot; false true&gt;&gt; They touch or carry objects symbolizing gobal adventure and experience, including armed conflict (e.g., globe, swords, and a purse).&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships1YouthSave&quot; false true&gt;&gt; They are middle aged or young, not old. They appear physically strong and intelligent.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -3980,7 +3975,7 @@ SOURCES: JACKSON
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships3GunsSave&quot; false true&gt;&gt; The large ships with cannons represent a significant military power. They can threaten settlements or people near the shore. Ship captains arriving in a new place would be accustomed to navigating volatile social and political interactions.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships3TradeSave&quot; false true&gt;&gt; People seem eager to interact with the ships, probably looking for trade goods and news. Captains would need skills in clear communcation and fast decision-making.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships3TradeSave&quot; false true&gt;&gt; People seem eager to interact with the ships, probably looking for trade goods and news. Captains would be adept at clear communication and fast decision-making.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$ships3WrongSave&quot; false true&gt;&gt; People seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -4392,7 +4387,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Unknown artist, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
-&lt;p&gt;From Shirley Plantation.&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&quot;https://colonialvirginiaportraits.org/portrait/robert-king-carter-ca-1664-1732/&quot; target=&quot;_blank&quot;&gt;Shirley Plantation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen1.jpg&quot; alt=&quot;Portrait of man wearing red jacket and waistcoat, and a wig with a ponytail&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
@@ -4405,7 +4400,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Minnigrode Andrews, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
-&lt;p&gt;Original ca. 1690-1720, copy ca. 1900, oil on canvas, 152.4 x 111.76 cm. From Virginia Museum of History and Culture.&lt;/p&gt;
+&lt;p&gt;Original ca. 1690-1720, copy ca. 1900, oil on canvas, 152.4 x 111.76 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1973.15&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen2.jpg&quot; alt=&quot;Portrait of man leaning on a carved wooden table. He wears a long dark red coat and a white wig, with a dress sword on his hip.&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
@@ -4418,7 +4413,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Kneller, William Byrd II (c. 1700-1704)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 125.7 x 101 cm. From Colonial Williamsburg Foundation.&lt;/p&gt;
+&lt;p&gt;Oil on canvas, 125.7 x 101 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/14025/portrait-of--william-byrd-ii-16741744&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen3.jpg&quot; alt=&quot;Portrait of man wearing long dark wig, dark blue jacket with jeweled embellishments and red drape around his waist. There is a dress sword on his hip, and he stands outdoors.&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
@@ -4431,7 +4426,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Closterman, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 101.6 x 76.2 cm. From Virginia Museum of History and Culture. &lt;/p&gt;
+&lt;p&gt;Oil on canvas, 101.6 x 76.2 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1985.35&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture.&lt;/a&gt;&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen4.jpg&quot; alt=&quot;Portrait of man wearing gray wig, orange coat, embroidered blue waistcoat, gold brocade sash around his waist. Miniature portrait of Queen Anne hangs on his neck..&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
@@ -4444,7 +4439,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Kneller, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 125.41 x 101.6 cm. From Colonial Williamsburg Foundation.&lt;/p&gt;
+&lt;p&gt;Oil on canvas, 125.41 x 101.6 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/33395/portrait-of-daniel-parke-ii-16641710?ctx=e4ac1f325f314e4b956b6893549e6db52f78fc28&amp;idx=0&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen5.jpg&quot; alt=&quot;Portrait of man wearing gray wig and full suit of armor. Miniature portrait of Queen Anne hangs on his neck, and a sword is at his waist.&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
@@ -4457,7 +4452,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Hysing, William Byrd II (c. 1720 - 1726)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 127 x 106.68 cm. From Virginia Museum of History and Culture.&lt;/p&gt;
+&lt;p&gt;Oil on canvas, 127 x 106.68 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/portal.aspx?lang=en-US&amp;g_AABS=1973.6.&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen6.jpg&quot; alt=&quot;Portrait of man wearing long dark wig with ponytail and blue jacket with gold frogging.&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
