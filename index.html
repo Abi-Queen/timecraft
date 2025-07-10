@@ -4061,11 +4061,22 @@ image map with links to:
 &lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md border&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about the 17th-century maritime paintings)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the paintings&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;/ul&gt;
+&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about the 17th-century maritime paintings) (Score +5 graphic, placeholder text for now)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the paintings&lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md border&quot;&gt;
+&lt;h2&gt;Mining Accidents&lt;/h2&gt;
+&lt;p&gt;Did you mine any false information or make a mistake?&lt;/p&gt;
+&lt;p&gt;&lt;&lt;if $ships1WrongSave is true&gt;&gt;&lt;&lt;print $ships1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $ships2WrongSave is true&gt;&gt;&lt;&lt;print $ships2Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $ships3WrongSave is true&gt;&gt;&lt;&lt;print $ships3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $ships5WrongSave is true&gt;&gt;&lt;&lt;print $ships5Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;card-group&quot;&gt;
@@ -4518,9 +4529,10 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;img src=&quot;images/gentlemen-berkeley.jpg&quot; alt=&quot;Portrait of man resting hand on hip and a cane, wearing grey wig, dark red coat and trousers, white frilled collar and cuffs.&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1ItemSave&quot; false true&gt;&gt; Interpretation&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1OtherSave&quot; false true&gt;&gt; Another interpretation&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1WrongSave&quot; false true&gt;&gt; An invalid interpretation&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1PostureSave&quot; false true&gt;&gt; Confident and languid posture exudes cultured and privileged self-assurance.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1WealthSave&quot; false true&gt;&gt; The pristine wig and generous folds of smooth, clean, expensive fabric are displays of wealth, fashion, and a labor-free lifestyle.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1FaceSave&quot; false true&gt;&gt; The facial expression suggests a character that is placid, rational, sensitive.&lt;label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1WrongSave&quot; false true&gt;&gt; There is nothing martial here, no suggestion of military power.&lt;label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -4532,9 +4544,10 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;img src=&quot;images/gentlemen1.jpg&quot; alt=&quot;Portrait of man wearing red jacket and waistcoat, and a wig with a ponytail&quot; class=&quot;border img-fluid&quot;&gt;
 &lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2ItemSave&quot; false true&gt;&gt; Interpretation&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2OtherSave&quot; false true&gt;&gt; Another interpretation&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2WrongSave&quot; false true&gt;&gt; An invalid interpretation&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2ClothingSave&quot; false true&gt;&gt; The voluminous, pristine wig, and the generous folds of smooth, clean, richly embroidered, expensive fabric (with the lining displayed) signify wealth, fashion, and a labor-free lifestyle.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2WrongSave&quot; false true&gt;&gt; Military leadership is central to the symbolism.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2PostureSave&quot; false true&gt;&gt; The body language is assertive, active, confident.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2FaceSave&quot; false true&gt;&gt; The facial expression suggests confidence and determination.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -4548,6 +4561,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3ItemSave&quot; false true&gt;&gt; Interpretation&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3OtherSave&quot; false true&gt;&gt; Another interpretation&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3WrongSave&quot; false true&gt;&gt; An invalid interpretation&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2SceneSave&quot; false true&gt;&gt; The background suggests elegant plantation landscaping, an important symbol of elite status, wealth, and fashion.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -4908,12 +4922,25 @@ image map with links to:
 &lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md border&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;&lt;if (def $anxiousc) and ($anxiousc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $anxiousc&gt;&gt;&quot; (Comments by $PlayerName about Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Brown&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if (def $bportraitsc) and ($bportraitsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $bportraitsc&gt;&gt;&quot; (Comments by $PlayerName about 17th-century portraits of Virginia elite men)&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the portraits&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md border&quot;&gt;
+&lt;h2&gt;Mining Accidents&lt;/h2&gt;
+&lt;p&gt;Did you mine any false information or make a mistake?&lt;/p&gt;
+&lt;p&gt;&lt;&lt;if $bportraits1WrongSave is true&gt;&gt;&lt;&lt;print $bportraits1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $bportraits2WrongSave is true&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;&lt;&lt;print $bportraits2Wrong&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $bportraits3WrongSave is true&gt;&gt;&lt;&lt;print $bportraits3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;&lt;if $bportraits4WrongSave is true&gt;&gt;&lt;&lt;print $bportraits4Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text fpr now)&lt;&lt;/if&gt;&gt;&lt;p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;card-group&quot;&gt;
