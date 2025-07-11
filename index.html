@@ -4212,53 +4212,100 @@ image map with links to:
 &lt;div class=&quot;row&quot;&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressLicensing&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Licensing: Revenue and control.&lt;/span&gt; Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
 &lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $coffee2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee2&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
+
 &lt;/ul&gt;
 &lt;hr&gt;
 
+
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressPaper&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Paper tax&lt;/span&gt;: Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
+
 &lt;/ul&gt;
 &lt;hr&gt;
 
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressTheywill&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if $coffee2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee2&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
 &lt;hr&gt;
 
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressStatus&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Virginia&#39;s status:&lt;/span&gt; No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
 &lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
 &lt;hr&gt;
 
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressControl&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Control the narrative&lt;/span&gt; When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own clear and persuasive statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
 &lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;hr&gt;
 
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong1&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;A printing press is not important.&lt;/span&gt; There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressControl&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Control the narrative&lt;/span&gt; When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own pages for every one of Bacon&#39;s hand-copied, seditious rags? If when a colonist heard or read Bacon&#39;s &quot;Declaration,&quot; they had already laughed at a dozen satires exposing him as a fraud, liar, adulterer, debtor, traitor, murderer, and maybe a sorcerer and heretic too (why not?)? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s rag-tag army literally burning across their colony, threatening their own homes and families, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressKnowledge&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;A more prosperous, powerful society:&lt;/span&gt; A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/label&gt;&lt;/li&gt;
 &lt;ul&gt;
 &lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
 &lt;hr&gt;
 
