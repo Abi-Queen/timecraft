@@ -616,7 +616,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 
 .crafting {
   background-color: #dedede;
-  border: 2px solid black;
+  border: 1px solid #666666;
   border-radius: 15px;
   margin: 5px;
 
@@ -1019,12 +1019,14 @@ console.log(tooltipList)
 &lt;p&gt;Meanwhile, the dock gets busier as more colonists arrive from Jamestown and the hinterlands. The ship has been carefully moored at the dock, where the captain, his officers, and the governor&#39;s clerk direct the swarm of colonists who have come to buy supplies and exchanging news. The colony is desperate for both, and you know it will be a good day for the captain. He can name his own price. While the new taxes and low tobacco prices have cut everyone&#39;s profits, they still need supplies and they&#39;re willing to pay a high price. All day, the captain is too busy to respond to your inquiries about the printing press you believe is stowed in his holds.&lt;/p&gt;
 
 &lt;p&gt;You hang around the dock chatting with neighbors and friends. You learn some interesting news.&lt;/p&gt;
-&lt;ul&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;Tobacco prices&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;Old Governor Berekeley is losing friends fast, especially since he made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes - paid for with a heavy new tax. The tax can only be paid in tobacco. Now, you learn that parliament has raised new taxes on tobacco, too, crushing its value for the planters. &lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;div class=&quot;row crafting&quot;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;Tobacco prices&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;Old Governor Berekeley is losing friends fast, especially since he made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes - paid for with a heavy new tax. The tax can only be paid in tobacco. Now, you learn that parliament has raised new taxes on tobacco, too, crushing its value for the planters.&lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
 &lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;What the government thinks about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The king plans to send royal commissioners to investigate Nathaniel Bacon&#39;s insurrection and charges of misgovernment against Governor Berkeley. Bacon has a bad reputation as a liar and a pompous fool, but the governor isn&#39;t much better. In London, the royalist faction is triumphant, but dissent is brewing in the London coffeehouses and theaters. The government is fighting these forces aggressively, outlawing coffeehouses and issuing harsh censorship laws. The military has been crushing rebellion at home, as well as in Ireland and Scotland. Everyone feels confident that the king will send troops to suppress Bacon&#39;s Rebellion if it becomes a real threat to the colony. &lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
 &lt;p&gt;It&#39;s nearly dark when you manage to retrieve the new press. While your apprentice loads it into the cart and begins hauling it home, you open conversation with one of the ship&#39;s officers, asking to buy some supplies. He shrugs and says there&#39;s not much left, and the captain has gone to the fort for the evening.&lt;/p&gt;
-&lt;p&gt;When you return the next morning, there isn&#39;t much left this morning, and the captain feels no need to bring the prices down.&lt;/p&gt;
+&lt;p&gt;When you return the next morning, there isn&#39;t much left this morning, and the captain feels no need to bring the prices down.&lt;/p&gt;&lt;hr&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -1267,12 +1269,16 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;p&gt;The captain&#39;s name is Thomas Gardner. He gratefully accepts your offer, and you send John jogging up toward the fort, with instructions to stop at your shop and send the servant down with fresh bacon, bread, and beer. Settling down to wait, the group takes a seat on some empty tobacco barrels and pass the time in friendly conversation:&lt;/p&gt;
-&lt;ul&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You share the latest news about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;The captain knows about Nathaniel Bacon&#39;s challenge to Governor Berkeley&#39;s regime, and he&#39;s curious to hear the latest. You tell him that Bacon has a bad reputation as a liar and a pompous fool, but old Governor Berekeley is losing friends fast. In your opinion, it started with the governor&#39;s new rules about trading with the tribes. He suddenly made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes. The captain rolls his eyes and shakes his head, and you nod and chuckle, adding that the governor has levied heavy new taxes to pay for these forts - a tax that can &lt;span class=&quot;bi&quot;&gt;only&lt;/span&gt; by paid in tobacco.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;The captain shares what he&#39;s heard of the royal court&#39;s view of Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The captain laughs as he delivers his news: There&#39;s a huge new tax on tobacco! Ha ha! Oh, how the wigged and powdered gentlemen will howl. You both share some unkind remarks about the upper classes. The captain grows thoughtful and asks you, as a friend, to keep this news about the tobacco tax private for now. The governor will find out today, in any case, and then everyone will know. You agree. Obviously, this will give the captain a signfiicant advantage today when the wealthy plantation owners come to buy supplies, imagining their tobacco is worth significantly more than it really is, thanks to this new tax.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;p id=&quot;zrespC&quot;&gt;&lt;&lt;link &quot;You ask about the news from London, sharing your hope for the strength of the monarchy and an end to all rebellion.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespC&quot;&gt;&gt;&lt;li&gt;The captain agrees and tells you that the king and his supporters are in power, crushing dissent at home and in Ireland and Scotland. But trouble is brewing, especially in the London coffeehouses and theaters where people read and spread dangerous ideas, criticizing the king. New laws are making such places illegal and setting new rules for what can be printed. You suggest that, in the right hands, a printing press can be a valuable tool. The captain agrees, and you share your plans to begin printing here in your workshop. He&#39;s happy to report that your new printing press is packed safely in his hold, ready for delivery.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;p id=&quot;zrespD&quot;&gt;&lt;&lt;link &quot;After sharing news and ideas for printing, the conversation turns to your work as a gunsmith.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespD&quot;&gt;&gt;&lt;li&gt;The captain says he believes flintlocks will soon replace matchlocks. You express more skepticism than you really feel, to get the captain to share his ideas. He says he&#39;s heard gossip that the army will soon be ordering standard issue muskets in a new flintlock pattern, and you trade ideas on the feasibility and expense of such a change. Are the Amsterdam and London gunsmiths really capable of producing the complex flintlock in such quantities? Can the crown really afford it? Did the king get this idea from his French friends? You&#39;re both lost in conversation for a time.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+
+&lt;div class=&quot;row crafting&quot;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You share the latest news about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;The captain knows about Nathaniel Bacon&#39;s challenge to Governor Berkeley&#39;s regime, and he&#39;s curious to hear the latest. You tell him that Bacon has a bad reputation as a liar and a pompous fool, but old Governor Berekeley is losing friends fast. In your opinion, it started with the governor&#39;s new rules about trading with the tribes. He suddenly made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes. The captain rolls his eyes and shakes his head, and you nod and chuckle, adding that the governor has levied heavy new taxes to pay for these forts - a tax that can &lt;span class=&quot;bi&quot;&gt;only&lt;/span&gt; by paid in tobacco.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;The captain shares what he&#39;s heard of the royal court&#39;s view of Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The captain laughs as he delivers his news: There&#39;s a huge new tax on tobacco! Ha ha! Oh, how the wigged and powdered gentlemen will howl. You both share some unkind remarks about the upper classes. The captain grows thoughtful and asks you, as a friend, to keep this news about the tobacco tax private for now. The governor will find out today, in any case, and then everyone will know. You agree. Obviously, this will give the captain a signfiicant advantage today when the wealthy plantation owners come to buy supplies, imagining their tobacco is worth significantly more than it really is, thanks to this new tax.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespC&quot;&gt;&lt;&lt;link &quot;You ask about the news from London, sharing your hope for the strength of the monarchy and an end to all rebellion.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespC&quot;&gt;&gt;&lt;li&gt;The captain agrees and tells you that the king and his supporters are in power, crushing dissent at home and in Ireland and Scotland. But trouble is brewing, especially in the London coffeehouses and theaters where people read and spread dangerous ideas, criticizing the king. New laws are making such places illegal and setting new rules for what can be printed. You suggest that, in the right hands, a printing press can be a valuable tool. The captain agrees, and you share your plans to begin printing here in your workshop. He&#39;s happy to report that your new printing press is packed safely in his hold, ready for delivery.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespD&quot;&gt;&lt;&lt;link &quot;After sharing news and ideas for printing, the conversation turns to your work as a gunsmith.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespD&quot;&gt;&gt;&lt;li&gt;The captain says he believes flintlocks will soon replace matchlocks. You express more skepticism than you really feel, to get the captain to share his ideas. He says he&#39;s heard gossip that the army will soon be ordering standard issue muskets in a new flintlock pattern, and you trade ideas on the feasibility and expense of such a change. Are the Amsterdam and London gunsmiths really capable of producing the complex flintlock in such quantities? Can the crown really afford it? Did the king get this idea from his French friends? You&#39;re both lost in conversation for a time.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Your servant shows up with a cart carrying food and ale for the group. You&#39;re enjoying the conversation, but need to make some purchases. Like everyone in the colony, you&#39;re desperately low on basic supplies. When the captain mentions some metalworking repairs needed on the ship, you offer to handle this work as a favor to a friend. You ask if you might come on board now and have a look at the work, before the captain gets too busy. He knows you&#39;re maneuvering to begin trading before anyone else can, but accepts the offer. On board the ship, he points out a cracked chain, a gun carriage with a bent axle, two cannons with sticky locks, and mentions an old blunderbus that won&#39;t fire at all. While you chat about these repairs, you ask about the goods the ship is carrying for sale. The captain sets fair prices, building on your friendly relationship and accounting for your offer of free repairs. But he knows the colony is desperate for supplies, and a horde of rich plantation owners will be mobbing the dock at any moment. He&#39;s quite rightly going to make you pay for this privilege of having first choice. You must choose wisely.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -1292,7 +1298,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot; id=&quot;trade&quot;&gt;
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Old fashioned, but cheap and easy to operate. The new flintlocks are better but half again more expensive and much harder to make. You can make matchlocks easily. Is there a reason to buy some, too?&quot;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Old fashioned, but cheap and easy to operate. The new flintlocks are better but half again more expensive and much harder to make. You can make matchlocks easily. Is there a reason to buy some, too?&quot;&gt;&lt;&lt;link &quot;Matchlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;if $wealth gt 0&gt;&gt;
@@ -1312,7 +1318,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;These have all but replaced the old fashioned matchlocks of the Civil War days. But they&#39;re expensive, hard to make, and supply is always short.&quot;&lt;&lt;link &quot;Flintlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;These have all but replaced the old fashioned matchlocks of the Civil War days. But they&#39;re expensive, hard to make, and supply is always short.&quot;&gt;&lt;&lt;link &quot;Flintlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;The captain has some of these, but none are for sale. The whole shipment is for the soldiers at the fort. &lt;/p&gt;
@@ -2170,61 +2176,49 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;if ($gov is &quot;lie&quot;) and ($serv isnot &quot;feed&quot;) and ($capt isnot &quot;friend&quot;)&gt;&gt;
+&lt;&lt;if ($gov is &quot;lie&quot;) and ($serv isnot &quot;feed&quot;)&gt;&gt;
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;p&gt;The governor is mollified. When he leaves, you and the servants store the press in pieces underneath your store of scrap iron and timber. You load a few rocks into the original crate for weight and nail it closed. By nightfall, the crates have been returned to the ship.&lt;/p&gt;
 &lt;p&gt;The next day, Tom and John betray your secret to friends and neighbors. They feel no great loyalty to you, and good servants are in high demand. It won&#39;t take them long to sign a contracts with new masters.&lt;/p&gt;
 &lt;p&gt;Gossip spreads like wildfire. Before you&#39;ve printed a single page, the governor&#39;s clerk is bursting through your door again, followed by the captain general and soldiers from the fort. You&#39;re arrested, thrown in jail, and convicted of sedition and fraud. The council decides to exile you from the colony (though, mercifully, not to brand or whip you). They pass a new &quot;Act Concerning Printing,&quot; banning all printing presses. You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
-&lt;h2&gt;What will you do now?&lt;/h2&gt;
+&lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;rebel&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Rebellion:&lt;/span&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, but they can&#39;t take your skills. The rebels will welcome you.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;leave&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Go home: &lt;/span&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;wilderness&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;The Howling Wilderness:&lt;/span&gt; Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Find a defensible spot near good water and fertile land, and plant your own homestead. Trade with the local tribes. Virginia law prescribes the death penalty for anyone who teaches an Indian to use a gun. What if ... ?&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |jackson-end]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
+&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/result&gt;&gt;
+&lt;p&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, whatever. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;p&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-
+&lt;/div&gt;
 
 
 &lt;&lt;elseif $gov is &quot;defy&quot;&gt;&gt;
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;The governor is well within his authority when he orders your arrest for sedition. The soldiers march you up to the fort and throw you in jail. The next day, the council orders you fined and exiled (but, mercifully, not whipped or branded). The printing press is smashed and burned. A new &quot;Act Concerning Printing&quot; is passed, explicitly banning all printing presses.&lt;/p&gt;
-&lt;p&gt;You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
+&lt;p&gt;The governor is well within his authority when he orders your arrest for sedition. The soldiers march you up to the fort and throw you in jail. The next day, the council orders you fined and exiled (but, mercifully, not whipped or branded). The printing press is smashed and burned. At its next meeting, the governor and his council pass a new &quot;Act Concerning Printing,&quot; explicitly banning all printing presses in Virginia.&lt;/p&gt;
+&lt;p&gt;You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom and John ask the magistrate to find them a new master, since you&#39;re no longer able to feed or lodge them. Healthy, young servants are always in high demand, and they quickly find new places.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;rebel&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Rebellion:&lt;/span&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, but they can&#39;t take your skills. The rebels will welcome you.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;leave&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;Leave: &lt;/span&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$end&quot; &quot;wilderness&quot;&gt;&gt; &lt;span class=&quot;bi&quot;&gt;The Howling Wilderness:&lt;/span&gt; Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Find a defensible spot near good water and fertile land, and plant your own homestead. Trade with the local tribes. Virginia law prescribes the death penalty for anyone who teaches an Indian to use a gun. What if ... ?&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |jackson-end]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
+&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/result&gt;&gt;
+&lt;p&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, whatever. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;p&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-
+&lt;/div&gt;
 
 &lt;&lt;elseif $gov is &quot;ask&quot;&gt;&gt;
 &lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially now, while thousands of other colonists have joined Nathaniel Bacon in violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;And the implied threat in your news about the new muskets is not lost on the old man: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets .... Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;/p&gt;
@@ -2245,36 +2239,127 @@ Image
 &lt;p&gt;Settling down with charcoal and a clean sanded plank, you begin listing the arguments that will convince the countil to grant you the first printing license in the English colonies.&lt;/p&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
-&lt;h2&gt;What are some of the points you will make at the upcoming council meeting?&lt;/h2&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
+&lt;h2&gt;What are some of the points you will make at the upcoming council meeting?
 &lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Feed them? &lt;/span&gt; Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/li&gt;
+&lt;h3&gt;Licensing: Revenue and Control&lt;/h3&gt;
+&lt;p&gt;Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/p&gt;
 &lt;hr&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Licensing&lt;/span&gt;: Revenue and control&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Taxes&lt;/span&gt;: Revenue from tax on paper, esp as colony grows&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;If we don&#39;t do it ...&lt;/span&gt;: Parliament is happy to pass legislation regulating printing, and to collect the resulting revenue from license fees and taxes. If we don&#39;t do this, they will, and we&#39;ll never get our hands on that money once it&#39;s flowing into the the bottomless maw of the imperial purse.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Virginia&#39;s status&lt;/span&gt;: Keep up w other colonies&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Control&lt;/span&gt;: Shape/control narrative w Rebellions like Bacon’s&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Current examples&lt;/span&gt;: Slur Bacon’s character, debunk “declaration,” present tribes as valuable econ partners, explain unpopular forts&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Control public knowledge of politics&lt;/span&gt;: Solve prob of damaging rumors and disinformation like council decisions and royal proclamations, news from England. Ppl already buying books w each ship; council/colonial leadership could be framing/engineering the colonists’ worldview instead of entirely at the mercy of what individual ppl decide to buy from their agents in London and what ppl in Jamestown gossip about on the daily&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Prosperity&lt;/span&gt;: Knowledge, information = more productive, econ prosperous citizens and colony? Eg new crops and tech, runaway slave/servant ads, laws re slaves and servants, give example of gunbook&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Growth&lt;/span&gt;: Pride for colony, mark of success, huge draw for new immigrants of higher status and more resources&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3&gt;Paper Tax&lt;/h3&gt;
+&lt;p&gt;Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;If we don&#39;t do it, they will.&lt;/h3&gt;
+&lt;p&gt;Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Virginia&#39;s Status&lt;/h3&gt;
+&lt;p&gt;No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Control the Narrative&lt;/h3&gt;
+&lt;p&gt;When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own clear and persuasive statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;A Printing Press is Unimportant.&lt;/h3&gt;
+&lt;p&gt;There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Prosperity and Growth&lt;/h3&gt;
+&lt;p&gt;A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Free Speech&lt;/h3&gt;
+&lt;p&gt;As an English citizen, you have the right to free speech. The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;/p&gt;
+&lt;br&gt;
+&lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Before crafting this choice, grab the pickaxe to mine for knowledge.&lt;/p&gt;
+&lt;p&gt;Before making a choice, grab the pickaxe and mine for knowledge.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;press-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+
 
 &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">spriggs 
+</tw-passagedata><tw-passagedata pid="8" name="scraps" tags="" position="0,0" size="100,100">
+
+
+nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
+
+print trade sell: how much of these trades will you take in various forms?
+
+set $coin as textbox coin tooltip yes, always good and you have a strong store-room
+set $stock as textbox stock shares tooltip yes, mostly good but a risk
+set $credit as textbox credit tooltip bad idea esp w economic downturn and political instability
+set $rum as textbox tooltip yes always good 
+set $flour as textbox tooltip yes
+set $bacon and ham textbox tooltip yes please
+set $butter textbox tooltip yes please
+set $cow tooltip maybe if you have enough to lease grazing land too
+set $pigs tooltip maybe if you have enough to lease land 
+set $lease of plantation land tooltip maybe 
+set $lease of grazing land tooltip yes
+set $horse tooltip yes, can graze in x for use
+set $male indentured servant tooltip sure but female would be better bc you have a male one
+set $female indentured servant tooltip yes please for sure absolutely 
+
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;What do you do?&lt;/h2&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$newserv&quot; &quot;female&quot;&gt;&gt; You hire a strong young man for a term of four years.&lt;&lt;set $score to $score -30&gt;&gt;&lt;&lt;set $wealth to $wealth -30&gt;&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$newserv&quot; &quot;male&quot;&gt;&gt; You hire a strong young woman for a term of four years.&lt;&lt;set $score to $score +10&gt;&gt;&lt;&lt;set $wealth to $wealth +20&gt;&gt;&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;/div&gt;
+
+
+Trade: 
+news of the massive drop in tobacco prices, and the high new tobacco duties has spread fast. poor yeomen are desperate to sell off assets to make the tax and pay their debts and keep their land. even upper gentry are more amenable to a trade than they usually are.  
+
+if $muskets or swords
+because of Bacon&#39;s Rebellion, the fort and wealthy planters will want all the: 
+matchlock muskets
+swords
+how much do you sell?
+50% set $wealth to +100 set $trade-sell to +100
+100% set $wealth to +200 set $trade-sell to +200
+0 set $wealth to +150
+
+if $saltpeter or ... 
+you keep the following items because nobody else can use them, anyhow:
+saltpeter 
+sulfur
+lead
+paper
+copper
+iron
+set $wealth to +400
+
+With the steep drop in tobacco prices, and an equally steep increase in taxes to build forts - payable only in tobacco - most of the yeomen farmers and gentry are broke. Very few will be in a position to buy luxury goods like: 
+printed materials (illustrations, books, essays, periodicals, novels, poems, plays)
+French wine
+silk
+spices: cinnamon, nutmeg, pepper
+coffee
+sugar
+paper
+you can maybe sell half of what you bought. Do you, or do you keep it for now? Hope the economy will stabilize in the future?  
+sell 50% set $wealth to +50  set $trade-sell to +50
+sell 10% set $wealth to +10 set $trade-sell to +10
+sell none set $wealth to +40
+
+you&#39;re able to find buyers for the essentials: 
+rum
+wool
+salt cod
+cheese
+how much do you sell?
+100% set $wealth to +50
+50% set $wealth to +25
+none set $wealth to +40 
+
+
+
+spriggs 
 &lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -2704,99 +2789,43 @@ play again to try new choices or try out another character
 
 
 
-</tw-passagedata><tw-passagedata pid="12" name="trade-buy" tags="" position="2500,200" size="100,100">next day, reputation soars if good
+</tw-passagedata><tw-passagedata pid="12" name="prepare" tags="" position="2500,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-what can you do to boost your chances of success? (choice-no
-checkboxes: 
-Flex your power. Say it really should be a council decision, you have a right to present case as prominent citizen and militia commander 
-threaten to appeal to the king
-Send servant w letters to a couple of council member supporters
-Tell your militia co 
-Print case for press and distribute to council members and elite 
-Print case for press and send to rebels
+&lt;div class=&quot;row hero-result&quot;&gt;
+&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;h1&gt;Getting Ready&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-
-&lt;p&gt;Over the next days, you carry on w work, council mtgs, militia drills. trade your new goods with neighbors and visitors who pass through the settlement. &lt;/p&gt;
-
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;div class=&quot;row scenario&quot;&gt;
 Your servants have spread the story of your victorious confrontation with the gov, massively boosting your social capital bc they have depicted you as basically hercules, and everyone knows how savage the governor&#39;s scoldings are, so everyone is inviting you over and stopping by the shop to hear the story first hand. Business is off the charts.
 
-trade results: what you bought, you sell half and profit. male and female servs available, fallout from Bacon&#39;s Reb. which do you buy, or none? 
-
-if $female-serv is yes: 
-the food in your house is suddenly amazing and you have clean clothes and new trousers 
-ppl come just to see Betsy and the only downside is sometimes they don&#39;t want to leave and hang out all the time
-
-
-
-nobody is paying in tobacco because the price has tanked and they need it to pay the new taxes for those forts; what do you accept as payment in these trades?
-
-print trade sell: how much of these trades will you take in various forms?
-
-set $coin as textbox coin tooltip yes, always good and you have a strong store-room
-set $stock as textbox stock shares tooltip yes, mostly good but a risk
-set $credit as textbox credit tooltip bad idea esp w economic downturn and political instability
-set $rum as textbox tooltip yes always good 
-set $flour as textbox tooltip yes
-set $bacon and ham textbox tooltip yes please
-set $butter textbox tooltip yes please
-set $cow tooltip maybe if you have enough to lease grazing land too
-set $pigs tooltip maybe if you have enough to lease land 
-set $lease of plantation land tooltip maybe 
-set $lease of grazing land tooltip yes
-set $horse tooltip yes, can graze in x for use
-set $male indentured servant tooltip sure but female would be better bc you have a male one
-set $female indentured servant tooltip yes please for sure absolutely 
-
-[[pre-council]] 
-
-Trade: 
-news of the massive drop in tobacco prices, and the high new tobacco duties has spread fast. poor yeomen are desperate to sell off assets to make the tax and pay their debts and keep their land. even upper gentry are more amenable to a trade than they usually are.  
-
-if $muskets or swords
-because of Bacon&#39;s Rebellion, the fort and wealthy planters will want all the: 
-matchlock muskets
-swords
-how much do you sell?
-50% set $wealth to +100 set $trade-sell to +100
-100% set $wealth to +200 set $trade-sell to +200
-0 set $wealth to +150
-
-if $saltpeter or ... 
-you keep the following items because nobody else can use them, anyhow:
-saltpeter 
-sulfur
-lead
-paper
-copper
-iron
-set $wealth to +400
-
-With the steep drop in tobacco prices, and an equally steep increase in taxes to build forts - payable only in tobacco - most of the yeomen farmers and gentry are broke. Very few will be in a position to buy luxury goods like: 
-printed materials (illustrations, books, essays, periodicals, novels, poems, plays)
-French wine
-silk
-spices: cinnamon, nutmeg, pepper
-coffee
-sugar
-paper
-you can maybe sell half of what you bought. Do you, or do you keep it for now? Hope the economy will stabilize in the future?  
-sell 50% set $wealth to +50  set $trade-sell to +50
-sell 10% set $wealth to +10 set $trade-sell to +10
-sell none set $wealth to +40
-
-you&#39;re able to find buyers for the essentials: 
-rum
-wool
-salt cod
-cheese
-how much do you sell?
-100% set $wealth to +50
-50% set $wealth to +25
-none set $wealth to +40 
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;What will you do?&lt;/h2&gt;
+&lt;p&gt;What are some things you can do over the next few days to prepare for the council meeting? (You can choose more than one.)&lt;/p&gt;
+&lt;hr&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepCapt&quot; false true&gt;&gt;Meet with the old Captain General.&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;You go to the fort to find old Captain Wenham who commands the garrison of regular troops. As militia captain and gunsmith, you often work with him. He&#39;s the one who recommended you to the governor as deserving a seat on the council in the first place. If he can spend the next few days convincing the councilors to support you, success is all but guaranteed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepLady&quot; false true&gt;&gt;Consult Lady Berkeley.&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;It&#39;s worthwhile to visit the Governor&#39;s wife, Lady Frances Berkeley. Everyone knows hers is a powerful voice in all high-level government decisions. Many even blame her for Bacon&#39;s Rebellion ... She isn&#39;t likely to refuse an offer of friendship now. If you can win her support, you&#39;ll have the governor on your side.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepClothes&quot; false true&gt;&gt;Get some decent clothes.&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;Spend some money and have your neighbor, the tailor, improve your best set of clothes. Appearances are important to the gentry (the council). They think you are a peasant and they&#39;re prepared to ignore everything you say. No need to fulfil their expectations and arrive in dirty rags. If you look like you belong there, there&#39;s a chance they will listen to you. Maybe.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepTalk&quot; false true&gt;&gt;Spread the word.&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;Tell everyone what you&#39;re trying to do. It will be a popular idea with the vast majority of folk in and near Jamestown. The more pro-printing talk the councilmembers hear between now and the meeting, the better.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepTalk&quot; false true&gt;&gt;Muster the militia.&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;Flex your power a little by calling a militia muster. Lead your company in drill practice. Treat them to refreshments afterwards. The spectacle always enhances your status with the population and boosts morale among the militia and their families and neighborhoods. Enhancing your public power before the meeting can only help your cause.&lt;/p&gt;
+&lt;/div&gt;
 
 
 
-</tw-passagedata><tw-passagedata pid="13" name="council-decision" tags="" position="1800,1050" size="100,100">It&#39;s the day of the big council mtg 
+[[pre-council]] </tw-passagedata><tw-passagedata pid="13" name="council-decision" tags="" position="1800,1050" size="100,100">It&#39;s the day of the big council mtg 
 
 if $press-secret is no
 your audience is primed; the benefits and power are evident and indeed proven here in real time; you win this one easily
@@ -3000,7 +3029,6 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="26" name="
 &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Contract, 1635)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Indenture Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Beverley&#39;s &lt;em&gt;History&lt;/em&gt;&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Apprenticeship Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Spriggs&#39; letter&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -3032,27 +3060,7 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="26" name="
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $spriggs1Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-         &lt;&lt;if $spriggs3Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
+                    &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Form, 1635)&lt;/p&gt;
                 &lt;/div&gt;
@@ -3156,26 +3164,6 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="26" name="
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-           &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $spriggs2Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs2&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $spriggs3Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
                    &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Form, 1635)&lt;/p&gt;
@@ -3222,26 +3210,6 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="26" name="
 		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-           &lt;&lt;if (def $spriggsc) and ($spriggsc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggsc&gt;&gt;&quot; (Comments by $PlayerName about Spriggs&#39; letter, 1756)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $spriggs1Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs1&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if $spriggs3Save&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $spriggs3&gt;&gt;&quot; (Spriggs, 1756)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
@@ -4024,15 +3992,18 @@ image map with links to:
 &lt;div class=&quot;col-md crafting&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
-&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about the 17th-century maritime paintings) (Score +5 graphic, placeholder text for now)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the paintings&lt;&lt;/if&gt;&gt;
+&lt;hr&gt;
+&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about the 17th-century maritime paintings) (Score +5 graphic, placeholder text for now)&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;p&gt;(No comments from the paintings)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md crafting&quot;&gt;
 &lt;h2&gt;Mining Accidents&lt;/h2&gt;
 &lt;p&gt;Did you mine any false information or make a mistake?&lt;/p&gt;
-&lt;&lt;if $ships1WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ships2WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships2Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ships3WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $ships5WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships5Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+&lt;hr&gt;
+&lt;&lt;if $ships1WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;
+&lt;&lt;elseif $ships2WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships2Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;
+&lt;&lt;elseif $ships3WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;
+&lt;&lt;elseif $ships5WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $ships5Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;
+&lt;&lt;else&gt;&gt;&lt;p&gt;(No mining accidents)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4334,7 +4305,7 @@ image map with links to:
             &lt;/ul&gt;
             &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
             &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
-            &lt;p&gt;&lt;&lt;button [[Continue the Story |trade-buy]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;&lt;button [[Continue the Story |prepare]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
@@ -4779,11 +4750,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;This indenture made the __ day of _______ in the _____ year of our Sovereign Lord King Charles, between _________ of the one party, and ___________ of the other party, witnesses that the said _____________ does hereby covenant [promise], and grant, to and with the said _____________ his executors and assignees, to serve him from the day of the date hereof, until his first and next arrival in Maryland; and after for and during the term of ________ years, in such service and employment, as he the said ________________ or his assignees shall there employ him, according to the custom of the country in the like kind.&lt;/p&gt;
-&lt;p&gt;In consideration whereof, the said _________ [the master] does promise and grant, to and with the said _______________ &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1 to &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; In witness whereof, the said ___________ has hereunto put his hand and seal, the day and year above written. 
-Sealed and delivered in the presence of ____________.&lt;/p&gt;
+&lt;p&gt;This indenture made the [blank] day of [blank] in the [blank] year of our Sovereign Lord King Charles, between [blank] of the one party, and [blank] of the other party, witnesses that the said [blank] does hereby covenant [promise], and grant, to and with the said [blank] his executors and assignees, to serve him from the day of the date hereof, until his first and next arrival in Maryland; and after for and during the term of [blank] years, in such service and employment, as he the said [blank] or his assignees shall there employ him, according to the custom of the country in the like kind.&lt;/p&gt;
+&lt;p&gt;In consideration whereof, the said [blank] [the master] does promise and grant, to and with the said [blank] &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1 to &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; In witness whereof, the said [blank] has hereunto put his hand and seal, the day and year above written.&lt;/p&gt;
+&lt;p&gt;Sealed and delivered in the presence of [blank].&lt;/p&gt;
 &lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $contract2 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $contract2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/p&gt; 
 &lt;/div&gt;
 
 &lt;hr&gt;
@@ -4818,15 +4788,16 @@ Sealed and delivered in the presence of ____________.&lt;/p&gt;
 &lt;p&gt;I have heard rumors that servitude in Virginia is strangely cruel and severe. I must assure you, with great truth, that these rumors are false. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England.&quot;&gt;&gt;&lt;&lt;set $beverley1 to &quot;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England.&quot;&gt;&gt;&lt;&lt;set $beverley1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; To complete this account of servants, I will provide a summary of the laws which require that servants be treated as kindly as possible.&lt;/p&gt;
 &lt;p&gt;By the Laws of Virginia&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;&lt;span class=&quot;bi&quot;&gt;Servants can file complaints for free.&lt;/span&gt; If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&gt;&gt;&lt;&lt;set $beverley2 to &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&quot;&gt;&gt;&lt;&lt;set $beverley2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Local justices handle complaints quickly.&lt;/span&gt; Any justice of the peace can investigate until the county court makes a final decision. Servants&#39; complaints are heard right away, even without formal paperwork.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Masters must obey the court.&lt;/span&gt; If a master don’t show up after being notified [by the magistrate] of a servant&#39;s complaint, they lose the right to their servant’s labor until they appear. If a master disobeys or ignores court orders, the servant can be sold to a different master. The original master receives the sale money, minus court fees.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;No unfair deals.&lt;/span&gt; Masters cannot change or make any indenture contract without court approval.&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Sick or injured servants must be protected.&lt;/span&gt; If a master mistreats a sick or disabled servant, the servant is moved to a safer home at the master’s expense. If needed, the parish [community church] pays the cost later.&lt;/li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;&lt;span class=&quot;bi&quot;&gt;Masters must provide basic needs.&lt;/span&gt; They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4 to &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Servants keep their own money and goods.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Servants who are English citizens receive &quot;freedom&#39;s dues&quot;&lt;/span&gt; After serving their term of indenture, servants are given food, clothing, a gun. They are allowed to claim 50 acres of unclaimed land.&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;&lt;span class=&quot;bi&quot;&gt;The rights of Englishmen.&lt;/span&gt; As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5 to &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&gt;&gt;&lt;&lt;set $beverley2 to &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&gt;&gt;&lt;&lt;set $beverley2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Local justices handle complaints quickly: Any justice of the peace can investigate until the county court makes a final decision. Servants&#39; complaints are heard right away, even without formal paperwork.&lt;/li&gt;
+&lt;li&gt;Masters must obey the court: If a master don’t show up after being notified [by the magistrate] of a servant&#39;s complaint, they lose the right to their servant’s labor until they appear. If a master disobeys or ignores court orders, the servant can be sold to a different master. The original master receives the sale money, minus court fees.&lt;/li&gt;
+&lt;li&gt;No unfair deals: Masters cannot change or make any indenture contract without court approval.&lt;/li&gt;
+&lt;li&gt;Sick or injured servants must be protected: If a master mistreats a sick or disabled servant, the servant is moved to a safer home at the master’s expense. If needed, the parish [community church] pays the cost later.&lt;/li&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4 to &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Servants keep their own money and goods.&lt;/li&gt;
+&lt;li&gt;Servants who are English citizens receive &quot;freedom&#39;s dues&quot;: After serving their term of indenture, servants are given food, clothing, a gun. They are allowed to claim 50 acres of unclaimed land.&lt;/li&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5 to &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;These laws were designed to protect servants and ensure fair treatment. Claims of commonplace cruelty to servants in Virginia are unfair and widely exaggerated. Instead, as you can see, we Virginians actively work to prevent such abuses.&lt;/p&gt;
 &lt;/div&gt;
@@ -4850,17 +4821,32 @@ almost time for mtg.
 
 you know the substance of your argument. you have memorized your list and have a plan for presenting each point. 
 
-but you&#39;re still deliberating on a mode. you&#39;re the lowest status. you&#39;re wealthy - prob the wealthiest in jamestown - but no land and no fam. not in their network. bacon&#39;s rebellion is shifting the landscape. how do you make them listen? seize the moment wo blowing it? 
+but you&#39;re still deliberating on a mode. you&#39;re the lowest status. it&#39;s weird that you&#39;re even on the council and they could kick you off any time. you&#39;re wealthy - prob the wealthiest in jamestown - but no land and no fam. not in their network. bacon&#39;s rebellion is shifting the landscape. how do you make them listen? seize the moment wo blowing it? 
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h2&gt;What will your mode be when you address the council?&lt;/h2&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Assiduous deference? &lt;/span&gt; Avoid doing anything that might threaten their power or status. Bacon&#39;s Rebellion has the planter elite feeling touchy and defensive. You are modestly wealthy and powerful, but nowhere near their level. Now is not the time to challenge their dominance.&lt;/li&gt;
+&lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Assiduous deference? &lt;/span&gt; Avoid doing anything that might threaten their power or status. Bacon&#39;s Rebellion has the planter elite feeling touchy and defensive. You are modestly wealthy and powerful, but nowhere near their level. Now is not the time to challenge them.&lt;/li&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Mention your newfound ability to manufacture the latest military muskets, but be careful to present this advantage as a service you can perform for them. Avoid challenging their claims to military leadership.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;&lt;if&gt;&gt;
 &lt;hr&gt;
 &lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Carefully correct confidence? &lt;/span&gt;Display your wealth and power. Bacon&#39;s Rebellion has forced the planter elite to know the limits of their dominance. This is your moment to reposition yourself higher up the hierarchy. Project ideal masculine authority as they understand it, acknowledging (and judiciously flattering) the status quo they represent.&lt;/li&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Tell them about your new ability to manufacture the latest military muskets. Explain how valuable that will be in the present crisis, but avoid claiming any right to military leadership yourself.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;&lt;if&gt;&gt;
 &lt;hr&gt;
 &lt;li&gt;&lt;span class=&quot;bi&quot;&gt;Brazen defiance? &lt;/span&gt;These people need to wake up. They&#39;re no longer in control. Their power is hollow. Bacon&#39;s Rebellion has opened the door, and you need to charge through. You don&#39;t ask them to let you print. You tell them it&#39;s happening.&lt;/li&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Tell them about your new ability to manufacture the latest military muskets. Point out that they can&#39;t hope to achieve any kind of military solution to the present crisis without your support. New muskets from London are weeks or months away. And Bacon would welcome your support if they choose to reject it ...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;&lt;if&gt;&gt;
 &lt;/ul&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Before making a choice, grab the pickaxe to mine for knowledge.&lt;/p&gt;
@@ -4933,6 +4919,9 @@ image map with links to:
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Assiduous deference.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Avoid doing anything that might threaten their power or status. Bacon&#39;s Rebellion has the planter elite feeling touchy and defensive. You are modestly wealthy and powerful, but nowhere near their level. Now is not the time to challenge their dominance.&lt;/p&gt;
+      &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p class=&quot;card-text&quot;&gt;Mention your newfound ability to manufacture the latest military muskets, but be careful to present this advantage as a service you can perform for them. Avoid challenging their claims to military leadership.&lt;/p&gt;
+&lt;&lt;if&gt;&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
           &lt;&lt;if $ships1PostureSave&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
@@ -4958,6 +4947,9 @@ image map with links to:
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Carefully correct confidence.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Display your wealth and power. Bacon&#39;s Rebellion has forced the planter elite to know the limits of their dominance. This is your moment to reposition yourself higher up the hierarchy. Project ideal masculine authority, but also acknowledge (and judiciously flatter) their status.&lt;/p&gt;
+            &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p class=&quot;card-text&quot;&gt;Tell them about your new ability to manufacture the latest military muskets. Explain how valuable that will be in the present crisis, but avoid claiming any right to military leadership yourself.&lt;/p&gt;
+&lt;&lt;if&gt;&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
 		  &lt;&lt;if $ships1YouthSave&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
@@ -4990,6 +4982,9 @@ image map with links to:
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Brazen defiance.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;These people need to wake up. The gentry are no longer in control. Their power is hollow. Bacon&#39;s Rebellion has opened the door, and you need to charge through. Don&#39;t &lt;em&gt;ask&lt;/em&gt; them to let you print. &lt;em&gt;Tell&lt;/em&gt; them it&#39;s happening.&lt;/p&gt;
+                  &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p class=&quot;card-text&quot;&gt;Tell them about your new ability to manufacture the latest military muskets. Point out that they can&#39;t hope to achieve any kind of military solution to the present crisis without your support. New muskets from London are weeks or months away. And Bacon would welcome your support if they choose to reject it ...&lt;/p&gt;
+&lt;&lt;if&gt;&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
 		  &lt;&lt;if $ships2GroupSave&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
@@ -5025,7 +5020,7 @@ image map with links to:
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue On |trade-buy]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button [[Continue On |prepare]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
@@ -5080,9 +5075,17 @@ image map with links to:
 &lt;/div&gt;
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="print-bacon" tags="" position="3000,200" size="100,100">council mtg decision, results 
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="print-bacon" tags="" position="3200,200" size="100,100">council mtg decision, results 
 
-what will you print to refute bacon&#39;s declaration?</tw-passagedata><tw-passagedata pid="61" name="print-tribes" tags="" position="3200,200" size="100,100">what will you print to humanize the tribes?</tw-passagedata><tw-passagedata pid="62" name="carr" tags="Source" position="2400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+what will you print to refute bacon&#39;s declaration?
+
+present dangers of race mixing and lawlessness no property rights women involved too (babylonical confusion) 
+
+shred bacon&#39;s character</tw-passagedata><tw-passagedata pid="61" name="print-tribes" tags="" position="3600,200" size="100,100">prints to humanize the tribes
+
+choose one or two debry prints and add your comments humanizing and reducing fear
+
+</tw-passagedata><tw-passagedata pid="62" name="carr" tags="Source" position="1100,2400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Carr and Walsh, &quot;The Planter&#39;s Wife: The Experience of Women in Seventeenth-Century Maryland,&quot; in Kupperman, ed., &lt;em&gt;Major Problems in American Colonial History&lt;/em&gt; (Houghton Mifflin, 2000), pp. 71 - 79.&lt;/h1&gt;
