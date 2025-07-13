@@ -2125,7 +2125,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row score-change&quot;&gt;
 &lt;h2&gt;Your score and wealth have increased&lt;/h2&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You were able to start chores as usual this morning, and they&#39;re each working on profitable tasks while you begin assembling the press.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt; &lt;p&gt;Score -2, Wealth -10&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You were able to start chores as usual this morning, and they&#39;re each working on profitable tasks while you begin assembling the press.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt; &lt;p&gt;Score +5, Wealth +10&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;set $score to $score + 5&gt;&gt;&lt;&lt;set $wealth to $wealth + 10&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. Each little block meticulously crafted, its surface a specialized alloy that will hold a sharp edge after repeated pressings. The ink is a cunning portion that will adhere to the metal type face and transfer smoothly and precisely onto the paper.&lt;/p&gt; 
@@ -2270,14 +2270,13 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/result&gt;&gt;
-&lt;p&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, whatever. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
+&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
+&lt;p&gt;Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
 &lt;/div&gt;
 
@@ -2292,27 +2291,26 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/result&gt;&gt;
+&lt;h3&gt;&lt;&lt;button [[Rebellion. |rebels]]&gt;&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt; Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings, whatever. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;h3&gt;&lt;&lt;button [[Go home. |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;/h3&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;h3&gt;&lt;&lt;button [[&quot;The Howling Wilderness.&quot; |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;&lt;elseif $gov is &quot;ask&quot;&gt;&gt;
 &lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially now, while thousands of other colonists have joined Nathaniel Bacon in violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;And the implied threat in your news about the new muskets is not lost on the old man: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets .... Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;/p&gt;
 &lt;p&gt;Berkeley asserts his authority by commanding you to present your case to the council in 4 days. His dignity affirmed, he turns and leaves, trailed by the clerk and soldiers.&lt;/p&gt;
-&lt;&lt;if ($serv is &quot;feed&quot;) and ($capt is &quot;friend&quot;)&gt;&gt;
+
+&lt;&lt;elseif ($serv is &quot;feed&quot;) and ($capt is &quot;friend&quot;)&gt;&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;When they&#39;re gone, you all nearly collapse in hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate. &lt;p&gt;You send Tom next door to invite your friend, the clothier, to join the celebration. He has a violin and a pretty servant girl ... you and John laugh at Tom&#39;s sudden haste in running to fetch them. You sit down to finish your sketch before sending the musket back to Captain Gardner with Olaudah, along with another bottle of wine.&lt;/p&gt;
+&lt;p&gt;When they&#39;re gone, you all nearly collapse in hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate. &lt;p&gt;You send Tom next door to invite your friend, the clothier, to join the celebration. He has a violin and a pretty servant girl ... you and John laugh at Tom&#39;s sudden haste in running to fetch them. You sit down to finish your sketch before sending the musket back to Captain Gardner with de Pareja, along with another bottle of wine.&lt;/p&gt;
 &lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. The good folk of Jamestown think this ritual of yours is shockingly unhealthy and dangerous. You&#39;ve heard more than one whisper of &quot;sorcerer&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Canterbury after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at the shop, you stoke the fire, start breakfast, and make enough noise to wake John and Tom (a lot of noise) ... they aren&#39;t used to wine, and this will be an unpleasant morning for them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -2320,12 +2318,13 @@ Image
 &lt;p class=&quot;caption&quot;&gt;Caption&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;&lt;/if&gt;&gt;
 
 &lt;p&gt;Settling down with charcoal and a clean sanded plank, you begin listing the arguments that will convince the countil to grant you the first printing license in the English colonies.&lt;/p&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
-&lt;h2&gt;What are some of the points you will make at the upcoming council meeting?
+&lt;h2&gt;What are some of the points you will make at the upcoming council meeting?&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3&gt;Licensing: Revenue and Control&lt;/h3&gt;
 &lt;p&gt;Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/p&gt;
@@ -2350,8 +2349,9 @@ Image
 &lt;hr&gt;
 &lt;h3&gt;Free Speech&lt;/h3&gt;
 &lt;p&gt;As an English citizen, you have the right to free speech. The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;/p&gt;
+&lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Before making a choice, grab the pickaxe and mine for knowledge.&lt;/p&gt;
 &lt;/div&gt;
@@ -3489,7 +3489,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;An hour later, you drag yourself out of bed and find mayhem and disaster in your shop. John, the apprentice, is at the forge hammering out a heap of crooked, lumpy nails. His body language and face reflect his rage and frustration. He&#39;s about to cry. Tom, the indentured servant, slumps on a bench nearby, splitting kindling very slowly and looking half asleep.&lt;/p&gt;
+&lt;p&gt;An hour later, you drag yourself out of bed and find mayhem and disaster in your shop. At the door, $dog whines and scratches, wanting to go out. John, the apprentice, is at the forge hammering out a heap of crooked, lumpy nails. His body language and face reflect his rage and frustration. He&#39;s about to cry. Tom, the indentured servant, slumps on a bench nearby, splitting kindling very slowly and looking half asleep.&lt;/p&gt;
 
 &lt;p&gt;You need to finish repairing some old matchlock muskets for the Jamestown garrison. Then there&#39;s a French wheellock a wealthy planter asked you to repair - it&#39;s his favorite fowling piece and his been misfiring arbitrarily.&lt;/p&gt;
 
@@ -3534,7 +3534,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;You stir the fire and add wood. You scoop water and oats into the pot and set it on the shelf a good distance from the flames. You cut chunks of bacon and set them on the shelf a bit closer to the flame.&lt;/p&gt;
+&lt;p&gt;You stir the fire and add wood. You scoop water and oats into the pot and set it on the stone shelf a good distance from the flames. You cut chunks of bacon, tossing one to $dog and setting the rest on the shelf a bit closer to the flame.&lt;/p&gt;
 
 &lt;div class=&quot;row evidence&quot;&gt;
 &lt;h2&gt;Your score has changed.&lt;/h2&gt;
@@ -3579,9 +3579,11 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="33" name="frethorne" tags="Source" position="1000,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Letter from an indentured servant (Virginia, 1629)&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Richard Frethorne was like most indentured servants in early Virginia: a young boy from the lower economic levels of society. Frethorne couldn&#39;t read and write, but a literate friend (the gunsmith named Jackson, who inspired this role play character) kindly wrote this letter from Frethorne&#39;s to parents back in England. Unfortunately, the only reason we can read the boy&#39;s desperate words today is that his family never did. The Virginia Company&#39;s censors nabbed the page and kept it in their own records. Anxious to keep investors optimistic, Virginia Co. suppressed negative news about their colony.&lt;/p&gt;
 &lt;p&gt;This text has been modernized by the authors with help from Claude AI, using the edition at &lt;a href=&quot;https://historymatters.gmu.edu/d/6475&quot; target=&quot;_blank&quot;&gt;“History Matters&quot;&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
@@ -3589,22 +3591,12 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt; 
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/ind-servant.jpg&quot; alt=&quot;servants and slaves processing tobacco&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;18th-century engraving of indentured servants and African slaves processing tobacco on a Virginia plantation. Citation.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;Richard Frethorne was like most indentured servants in early Virginia: a young boy from the lower economic levels of society. Frethorne couldn&#39;t read and write, but a literate friend (the gunsmith named Jackson, who inspired this role play character) kindly wrote this letter from Frethorne&#39;s to parents back in England. Unfortunately, the only reason we can read the boy&#39;s desperate words today is that his family never did. The Virginia Company&#39;s censors nabbed the page and kept it in their own records. Anxious to keep investors optimistic, Virginia Co. suppressed negative news about their colony.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt; 
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
@@ -3622,10 +3614,12 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt; 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="contract" tags="Source" position="1000,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Indenture Contract&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;New York, 1742&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;To become a tradesman like a carpenter or a smith, you had to learn by working in your family&#39;s shop or by serving as an apprentice. Apprenticeship contracts were carefully negotiated, legally binding agreements. Typically, the master was required to teach the apprentice and provide housing and food and protection, while the apprentice was required to serve and obey.&lt;/p&gt;
 &lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition from the &lt;a href=&quot;https://www.gilderlehrman.org/history-resources/spotlight-primary-source/indenture-agreement-1742&quot; target=&quot;_blank&quot;&gt;Gilder Lehman Institute of American History.&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
@@ -3633,21 +3627,11 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/indenture-contract.jpg&quot; alt=&quot;servants and slaves processing tobacco&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;The indenture contract binding John Reid to serve Robert Livingston as an apprentice for five years. From the &lt;a href=&quot;https://www.gilderlehrman.org/history-resources/spotlight-primary-source/indenture-agreement-1742&quot; target=&quot;_blank&quot;&gt;Gilder Lehman Institute of American History.&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;To become a tradesman like a carpenter or a smith, you had to learn by working in your family&#39;s shop or by serving as an apprentice. Apprenticeship contracts were carefully negotiated, legally binding agreements. Typically, the master was required to teach the apprentice and provide housing and food and protection, while the apprentice was required to serve and obey.&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -4225,114 +4209,121 @@ image map with links to:
 &lt;div class=&quot;row crafting&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
-&lt;ul class=&quot;nodot crafting&quot;&gt;
+&lt;hr&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
 &lt;&lt;if (def $coffeec) and ($coffeec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffeec&gt;&gt;&quot; (Comments by $PlayerName about 17th-century English coffeehouse bans)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the coffeehouse bans&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $printc) and ($printc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $printc&gt;&gt;&quot; (Comments by $PlayerName about the Licensing Order of 1643)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Licensing Order&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $miltonc) and ($miltonc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $miltonc&gt;&gt;&quot; (Comments by $PlayerName about the Milton&#39;s &lt;em&gt;Aeropagitica&lt;/em&gt;)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Milton&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $printc) and ($printc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $printc&gt;&gt;&quot; (Comments by $PlayerName about the Licensing Order of 1643)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from the Licensing Order)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $miltonc) and ($miltonc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $miltonc&gt;&gt;&quot; (Comments by $PlayerName about the Milton&#39;s &lt;em&gt;Aeropagitica&lt;/em&gt;)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from Milton)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressLicensing&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Licensing: Revenue and control.&lt;/span&gt; Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressLicensing&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Licensing: Revenue and control.&lt;/span&gt; Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $coffee3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 
 &lt;/ul&gt;
 &lt;hr&gt;
 
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressPaper&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Paper tax&lt;/span&gt;: Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressPaper&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Paper tax&lt;/span&gt;: Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 
 &lt;/ul&gt;
 &lt;hr&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressTheywill&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressTheywill&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee2&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $coffee3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee2&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee3&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;/ul&gt;
 &lt;hr&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressStatus&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Virginia&#39;s status:&lt;/span&gt; No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressStatus&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Virginia&#39;s status:&lt;/span&gt; No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;/ul&gt;
 &lt;hr&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressControl&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;Control the narrative&lt;/span&gt; When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own clear and persuasive statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressControl&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Control the narrative&lt;/span&gt; When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own clear and persuasive statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print8Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print4&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print5&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print6&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print7&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print8&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong1&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;A printing press is not important.&lt;/span&gt; There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong1&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A printing press is not important.&lt;/span&gt; There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressKnowledge&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;A more prosperous, powerful society:&lt;/span&gt; A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressKnowledge&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A more prosperous, powerful society:&lt;/span&gt; A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/label&gt;&lt;/li&gt;
 &lt;ul&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton1Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton2Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton3Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton4Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton5Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton6Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton7Save&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print2&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print3&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton1&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton2&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton3&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton4&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton5&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton6&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $milton7&gt;&gt;&quot; (Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;/ul&gt;
 &lt;hr&gt;
 
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong2&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;As an English citizen, you have the right to free speech.&lt;/span&gt; The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong2&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  As an English citizen, you have the right to free speech.&lt;/span&gt; The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
 
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -4365,12 +4356,14 @@ image map with links to:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="coffee" tags="Source" position="2100,500" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="coffee" tags="Source" position="2100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-11&quot;&gt;
 &lt;h1&gt;Bans and Supression of Coffeehouses&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;England, 1670s&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions.&lt;/p&gt;
 &lt;p&gt;This text has been modernized by ChatGPT and the authors, using the edition at the University of Michigan Library).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-1&quot;&gt;
@@ -4378,22 +4371,12 @@ image map with links to:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for information about the English government&#39;s fears about printed material and social and political unrest. Choose a link to save the text to your inventory.&lt;/p&gt;
 &lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/coffeehouse.jpg&quot; alt=&quot;men in rich clothing around tables drinking, reading, smoking, arguing violently&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;A typical coffeehouse scene from England, 1710: Reading, drinking, smoking, arguing. Public Domain Review.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions.&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -4409,6 +4392,8 @@ image map with links to:
 &lt;p&gt;God save the king.&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="press-mine" tags="" position="2200,300" size="100,100">&lt;div class=&quot;container mine&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
@@ -4441,34 +4426,27 @@ image map w links to:
 [[milton]] 
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="milton" tags="Source" position="2100,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="milton" tags="Source" position="2100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;Milton, &lt;em&gt;Aeropagitica&lt;/em&gt; (England, 1644)&lt;/h1&gt;
-&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at &quot;The Milton Reading Room&quot; (University of Dartmouth).&lt;/p&gt;
+&lt;h1&gt;Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;&lt;/h1&gt;
+&lt;p class=&quot;subtitle&quot;&gt;England, 1644&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;John Milton (1608 - 1674) is widely regarded as one of the most important and brilliant English authors (e.g., the epic poem &lt;em&gt;Paradise Lost&lt;/em&gt;). He served in government and wrote about controversial religious and political subjects in poetry and prose. He was imprisoned for a time, for his liberal, anti-monarchist statements. In &lt;em&gt;Aeropagitica&lt;/em&gt;, Milton argues against the a new and harsh censorship law - the 1643 &quot;Ordinance for the Regulation of Printing.&quot;&lt;/p&gt;
+&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at University of Dartmouth&#39;s &lt;a href=&quot;https://milton.host.dartmouth.edu/reading_room/areopagitica/text.shtml&quot; target=&quot;_blank&quot;&gt;Milton Reading Room&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for key concepts in the debate about freedom of the press in mid 17th-century English society.&lt;/p&gt;
 &lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/milton.jpg&quot; alt=&quot;framed line drawing of long-haired slightly smiling man from shoulders up&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Portrait of John Milton (Faithorne, 1670). National Portrait Gallery.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;John Milton (1608 - 1674) is widely regarded as one of the most important and brilliant English authors (e.g., the epic poem &lt;em&gt;Paradise Lost&lt;/em&gt;). He served in government and wrote about controversial religious and political subjects in poetry and prose. He was imprisoned for a time, for his liberal, anti-monarchist statements. In &lt;em&gt;Aeropagitica&lt;/em&gt;, Milton argues against the a new and harsh censorship law - the 1643 &quot;Ordinance for the Regulation of Printing.&quot;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt; 
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
@@ -4496,10 +4474,11 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;p&gt;Instead of suppressing books, government should nurture virtue, educate wisely, and trust mature readers. True liberty means choosing rightly, not being forced to be good. … &lt;/p&gt;
 &lt;p&gt;And so the oppressive tools of censorship are quietly returning. Truth is being silenced. Publishing is being chained up again. ... The people’s rights are denied, and the freedom of learning is once again in shackles.&lt;/p&gt;
 &lt;p&gt;Ironically, Parliament itself has argued that censorship usually produces the opposite effect: it doesn’t stop heresies or factions. It strengthens them. As Francis Bacon once said, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them.&quot;&gt;&gt;&lt;&lt;set $milton7 to &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them.&quot;&gt;&gt;&lt;&lt;set $milton7Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;…&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="berkeley-portraits" tags="Source" position="2700,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
+</tw-passagedata><tw-passagedata pid="46" name="berkeley-portraits" tags="Source" position="2700,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
 
 &lt;div class=&quot;container main&quot;&gt;
 
@@ -4627,18 +4606,21 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Licensing Order of 1643&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays.&lt;/p&gt;
+&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at British History Online.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at British History Online.&lt;/p&gt;
-&lt;hr&gt; 
+
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
@@ -4646,36 +4628,24 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/press.jpg&quot; alt=&quot;wooden printing press&quot; width=&quot;80%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Eighteenth-Century English Printing Press. Elmbridge Museum.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt; 
-
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$printc&quot; `$printc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;h3&gt;Background&lt;/h3&gt;
 &lt;p&gt;Parliament has recently issued several orders to stop the &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;growing abuse and disorder in printing. Many false, forged, offensive, and unapproved papers, pamphlets, and books have been published, damaging both religion and government.&quot;&gt;&gt;&lt;&lt;set $print1 to &quot;growing abuse and disorder in printing. Many false, forged, offensive, and unapproved papers, pamphlets, and books have been published, damaging both religion and government&quot;&gt;&gt;&lt;&lt;set $print1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Despite the Stationers&#39; Company’s efforts to enforce these rules, little progress has been made. This is partly because the new law to address these problems has been delayed due to the ongoing national unrest. Also, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;many printers have set up secret printing presses to produce and distribute large numbers of unlicensed materials, making it nearly impossible to find and punish all offenders. Some have ignored the rules and reprinted profitable books without permission&quot;&gt;&gt;&lt;&lt;set $print2 to &quot;many printers have set up secret printing presses to produce and distribute large numbers of unlicensed materials, making it nearly impossible to find and punish all offenders. Some have ignored the rules and reprinted profitable books without permission&quot;&gt;&gt;&lt;&lt;set $print2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;, especially those belonging to members enforcing Parliament’s orders, as an act of revenge. This has harmed the Stationers&#39; Company and discouraged their participation in this public duty.&lt;/p&gt;
-&lt;h3&gt;New Rules and Restrictions&lt;/h3&gt;
+
 &lt;p&gt;Therefore, Parliament orders the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Only authorized people may print Parliament’s orders or declarations, and only by official permission from one or both Houses of Parliament.&lt;/li&gt;
-&lt;li&gt;No book, pamphlet, paper, or even a part of one may be printed, bound, stitched, or sold unless: (1) It has been approved and licensed by someone authorized by Parliament, (2), it is officially recorded in the Stationers&#39; Company registry, or (3) the printer&#39;s name is included on the publication.
+&lt;li&gt;No book, pamphlet, paper, or even a part of one may be printed, bound, stitched, or sold unless: (1) It has been approved and licensed by someone authorized by Parliament, (2), it is officially recorded in the Stationers&#39; Company registry, or (3) the printer&#39;s name is included on the publication.&lt;/li&gt;
 &lt;li&gt;Books previously granted to the Stationers’ Company to support their members and the poor must not be printed without the consent of the Company’s leadership.&lt;/li&gt;
 &lt;li&gt;Books legally licensed and registered to individual members of the Company must not be printed without the owner&#39;s permission.&lt;/li&gt;
 &lt;li&gt;No importing of books (or parts of books) previously printed in England from overseas is allowed without approval. Violators will forfeit those books and may be punished further.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Enforcement Powers:&lt;/h3&gt;
 &lt;p&gt;The following people (or their deputies) are authorized and required to enforce these rules: the Master and Wardens of the Stationers’ Company, the Gentleman Usher of the House of Lords, the Sergeant-at-Arms of the House of Commons. These individuals may:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Search any location for unlicensed printing presses and materials used to print unauthorized or scandalous content.&quot;&gt;&gt;&lt;&lt;set $print3 to &quot;Search any location for unlicensed printing presses and materials used to print unauthorized or scandalous content.&quot;&gt;&gt;&lt;&lt;set $print3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
@@ -4687,10 +4657,10 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;/ul&gt;
 &lt;p&gt;Local officials (justices, captains, constables, etc.) are ordered to help enforce this law. If necessary, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;authorities may break locks or doors to conduct their searches.&quot;&gt;&gt;&lt;&lt;set $print8 to &quot;authorities may break locks or doors to conduct their searches&quot;&gt;&gt;&lt;&lt;set $print8Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;h3&gt;Concluding Remarks&lt;/h3&gt;
 &lt;p&gt;This order must be immediately printed and published so everyone is aware of it, and so that violators have no excuse.&lt;/p&gt;
-&lt;/div&gt;
 
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="chest" tags="Utilities" position="100,700" size="100,100">&lt;div class=&quot;container chest-inside&quot;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -4721,7 +4691,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 </tw-passagedata><tw-passagedata pid="50" name="quitsave" tags="Utilities" position="100,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;h1&gt;Choose an option&lt;/h1&gt;
+&lt;h1&gt;Pick one:&lt;/h1&gt;
 
 &lt;p&gt;To go back to the story, close this window.&lt;/p&gt;
 
@@ -4783,10 +4753,13 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="52" name="StoryDisplayTitle" tags="Utilities" position="100,300" size="100,100">Timecraft</tw-passagedata><tw-passagedata pid="53" name="indenture" tags="Source" position="1000,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;row choice center&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Indenture Form&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Maryland, 1635&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This was a common format for the indenture contracts signed by servants and masters in the colonies.&lt;/p&gt;
 &lt;p&gt;This text has been modernized by the authors using the edition from Kupperman, ed., &lt;em&gt;Major Problems in American Colonial History&lt;/em&gt; (Houghton Mifflin, 2000)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
@@ -4794,7 +4767,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
@@ -4817,10 +4790,13 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="beverley" tags="Source" position="1000,800" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Virginia Laws about Servants and Masters&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Virginia, 1705&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;This is a summary of the Virginia laws regulating servants and masters, was written by Virginia governor, Robert Beverley, in his 1705 book, &lt;em&gt;The History and Present State of Virginia&lt;/em&gt;. Beverley wrote to promote a positive image of Virginia among the British public. In this excerpt, he strives to refute rumors that servants in Virginia were abused. Although Virginia planters like Beverly were increasingly relying on enslaved Africans rather than European indentured servants by 1705, a steady supply of servants remained crucial.&lt;/p&gt;
 &lt;p&gt;This text has been modernized by the authors using the edition from Kupperman, ed., &lt;em&gt;Major Problems in American Colonial History&lt;/em&gt; (Houghton Mifflin, 2000)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
@@ -4828,13 +4804,13 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;This is a summary of the Virginia laws regulating servants and masters, was written by Virginia governor, Robert Beverley, in his 1705 book, &lt;em&gt;The History and Present State of Virginia&lt;/em&gt;. Beverley wrote to promote a positive image of Virginia among the British public. In this excerpt, he strives to refute rumors that servants in Virginia were abused. Although Virginia planters like Beverly were increasingly relying on enslaved Africans rather than European indentured servants by 1705, a steady supply of servants remained crucial.&lt;/p&gt;
 &lt;p&gt;Look for information about the institution of indentured servitude in Virginia, including the relationship between master and servant or apprentice. Select useful links to save the them to your inventory.&lt;/p&gt;
 &lt;/div&gt;
+&lt;hr&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
