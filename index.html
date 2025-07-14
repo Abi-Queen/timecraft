@@ -559,6 +559,17 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   background-repeat: repeat;
   border: 1px solid black;
   padding: 5px;
+  font-size: 12pt;
+  box-shadow: 0px 0px 3px 3px #dedede;
+}
+
+.mined-acc {
+  background-image: url("images/ss-background.jpg");
+  background-repeat: repeat;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 12pt;
+  box-shadow: 0px 0px 3px 3px #dedede;
 }
 
 .score {
@@ -4306,7 +4317,7 @@ image map with links to:
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong1&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A printing press is not important.&lt;/span&gt; There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
 
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressKnowledge&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A more prosperous, powerful society:&lt;/span&gt; A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/label&gt;&lt;/li&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;Evidence mined:&lt;/li&gt;
 &lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $print1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $print1&gt;&gt;&quot; (Licensing Order of 1643) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
@@ -4363,8 +4374,7 @@ image map with links to:
 &lt;h1&gt;Bans and Supression of Coffeehouses&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;England, 1670s&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions.&lt;/p&gt;
-&lt;p&gt;This text has been modernized by ChatGPT and the authors, using the edition at the University of Michigan Library).&lt;/p&gt;
+&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions. This text has been modernized by ChatGPT and the authors, using the edition at the University of Michigan Library).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-1&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
@@ -4433,8 +4443,7 @@ image map w links to:
 &lt;h1&gt;Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;England, 1644&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;John Milton (1608 - 1674) is widely regarded as one of the most important and brilliant English authors (e.g., the epic poem &lt;em&gt;Paradise Lost&lt;/em&gt;). He served in government and wrote about controversial religious and political subjects in poetry and prose. He was imprisoned for a time, for his liberal, anti-monarchist statements. In &lt;em&gt;Aeropagitica&lt;/em&gt;, Milton argues against the a new and harsh censorship law - the 1643 &quot;Ordinance for the Regulation of Printing.&quot;&lt;/p&gt;
-&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at University of Dartmouth&#39;s &lt;a href=&quot;https://milton.host.dartmouth.edu/reading_room/areopagitica/text.shtml&quot; target=&quot;_blank&quot;&gt;Milton Reading Room&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;John Milton (1608 - 1674) is widely regarded as one of the most important and brilliant English authors (e.g., the epic poem &lt;em&gt;Paradise Lost&lt;/em&gt;). He served in government and wrote about controversial religious and political subjects in poetry and prose. He was imprisoned for a time, for his liberal, anti-monarchist statements. In &lt;em&gt;Aeropagitica&lt;/em&gt;, Milton argues against the a new and harsh censorship law - the 1643 &quot;Ordinance for the Regulation of Printing.&quot; The following excerpts have been modernized by ChatGPT and the authors, using the edition at University of Dartmouth&#39;s &lt;a href=&quot;https://milton.host.dartmouth.edu/reading_room/areopagitica/text.shtml&quot; target=&quot;_blank&quot;&gt;Milton Reading Room&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
@@ -4480,18 +4489,18 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="46" name="berkeley-portraits" tags="Source" position="2700,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
 
-&lt;div class=&quot;container main&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;h1&gt;Late Seventeenth-Century Portraits of Virginia Gentlemen&lt;/h1&gt;
 &lt;p&gt;Look for insights into the identity, character, and behaviors of elite White men in late seventeenth-century Virginia. Choose checkboxes to save items to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;img class=&quot;center img-fluid&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;br&gt;
 
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
@@ -4594,26 +4603,13 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;/div&gt;
 &lt;hr&gt;
 
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue On |council-choice]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Licensing Order of 1643&lt;/h1&gt;
 &lt;hr&gt;
-&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays.&lt;/p&gt;
-&lt;p&gt;The following excerpts have been modernized by ChatGPT and the authors, using the edition at British History Online.&lt;/p&gt;
+&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays. The following excerpts have been modernized by ChatGPT and the authors, using the edition at British History Online.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
@@ -4880,19 +4876,21 @@ image map with links to:
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if (def $anxiousc) and ($anxiousc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $anxiousc&gt;&gt;&quot; (Comments by $PlayerName about Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Brown&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $bportraitsc) and ($bportraitsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $bportraitsc&gt;&gt;&quot; (Comments by $PlayerName about 17th-century portraits of Virginia elite men)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the portraits&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $anxiousc) and ($anxiousc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $anxiousc&gt;&gt;&quot; (Comments by $PlayerName about Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from Brown)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $bportraitsc) and ($bportraitsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $bportraitsc&gt;&gt;&quot; (Comments by $PlayerName about 17th-century portraits of Virginia elite men)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from the portraits)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md crafting&quot;&gt;
 &lt;h2&gt;Mining Accidents&lt;/h2&gt;
 &lt;p&gt;Did you mine any false information or make a mistake?&lt;/p&gt;
-&lt;&lt;if $bportraits1WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $bportraits2WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits2Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $bportraits3WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $bportraits4WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits4Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $bportraits5WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits5Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $bportraits6WrongSave is true&gt;&gt;&lt;p&gt;&lt;&lt;print $bportraits6Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if $bportraits1WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits1Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bportraits2WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits2Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bportraits3WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits3Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bportraits4WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits4Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bportraits5WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits5Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bportraits6WrongSave is true&gt;&gt;&lt;li class=&quot;mined-acc&quot;&gt;&lt;&lt;print $bportraits6Wrong&gt;&gt;&lt;&lt;set $score to $score - 5&gt;&gt;: Invalid interpretation ( Score -5 graphic, placeholder text for now)&lt;/li&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -5301,32 +5299,23 @@ image map with links to:
 &lt;/div&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="brown-mascuilnity" tags="Source" position="2700,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
+
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Kathleen M. Brown, &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; (University of North Carolina Press, 1996)&lt;/h1&gt;
-&lt;p&gt;The authors reviewed, edited, and curated the following collection of excerpts generated by ChatGPT.&lt;/p&gt;
+&lt;p&gt;This classic work on gender, race, and power in colonial Virginia by leading historian Kathleen Brown can tell us a lot about the outlook and behaviors of the men on Governor Berkeley&#39;s council in 1676. The authors reviewed, edited, and curated the following collection of excerpts generated by ChatGPT.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;secondary source label&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-4&quot;&gt;
-&lt;img class=&quot;border&quot; src=&quot;images/brown-book.jpg&quot; alt=&quot;book cover for Brown, Good Wives, Nasty Wenches, and Anxious Patriarchs&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Book cover&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-8&quot;&gt;
-&lt;p&gt;This classic work on gender, race, and power in colonial Virginia by leading historian Kathleen Brown can tell us a lot about the outlook and behaviors of the men on Governor Berkeley&#39;s council in 1676.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt; 
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
@@ -5346,8 +5335,6 @@ image map with links to:
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Non-elite White men were politically active&quot;&gt;&gt;&lt;&lt;set $anxious9 to &quot;Non-elite White men were politically active: &#39;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious9Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law.&quot;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;/div&gt;
-
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="printbacon" tags="" position="3200,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -5360,12 +5347,13 @@ image map with links to:
 &lt;p class=&quot;rt&quot;&gt;Above: Detail from copper plate engraving for a copy of D&amp;#252;rer&#39;s &quot;Knight, Death, and the Devil&quot; (Germany, 1563). From the &lt;a href=&quot;https://www.britishmuseum.org/collection/object/P_1865-0429-173&quot; target=&quot;_blank&quot;&gt; British Museum&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;The council has granted you permission to operate your press. However, they have also resolved to draft an &quot;Act Concerning Printing,&quot; to be debated and passed (or rejected) at the next council meeting. So ... This is a test. They want to see how loyal you are, and how useful the press can be (&lt;em&gt;for them&lt;/em&gt;).&lt;/p&gt;
-&lt;p&gt;The governor &quot;had a notion&quot; that you print might something to sway public opinion against Bacon&#39;s Rebellion. His &quot;notion&quot; is essentially a royal decree, for someone in your position. &lt;em&gt;This is a test.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The council has granted you permission to operate your press. However, they have also resolved to draft an &quot;Act Concerning Printing,&quot; to be debated and passed (or rejected) at the next assembly meeting (House of Burgesses). So ... this is a test. They want to see how loyal you are, and how useful the press can be (&lt;em&gt;for them&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;The governor &quot;had a notion&quot; that you print might something to sway public opinion against Bacon&#39;s Rebellion. His &quot;notion&quot; is essentially a royal decree, for someone like you. &lt;em&gt;This is a test.&lt;/em&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;You decide to create a broadside - a large print that can be displayed on a wall or a table. Strong symbolic images. A variety of text in various sizes, configurations, ornamentation. It will look impressive and have maximum impact on a low-literacy population. You unlock your storeroom and search by lantern light, pawing aside old lumber and bits of broken tools, finally drawing out a long, dusty roll of stiff paper. It&#39;s a broadside you brought with you from London many years ago. Back at your workbench, you unroll it carefully, weighting down the corners until you can stand back and consider the whole. It&#39;s an inspiration - a visual homily with catchy rhyming verses to stick in the memories of the illiterate. You will make something similar. With luck, you&#39;ll soon hear Jamestown folk singing snatches of your song while they fiddle a tune in the evening. With even better luck, the council will hear it, too.&lt;/p&gt;
+&lt;p&gt;You decide to create a broadside - a large print that can be displayed on a wall or a table. Strong symbolic images. A variety of text in various sizes, configurations, ornamentation. It will look impressive and have maximum impact on a low-literacy population. You unlock your storeroom and light a lantern light. Moving carefully through the shifting shadows, you paw aside old lumber and bits of broken tools, finally drawing out a long, dusty roll of stiff paper. You carry it back to the workbench and unroll it carefully, weighing down each corner so you can stand back and consider the whole. It&#39;s an old broadside you brought with you from London many years ago, and it&#39;s an inspiration - a visual homily with catchy rhyming verses to stick in the memories of the illiterate.&lt;/p&gt;
+&lt;p&gt;You will make something like this. With luck, you&#39;ll soon hear Jamestown folk singing snatches of your song while they fiddle a tune in the evening. With even better luck, the council will hear it, too.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/upside-down.jpg&quot; alt=&quot;early modern print illustration showing backward and upside down things&quot; width=&quot;90%&quot;&gt;
@@ -5387,10 +5375,10 @@ image map with links to:
 &lt;p&gt;Expose Bacon and his rebellion as violations of masculine virtue.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;Racism&lt;/h3&gt;
-&lt;p&gt;Fuel and feed on colonists&#39; fears of racial mixing ... which Bacon&#39;s Rebellion seems to be facilitating.&lt;/p&gt;
+&lt;p&gt;Fuel and exploit colonists&#39; fears of racial mixing ... which Bacon&#39;s Rebellion seems to be facilitating.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;&quot;Babylonical Confusion&quot;&lt;/h3&gt;
-&lt;p&gt;Fuel and feed fears anarchy, &quot;a war of all against all,&quot; in the absence of good government and right order.&lt;/p&gt;
+&lt;p&gt;Fuel and exploit fears anarchy, of &quot;a war of all against all,&quot; in the absence of good government and right order.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;Join the Rebels&lt;/h3&gt;
 &lt;p&gt;Defend and promote Bacon&#39;s Rebellion. Attack the status quo. Harness the power of your new machine to conjure bloody revolution here and now. &lt;em&gt;Carpe diem.&lt;/em&gt;&lt;/p&gt;
@@ -5449,25 +5437,30 @@ choose one or two debry prints and add your comments humanizing and reducing fea
 &lt;/div&gt;
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="bacon-declaration" tags="Source" position="3100,500" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="bacon-declaration" tags="Source" position="3100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-11&quot;&gt;
 &lt;h1&gt;Bacon&#39;s Declaration&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Virginia, 1676&lt;/p&gt;
-&lt;p&gt;Nathaniel Bacon drafted this statement of grievances to justify his rebellion against Governor Berkeley&#39;s regime.&lt;/p&gt;
-&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://historymatters.gmu.edu/d/5800&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
+&lt;p&gt;Nathaniel Bacon drafted this statement of grievances to justify his rebellion against Governor Berkeley&#39;s regime. This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://historymatters.gmu.edu/d/5800&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-1&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt; 
+&lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the English government&#39;s fears about printed material and social and political unrest. Choose a link to save the text to your inventory.&lt;/p&gt;
+&lt;p&gt;Look for information about the political, social, economic framework of Bacon&#39;s Rebellion, especially:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The colonists&#39; ideas of good governance and a healthy society,&lt;/li&gt;
+&lt;li&gt;Causes of resentment against Berkeley&#39;s regime,&lt;/li&gt;
+&lt;li&gt;Motives and objectives of those who support the rebellion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Choose a link to save the text to your inventory.&lt;/p&gt;
 &lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -5477,19 +5470,25 @@ choose one or two debry prints and add your comments humanizing and reducing fea
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Abuse of Taxation and Neglect of Public Good: He raised heavy taxes on the general population under the excuse of funding public projects. However, these taxes were actually used to benefit his personal allies and serve hidden agendas. Despite his long time in office, he failed to improve the colony through fortifications, town-building, or trade.&lt;/li&gt;
-&lt;li&gt;Corruption of the Judicial System: He disrespected the justice system by appointing corrupt and ignorant personal favorites to positions of legal authority, making the courts a mockery.&lt;/li&gt;
-&lt;li&gt;Betrayal of Royal Interests Through Monopoly: He undermined the King’s rights by seizing control of the beaver trade for himself. In doing so, he profited unjustly and, in effect, betrayed both the colony and the lives of loyal settlers by allowing hostile native groups to flourish.&lt;/li&gt;
-&lt;li&gt;Protecting Hostile Native Groups: He repeatedly supported and protected Native American groups that had attacked the colonists. He never made real efforts to punish them or seek justice for the invasions, thefts, and killings they committed.&lt;/li&gt;
-&lt;li&gt;Sabotaging Military Action Against Hostile Tribes: When the colonial army had a chance to defeat the attacking tribes (who were openly raiding and killing settlers) he intervened and ordered the army to retreat. He claimed the tribes would be peaceful, but they continued their attacks, burning homes, killing settlers, and spreading terror. His decision allowed them to grow stronger and become a far more dangerous enemy.&lt;/li&gt;
-&lt;li&gt;Ignoring the Assembly’s Efforts to Defend the Colony: Even after the assembly raised an army in response to public outcry and bloodshed, he failed to properly support their efforts to defend the colony.&lt;/li&gt;
-&lt;li&gt;Secretly Instigating Civil War: He and a few close allies forged a commission (possibly changing just one number) to start a civil war, without informing or gaining the approval of the people. Though their first attempt failed without violence, they tried again—pulling defenders away from vulnerable frontier areas.&lt;/li&gt;
-&lt;li&gt;Endangering the Colony During Attacks: While enemy attacks continued across the colony, he focused on suppressing internal dissent rather than protecting the people from invasion and violence.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;We accuse Sir William Berkeley of being guilty of all these charges. His actions have betrayed the King&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks. Furthermore, we identify the following individuals (listed separately) as his corrupt advisors, collaborators, and supporters who helped him harm the common people during these troubled times.&lt;/p&gt;
-
+&lt;p&gt;Governor Berkeley has:&lt;/p&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Raised unfairly high taxes and used the money to enrich his friends instead of benefiting the common people by building fortifications or towns, or encouraging trade.&quot;&gt;&gt;&lt;&lt;set $bacon1 to &quot;Berkeley has raised unfairly high taxes and used the money to enrich his friends instead of benefiting the common people by building fortifications or towns, or encouraging trade.&quot;&gt;&gt;&lt;&lt;set $bacon1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges.&quot;&gt;&gt;&lt;&lt;set $bacon2 to &quot;Berkeley has undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges.&quot;&gt;&gt;&lt;&lt;set $bacon2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer.&quot;&gt;&gt;&lt;&lt;set $bacon3 to &quot;Berkeley has violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer.&quot;&gt;&gt;&lt;&lt;set $bacon3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4 to &quot;Berkeley repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever.&quot;&gt;&gt;&lt;&lt;set $bacon5 to &quot;Berkeley forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever.&quot;&gt;&gt;&lt;&lt;set $bacon5Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Ignored the assembly&#39;s decision to raise an army to fight hostile tribes.&quot;&gt;&gt;&lt;&lt;set $bacon6 to &quot;Berkeley ignored the assembly&#39;s decision to raise an army to fight hostile tribes.&quot;&gt;&gt;&lt;&lt;set $bacon6Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&quot;&gt;&gt;&lt;&lt;set $bacon7 to &quot;Berkeley forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&quot;&gt;&gt;&lt;&lt;set $bacon7Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forged documents to raise troops for a civil war, weakening defenses on the vulnerable frontier.&quot;&gt;&gt;&lt;&lt;set $bacon8 to &quot;Berkeley forged documents to raise troops for a civil war, weakening defenses on the vulnerable frontier.&quot;&gt;&gt;&lt;&lt;set $bacon8Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We accuse Sir William Berkeley of being guilty of all these charges. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;His actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks.&quot;&gt;&gt;&lt;&lt;set $bacon9 to &quot;Berkeley&#39;s actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks.&quot;&gt;&gt;&lt;&lt;set $bacon9Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Furthermore, we identify the following individuals as his corrupt advisors, collaborators, and supporters who helped him harm the common people during these troubled times:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sir Henry Chichley&lt;/li&gt;
 &lt;li&gt;William Claiburne Junior&lt;/li&gt;
@@ -5514,9 +5513,10 @@ choose one or two debry prints and add your comments humanizing and reducing fea
 &lt;li&gt;Hubert Farrell&lt;/li&gt;
 &lt;li&gt;Thomas Reade&lt;/li&gt;
 &lt;li&gt;Math. Kempe&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;We also demand that Sir William Berkeley and all those named in the accompanying list immediately surrender or be handed over within four days of receiving this notice. If they fail to do so, we declare the following:&lt;/p&gt;
-&lt;p&gt;Anyone who shelters, hides, or protects any of these individuals—in any house, building, or ship—will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&lt;/p&gt;
-&lt;p&gt;We, the common people of Virginia, make this declaration as a call for **unity among ourselves**, so that we may stand together in defending against our true enemies. Let us not blame the innocent for the crimes of the guilty, nor let the wrongdoing of our oppressors divide those of us who have suffered under their rule.&lt;/p&gt;
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&quot;&gt;&gt;&lt;&lt;set $bacon10 to &quot;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&quot;&gt;&gt;&lt;&lt;set $bacon10Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.&quot;&gt;&gt;&lt;&lt;set $bacon11 to &quot;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.&quot;&gt;&gt;&lt;&lt;set $bacon11Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Let us not blame the innocent for the crimes of the guilty, nor let the wrongdoing of our oppressors divide those of us who have suffered under their rule.&lt;/p&gt;
 &lt;p&gt;Therefore, in His Majesty’s name, we command you to seize the individuals named above as traitors to both the King and this country. Bring them to Middle Plantation and hold them securely until further instructions are given.&lt;/p&gt;
 &lt;p&gt;If anyone resists or you face opposition, you are authorized to request reinforcements in the name of the people from any and all counties in Virginia.&lt;/p&gt;
 
@@ -5525,21 +5525,27 @@ choose one or two debry prints and add your comments humanizing and reducing fea
 &lt;p&gt;William Sherwood&lt;/p&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="62" name="schmidt-bacon" tags="Source" position="3500,500" size="100,100"></tw-passagedata><tw-passagedata pid="63" name="brown-bacon" tags="Source" position="3100,600" size="100,100"></tw-passagedata><tw-passagedata pid="64" name="beverley-bacon" tags="" position="3100,700" size="100,100">&lt;div class=&quot;container main&quot;&gt;
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="62" name="schmidt-bacon" tags="Source" position="3500,500" size="100,100"></tw-passagedata><tw-passagedata pid="63" name="brown-bacon" tags="Source" position="3100,600" size="100,100"></tw-passagedata><tw-passagedata pid="64" name="beverley-bacon" tags="Source" position="3100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-11&quot;&gt;
 &lt;h1&gt;Beverley Explains Bacon&#39;s Rebellion&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;&lt;em&gt;The History and Present State of Virginia&lt;/em&gt; (1705)&lt;/p&gt;
-&lt;p&gt;Robert Beverley was a wealthy planter who actively supported Governor Berkeley&#39;s regime during Bacon&#39;s Rebellion, leading successful attacks on the rebel forces. Later, he served on the Virginia House of Burgesses (legislature).&lt;/p&gt;
-&lt;p&gt;This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=3&amp;psid=3998&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
+&lt;p&gt;Robert Beverley was a wealthy planter who actively supported Governor Berkeley&#39;s regime during Bacon&#39;s Rebellion, leading successful attacks on the rebel forces. Later, he served on the Virginia House of Burgesses (legislature). This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=3&amp;psid=3998&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-1&quot;&gt;
 &lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;br&gt; 
 
-&lt;hr&gt; 
+&lt;div class=&quot;row center&quot;&gt;
+&lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;textarea &quot;$beverleyc&quot; `$beverleyc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;p&gt;The exact cause of Bacon’s Rebellion isn’t easy to pinpoint, but it’s clear that multiple problems contributed to it. It’s unlikely the entire colony would risk their lives in open rebellion just because a few traders wanted a monopoly on trade with the Native Americans, as some claim. After all, the colonists had long admired and chosen Governor Berkeley, who had spent decades serving the colony faithfully without serious complaint. It seems improbable they would abandon such a respected leader for someone they barely knew—unless something deeper was troubling them.&lt;/p&gt;
