@@ -287,10 +287,6 @@ body .passage {
   list-style: none;
 }
 
-textarea {
-  background-color: #5d5d5d;
-}
-
 .chest:hover {
   padding: 8px;
 }
@@ -593,11 +589,14 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 
 .score-change {
   width: 80%;
-  border: 2 px solid black;
+  border: 1 px solid #666666;
   border-radius: 20px;
-  background-image: radial-gradient(#fffcf0, #bebebd);
+  background-image: url("images/metal-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
   padding: 30px;
-  box-shadow: 0px 0px 2px 2px #000;
+  box-shadow: 0px 0px 2px 2px #666666;
   margin-bottom: 5px;
 } 
 
@@ -630,11 +629,14 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
 }
 
 .chest-inside {
-  background-image: radial-gradient(#fffcf0, #FFDE80);
+  background-image: url("images/metal-gold-bg.jpg");
   box-shadow: inset 0px 0px 5px 5px #806f40;
   display: flex;
   align-content: space-around;
   padding: 5px; 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .crafting {
@@ -696,12 +698,9 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 console.log(tooltipList) 
 
-//favicon
-
-
 
 //jquery for image maps
-!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;&lt;set $psg to &quot;jackson&quot;&gt;&gt;
+!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-tag name="MC" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;&lt;set $psg to &quot;jackson&quot;&gt;&gt;
 
 &lt;&lt;set $wealth to 1000&gt;&gt;
 &lt;&lt;set $score to 50&gt;&gt;
@@ -3058,23 +3057,17 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="25" name="
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;img src=&quot;images/mineshaft-morning.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
+&lt;img src=&quot;images/mineshaft.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Indentured servant&#39;s letter (Virginia, 1629)&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;749,471,1243,782&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indentured servant&#39;s letter (Maryland, 1756)&quot; data-passage=&quot;spriggs&quot; role=&quot;link&quot; coords=&quot;955,1444,1445,1763&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice&#39;s contract, 1742&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;3324,825,3965,1132&quot;  shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;An indentured servant writes home, 1629&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Indenture contract, 1635&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;655,90,913,327&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Apprentice&#39;s contract, 1742&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;363,393,592,499&quot;  shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Beverley explains servitude, 1705&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;148,305,299,537&quot;  shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
 
-(remove these links when image map works)
-[[frethorne]]
 
-[[contract]]
-
-[[indenture]]
-
-[[beverley]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="serv-choice" tags="" position="1100,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
@@ -3490,7 +3483,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;p&gt;You sink blissfully back into warm dreams. Your neighbor knocks to tell you that a ship has arrived in the harbor, but the noise don&#39;t rouse you, and he quickly hurries on his way.&lt;/p&gt;
 
-&lt;div class=&quot;row evidence&quot;&gt;
+&lt;div class=&quot;row score-change&quot;&gt;
 &lt;h2&gt;Your score and wealth have decreased&lt;/h2&gt;
 &lt;p&gt;You lost opportunities by choosing to rest.&lt;/p&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
@@ -3547,7 +3540,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;You stir the fire and add wood. You scoop water and oats into the pot and set it on the stone shelf a good distance from the flames. You cut chunks of bacon, tossing one to $dog and setting the rest on the shelf a bit closer to the flame.&lt;/p&gt;
 
-&lt;div class=&quot;row evidence&quot;&gt;
+&lt;div class=&quot;row score-change&quot;&gt;
 &lt;h2&gt;Your score has changed.&lt;/h2&gt;
 &lt;p&gt;Productivity:&lt;/p&gt;
 &lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;&amp;#9733; Score +10   &amp;#9733; Wealth +20&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;Your servants feel motivated and confident when they begin work. They are more productive because you have created order and energy in the shop.&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
@@ -4022,9 +4015,9 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;/div&gt;
 
-image map with links to:
-[[ships]]
-[[articles]]
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area title=&quot;Seventeenth-century European ships and captains&quot; data-passage=&quot;ships&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="articles" tags="Source" position="1300,600" size="100,100">source text to be posted ... </tw-passagedata><tw-passagedata pid="41" name="capt-choice" tags="" position="1400,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
@@ -4429,11 +4422,11 @@ image map with links to:
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 
-image map w links to:
-
-[[coffee]]
-[[licensing-order]] 
-[[milton]] 
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area title=&quot;Bans on London Coffeehouses, 1670s&quot; data-passage=&quot;coffee&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Restrictions on printing, 1643&quot; data-passage=&quot;licensing-order&quot; role=&quot;link&quot; coords=&quot;655,90,913,327&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Milton, Aeropagitica&quot; data-passage=&quot;milton&quot; role=&quot;link&quot; coords=&quot;363,393,592,499&quot;  shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
 
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="milton" tags="Source" position="2100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -4858,9 +4851,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;/div&gt;
 
-image map with links to:
-[[berkeley-portraits]]
-[[brown-mascuilnity]]
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area title=&quot;Male Gentility&quot; data-passage=&quot;brown-masculinity&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Portraits of Virginia gentry, c. 1700&quot; data-passage=&quot;berkley-portraits&quot; role=&quot;link&quot; coords=&quot;655,90,913,327&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="council-choice" tags="" position="2800,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
@@ -5627,10 +5621,11 @@ choose one or two debry prints and add your comments humanizing and reducing fea
 &lt;/div&gt;
 &lt;/div&gt;
 
-image map with links to:
-[[bacon-declaration]]
-[[brown-bacon]] 
-[[beverley-bacon]]
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area title=&quot;Bacon&#39;s Declaration, 1676&quot; data-passage=&quot;bacon-declaration&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Masculinity and Bacon&#39;s Rebellion&quot; data-passage=&quot;brown-bacon&quot; role=&quot;link&quot; coords=&quot;363,393,592,499&quot;  shape=&quot;rect&quot;&gt;
+    &lt;area title=&quot;Beverley explains Bacon&#39;s Rebellion, 1705&quot; data-passage=&quot;beverley-bacon&quot; role=&quot;link&quot; coords=&quot;148,305,299,537&quot;  shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="printbacon-choice" tags="" position="3200,400" size="100,100">&lt;h2&gt;Outline some messages for your anti-Bacon broadside.&lt;/h2&gt;
 &lt;p&gt;How will you portray Bacon as a villain and his rebellion as a sham? (Or will you ...)&lt;/p&gt;
@@ -5692,6 +5687,8 @@ but you&#39;re still deliberating on a mode. you&#39;re the lowest status. it&#3
 &lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;council-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="69" name="mc-jackson1" tags="MC" position="700,0" size="100,100">answer mc question, disappears on timer 
+
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
