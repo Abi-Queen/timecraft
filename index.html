@@ -203,7 +203,7 @@ body .passage {
   text-align: center;
   align-content: center;
   background-image: radial-gradient(#fffcf0, #7c7c7b);
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 30px;
   color: black;
   margin: 50px;
@@ -2796,7 +2796,7 @@ if $gov is lie and $serv is beat or ignore
 
 if $gov is lie and $serv is feed
 
-</tw-passagedata><tw-passagedata pid="9" name="lie" tags="" position="2200,1000" size="100,100">set $jackson-end to fail
+</tw-passagedata><tw-passagedata pid="9" name="lie" tags="" position="1900,400" size="100,100">set $jackson-end to fail
 
 if $serv is feed and slave is $friend
 set $power to -200 
@@ -5248,26 +5248,59 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="print-tribes" tags="" position="3600,200" size="100,100">if $printbacon is join, print to demonize tribes
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="print-tribes" tags="" position="3600,200" size="100,100">&lt;&lt;if $gov is &quot;lie&quot;&gt;&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-Bacon&#39;s Rebellion is easy to find: Follow the smoke on the horizon. They&#39;re burning plantations and looting. Freed slaves join the army. Women find a ready welcome here, as they do with any army. You see women washing near the stream, and others spinning and cooking oustide an encampment of tents. An armed escort is taking you toward a handsome mansion to meet with Bacon. A woman on horseback trots past and dismounts at the house before hurrying up the stairs and inside. 
+join Bacon; no friends in Jamestown 
 
-A month ago, this social and racial equality would have disgusted you, but your expulsion from Jamestown has left you embittered against the establishment, the status quo, the system you&#39;ve supported so faithfully all your life. It&#39;s still a relief when you discover that even here among the rebels, there is a stong sense of decent order. The wealthy elite like Bacon and the gentry who have joined him are clearly in charge. None of the rabble you passed outside are present in the fine dining room where you find yourself face to face with Bacon and five other gentlemen. They look at you the way gentlemen always look at a smith. Bacon condescendingly offers you refreshment before asking your business.
+&lt;/div&gt;
 
-How do you present your qualifications as a leader of the rebellion? 
-print: support rebellion, defame berkeley, shape London perspective, demonize tribes 
+&lt;&lt;elseif $printbacon is &quot;join&quot;&gt;&gt;
 
-You can also build, design, and repair guns including latest flintlock (but v slow bc lost shop) and basically anything made of metal. 
+&lt;div class=&quot;container&quot;&gt;
 
-what do you print to dehumanize and demonize the tribes and stoke fear? 
+&lt;p&gt;You manage to escape Jamestown just seconds ahead of the soldiers Berkeley has sent to arrest you. You&#39;re hiding in the thick riverine brush near the bank of the James River, with $dog at your side. Tom and John and your militia company have pledged loyalty to you and the rebellion. They will stay in Jamestown to encourage people to resist Berkeley. They will be ready to open the city gates when you return with Bacon and his army.&lt;/p&gt;
+&lt;p&gt;When night falls, you venture out into the open. There&#39;s a good moon, and it&#39;s easy to find a well-traveled wagon road leading away from Jamestown. The slow dawning silouhettes a dark column of smoke rising in the distance. Bacon&#39;s army is burning and looting. Bacon has declared that he is the legitimate representative of the people, and that his opponents are outlaws. By ancient custom, an outlaw is &lt;em&gt;outside&lt;/em&gt; the protection of the law. Every loyal citizen has a duty to attack an outlaw. The smoke billowing on the horizon seems to confirm the rumors you heard in Jamestown - that Bacon&#39;s followers have welcomed the opportunity to redistribute the planters&#39; wealth, and are burning and looting with glee.&lt;/p&gt;
+&lt;p&gt;By daybreak, you&#39;re approaching a handsome, columned mansion, surrounded by a dozen small outbuildings and acres of tobacco. Some of the bulidings are charred and smouldering, but the mansion itself seems to have been spared. Strewn about its grounds is a haphazard encampment of shoddy tents - a noisy and foul-smelling litter of humanity - &lt;em&gt;much like Jamestown&lt;/em&gt;, you think. Women have found a ready welcome here, as they do with any army. One group washes clothes in the stream. Others sit on a bench, spinning and sewing, chatting with still more who are cooking and serving food. A swarm of children runs past you at top speed, and $dog growls a warning. In the shade of the trees, a group of men sit in idle conversation. There&#39;s a mix of European and African faces.&lt;/p&gt;
+
+&lt;p&gt;A month ago, this social and racial equality would have disturbed you, but your expulsion from Jamestown has left you embittered against the establishment, the status quo, the system you&#39;ve supported so faithfully all your life. But when the guards escort you into the cool and elegant dining room, Bacon and the gentry who have joined him dismiss the guards with firm authority and then look at you the way gentlemen always look at a smith. So. The gentry are still up there, and you&#39;re still down here. You smirk sardonically to yourself: &lt;em&gt;Berkeley or Bacon, what&#39;s the difference, really?&lt;/em&gt;. Bacon condescendingly offers you refreshment before asking your business.&lt;/p&gt;
+
+&lt;p&gt;You tell Bacon that you have brought Jamestown within his reach. The populace is ready to join him. They will open the gates to him.&lt;/p&gt;
 
 
-if $printbacon isnot join, council praises efforts and requests another publication to combat fear of tribes 
+&lt;/div&gt;
 
-you decide on a leaflet this time rather than a big broadside
 
-choose some debry images and add messages to humanize indigenous ppl, assuage colonists&#39; fears of violence and difference, and encourage peaceful interactions esp trade for econ growth 
+&lt;&lt;else&gt;&gt;
 
+&lt;div class=&quot;container&quot;&gt;
+
+&lt;div class=&quot;row hero-printtribes&quot;&gt;
+&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;h1&gt;&quot;To Ruin and Extirpate All Indians in General&quot;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;rt&quot;&gt;Above: Caption. From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Source&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;Your anti-Bacon broadside is a huge success. Now, the governor has asked you to print something to calm the colonists&#39; fear and hatred of the tribes. Since the colony was founded sixty years ago, there&#39;s been constant violence between the colonists and the neighboring tribes. There&#39;s also been peace, friendship, and trade - but never for very long. Bacon has aggressively, successfully, used this fear and hatred to unite an extremely diverse group. His supporters are gentry, commoners, servants, White, Black, male, female. What do they have in common? Hatred and fear of the tribes (who, according to Bacon, are being supported by Berkeley to feed his own greed).&lt;/p&gt;
+&lt;p&gt;It&#39;s working very well for Bacon. And now, for Berkeley, it&#39;s become impossible to remain unaware of how powerful your printing press has been in unifying the Jamestown population &lt;em&gt;against&lt;/em&gt; Bacon. There&#39;s far less grumbling against Berkeley&#39;s set. Far more good humor and good spirits. He didn&#39;t say it out loud, but he&#39;s seen the value of your printing press, formerly known as &quot;that demonic engine from the cess pit of London.&quot;&lt;/p&gt;
+&lt;p&gt;You decide to create a leaflet this time with several small images, each one with a bit of text. You will print a few scenes from John Hariot&#39;s popular book about Virginia. It&#39;s an old, familiar classic. Best to build a controversial argument on a foundation of shared knowledge. Still, this won&#39;t be easy. It might be impossible. The stakes couldn&#39;t be higher.&lt;/p&gt;
+&lt;p&gt;You sigh and set out a copper plate, ready to begin etching. Which scenes will you use? And how will you explain them in a way that makes the indigenous people seem less frightening, more human, more normal? More like helpful neighbors and profitable trade partners to be befriended, and less like murderous cannibals to be exterminated?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center choice&quot;&gt;
+&lt;h2&gt;What will you put in your new broadside to change the way the colonists see their indigenous neighbors?&lt;/h2&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;p&gt;Before making a choice, grab the pickaxe to mine for knowledge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;printtribes-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="46" name="carr" tags="Source" position="1100,2400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -5596,7 +5629,7 @@ choose some debry images and add messages to humanize indigenous ppl, assuage co
 &lt;/div&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;Your servants have spread the story of your victorious confrontation with the governor. In their version of events, you&#39;ve morphed into a hybrid of Cromwell Lord Protector and Hercules. The governor&#39;s rages are legendary, and your fortitude in withstanding that storm has hugely boosted your social capital. Everyone in Jamestown seems to be finding excuses to stop by your shop. They all want to hear the story. They all want to see the printing press. Most of them come on some pretext of commissioning work or buying supplies. Business is booming.&lt;/p&gt;
+&lt;p&gt;Your servants have spread the story of your victorious confrontation with the governor. In their version of events, you&#39;ve morphed into a hybrid of Herakles and Cromwell Lord Protector. The governor&#39;s rages are legendary, and your fortitude in withstanding that storm has hugely boosted your social capital. Everyone in Jamestown seems to be finding excuses to stop by your shop. They all want to hear the story. They all want to see the printing press. Most of them come on some pretext of commissioning work or buying supplies. Business is booming.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;What will you do?&lt;/h2&gt;
@@ -5604,7 +5637,7 @@ choose some debry images and add messages to humanize indigenous ppl, assuage co
 &lt;hr&gt;
 &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepCapt&quot; false true&gt;&gt;Meet with the old Captain General.&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;You go to the fort to find old Captain Wenham who commands the garrison of regular troops. As militia captain and gunsmith, you often work with him. He&#39;s the one who recommended you to the governor as deserving a seat on the council in the first place. If he can spend the next few days convincing the councilors to support you, success is all but guaranteed.&lt;/p&gt;
+&lt;p&gt;You go to the fort to find old Captain Price who commands the garrison of regular troops. As militia captain and gunsmith, you often work with him. He&#39;s the one who recommended you to the governor as deserving a seat on the council in the first place. If he can spend the next few days convincing the councilors to support you, success is all but guaranteed.&lt;/p&gt;
 &lt;hr&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepLady&quot; false true&gt;&gt;Consult Lady Berkeley.&lt;/label&gt;&lt;/h3&gt;
