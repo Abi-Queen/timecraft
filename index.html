@@ -651,6 +651,18 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("
   background-repeat: repeat;
 }
 
+#scoreup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+	z-index: 9999;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+}
+
 @media (max-width: 576px) {
   .hero-start, .hero-jackson, .hero-morning, .hero-dock, .hero-virginia {
     height: 200px; 
@@ -3543,6 +3555,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;div class=&quot;container&quot;&gt;
 [[test]]
+[[test2]]
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h1&gt;Welcome, $PlayerName!&lt;/h1&gt;
@@ -7073,11 +7086,19 @@ what do they want</tw-passagedata><tw-passagedata pid="87" name="caveat" tags=""
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;Seventeenth-century European writers like John Smith are notorious for sensationalizing accounts of “savagery” in indigenous American societies. They’re trying to sell books for profit. And what sells? … You know. (Some things don’t change much.) We should assume that some portion of these hair-raising details (such as flaying, dismemberment, and child sacrifice) are invented or embellished and misconstrued for venal motives: Smith amplifies the shock factor to boost sales and make more money. Simple.  Smith is also laboring under a burden of racist disdain for the people he describes, firmly convinced of their innate inferiority. In the words of anthropologist Helen Rountree, writers like Smith “had severe disabilities as ethnographers.” But since the indigenous peoples of North America did not use text, their history has been largely “written by the victors,” leaving us with the task of interpreting an incomplete and Eurocentric textual record. We&#39;re building on suspicious sand.&lt;/p&gt;
+&lt;p&gt;Seventeenth-century European writers like John Smith are notorious for sensationalizing accounts of “savagery” in indigenous American societies. They’re trying to sell books for profit. And what sells? … &lt;em&gt;You know.&lt;/em&gt; (Some things don’t change much.) We should assume that some portion of these hair-raising details (such as flaying, dismemberment, and child sacrifice) are invented or embellished and misconstrued for venal motives: Smith amplifies the shock factor to boost sales and make more money. Simple.  Smith is also laboring under a burden of racist disdain for the people he describes, firmly convinced of their innate inferiority. In the words of anthropologist Helen Rountree, writers like Smith “had severe disabilities as ethnographers.” But since the indigenous peoples of North America did not use text, their history has been largely “written by the victors,” leaving us with the task of interpreting an incomplete and Eurocentric textual record. We&#39;re building on suspicious sand.&lt;/p&gt;
 &lt;p&gt;So, our question today is: “How much of the violence described in these texts &lt;em&gt;really was&lt;/em&gt; part of Algonquian cultural practices?” The balance of opinion among academic historians and anthropologists is: “A non-zero amount, but not as much as writers like Smith suggest.” For a well-respected and judicious assessment of the evidence, I recommend the work of anthropologist Helen Rountree, such as &lt;em&gt;Manteo’s World: Native American Life in Carolina’s Sound Country before and after the Lost Colony&lt;/em&gt; (Chapel Hill: University of North Carolina Press, 2021) or archaeologist Bruce Trigger (for example, “Early Native North American Responses to European Contact: Romantic versus Rationalistic Interpretations” (&lt;em&gt;Journal of American History&lt;/em&gt; 77.4 (1991): 1195 – 1215.)
 &lt;/div&gt;
 
 &lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="88" name="test2" tags="" position="200,0" size="100,100">&lt;&lt;link &quot;Text to Click&quot;&gt;&gt;
+	&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+	&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 2000);&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;img id=&quot;scoreup&quot; src=&quot;images/mc-chest.png&quot; style=&quot;display: none;&quot;&gt;
+
+
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
