@@ -1052,7 +1052,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;Get up and start chores. Be a good example. An apprentice needs healthy habits as much as he needs skills and tools.&lt;/p&gt;
-&lt;div class=&quot;feedback&quot;&gt;&lt;p&gt;Good choice! Your servants feel motivated and confident when they begin work. They are more productive because you have created order and energy in the shop.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice! Your servants feel motivated and confident when they begin work. They are more productive because you have created order and energy in the shop.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3575,6 +3575,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;&lt;&lt;textbox &quot;$PlayerName&quot; &quot;&quot; &quot;portals&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p class=&quot;rt&quot;&gt;&quot;Timecraft&quot; graphic by Trinity Stuckey (Cal Poly Humboldt History Department). Main image by Alan Frijns at &lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="18" name="morning" tags="" position="1100,200" size="100,100">&lt;&lt;if $bed is &quot;&quot;&gt;&gt;
 [[Make a choice |jackson]]
@@ -3709,6 +3710,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;div class=&quot;row&quot;&gt;
 &lt;p&gt;Most humble and dutiful greetings.&lt;/p&gt;
 &lt;p&gt;I hope you&#39;re well. I write in desperation. This place is extremely unhealthy and causes many illnesses like scurvy, bloody flux, and other weakening diseases. When sick, we receive no care.&lt;/p&gt;
+
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
@@ -3727,6 +3729,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
+
 &lt;p&gt;You&#39;d be heartbroken if I told you everything about this place. People here say, &quot;If only I could return to England, even if it cost me my legs!&quot; … &lt;/p&gt;
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
@@ -3928,6 +3931,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $dog to &quot;Dog&quot;&gt;&gt;
 
 &lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;rt&quot;&gt;&quot;Timecraft&quot; graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
 [[test]]
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -3940,6 +3944,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;When you see this creature, catch it before it disappears!&quot;&gt;&lt;img src=&quot;images/wildbaby2-sm.png&quot; width=&quot;100%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p class=&quot;rt&quot;&gt;Wild child graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
 &lt;hr&gt;
 
 &lt;h2&gt;Early Virginia&lt;/h2&gt;
@@ -4184,7 +4189,6 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
-&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;The ship captains&#39; posture and body language express strength and confidence. Their facial expressions suggest good humor, intelligence, and fortitude.&lt;/p&gt;
@@ -4211,18 +4215,26 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;row center&quot; id=&quot;tnt1&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
 &lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
-&lt;&lt;set $shipsDress to &quot;The ship captains&#39; clothing is fine and fashionable. The bright colors and expensive fabrics are impractical for strenuous physical activity, displaying the captains&#39; elite social status and exemption from manual labor. (Portrait of English Captains, c. 1600)&quot;&gt;&gt;
-&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
-&lt;&lt;set $shipsDressSave to true&gt;&gt;
 &lt;&lt;set $score to $score -2&gt;&gt;
-&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;replace &quot;#tnt1&quot;&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text -2&quot; width=&quot;90%&quot;&gt;
 &lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The ship captains&#39; clothing is fine and fashionable. The bright colors and expensive fabrics are impractical for strenuous physical activity, displaying the captains&#39; elite social status and exemption from manual labor.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Well, by 17th-century standards, their dress is fairly functional. There are some embelishments displaying wealth and status (like the embroidery, jewelry, lace), but the textiles and materials are dark and practical rather than flamboyant or physically restrictive.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;The ship captains&#39; clothing is fine and fashionable. The bright colors and expensive fabrics are impractical for strenuous physical activity, displaying the captains&#39; elite social status and exemption from manual labor.&lt;/p&gt;
@@ -4267,18 +4279,26 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;row center&quot; id=&quot;tnt2&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;replace &quot;#tnt2&quot;&gt;&gt;
 &lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
 &lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
-&lt;&lt;set $shipsFear to &quot;People on shore seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust. (Willaerts, &lt;em&gt;Ships in the Estuary&lt;/em&gt;, 1640)&quot;&gt;&gt;
-&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
-&lt;&lt;set $shipsFearSave to true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;People on shore seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Not really. Ordinary people stream down to greet the ships in the estuary. At the pier, folks including women and babies laze comfortably around the ships.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
 &lt;&lt;set $score to $score -2&gt;&gt;
 &lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
-&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;People on shore seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust.&lt;/p&gt;
