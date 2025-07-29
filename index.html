@@ -4702,9 +4702,70 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;By the King (Charles II): A Proclamation for the Suppression of Coffee Houses (1675)&lt;/h2&gt;
-&lt;p&gt;It has become clear that the growing number of coffeehouses, along with the crowds of idle and discontented people who gather in them, have led to serious problems. These include &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&quot;&gt;&gt;&lt;&lt;set $coffee1 to &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&quot;&gt;&gt;&lt;&lt;set $coffee1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Therefore, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down.&quot;&gt;&gt;&lt;&lt;set $coffee2 to &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down&quot;&gt;&gt;&lt;&lt;set $coffee2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Starting January 10th, no one is allowed to run a public coffeehouse or sell coffee, chocolate, sherbet, or tea for consumption on the premises. Anyone who does so will face serious consequences.&lt;/p&gt;
-&lt;p&gt;To enforce this, justices of the peace and city magistrates are ordered to &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined&quot;&gt;&gt;&lt;&lt;set $coffee3 to &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined&quot;&gt;&gt;&lt;&lt;set $coffee3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; and may face the harshest legal penalties if they continue.&lt;/p&gt;
+&lt;p&gt;It has become clear that the growing number of coffeehouses, along with the crowds of idle and discontented people who gather in them, have led to serious problems. These include&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $coffee1 to &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
+&lt;&lt;set $coffee1Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Therefore, 
+
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $coffee2 to &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
+&lt;&lt;set $coffee2Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Starting January 10th, no one is allowed to run a public coffeehouse or sell coffee, chocolate, sherbet, or tea for consumption on the premises. Anyone who does so will face serious consequences.&lt;/p&gt;
+&lt;p&gt;To enforce this, justices of the peace and city magistrates are ordered to&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $coffee3 to &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined and may face the harshest legal penalties if they continue. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
+&lt;&lt;set $coffee3Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined and may face the harshest legal penalties if they continue.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
 &lt;p&gt;God save the king.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -4917,19 +4978,19 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Licensing Order of 1643&lt;/h1&gt;
 &lt;hr&gt;
-&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays. The following excerpts have been modernized by ChatGPT and the authors, using the edition at British History Online.&lt;/p&gt;
+&lt;p&gt;In 1643, Parliament passed a &quot;Licensing Order&quot; that prohibited the publication of any work not previously approved by government censors. This strict censorship policy ended in the 1690s with the Bill of Rights established by the Glorious Revolution of 1689. Note: The &quot;Stationer&#39;s Company&quot; was the guild-like London trade organization traditionally responsible for regulating printed material, including plays. This text has been modernized by ChatGPT and the authors, using the edition in Flannagan, &lt;em&gt;The Riverside Milton&lt;/em&gt; (New York: Houghton Mifflin, 1998).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for key aspects of the English government&#39;s concerns about the dangers of printing presses. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for key aspects of the English government&#39;s concerns about the dangers of printing presses.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
+
 &lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
