@@ -517,6 +517,28 @@ background-image: url("images/hero-result.jpg");
   justify-content: space-around;
 }
 
+.hero-powtrade {
+  background-image: url("images/hero-powtrade.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-powattack {
+  background-image: url("images/hero-powattack.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .choice {
   background-color: #33312e;
   border: 1px solid black;
@@ -3893,7 +3915,7 @@ $(&quot;img[usemap]&quot;).maphilight({
     &lt;&lt;link &#39;&lt;img src=&quot;images/module-powhatan.jpg&quot; class=&quot;card-img-top&quot; alt=&quot;Native American man with face paint and feathers and bow&quot;&gt;&#39; &quot;portals&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h5 class=&quot;card-title&quot;&gt;[[Werowance Powhatan |powhatan-setting]]&lt;/h5&gt;
-      &lt;p class=&quot;card-text&quot;&gt;Virginia, 1610: You are the leader of a powerful Algonquian confederacy when the Virginia Company arrives.&lt;/p&gt;
+      &lt;p class=&quot;card-text&quot;&gt;Virginia, 1607: You are the leader of a powerful Algonquian confederacy when the Virginia Company arrives.&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   
@@ -5014,9 +5036,47 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;This indenture made the [blank] day of [blank] in the [blank] year of our Sovereign Lord King Charles, between [blank] of the one party, and [blank] of the other party, witnesses that the said [blank] does hereby covenant [promise], and grant, to and with the said [blank] his executors and assignees, to serve him from the day of the date hereof, until his first and next arrival in Maryland; and after for and during the term of [blank] years, in such service and employment, as he the said [blank] or his assignees shall there employ him, according to the custom of the country in the like kind.&lt;/p&gt;
-&lt;p&gt;In consideration whereof, the said [blank] [the master] does promise and grant, to and with the said [blank] &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1 to &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&quot;&gt;&gt;&lt;&lt;set $contract1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; In witness whereof, the said [blank] has hereunto put his hand and seal, the day and year above written.&lt;/p&gt;
+&lt;p&gt;In consideration whereof, the said [blank] [the master] does promise and grant, to and with the said [blank] &lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $contract1 to &quot;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country. (Indenture Contract, 1635)&quot;&gt;&gt;
+&lt;&lt;set $contract1Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;to pay for his passing, and to find him with meat, drink, apparel, and lodging, with other necessaries during the said term, and at the end of the said term, to give him one whole year’s provision of grain, and fifty acres of land, according to the order of the country.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt; In witness whereof, the said [blank] has hereunto put his hand and seal, the day and year above written.&lt;/p&gt;
 &lt;p&gt;Sealed and delivered in the presence of [blank].&lt;/p&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $contract2 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $contract2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $contract2 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage. (Indenture Contract, 1635)&quot;&gt;&gt;
+&lt;&lt;set $contract2Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
 &lt;/div&gt;
 
 &lt;hr&gt;
@@ -5040,32 +5100,116 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;br&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the institution of indentured servitude in Virginia, including the relationship between master and servant or apprentice. Select useful links to save the them to your inventory.&lt;/p&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$beverleyc&quot; `$beverleyc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;I have heard rumors that servitude in Virginia is strangely cruel and severe. I must assure you, with great truth, that these rumors are false. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England.&quot;&gt;&gt;&lt;&lt;set $beverley1 to &quot;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England.&quot;&gt;&gt;&lt;&lt;set $beverley1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; To complete this account of servants, I will provide a summary of the laws which require that servants be treated as kindly as possible.&lt;/p&gt;
-&lt;p&gt;By the Laws of Virginia&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&gt;&gt;&lt;&lt;set $beverley2 to &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&quot;&gt;&gt;&lt;&lt;set $beverley2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Local justices handle complaints quickly: Any justice of the peace can investigate until the county court makes a final decision. Servants&#39; complaints are heard right away, even without formal paperwork.&lt;/li&gt;
-&lt;li&gt;Masters must obey the court: If a master don’t show up after being notified [by the magistrate] of a servant&#39;s complaint, they lose the right to their servant’s labor until they appear. If a master disobeys or ignores court orders, the servant can be sold to a different master. The original master receives the sale money, minus court fees.&lt;/li&gt;
-&lt;li&gt;No unfair deals: Masters cannot change or make any indenture contract without court approval.&lt;/li&gt;
-&lt;li&gt;Sick or injured servants must be protected: If a master mistreats a sick or disabled servant, the servant is moved to a safer home at the master’s expense. If needed, the parish [community church] pays the cost later.&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&quot;&gt;&gt;&lt;&lt;set $beverley3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4 to &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&quot;&gt;&gt;&lt;&lt;set $beverley4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Servants keep their own money and goods.&lt;/li&gt;
-&lt;li&gt;Servants who are English citizens receive &quot;freedom&#39;s dues&quot;: After serving their term of indenture, servants are given food, clothing, a gun. They are allowed to claim 50 acres of unclaimed land.&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5 to &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&quot;&gt;&gt;&lt;&lt;set $beverley5Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;I have heard rumors that servitude in Virginia is strangely cruel and severe. I must assure you, with great truth, that these rumors are false.&lt;p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $beverley1 to &quot;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $beverley1Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Since arriving, I&#39;ve had nothing but peas and watery gruel to eat. ... Four men must share one small penny loaf of bread.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;Servants and slaves in Virginia do no more work than what every common freeman does in England. They do no more in a day than their overseers. Truly, slaves generally don&#39;t work as hard in a day as a husbandman [farmer] or day laborer [farm worker] does in England.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;p&gt;By the Laws of Virginia:&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $beverley2 to &quot;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $beverley2Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Servants can file complaints for free: If the master is found at fault, he pays the cost. Otherwise, the court handles it at no charge.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Local justices handle complaints quickly: Any justice of the peace can investigate until the county court makes a final decision. Servants&#39; complaints are heard right away, even without formal paperwork.&lt;/p&gt;
+&lt;p&gt;Masters must obey the court: If a master don’t show up after being notified [by the magistrate] of a servant&#39;s complaint, they lose the right to their servant’s labor until they appear. If a master disobeys or ignores court orders, the servant can be sold to a different master. The original master receives the sale money, minus court fees.&lt;/p&gt;
+&lt;p&gt;No unfair deals: Masters cannot change or make any indenture contract without court approval.&lt;/p&gt;
+&lt;p&gt;Sick or injured servants must be protected: If a master mistreats a sick or disabled servant, the servant is moved to a safer home at the master’s expense. If needed, the parish [community church] pays the cost later.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $beverley3 to &quot;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $beverley3Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The usual term of binding a servant is for five years, but for any artificer or one that shall deserve more than ordinary, the adventurer [master] shall do well to shorten that time, and add encouragements of another nature (as he shall see fit) rather than to keep such useful men in bondage.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $beverley4 to &quot;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $beverley4Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Masters must provide basic needs: They are required to give servants proper food, clothing, and shelter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Servants keep their own money and goods.&lt;/p&gt;
+&lt;p&gt;Servants who are English citizens receive &quot;freedom&#39;s dues&quot;: After serving their term of indenture, servants are given food, clothing, a gun. They are allowed to claim 50 acres of unclaimed land.&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $beverley5 to &quot;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $beverley5Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The rights of Englishmen: As English citizens, servants enjoy their full rights as subjects of the English crown, both during and after their term of indenture.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
 &lt;p&gt;These laws were designed to protect servants and ensure fair treatment. Claims of commonplace cruelty to servants in Virginia are unfair and widely exaggerated. Instead, as you can see, we Virginians actively work to prevent such abuses.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -6956,7 +7100,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;attack&quot;&gt;&gt; Begin planning an attack to destroy the new settlement.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;trade&quot;&gt;&gt; Forbid aggression. Instead, send a delegation bearing gifts to the settlement with the goal of opening trade and diplomatic relations.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;spy&quot;&gt;&gt; You need more information. Send a delegation to deliver gifts to the settlement, with orders to find out about the Europeans&#39; identities, goals, resources, and military strength.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;pantribal&quot;&gt;&gt; Send a summons to the leaders of every village, and to your enemies beyond the falls. Gather them together to pledge unity in resisting all Europeans.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;pantribal&quot;&gt;&gt; Send a summons to the leaders of every village in your confederacy, and even some of your enemies beyond the falls. Convince them to pledge unity in resisting all European settlements.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -7043,7 +7187,230 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="white-villages" tags="Source" position="2000,1900" size="100,100">John White Pomeioc, Secoton, Dance
-</tw-passagedata><tw-passagedata pid="72" name="white-men" tags="Source" position="2000,1700" size="100,100">john white men</tw-passagedata><tw-passagedata pid="73" name="white-women" tags="Source" position="2000,1800" size="100,100">John White women</tw-passagedata><tw-passagedata pid="74" name="smith-tribes" tags="Source" position="1600,1700" size="100,100">
+</tw-passagedata><tw-passagedata pid="72" name="white" tags="Source" position="2000,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-10&quot;&gt;
+&lt;h1&gt;John White&#39;s Paintings of Indigenous People in North Carolina, 1585&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;As a member of England&#39;s Roanoke settlement in 1584, John White painted numerous representations of indigenous peoples he encountered. He returned to England in 1585 where his art became the basis of versions printed by Theodor de Bry and others.&lt;/p&gt; 
+&lt;div class=&quot;col-md-2&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;These examples from White&#39;s portfolio provide insights into gender identities, daily lives, and societal roles of men and women in Algonquian societies like the Powhatan Confederacy. Save useful items to your inventory.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;textarea &quot;$whitec&quot; `$whitec ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+
+&lt;h2&gt;What evidence from these paintings will you save to your inventory?&lt;/h2&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $whiteWar to &quot;Women are never shown with weapons. (White, 1585)&quot;&gt;&gt;
+&lt;&lt;set $whiteWarSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Women are never shown with weapons.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $whiteOrnament to &quot;Both male and female figures are wear with purposeful and intricate body paint or tattoos, ornaments, and hairstyles. (White&#39;s paintings, 1585)&quot;&gt;&gt;
+&lt;&lt;set $whiteOrnamentSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Both male and female figures are wear with purposeful and intricate body paint or tattoos, ornaments, and hairstyles.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $whiteSubordinate to &quot;Women almost never appear with men. They seem to be purely concerned with childcare and domestic labor, while the men use bows for hunting and war, go fishing and participate in religious ceremonies. (White&#39;s paintings, 1585)&quot;&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
+&lt;&lt;set $whiteSubordinateSave to true&gt;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Women almost never appear with men. They seem to be purely concerned with childcare and domestic labor, while the men use bows for hunting and war, go fishing and participate in religious ceremonies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $whiteCorn to &quot;Corn cultivation is extensive and highly productive. It seems to be a crucial . (White&#39;s paintings, 1585)&quot;&gt;&gt;
+&lt;&lt;set $whiteCornSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The ships are crowded and every sailor is risking his life and struggling for survival. To succeed, the group needs to perform specialized tasks and work together closely and under intense pressure. Captains would have a high tolerance for stress and danger, and an appreciation for clear chains of command in which each person has a discrete set of roles and responsibilities. Captains needed strong leadership skills to direct a large group through deadly, desperate crises.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $whiteActive to &quot;The women&#39;s dress and activities suggest physical strength and a busy, productive daily life. (White&#39;s paintings, 1585)&quot;&gt;&gt;
+&lt;&lt;set $whiteActiveSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The women&#39;s dress and activities suggest physical strength and a busy, productive daily life.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $whiteWeak to &quot;The women&#39;s dress, activities, and bodies suggest that they avoid physical activity, pursuing a sedentary, indoor lifestyle. (White&#39;s paintings, 1595). (White&#39;s paintings, 1585)&quot;&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
+&lt;&lt;set $whiteWeakSave to true&gt;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The women&#39;s dress, activities, and bodies suggest that they avoid physical activity, pursuing a sedentary, indoor lifestyle. (White&#39;s paintings, 1595)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $whiteWar to &quot;The fortification around the village of Pomeioc indicates a concern for defense, suggesting that violent conflict was commonplace. Warriors (males) would probably have high status in such a society. (White&#39;s paintings, 1595)&quot;&gt;&gt;
+&lt;&lt;set $whiteWarSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The fortification around the village of Pomeioc indicates a concern for defense, suggesting that violent conflict was commonplace. Warriors (males) would probably have high status in such a society. &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;html&gt;
+&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
+  &lt;div class=&quot;carousel-indicators&quot;&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
+              &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
+        &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
+
+
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
+&lt;h2&gt;The Village of Pomeioc&lt;/h2&gt;
+&lt;p&gt;White&#39;s description: &quot;The town of Pomeioc and true forme of their houses, covered and enclosed wth mats or tree bark, and all surrounded with smale poles stuck together (as a wall).&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25869001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-pomeioc.jpg&quot; alt=&quot;Painting showing bird&#39;s eye view of houses within circular palisade, with Native Americans surrounding a fire in the center of the town&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Woman and Child&lt;/h2&gt;
+&lt;p&gt;White&#39;s description: &quot;A chief Herowans woman of Pomeoc and her daughter of the age of 8 or 10 years.&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25876001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-woman-girl.jpg&quot; alt=&quot;Watercolor drawing of a woman, topless and with tattoos or body paint, carrying a large bottle-shaped gourd vessel. A child carries a European style doll.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Woman Carrying a Baby&lt;/h2&gt;
+&lt;p&gt;White&#39;s description: &quot;The wife of an Herowan of Pomeioc.&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25878001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-woman-baby.jpg&quot; alt=&quot;Watercolor drawing of a woman with a child hanging off of her back, her upper arms with tattoos or painted marks, and wearing a fringed skirt.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;The Village of Secoton&lt;/h2&gt;
+&lt;p&gt;White&#39;s descriptions: Top right, &quot;Their ripe corn [grain].&quot; Below: &quot;Their green corn.&quot; Below: &quot;Their corn newly sprung.&quot; Center: &quot;Their sitting at meat.&quot; Bottom left: &quot;The place of solemn prayer,&quot; and below, above the hut, &quot;The house where the tomb of their chiefs stands,&quot; and below right: &quot;SECOTON.&quot; At the bottom: &quot;A ceremony in their prayers with strange gestures and songs, dancing about post carved on the top like people&#39;s faces.&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25878001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-secoton.jpg&quot; alt=&quot;Watercolor bird&#39;s eye view of a village with corn fields planted in rotation, platforms, cross-section views of long houses, central fires, and a ritual dance.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;A Chief&#39;s Wife&lt;/h2&gt;
+&lt;p&gt;White&#39;s description: &quot;The wife of an Herowan of Secotan.&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25881001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-woman.jpg&quot; alt=&quot;Watercolor drawing of an Indian woman, topless with crossed arms, and tattooed or painted marks on her chest and arms.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Sitting around a Fire&lt;/h2&gt;
+&lt;p&gt;From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25872001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-fire.jpg&quot; alt=&quot;Watercolor drawing of a ceremony with 10 Native Americans surrounding a campfire. Some appear to be singing, while others hold gourd rattles.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+ &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Fishing&lt;/h2&gt;
+&lt;p&gt;White&#39;s description: &quot;The manner of their fishing. A canoe.&quot; From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/22109001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/white-fishing.jpg&quot; alt=&quot;Watercolor drawing of Native Americans fishing in a large body of water. Birds fly overhead and various fish are shown in the water. Four figures are in a canoe, and two are spear fishing.&quot; width=&quot;90%&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="white-women" tags="Source" position="2000,1800" size="100,100">John White women</tw-passagedata><tw-passagedata pid="74" name="smith-tribes" tags="Source" position="1600,1700" size="100,100">
 
 
 ### **Exploring, Trading, and Fighting in Virginia (Student Edition)**
@@ -7226,7 +7593,7 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img src=&quot;images/white-body-paint-sm.jpg&quot; alt=&quot;Native American man wearing hide loincloth, holding bow, with body paint and feathered hairstyle&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;&quot;Indian Body Paint&quot; from English artist John White&#39;s visit to the Roanoke Colony (North Carolina coast) in 1584. From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25875001&quot; target=&quot;_blank&quot;&gt;British Museum.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;&quot;Indian Body Paint&quot; from English artist John White&#39;s visit to the Roanoke Colony (North Carolina coast) in 1584. From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25875001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Within a moon cycle, you host an unprecedented pantribal meeting. Ancient enemies and close kinsmen sit together in solemn silence. A mood of intense expectation elevates everyone, following the rituals of the &lt;em&gt;kwiocosuk&lt;/em&gt;. You applu all your powers of persuasion to convince them to set aside their differences and unite in a pledge to oppose all Europeans, to refuse all contact and destroy all settlements, and to support one another unconditionally and immediately and entirely in this enterprise that transcends centuries of tribal feuds.&lt;/p&gt; 
 &lt;p&gt;It&#39;s not going to work. Immediately, there are objectsions, and then more objections. Conditions, questions, mistrust ... soon accusations and insults. If the &lt;em&gt;kwiocosuk&lt;/em&gt; had not solemnized the meeting with the most sacred guarantees of peace, some of the chiefs would have come to blows already. The struggle to translate so many languages and dialects adds to the tension. &lt;/p&gt;
@@ -7266,34 +7633,38 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 &lt;br&gt;
 &lt;h3&gt;Attack and Eliminate the Problem&lt;/h3&gt;
 &lt;p&gt;Gather your warband and destroy the colonists and their settlement. Success will enhance your status and power throughout the region. Looted weapons may help fend off the next European incursion. However, failure would have the opposite effect. Some of your subjects would leave your hegemony, rebel, and possibly even ally with the English. Your enemies would exploit your weakness.&lt;/p&gt;
+&lt;/div&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Before making a choice, grab the pickaxe and mine for knowledge.&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;h2&gt;Go Mining&lt;/h2&gt;
+&lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;firstcontact-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;firstcontact-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+
 &lt;/div&gt;
-&lt;/div&gt;
+
 
 &lt;&lt;elseif $firstsight is &quot;attack&quot;&gt;&gt;
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-powattack&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
 &lt;h1&gt;Eliminate the Threat&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p class=&quot;caption&quot;&gt;Above: Detail from Johann Theodore de Bry&#39;s 1619 engraing, &quot;The Chickahominy Become New Englishmen.&quot;From &lt;a href=&quot;https://encyclopediavirginia.org/675hpr-d64c7f8ac17df29/&quot; target=&quot;_blank&quot;&gt;Encyclopedia Virginia&lt;/a&gt;.&lt;/p&gt;
 
 
 &lt;div class=&quot;row scenario&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;You gather your warband. You will destroy the colonists and their settlement now, before they become stronger. Success will enhance your status and power throughout the region. Looted weapons may help fend off the next European incursion. However, failure would have the opposite effect. Some of your subjects would leave your hegemony, rebel, and possibly even ally with the English. Your enemies would exploit your weakness. The stakes are high.&lt;/p&gt;
-
-Is there a way to guarantee military success? Will you  destroy it and the settlers completely? Or will you array your forces, and perhaps engage in some light skirmishing, as a display of power to enhance your status before opening diplomatic negotiations?&lt;/p&gt;
-
 &lt;/div&gt;
-
+&lt;div class=&quot;col-md&quot;&gt;
+&lt;img src=&quot;images/white-body-paint-sm.jpg&quot; alt=&quot;Native American man wearing hide loincloth, holding bow, with body paint and feathered hairstyle&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;&quot;Indian Body Paint&quot; from English artist John White&#39;s visit to the Roanoke Colony (North Carolina coast) in 1584. From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25875001&quot; target=&quot;_blank&quot;&gt;British Museum.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -7324,22 +7695,37 @@ Is there a way to guarantee military success? Will you  destroy it and the settl
 &lt;br&gt;
 &lt;h3&gt;Show of Force&lt;/h3&gt;
 &lt;p&gt;Display the strength of your warband. Incite the settlers to attack. Fire &lt;/p&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Before making a choice, grab the pickaxe and mine for knowledge.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;firstcontact-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;h2&gt;Go Mining&lt;/h2&gt;
+&lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;firstcontact-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
+
 &lt;/div&gt;
+
 
 &lt;&lt;elseif $firstsight is &quot;trade&quot;&gt;&gt;
 &lt;div class=&quot;container&quot;&gt;
 
+&lt;div class=&quot;row hero-powtrade&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;Trade&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from Johann Theodore de Bry&#39;s 1619 engraing, &quot;The Chickahominy Become New Englishmen.&quot;From &lt;a href=&quot;https://encyclopediavirginia.org/675hpr-d64c7f8ac17df29/&quot; target=&quot;_blank&quot;&gt;Encyclopedia Virginia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
+&lt;div class=&quot;col-md&quot;&gt;
+Negotiate trade.What do they need? what do you want? 
+&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;
 &lt;img src=&quot;images/chickahominy.jpg&quot; alt=&quot;Woodcut illustration of 16th-century Europeans talking ceremonially with Native Americans, with ships in the background&quot; width=&quot;90%&quot;&gt;
 &lt;p class=&quot;caption&quot;&gt;Johann Theodore de Bry&#39;s 1619 engraing, &quot;The Chickahominy Become New Englishmen&quot; depicts Captain Argall formalizing an alliance between the Virginia Company and the Chicahominy tribe in 1614. Johann de Bry utilized examples from his father&#39;s engravings, based on John White&#39;s paintings from his stay in the Roanoke Colony in 1584. From &lt;a href=&quot;https://encyclopediavirginia.org/675hpr-d64c7f8ac17df29/&quot; target=&quot;_blank&quot;&gt;Encyclopedia Virginia&lt;/a&gt;.&lt;/p&gt;
-
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
