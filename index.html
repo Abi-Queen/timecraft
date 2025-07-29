@@ -214,6 +214,32 @@ body .passage {
   border: 3px solid black;
 }
 
+.feedback-good {
+  background-color: rgba(244, 243, 255);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  text-align: center;
+  align-content: center;
+  vertical-align: center;
+  color: black;
+  size: 14pt; 
+  border: 3px rgba(135, 128, 237) solid;
+  box-shadow: inset 0px 0px 5px 5px #000;
+  padding: 14px;
+}
+
+.feedback-bad {
+  background-color: rgba(253, 226, 219);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+  text-align: center;
+  align-content: center;
+  vertical-align: center;
+  color: black;
+  size: 14pt; 
+  border: 3px rgba(245, 76, 32) solid;
+  box-shadow: inset 0px 0px 5px 5px #000;
+  padding: 14px;
+}
+
 .center {
   text-align: center;
   align-content: center;
@@ -1026,6 +1052,7 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;Get up and start chores. Be a good example. An apprentice needs healthy habits as much as he needs skills and tools.&lt;/p&gt;
+&lt;div class=&quot;feedback&quot;&gt;&lt;p&gt;Good choice! Your servants feel motivated and confident when they begin work. They are more productive because you have created order and energy in the shop.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1054,6 +1081,13 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;Take a few more minutes in bed. What are apprentices for, anyway? He can do the morning chores.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Bad news: As you sleep, your neighbor knocks on the door to tell you that a ship has arrived in the harbor, but the noise don&#39;t rouse you, and he quickly hurries on his way. You have missed opportunities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Information: The ship was in London two months ago, it bears printed and oral news (and gossip) from the financial and political hub of the empire. Knowledge is power, and now others have more than you.&lt;/li&gt;
+&lt;li&gt;Profit: Early visitors will buy all the best goods, including the latest books and pamphlets you could use in your new printing venture. You could have printed copies and extracts, and charged exorbitant prices to the colonial elite, who are always desperate for new reading material. If you could buy gunpowder, you could speed production of your shop&#39;s highest-value product (guns).&lt;/li&gt;
+&lt;li&gt;Social capital: The arrival of a new ship is an important event in the young settlement. To maintain your leadership status, you should be present when important events occur.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -3560,8 +3594,6 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p class=&quot;rt&quot;&gt;Above: Sketch of a metalsmith&#39;s workshop from Diderot&#39;s Encyclopedia, c. 1750. From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Online Library of Liberty.&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;You sink blissfully back into warm dreams. Your neighbor knocks to tell you that a ship has arrived in the harbor, but the noise don&#39;t rouse you, and he quickly hurries on his way.&lt;/p&gt;
-
 &lt;p&gt;An hour later, you drag yourself out of bed and find mayhem and disaster in your shop. At the door, $dog whines and scratches, wanting to go out. John, the apprentice, is at the forge hammering out a heap of crooked, lumpy nails. His body language and face reflect his rage and frustration. He&#39;s about to cry. Tom, the indentured servant, slumps on a bench nearby, splitting kindling very slowly and looking half asleep.&lt;/p&gt;
 
 &lt;p&gt;You need to finish repairing some old matchlock muskets for the Jamestown garrison. Then there&#39;s a French wheellock a wealthy planter asked you to repair - it&#39;s his favorite fowling piece and his been misfiring arbitrarily.&lt;/p&gt;
@@ -3909,6 +3941,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
+
 &lt;h2&gt;Early Virginia&lt;/h2&gt;
 &lt;div class=&quot;card-group&quot;&gt;
 &lt;div class=&quot;card&quot;&gt;
@@ -4056,10 +4089,12 @@ $(&quot;img[usemap]&quot;).maphilight({
   &lt;/div&gt;
 &lt;/div&gt;
 
-
 &lt;h2&gt;Demo&lt;/h2&gt;
 &lt;p&gt;This video tutorial shows you how to play.&lt;/p&gt;
-(iframe)
+&lt;p&gt;(to be posted)&lt;/p&gt;
+
+&lt;h2&gt;Fact &amp; Fiction&lt;/h2&gt;
+&lt;p&gt;The information, sources, events, and historical figures in this game are real, but the &quot;role play&quot; scenario stories are fictional. An infinite number of such stories could be created - with historical realism and authenticity equal to or greater than those I created here. The stories that &lt;em&gt;did&lt;/em&gt; get written into this game are in no way superior to those other possible stories. I had to write &lt;em&gt;something&lt;/em&gt; ... &lt;/p&gt;
 
 &lt;hr&gt;
 &lt;h2&gt;Learning Objectives&lt;/h2&gt;
@@ -4623,30 +4658,27 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="coffee" tags="Source" position="2100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-11&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-lg-10&quot;&gt;
 &lt;h1&gt;Bans and Supression of Coffeehouses&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;England, 1670s&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions. This text has been modernized by ChatGPT and the authors, using the edition at the University of Michigan Library).&lt;/p&gt;
+&lt;p&gt;During the mid seventeenth century, authorities were concerned at the growing number of ordinary people who read and spoke about politics. They often accessed this printed material and chatted about it in coffeehouses, which were proliferating rapidly. Censorhip laws attempted to regulate what was printed. Banning coffeehouses attempted to limit ordinary people&#39;s opportunities for reading and discussing political questions. This text has been modernized by ChatGPT and the authors, using the edition in Flannagan, &lt;em&gt;The Riverside Milton&lt;/em&gt; (New York: Houghton Mifflin, 1998).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-1&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for information about the English government&#39;s fears about printed material and social and political unrest. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the English government&#39;s fears about printed material and social and political unrest. Choose a link to save the text to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$coffeec&quot; `$coffeec ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;br&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;By the King (Charles II): A Proclamation for the Suppression of Coffee Houses (1675)&lt;/h2&gt;
