@@ -740,6 +740,30 @@ background-image: url("images/hero-result.jpg");
 	border-radius: 8px;
 }
 
+#scoredown1 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+	z-index: 9999;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+}
+
+#scoredown2 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+	z-index: 9999;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+}
+
 #scoredown {
 	position: fixed;
 	top: 50%;
@@ -1288,7 +1312,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
 &lt;h1&gt;Trade&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1543,8 +1567,8 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;At the Dock&lt;/h1&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;Trade&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1959,7 +1983,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
 &lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;At the Dock&lt;/h1&gt;
+&lt;h1&gt;Trade&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2266,7 +2290,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-shop&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
 &lt;h1&gt;Back at the Shop&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2310,7 +2334,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-shop&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
 &lt;h1&gt;Back at the Shop&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2364,7 +2388,7 @@ console.log(tooltipList)
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Filled with curiosity, you carry the wooden crate to your workbench and open it. Nested in folds of rough wool cloth is a very new musket. Lifting it out, you notice something odd about it. The lock is new - not exactly French, not exactly English, but different. As understanding dawns, the rest of the world disappears and you feel giddy with excitement. De Pareja laughs from across the room: &quot;Yes, we thought you would like to see this.&quot; You nod and begin explaining to John: &quot;This is a new pattern. &lt;em&gt;The&lt;/em&gt; new pattern. I wager Captain Gardner just delivered these to the garrison at the fort, and he&#39;s managed to get one for himself as well.&quot; You point to the flourishing initials stamped into the metal behind the hammer - the mark of a leading master of the London Gunmaker&#39;s Company who supply the army.&lt;/p&gt;
-&lt;p&gt;The new lock is simpler than anything you&#39;ve seen previously - easier to make and faster use. &quot;We can make this here,&quot; you tell John. &quot;The London masters make them in separate pieces: One shop makes barrels, one makes locks, and so on. But we can make the whole thing. And with enough fuel for the forge, we can make lots of them, and fast. If only we had our own coal.&quot; Gesturing to the cordwood stacked neatly by size along one wall: &quot;We&#39;ll burn through this in a week. Poor Tom! Get ready to cut more firewood!&quot;&lt;/p&gt;
+&lt;p&gt;The new lock is simpler than anything you&#39;ve seen previously - easier to make and faster use. &quot;We can make this here,&quot; you tell John. &quot;The London masters make them in separate pieces: One shop makes barrels, one makes locks, and so on. But we can make the whole thing. &#39;Lock, stock, and barrel,&#39; as they say. And with enough fuel for the forge, we can make lots of them, and fast. If only we had our own coal.&quot; Gesturing to the cordwood stacked neatly by size along one wall: &quot;We&#39;ll burn through this in a week. Poor Tom! Get ready to cut more firewood!&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/gunmaker-mark.jpg&quot; alt=&quot;close view of gun lock metal with stamps and decorative flourishes&quot; width=&quot;90%&quot;&gt;
@@ -2400,8 +2424,8 @@ console.log(tooltipList)
 </tw-passagedata><tw-passagedata pid="6" name="governor" tags="" position="1775,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-gov&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;Back at the Shop&lt;/h1&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;A  Visit from Governor Berkeley&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2409,10 +2433,11 @@ console.log(tooltipList)
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot;  src=&quot;images/press.jpg&quot; alt=&quot;simple wooden printing press&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;A colonial printing press c. 1720. From &lt;a href=&quot;https://americanhistory.si.edu/collections/object/nmah_882271&quot; target-&quot;_blank&quot;&gt;National Museum of American History&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;caption&quot;&gt;A colonial printing press c. 1720. From &lt;a href=&quot;https://americanhistory.si.edu/collections/object/nmah_882271&quot; target=&quot;_blank&quot;&gt;National Museum of American History&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;The door slams open, nearly flattening Tom. Governor Berkeley storms into the room, flanked by his clerk and a couple of soldiers from the garrison. Berkeley is not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars, &quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to the howling wilderness!&quot;&lt;/p&gt;
+&lt;p&gt;The door slams open, nearly flattening Tom. Governor Berkeley storms into the room, flanked by his clerk and a couple of soldiers from the garrison. Berkeley is not a large man, but he suddenly seems to take up most of the space in the small shop. He stops to stare at the new press before turning to unleash a volley of pompous outrage upon you. You&#39;ve seen him use this tactic before, and you&#39;re surprised at how effective it really is, now that you&#39;re its target. You feel transformed into a small boy threatened with a whipping. You focus all of your energy on standing up straight because the urge to cringe is overpowering. He&#39;s thundering at you about the sanctity of authority, the divinity of the monarchy, the deadly specter of bloody anarchy and Babylonical confusion raised by the current rebellion, something about the antichrist and armageddon, and so on, et cetera, et cetera, ad infinitum ... You&#39;re thinking in Latin now, like a schoolboy, and it takes a moment to realize that the governor has gone silent and is attempting to incinerate you with rays of pure rage emanating from his eyes. When you draw a breath and open your mouth to reply, he roars:&lt;/p&gt;
+&lt;p&gt;&quot;You will return this demonic engine to the cess pit of London! ... Or find yourself branded for sedition and exiled to the howling wilderness!&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -4160,10 +4185,10 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="ships" tags="Source" position="1300,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-10&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
 &lt;h1&gt;Seventeenth-Century Depictions of Ships and Ships&#39; Captains (English and Dutch, 1610 - 1680)&lt;/h1&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md-2&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
 &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -4202,7 +4227,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
 &lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $shipsItems to &quot;The ship captains touch or carry objects symbolizing global adventure and experience, including armed conflict - e.g., globe, swords, purse, pearls. (Portrait of English Captains, c. 1600)&quot;&gt;&gt;
+&lt;&lt;set $shipsItems to &quot;The ship captains touch or carry objects symbolizing global adventure and experience, including armed conflict (e.g., globe, swords, purse, pearls). (Portrait of English Captains, c. 1600)&quot;&gt;&gt;
 &lt;&lt;set $shipsItemsSave to true&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
@@ -4210,28 +4235,33 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;The ship captains touch or carry objects symbolizing global adventure and experience, including armed conflict - e.g., globe, swords, purse, pearls.&lt;/p&gt;
+&lt;p&gt;The ship captains touch or carry objects symbolizing global adventure and experience, including armed conflict (e.g., globe, swords, purse, pearls).&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 
-&lt;div class=&quot;row center&quot; id=&quot;tnt1&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img id=&quot;scoredown1&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score -2&quot; width=&quot;300px&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot; id=&quot;tnt2&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown1&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown1&quot;).fadeOut(); }, 3000);&gt;&gt;
 &lt;&lt;set $score to $score -2&gt;&gt;
-&lt;&lt;replace &quot;#tnt1&quot;&gt;&gt;
+&lt;&lt;replace &quot;#tnt2&quot;&gt;&gt;
 &lt;div class=&quot;row center&quot;&gt;
-&lt;div class=&quot;col-sm-3&quot;&gt;
-&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text -2&quot; width=&quot;90%&quot;&gt;
-&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;The ship captains&#39; clothing is fine and fashionable. The bright colors and expensive fabrics are impractical for strenuous physical activity, displaying the captains&#39; elite social status and exemption from manual labor.&lt;/p&gt;
-&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Well, by 17th-century standards, their dress is fairly functional. There are some embelishments displaying wealth and status (like the embroidery, jewelry, lace), but the textiles and materials are dark and practical rather than flamboyant or physically restrictive.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Well, by 17th-century standards, their dress is fairly functional. There are some embelishments displaying wealth and status (like the embroidery, jewelry, lace), but the textiles and materials are dark and practical rather than flamboyant or physically restrictive.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
@@ -4279,25 +4309,31 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 &lt;hr&gt;
 
-&lt;div class=&quot;row center&quot; id=&quot;tnt2&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img id=&quot;scoredown2&quot; src=&quot;images/score-tnt2b.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score -2&quot; width=&quot;300px&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot; id=&quot;tnt1&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;replace &quot;#tnt2&quot;&gt;&gt;
-&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown2&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown2&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;&lt;replace &quot;#tnt1&quot;&gt;&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
-&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;People on shore seem fearful of interacting with the ships, and keep well away from the shoreline. Captains viewed strangers with a corresponding distrust.&lt;/p&gt;
-&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Not really. Ordinary people stream down to greet the ships in the estuary. At the pier, folks including women and babies laze comfortably around the ships.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Not really. Ordinary people stream down to greet the ships in the estuary. Women and babies laze comfortably on the pier alongside the ships and sailors.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
-&lt;&lt;set $score to $score -2&gt;&gt;
-&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
@@ -4994,123 +5030,240 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="32" name="berkeley-portraits" tags="Source" position="2700,500" size="100,100">&lt;div class=&quot;container source&quot;&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row center choice&quot;&gt;
+</tw-passagedata><tw-passagedata pid="32" name="berkeley-portraits" tags="Source" position="2700,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;h1&gt;Late Seventeenth-Century Portraits of Virginia Gentlemen&lt;/h1&gt;
-&lt;p&gt;Look for insights into the identity, character, and behaviors of elite White men in late seventeenth-century Virginia. Choose checkboxes to save items to your inventory.&lt;/p&gt;
+&lt;h1&gt;Late Seventeenth-Century Portraits of Elite Men in Virginia&lt;/h1&gt;
+&lt;p&gt;Look for insights into the identity, character, and behaviors of elite White men in late seventeenth-century Virginia. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
-&lt;img class=&quot;center img-fluid&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for insights into late seventeenth-century elite Virginia men&#39;s identity and sense of self, values, behaviors. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 &lt;br&gt;
 
-&lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$bportraitsc&quot; `$bportraitsc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;br&gt;
+
+&lt;h2&gt;What evidence from these paintings will you save to your inventory?&lt;/h2&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img id=&quot;scoredown1&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score -2&quot; width=&quot;300px&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot; id=&quot;tnt1&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown1&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown1&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;&lt;replace &quot;#tnt1&quot;&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The portraits are careful to depict facial expression, posture, and body language reflecting the timid, passive, docile character of their subjects.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Instead, I think that with these facial expressions, postures, and body language, the artists have been keen to convey a sense that their subjects are men of bold confidence and fortitude, self-assured, and commanding.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The portraits are careful to depict facial expression, posture, and body language reflecting the timid, passive, docile character of their subjects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img id=&quot;scoredown2&quot; src=&quot;images/score-tnt2b.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score -2&quot; width=&quot;300px&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot; id=&quot;tnt2&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown2&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown2&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;&lt;replace &quot;#tnt2&quot;&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The background scenery consistently emphasizes the subjects&#39; sedentary, indoor lifestyle.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Sometimes, yes. But several of the portraits&#39; backdrops present outdoor scenes: serene and carefully-cultivated garden spaces, lush wilderness, battle scenes, or the sea.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The background scenery consistently emphasizes the subjects&#39; sedentary, indoor lifestyle.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $bportraitsWar to &quot;Portraits often include celebrations of military might, with details like battle, swords and armor, and commemorative medals. (Seventeenth-century portraits of elite Virginia men: William Berkeley, Robert &quot;King&quot; Carter, Daniel Parke II)&quot;&gt;&gt;
+&lt;&lt;set $bportraitsWarSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Portraits often include celebrations of military might, with details like battle, swords and armor, and commemorative medals.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $bportraitsDress to &quot;Clothing often serves as a central expression of wealth, status, and fashionable taste: e.g., ample folds of costly textiles such as lace, velvet, silk; ornamentation like buttons and embroidery; voluminous wigs. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
+&lt;&lt;set $bportraitsDressSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Clothing often serves as a central expression of wealth, status, and fashionable taste: e.g., ample folds of costly textiles such as lace, velvet, silk; ornamentation like buttons and embroidery; voluminous wigs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $bportraitItems to &quot;The items included in these portraits celebrate elite men&#39;s enthusiasm for a variety of pursuits including war, landscaping (&quot;improving&quot; their estates), mercantile or naval ventures, fine furniture and interiors, fashionable dress, books and writing. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
+&lt;&lt;set $bportraitItemsSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The items included in these portraits celebrate elite men&#39;s enthusiasm for a variety of pursuits including war, landscaping (&quot;improving&quot; their estates), mercantile or naval ventures, fine furniture and interiors, fashionable dress, books and writing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $bportraitsLabor to &quot;The portraits present their subjects as people who are free from physical labor. The clothing, items, and scenery are incongruous with the performance physical labor. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
+&lt;&lt;set $shipsTechSave to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The portraits present their subjects as people who are free from physical labor. The clothing, items, and scenery are incongruous with the performance physical labor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;html&gt;
+&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
+  &lt;div class=&quot;carousel-indicators&quot;&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
 &lt;h2&gt;Lely, William Berkeley, Governor of Virginia (c. 1640 - 1670)&lt;/h2&gt;
 &lt;p&gt;Copy by Hariotte Montague c. 1900, after an original seveneenth-century portrait by Sir Peter Lely. From Encyclopedia Virginia.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen-berkeley.jpg&quot; alt=&quot;Portrait of man resting hand on hip and a cane, wearing grey wig, dark red coat and trousers, white frilled collar and cuffs.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1PostureSave&quot; false true&gt;&gt; Confident and languid posture exudes cultured and privileged self-assurance.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1WealthSave&quot; false true&gt;&gt; The pristine wig and generous folds of smooth, clean, expensive fabric are displays of wealth, fashion, and a labor-free lifestyle.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1FaceSave&quot; false true&gt;&gt; Facial expression suggests a character that is placid, rational, sensitive.&lt;label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits1WrongSave&quot; false true&gt;&gt; There is nothing martial here - no reference to military power.&lt;label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;row center&quot;&gt;
+    
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Unknown artist, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
 &lt;p&gt;From &lt;a href=&quot;https://colonialvirginiaportraits.org/portrait/robert-king-carter-ca-1664-1732/&quot; target=&quot;_blank&quot;&gt;Shirley Plantation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen1.jpg&quot; alt=&quot;Portrait of man wearing red jacket and waistcoat, and a wig with a ponytail&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2ClothingSave&quot; false true&gt;&gt; The voluminous, pristine wig, and the generous folds of smooth, clean, richly embroidered, expensive fabric (with the lining displayed) signify wealth, fashion, and a labor-free lifestyle.&lt;&lt;set $bportraits2Clothing to &quot;The voluminous, pristine wig, and the generous folds of smooth, clean, richly embroidered, expensive fabric (with the lining displayed) signify wealth, fashion, and a labor-free lifestyle.&quot;&gt;&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2WrongSave&quot; false true&gt;&gt; Military leadership is central to the symbolism.&lt;&lt;set $bportraits2Wrong to &quot;Military leadership is central to the symbolism.&quot;&gt;&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2PostureSave&quot; false true&gt;&gt; Posture: assertive, active, confident.&lt;&lt;set $bportraits2Posture to &quot;Posture: assertive, active, confident.&quot;&gt;&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2FaceSave&quot; false true&gt;&gt; Facial expression suggests confidence and determination.&lt;&lt;set $bportraits2Face to &quot;Facial expression suggests confidence and determination.&quot;&gt;&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits2SceneSave&quot; false true&gt;&gt; Background suggests elegant plantation landscaping - a symbol of elite status, wealth, and fashion.&lt;&lt;set $bportraits2Scene to &quot;Background suggests elegant plantation landscaping - a symbol of elite status, wealth, and fashion.&quot;&gt;&gt;&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Minnigrode Andrews, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
 &lt;p&gt;Original ca. 1690-1720, copy ca. 1900, oil on canvas, 152.4 x 111.76 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1973.15&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen2.jpg&quot; alt=&quot;Portrait of man leaning on a carved wooden table. He wears a long dark red coat and a white wig, with a dress sword on his hip.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3ClothingSave&quot; false true&gt;&gt; The textiles (lace, velvet, buttons, embroidery) and full, flowing wig are lavish displays of wealth and fashion.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3ItemsSave&quot; false true&gt;&gt; Sword and writing implements indicate social, intellectual, political, and military power.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3WrongSave&quot; false true&gt;&gt; Body language reflects a passive, timid character.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits3PostureSave&quot; false true&gt;&gt; Posture: confident and self-assured.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Kneller, William Byrd II (c. 1700-1704)&lt;/h2&gt;
 &lt;p&gt;Oil on canvas, 125.7 x 101 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/14025/portrait-of--william-byrd-ii-16741744&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen3.jpg&quot; alt=&quot;Portrait of man wearing long dark wig, dark blue jacket with jeweled embellishments and red drape around his waist. There is a dress sword on his hip, and he stands outdoors.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits4WrongSave&quot; false true&gt;&gt; Heavily powdered wig indicates respect for old age.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits4SceneSave&quot; false true&gt;&gt; Hand points to lush landscape of verdant vegetation, emphasizing (among other things, perhaps) land ownership and agriculture as the foundation of his status.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits4ClothingSave&quot; false true&gt;&gt; The coat&#39;s close fit and ornate fastenings, and the shirt&#39;s fine lace reflect wealth and a labor-free lifestyle.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits4PostureSave&quot; false true&gt;&gt; Posture and facial expression exude confidence and energy, purpose and authority.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Closterman, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
 &lt;p&gt;Oil on canvas, 101.6 x 76.2 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1985.35&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture.&lt;/a&gt;&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen4.jpg&quot; alt=&quot;Portrait of man wearing gray wig, orange coat, embroidered blue waistcoat, gold brocade sash around his waist. Miniature portrait of Queen Anne hangs on his neck.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits5WrongSave&quot; false true&gt;&gt; Setting and objects celebrate an indoor lifestyle of peace and comfort.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits5ClothingSave&quot; false true&gt;&gt; The voluminous wig and clothing of richly embroidered, gilded, expensive fabric are statements of wealth, taste, fashion.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits5WarSave&quot; false true&gt;&gt; There&#39;s an emphasis on military leadership, such as cannons, sword, a medallion portrait of the queen, and gilded tokens of victory.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Kneller, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
 &lt;p&gt;Oil on canvas, 125.41 x 101.6 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/33395/portrait-of-daniel-parke-ii-16641710?ctx=e4ac1f325f314e4b956b6893549e6db52f78fc28&amp;idx=0&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen5.jpg&quot; alt=&quot;Portrait of man wearing gray wig and full suit of armor. Miniature portrait of Queen Anne hangs on his neck, and a sword is at his waist.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits6WarSave&quot; false true&gt;&gt; Military leadership is emphasized: plate armor, baton and sword, a battle, a medallion portrait of the queen, and gilded tokens of victory.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits6WrongSave&quot; false true&gt;&gt; Posture is relaxed and passive, indicating a peaceful temperament.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;div class=&quot;row center&quot;&gt;
+    &lt;div class=&quot;carousel-item&quot;&gt;
 &lt;h2&gt;Hysing, William Byrd II (c. 1720 - 1726)&lt;/h2&gt;
 &lt;p&gt;Oil on canvas, 127 x 106.68 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/portal.aspx?lang=en-US&amp;g_AABS=1973.6.&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 &lt;img src=&quot;images/gentlemen6.jpg&quot; alt=&quot;Portrait of man wearing long dark wig with ponytail and blue jacket with gold frogging.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits7ClothingSave&quot; false true&gt;&gt; Rich textiles and fashionable details of dress are emphasized. Lace, velvet, buttons, embroidery, and voluminous wig are a lavish display of wealth and fashion.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$bportraits7ShipSave&quot; false true&gt;&gt; A ship celebrates mercantile and commercial success in the British Atlantic system.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
-&lt;hr&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+
+&lt;hr&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -6086,14 +6239,117 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;&lt;&lt;textarea &quot;$anxiousc&quot; `$anxiousc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Their homes expressed power and wealth&quot;&gt;&gt;&lt;&lt;set $anxious1 to &quot;Their homes expressed power and wealth: &#39;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&quot;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Land ownership was key&quot;&gt;&gt;&lt;&lt;set $anxious2 to &quot;Land ownership was key: &#39;William Byrd II... expanded his 26,000-acre inheritance to 180,000 acres by the time of his death in 1744.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;William Byrd II... expanded his 26,000-acre inheritance to 180,000 acres by the time of his death in 1744.&quot;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Personal fitness and beauty were important&quot;&gt;&gt;&lt;&lt;set $anxious3 to &quot;Personal fitness and beauty were important: &#39;William Byrd II ... [did a workout] every morning to enhance his posture, grace, and agility.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;William Byrd II ... [did a workout] every morning to enhance his posture, grace, and agility.&quot;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Ideal elite masculinity was achieved and expressed across systems of kinship, race, and social class&quot;&gt;&gt;&lt;&lt;set $anxious4 to &quot;Ideal elite masculinity was achieved and expressed across systems of kinship, race, and social class: &#39;Rooted firmly in familial, race, and class relations, Virginia planters’ material and social representations of self were the bedrock of gentry masculinity.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;Rooted firmly in familial, race, and class relations, Virginia planters’ material and social representations of self were the bedrock of gentry masculinity.&quot;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Self control&quot;&gt;&gt;&lt;&lt;set $anxious5 to &quot;Self control: &#39;Authority derived ... from his ability to subdue within himself those qualities he attributed to subordinates [i.e., women, non-Whites, laborers]: passion, weakness, and dependence. ... Habitual self-control, rooted in rural plantation life, was the key to exercising power over others. ... Masculinity and gentility required an authority that was deliberate rather than passionate, deriving its strength from being contained rather than unleashed.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious5Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;Authority derived ... from his ability to subdue within himself those qualities he attributed to subordinates [i.e., women, non-Whites, laborers]: passion, weakness, and dependence. ... Habitual self-control, rooted in rural plantation life, was the key to exercising power over others. ... Masculinity and gentility required an authority that was deliberate rather than passionate, deriving its strength from being contained rather than unleashed.&quot;&lt;/li&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Bacon&#39;s Rebellion made race and gender more important than class divisions, unifying White males&quot;&gt;&gt;&lt;&lt;set $anxoius6 to &quot;Bacon&#39;s Rebellion made race and gender more important than class divisions: &#39;Virginia&#39;s homegrown elite ... and largely disfranchised but armed and politically sensitive white male householders ... [were united by] an Anglo-Virginian masculinity in which class rifts were lessened by the new importance of race and gender hierarchies.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious6Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;Virginia&#39;s homegrown elite ... and largely disfranchised but armed and politically sensitive white male householders ... [were united by] an Anglo-Virginian masculinity in which class rifts were lessened by the new importance of race and gender hierarchies.&quot;&lt;/li&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious1 to &quot;Elite men&#39;s homes displayed power and wealth (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious1Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Elite men&#39;s homes displayed power and wealth: &quot;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious2 to &quot;Land ownership was key (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious2Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Land ownership was key: &quot;William Byrd II... expanded his 26,000-acre inheritance to 180,000 acres by the time of his death in 1744.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious3 to &quot;Personal fitness and beauty were important (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious3Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Personal fitness and beauty were important: &quot;William Byrd II ... [did a workout] every morning to enhance his posture, grace, and agility.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious4 to &quot;Ideal elite masculinity was achieved and expressed across systems of kinship, race, and social class: &#39;Rooted firmly in familial, race, and class relations, Virginia planters’ material and social representations of self were the bedrock of gentry masculinity.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious4Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Ideal elite masculinity was achieved and expressed across systems of kinship, race, and social class: &quot;Rooted firmly in familial, race, and class relations, Virginia planters’ material and social representations of self were the bedrock of gentry masculinity.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious5 to &quot;Self-control was prized: &#39;Habitual self-control, rooted in rural plantation life, was the key to exercising power over others.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious5Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Self control was prizedl: &quot;Authority derived ... from his ability to subdue within himself those qualities he attributed to subordinates [i.e., women, non-Whites, laborers]: passion, weakness, and dependence. ... Habitual self-control, rooted in rural plantation life, was the key to exercising power over others. ... Masculinity and gentility required an authority that was deliberate rather than passionate, deriving its strength from being contained rather than unleashed.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $anxious6 to &quot;Bacon&#39;s Rebellion made race and gender more important than class divisions, unifying White males. (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious6Save to true&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Bacon&#39;s Rebellion made race and gender more important than class divisions: &quot;Virginia&#39;s homegrown elite ... and largely disfranchised but armed and politically sensitive white male householders ... [were united by] an Anglo-Virginian masculinity in which class rifts were lessened by the new importance of race and gender hierarchies.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+
+
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Bacon&#39;s Rebellion made non-elite White men more assertive toward the elite&quot;&gt;&gt;&lt;&lt;set $anxious7Save to true&gt;&gt;&lt;&lt;set $anxious7 to &quot;Bacon&#39;s Rebellion made non-elite White men more assertive toward the elite: &#39;Ordinary men became unwilling to defer to the gentlemen who were supposed to be their leaders and demanded redress through armed resistance. ... [The rebels] derived a sense of power from collectively killing Indians, plundering the homes of the wealthy, and burning the seat of colonial government at Jamestown.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &#39;Ordinary men became unwilling to defer to the gentlemen who were supposed to be their leaders and demanded redress through armed resistance. ... [The rebels] derived a sense of power from collectively killing Indians, plundering the homes of the wealthy, and burning the seat of colonial government at Jamestown.&quot;&lt;/li&gt;
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Bacon&#39;s Rebellion drew power from a populist, racist, militant message&quot;&gt;&gt;&lt;&lt;set $anxoius8 to &quot;Bacon&#39;s Rebellion drew power from a populist, racist, militant message: &#39;...fashioning a new ethic that incorporated racist violence, populist politics, and military coercion.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious8Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;...fashioning a new ethic that incorporated racist violence, populist politics, and military coercion.&quot;&lt;/li&gt;
 &lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Non-elite White men were politically active&quot;&gt;&gt;&lt;&lt;set $anxious9 to &quot;Non-elite White men were politically active: &#39;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious9Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law.&quot;&lt;/li&gt;
