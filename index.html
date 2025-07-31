@@ -205,6 +205,17 @@ body .passage {
   border: 3px solid black;
 }
 
+.graphicbtn {
+  border: 1px solid #FFDE80;
+  border-radius: 30px;
+  color: black;
+}
+
+.graphicbtn:hover {
+  border: 3px solid #FFDE80;
+  box-shadow: 0px 0px 5px 5px #FFDE80;
+}
+
 .feedback-good {
   background-color: rgba(244, 243, 255);
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
@@ -455,7 +466,7 @@ background-image: url("images/hero-dock2.jpg");
 }
 
 .hero-shop {
-background-image: url("images/hero-printing2.jpg");
+background-image: url("images/hero-printing1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -574,11 +585,6 @@ background-image: url("images/hero-result.jpg");
   background-size: 100%;
 }
 
-.mine {
-  background-color: #3b3b3b;
-  color: white;
-}
-
 .subtitle {
   font-size: 20pt;
   font-weight: bold;
@@ -619,15 +625,6 @@ background-image: url("images/hero-result.jpg");
 
 .mined {
   background-image: radial-gradient(rgba(255, 252, 240, 0.1), rgba(255, 222, 128, 0.3)), url("images/ps-background1.jpg");
-  background-repeat: repeat;
-  border: 1px solid black;
-  padding: 5px;
-  font-size: 12pt;
-  box-shadow: 0px 0px 3px 3px #dedede;
-}
-
-.mined-acc {
-  background-image: url("images/ss-background.jpg");
   background-repeat: repeat;
   border: 1px solid black;
   padding: 5px;
@@ -831,7 +828,7 @@ console.log(tooltipList)
 //jquery for image maps
 !function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-tag name="MC" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;&lt;set $psg to &quot;jackson&quot;&gt;&gt;
 
-&lt;&lt;set $wealth to 1000&gt;&gt;
+&lt;&lt;set $wealth to 500&gt;&gt;
 &lt;&lt;set $score to 50&gt;&gt;
 
 &lt;&lt;set $capt to &quot;&quot;&gt;&gt;
@@ -1069,6 +1066,7 @@ console.log(tooltipList)
 &lt;p&gt;Get up and start chores. Be a good example. An apprentice needs healthy habits as much as he needs skills and tools.&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice! Your servants feel motivated and confident when they begin work. They are more productive because you have created order and energy in the shop.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;&lt;&lt;button [[Continue |morning]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
@@ -1103,7 +1101,7 @@ console.log(tooltipList)
 &lt;li&gt;Social capital: The arrival of a new ship is an important event in the young settlement. To maintain your leadership status, you should be present when important events occur.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;&lt;button [[Continue |morning]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
@@ -1123,16 +1121,6 @@ console.log(tooltipList)
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star10.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 10&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |morning]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1160,7 +1148,7 @@ console.log(tooltipList)
  
 &lt;p&gt;You duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
-&lt;p&gt;You call for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. They&#39;ve been at sea for weeks, and the simple act of standing on solid ground is a full assault on their senses. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
+&lt;p&gt;You call for John, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. They&#39;ve been at sea for weeks, and the simple act of standing on solid ground is a full assault on their senses. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/dock.jpg&quot; alt=&quot;ship with full sails and dinghy alongside&quot; width=&quot;90%&quot;&gt;
@@ -1187,8 +1175,10 @@ console.log(tooltipList)
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Go Mining&lt;/h2&gt;
 &lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
 
 &lt;/div&gt;
 
@@ -1210,8 +1200,9 @@ console.log(tooltipList)
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;After a quick breakfast, you duck outside quickly for your usual morning walk. As captain of the Jamestown militia company, you like to get a feel for each day as it begins. An unusual sound drifts up from the docks - creaking and clanking, and voices. A ship! In the grey dawn, you can just make out its bulky shape against the glow of the river.&lt;/p&gt;
 
-&lt;p&gt;You duck your head back in the door and shout for the apprentice, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
+&lt;p&gt;You call for John, and the two of you walk quickly down toward the dock. As you approach, you notice a small boat gliding slowly from the ship to the dock. The men who climb out onto the planks walk unsteadily and stand with feet apart, swaying slightly. You&#39;ve known seafaring men all your life near the London docks, and you recognize this characteristic aura of uncertainty and volatility. From the way the group moves, it&#39;s obvious who the captain is - the others hang back just behind his shoulder, looking where he looks, unconsciously responding to his movements.&lt;/p&gt;
 &lt;/div&gt;
+
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/dock.jpg&quot; alt=&quot;ship with full sails and dinghy alongside&quot; width=&quot;90%&quot;&gt;
 &lt;p class=&quot;caption&quot;&gt;Illustration from an English sailor&#39;s journal, c. 1700. From &lt;a href=&quot;https://www.rmg.co.uk/stories/maritime-history/library-archive/digitisation-caird-library&quot; target=&quot;_blank&quot;&gt;Royal Museums Greenwich.&lt;/a&gt;&lt;/p&gt;
@@ -1228,6 +1219,7 @@ console.log(tooltipList)
 &lt;p&gt;You call out that they must halt. Citing your authority as militia captain and member of the House of Burgesses, you tell the captain that he must remain on his ship until the governor has granted permission to enter the colony.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3&gt;Avoidance? &lt;/h3&gt;
+&lt;p&gt;You avoid making contact, standing back to watch the scene from a distance. Ship captains are far above you in social status. It would be pointless, or even dangerous, to approach him directly.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;br&gt;
@@ -1236,8 +1228,10 @@ console.log(tooltipList)
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Go Mining&lt;/h2&gt;
 &lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
 
 &lt;/div&gt;
 
@@ -1286,8 +1280,13 @@ console.log(tooltipList)
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Go Mining&lt;/h2&gt;
 &lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;br&gt;
+&lt;br&gt;
 
 &lt;/div&gt;
 
@@ -1296,11 +1295,9 @@ console.log(tooltipList)
 &lt;&lt;if $capt is &quot;&quot;&gt;&gt;
 [[Make a choice |dock]]
 
-
-&lt;&lt;elseif $capt is &quot;command&quot;&gt;&gt;
-&lt;&lt;set $wealthstart to $wealth&gt;&gt;
-
 &lt;div class=&quot;container&quot;&gt;
+&lt;&lt;elseif $capt isnot &quot;friend&quot;&gt;&gt;
+&lt;&lt;set $wealthstart to $wealth&gt;&gt;
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
 &lt;div class=&quot;setting-title&quot;&gt;
@@ -1312,45 +1309,31 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 
-&lt;p&gt;The captain turns away and ignores you. He sends three men from his ship up to the fort. Within an hour, they return, accompanied by the governor and captain general. You send your apprentice back home with orders to bring the cart for transporting the printing press.&lt;/p&gt;
-
-&lt;p&gt;Meanwhile, the dock gets busier as more colonists arrive from Jamestown and the hinterlands. The ship has been carefully moored at the dock, where the captain, his officers, and the governor&#39;s clerk direct the swarm of colonists who have come to buy supplies and exchanging news. The colony is desperate for both, and you know it will be a good day for the captain. He can name his own price. While the new taxes and low tobacco prices have cut everyone&#39;s profits, they still need supplies and they&#39;re willing to pay a high price. All day, the captain is too busy to respond to your inquiries about the printing press you believe is stowed in his holds.&lt;/p&gt;
-
-&lt;p&gt;You hang around the dock chatting with neighbors and friends. You learn some interesting news.&lt;/p&gt;
-&lt;div class=&quot;row crafting&quot;
-&lt;ul class=&quot;nodot&quot;&gt;
+&lt;p&gt;Chatting with friends and neighbors around the dock, you picked up some interesting information:&lt;/p&gt;
+&lt;hr&gt;
 &lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;Tobacco prices&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;Old Governor Berekeley is losing friends fast, especially since he made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes - paid for with a heavy new tax. The tax can only be paid in tobacco. Now, you learn that parliament has raised new taxes on tobacco, too, crushing its value for the planters.&lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
 &lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;What the government thinks about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The king plans to send royal commissioners to investigate Nathaniel Bacon&#39;s insurrection and charges of misgovernment against Governor Berkeley. Bacon has a bad reputation as a liar and a pompous fool, but the governor isn&#39;t much better. In London, the royalist faction is triumphant, but dissent is brewing in the London coffeehouses and theaters. The government is fighting these forces aggressively, outlawing coffeehouses and issuing harsh censorship laws. The military has been crushing rebellion at home, as well as in Ireland and Scotland. Everyone feels confident that the king will send troops to suppress Bacon&#39;s Rebellion if it becomes a real threat to the colony. &lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;p&gt;It&#39;s nearly dark when you manage to retrieve the new press. While your apprentice loads it into the cart and begins hauling it home, you open conversation with one of the ship&#39;s officers, asking to buy some supplies. He shrugs and says there&#39;s not much left, and the captain has gone to the fort for the evening.&lt;/p&gt;
-&lt;p&gt;When you return the next morning, there isn&#39;t much left this morning, and the captain feels no need to bring the prices down.&lt;/p&gt;&lt;hr&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;When you finally find the captain and buy some goods, there isn&#39;t much left, and the captain feels no need to bring the prices down. His voyage has already been profitable.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;choice&quot;&gt;
 &lt;h2&gt;You are starting with &amp;#163;&lt;&lt;print $wealth&gt;&gt; to spend. What do you buy?&lt;/h2&gt;
-&lt;p&gt;Choose &quot;Continue&quot; when you are ready. Do not spent more than you have. If your remaining budget is less than 0, &quot;Continue&quot; will clear your choices and reload this page.&lt;/p&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 
+&lt;div class=&quot;container&quot; id=&quot;trade&quot;&gt;
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;Matchlock muskets&lt;/p&gt;
@@ -1530,32 +1513,18 @@ console.log(tooltipList)
 &lt;p&gt;Sugar&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Noneis left.&lt;/p&gt;
+&lt;p&gt;None is left.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 
 &lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
 
-
-
-
-&lt;&lt;elseif $capt is &quot;friend&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
 &lt;&lt;set $wealthstart to $wealth&gt;&gt;
-
-&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-trade&quot;&gt;
 &lt;div class=&quot;setting-title&quot;&gt;
@@ -1566,20 +1535,23 @@ console.log(tooltipList)
 &lt;p class=&quot;rt&quot;&gt;Above: Detail from frontispiece of John Smith&#39;s &lt;em&gt;A True Relation of Such Occurrences and Accidents of Note as Hath Happened in Virginia&lt;/em&gt; (1608). From &lt;a href=&quot;https://virginiahistory.org/learn/virginia-company-london&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
-&lt;p&gt;The captain&#39;s name is Thomas Gardner. He gratefully accepts your offer, and you send John jogging up toward the fort, with instructions to stop at your shop and send the servant down with fresh bacon, bread, and beer. Settling down to wait, the group takes a seat on some empty tobacco barrels and pass the time in friendly conversation:&lt;/p&gt;
-
-&lt;div class=&quot;row crafting&quot;&gt;
+&lt;p&gt;You enjoy the conversation with Captain Gardner. What a treat. Before beginning to trade goods and money, you exchange interesting information:&lt;/p&gt;
+&lt;hr&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You share the latest news about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;The captain knows about Nathaniel Bacon&#39;s challenge to Governor Berkeley&#39;s regime, and he&#39;s curious to hear the latest. You tell him that Bacon has a bad reputation as a liar and a pompous fool, but old Governor Berekeley is losing friends fast. In your opinion, it started with the governor&#39;s new rules about trading with the tribes. He suddenly made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes. The captain rolls his eyes and shakes his head, and you nod and chuckle, adding that the governor has levied heavy new taxes to pay for these forts - a tax that can &lt;span class=&quot;bi&quot;&gt;only&lt;/span&gt; by paid in tobacco.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
-&lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;The captain shares what he&#39;s heard of the royal court&#39;s view of Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The captain laughs as he delivers his news: There&#39;s a huge new tax on tobacco! Ha ha! Oh, how the wigged and powdered gentlemen will howl. You both share some unkind remarks about the upper classes. The captain grows thoughtful and asks you, as a friend, to keep this news about the tobacco tax private for now. The governor will find out today, in any case, and then everyone will know. You agree. Obviously, this will give the captain a signfiicant advantage today when the wealthy plantation owners come to buy supplies, imagining their tobacco is worth significantly more than it really is, thanks to this new tax.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
-&lt;p id=&quot;zrespC&quot;&gt;&lt;&lt;link &quot;You ask about the news from London, sharing your hope for the strength of the monarchy and an end to all rebellion.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespC&quot;&gt;&gt;&lt;li&gt;The captain agrees and tells you that the king and his supporters are in power, crushing dissent at home and in Ireland and Scotland. But trouble is brewing, especially in the London coffeehouses and theaters where people read and spread dangerous ideas, criticizing the king. New laws are making such places illegal and setting new rules for what can be printed. You suggest that, in the right hands, a printing press can be a valuable tool. The captain agrees, and you share your plans to begin printing here in your workshop. He&#39;s happy to report that your new printing press is packed safely in his hold, ready for delivery.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
-&lt;p id=&quot;zrespD&quot;&gt;&lt;&lt;link &quot;After sharing news and ideas for printing, the conversation turns to your work as a gunsmith.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespD&quot;&gt;&gt;&lt;li&gt;The captain says he believes flintlocks will soon replace matchlocks. You express more skepticism than you really feel, to get the captain to share his ideas. He says he&#39;s heard gossip that the army will soon be ordering standard issue muskets in a new flintlock pattern, and you trade ideas on the feasibility and expense of such a change. Are the Amsterdam and London gunsmiths really capable of producing the complex flintlock in such quantities? Can the crown really afford it? Did the king get this idea from his French friends? You&#39;re both lost in conversation for a time.&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You share the latest news about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;The captain knows about Nathaniel Bacon&#39;s challenge to Governor Berkeley&#39;s regime, and he&#39;s curious to hear the latest. You tell him that Bacon has a bad reputation as a liar and a pompous fool, but old Governor Berekeley is losing friends fast. In your opinion, it started with the governor&#39;s new rules about trading with the tribes. He suddenly made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes. The captain rolls his eyes and shakes his head, and you nod and chuckle, adding that the governor has levied heavy new taxes to pay for these forts - a tax that can &lt;span class=&quot;bi&quot;&gt;only&lt;/span&gt; by paid in tobacco.&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;Gardner shares what he&#39;s heard of the royal court&#39;s view of Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The captain laughs as he delivers his news: There&#39;s a huge new tax on tobacco! Ha ha! Oh, how the wigged and powdered gentlemen will howl. You both share some unkind remarks about the upper classes. The captain grows thoughtful and asks you, as a friend, to keep this news about the tobacco tax private for now. The governor will find out today, in any case, and then everyone will know. You agree. Obviously, this will give the captain a signfiicant advantage today when the wealthy plantation owners come to buy supplies, imagining their tobacco is worth significantly more than it really is, thanks to this new tax.&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespC&quot;&gt;&lt;&lt;link &quot;You ask about the news from London, sharing your hope for the strength of the monarchy and an end to all rebellion.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespC&quot;&gt;&gt;&lt;li&gt;Gardner agrees and tells you that the king and his supporters are in power, crushing dissent at home and in Ireland and Scotland. But trouble is brewing, especially in the London coffeehouses and theaters where people read and spread dangerous ideas, criticizing the king. New laws are making such places illegal and setting new rules for what can be printed. You suggest that, in the right hands, a printing press can be a valuable tool. The captain agrees, and you share your plans to begin printing here in your workshop. He&#39;s happy to report that your new printing press is packed safely in his hold, ready for delivery.&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
+&lt;p id=&quot;zrespD&quot;&gt;&lt;&lt;link &quot;After sharing news and ideas for printing, the conversation turns to your work as a gunsmith.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespD&quot;&gt;&gt;&lt;li&gt;Gardner says he believes flintlocks will soon replace matchlocks. You express more skepticism than you really feel, to get the captain to share his ideas. He says he&#39;s heard gossip that the army will soon be ordering standard issue muskets in a new flintlock pattern, and you trade ideas on the feasibility and expense of such a change. Are the Amsterdam and London gunsmiths really capable of producing the complex flintlock in such quantities? Can the crown really afford it? Did the king get this idea from his French friends? You&#39;re lost in conversation for a long time.&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;&lt;hr&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Your servant shows up with a cart carrying food and ale for the group. You&#39;re enjoying the conversation, but need to make some purchases. Like everyone in the colony, you&#39;re desperate for supplies. When the captain mentions some metalworking repairs needed on the ship, you offer to handle this work as a favor to a friend. You ask if you might come on board now and have a look at the work, before the captain gets too busy. He knows you&#39;re maneuvering to begin trading before anyone else can. He grins and accepts the offer. On board the ship, he points out a cracked chain, a gun carriage with a bent axle, two cannons with sticky locks, and mentions a favorite, quirky old blunderbus that won&#39;t fire at all. While you chat about these repairs, you ask about the goods the ship is carrying for sale.&lt;/p&gt;
 
-&lt;p&gt;Your servant shows up with a cart carrying food and ale for the group. You&#39;re enjoying the conversation, but need to make some purchases. Like everyone in the colony, you&#39;re desperately low on basic supplies. When the captain mentions some metalworking repairs needed on the ship, you offer to handle this work as a favor to a friend. You ask if you might come on board now and have a look at the work, before the captain gets too busy. He knows you&#39;re maneuvering to begin trading before anyone else can, but accepts the offer. On board the ship, he points out a cracked chain, a gun carriage with a bent axle, two cannons with sticky locks, and mentions an old blunderbus that won&#39;t fire at all. While you chat about these repairs, you ask about the goods the ship is carrying for sale. The captain sets fair prices, building on your friendly relationship and accounting for your offer of free repairs. But he knows the colony is desperate for supplies, and a horde of rich plantation owners will be mobbing the dock at any moment. He&#39;s quite rightly going to make you pay for this privilege of having first choice. You must choose wisely.&lt;/p&gt;
+&lt;p&gt;Gardner sets fair prices, building on your friendly relationship and accounting for your offer of free repairs. But he knows the colony is desperate for supplies, and a horde of rich plantation owners will be mobbing the dock at any moment. He&#39;s quite rightly going to make you pay for this privilege of having first choice. You must choose wisely.&lt;/p&gt;
+&lt;br&gt;
 
-&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;choice&quot;&gt;
 &lt;h2&gt;You are starting with &amp;#163;&lt;&lt;print $wealth&gt;&gt; to spend. What do you buy?&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -1943,320 +1915,20 @@ console.log(tooltipList)
 &lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
+&lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;
-
+&lt;br&gt;
 &lt;p&gt;By the time you&#39;re finishing these trades, you see a delegation from the fort approaching the dock. You tip your head toward them and grin, sharing an eye roll with the captain. They&#39;re all on horseback, posturing carefully and wearing their best hats and boots - except for old Governor Berkeley himself, who is actually in a carriage. Any normal person might have walked from the fort, but (as you predicted) they wanted to make an entrance. You&#39;re pleased that their vanity delayed them long enough for you to enjoy a profitable morning here.&lt;/p&gt;
 
-&lt;p&gt;You chuckle and wink at the captain. Shaking his hand, you say goodbye and remind him of his promise to visit you as soon as he has time. You and your servant begin loading loading the cart and moving the goods to your shop while the captain prepares for his official meeting with the officials from the fort.&lt;/p&gt;
+&lt;p&gt;You chuckle and wink at Gardner. Shaking his hand, you say goodbye and remind him of his promise to visit you as soon as he has time. You and your servant begin loading loading the cart and moving the goods to your shop while Gardner prepares to receive the official delegation from the fort.&lt;/p&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
 
 
-
-
-&lt;&lt;elseif $capt is &quot;ignore&quot;&gt;&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row hero-trade&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;Trade&lt;/h1&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p class=&quot;rt&quot;&gt;Above: Detail from frontispiece of John Smith&#39;s &lt;em&gt;A True Relation of Such Occurrences and Accidents of Note as Hath Happened in Virginia&lt;/em&gt; (1608). From &lt;a href=&quot;https://virginiahistory.org/learn/virginia-company-london&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;row scenario center&quot;&gt;
-
-&lt;p&gt;The area gets busier all morning as more colonists arrive from Jamestown and the hinterlands. The ship has been carefully moored at the dock, where the captain, his officers, and the governor&#39;s clerk direct the swarm of colonists who have come to buy goods and exchanging news. The captain is busy all day, meeting with a delegation from the fort, including old Governor Berkeley in his carriage.&lt;/p&gt;
-
-&lt;p&gt;You hang around the dock chatting with neighbors and friends. You learn some interesting news.&lt;/p&gt;
-&lt;ul&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;Tobacco prices&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;Old Governor Berekeley is losing friends fast, especially since he made it illegal to trade with the tribes without a special license, which he only grants to his personal friends. Then he came up with a plan to build new forts for the colony&#39;s defense - ostensibly against the tribes - paid for with a heavy new tax. The tax can only be paid in tobacco. Now, you learn that parliament has raised new taxes on tobacco, too, crushing its value for the planters. &lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;p id=&quot;zrespB&quot;&gt;&lt;&lt;link &quot;What the government thinks about Bacon&#39;s Rebellion&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespB&quot;&gt;&gt;&lt;li&gt;The king plans to send royal commissioners to investigate Nathaniel Bacon&#39;s insurrection and charges of misgovernment against Governor Berkeley. Bacon has a bad reputation as a liar and a pompous fool, but the governor isn&#39;t much better. In London, the royalist faction is triumphant, but dissent is brewing in the London coffeehouses and theaters. The government is fighting these forces aggressively, outlawing coffeehouses and issuing harsh censorship laws. The military has been crushing rebellion at home, as well as in Ireland and Scotland. Everyone feels confident that the king will send troops to suppress Bacon&#39;s Rebellion if it becomes a real threat to the colony. &lt;&lt;set $score to $score +2&gt;&gt;&lt;p&gt;&lt;img src=&quot;images/score2.jpg&quot; alt=&quot;score +2&quot; width=&quot;20%&quot;&gt;&lt;/p&gt;&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/ul&gt;
-&lt;p&gt;It&#39;s nearly dark when you manage to retrieve the new press. While your apprentice loads it into the cart and begins hauling it home, you open conversation with one of the ship&#39;s officers, asking to buy some supplies. He shrugs and says there&#39;s not much left, and the captain has gone to the fort for the evening. When you return the next morning, there isn&#39;t much left this morning, and the captain feels no need to bring the prices down.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;h2&gt;You are starting with &amp;#163;&lt;&lt;print $wealth&gt;&gt; to spend. What do you buy?&lt;/h2&gt;
-&lt;p&gt;Choose &quot;Continue&quot; when you are ready. Do not spent more than you have. If your remaining budget is less than 0, &quot;Continue&quot; will clear your choices and reload this page.&lt;/p&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Matchlock muskets&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left. They were all bought by the captain general at the fort and the governor.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;These have all but replaced the old fashioned matchlocks of the Civil War days. But they&#39;re expensive, hard to make, and supply is always short.&quot;&lt;&lt;link &quot;Flintlock muskets&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;The captain has some of these, but none are for sale. The whole shipment is for the soldiers at the fort. &lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;It&#39;s easy to buy these from your neighbors. Is there a reason to buy these from England?&quot;&gt;&lt;&lt;link &quot;Crates of candles&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;10 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;numberbox &quot;$candlesQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (10*$candlesQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Barrels of gunpowder&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left. They were all bought by the captain general at the fort.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Casks of salt&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Nobody in Virginia is manufacturing paper yet. This is the only way to get it.&quot;&gt;&lt;&lt;link &quot;Crates of paper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$paperQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$paperQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You often use lead in your shop, most commonly to make musketballs. There are no local sources, yet.&quot;&gt;&lt;&lt;link &quot;Ingots of lead&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$leadQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (40*$leadQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You often use copper in your shop. Looking ahead, copper plates are often used for printing images. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Bars of copper&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;50 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$copperQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (50*$copperQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;You use a lot of iron in your shop. There are no local sources yet.&quot;&gt;&lt;&lt;link &quot;Iron bars&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; cost &amp;#163;40 each. How many will you buy? (Enter a number.)&lt;/p&gt; 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;if $wealth gt 0&gt;&gt;
-&lt;&lt;numberbox &quot;$ironQ&quot; 0&gt;&gt;&lt;&lt;button &quot;Buy&quot;&gt;&gt;&lt;&lt;set $wealth to ($wealth - (40*$ironQ))&gt;&gt;
-&lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
-&lt;br&gt;
-&lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/button&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;p&gt;You are out of money.&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Printed material: Books, plays, essays, engravings&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;These were all bought by the gentry. None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Crates of good French wine.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None is left. The gentry bought them all.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Crates of rum&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Casks of spices&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Bales of wool cloth&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Barrels of salt cod&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Bales of silk&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None are left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Butter and cheese&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None is left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Sugar&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;None is left.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Continue |shop]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="shop" tags="" position="1900,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
+&lt;&lt;set $wealth to $wealthstart&gt;&gt;
 &lt;&lt;set $spend to 0&gt;&gt;
 &lt;&lt;set $saltpeterQ to 0&gt;&gt;
 &lt;&lt;set $sulfurQ to 0&gt;&gt;
@@ -2277,7 +1949,7 @@ console.log(tooltipList)
 
 &lt;&lt;elseif $wealth gt 0&gt;&gt;
 
-&lt;&lt;if ($capt is &quot;command&quot;) or ($capt is &quot;ignore&quot;)&gt;&gt;
+&lt;&lt;if $capt isnot &quot;friend&quot;&gt;&gt;
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-shop&quot;&gt;
@@ -2286,13 +1958,10 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row scenario center&quot;&gt;
-&lt;p&gt;Buying supplies and hauling them home has taken most of the day. You&#39;re behind on work, but you&#39;re dying to assemble the new printing press. There&#39;s no question: That comes first.&lt;/p&gt;
+&lt;p class=&quot;rt&quot;&gt;Above: Citation.&lt;/p&gt;
 
-&lt;div class=&quot;row score-change&quot;&gt;
-&lt;h2&gt;Your score and wealth have decreased&lt;/h2&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;Interrupted workflow: Score -2, Wealth -10&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt;&lt;li&gt;While you were at the dock all day yesterday, your servant did nothing. He could have been making firewood or cleaning or completing menial tasks to facilitate productive shop time for you and the apprentice today. But now those tasks are incomplete and your for-profit work is delayed.&lt;/li&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class=&quot;row scenario center&quot;&gt;
+&lt;p&gt;Buying supplies and hauling them home has taken most of the day. You&#39;re behind on work ... but you &lt;em&gt;really&lt;/em&gt; want to play with the new printing press!&lt;/p&gt;
 
 &lt;p&gt;Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. The metal type is stacked neatly in the drawers of the type case - upper case in the top, lower below. Each tiny block meticulously crafted from a special alloy that will hold a sharp edge after repeated pressings. The ink is a cunning, oily, impossibly black concoction - sticky enough to adhere uniformly to the metal type face, and smooth enough to transfer perfectly onto the paper.&lt;/p&gt; 
 
@@ -2333,12 +2002,7 @@ console.log(tooltipList)
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;p&gt;You and your servants worked late last night hauling all of your new supplies home from the dock - along with the new printing press.&lt;/p&gt;
 
-&lt;div class=&quot;row score-change&quot;&gt;
-&lt;h2&gt;Your score and wealth have increased&lt;/h2&gt;
-&lt;p id=&quot;zrespA&quot;&gt;&lt;&lt;link &quot;You were able to start chores as usual this morning, and they&#39;re each working on profitable tasks while you begin assembling the press.&quot;&gt;&gt;&lt;&lt;replace &quot;#zrespA&quot;&gt;&gt; &lt;p&gt;Score +5, Wealth +10&lt;/p&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;set $score to $score + 5&gt;&gt;&lt;&lt;set $wealth to $wealth + 10&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. Each little block meticulously crafted, its surface a specialized alloy that will hold a sharp edge after repeated pressings. The ink is a cunning portion that will adhere to the metal type face and transfer smoothly and precisely onto the paper.&lt;/p&gt; 
+&lt;p&gt;This morning, after a hearty breakfast, eveyone is at work as usual - John&#39;s making nails, Tom&#39;s splitting cordwood, and you&#39;re tinkering with Captain Gardner&#39;s odd old blunderbus. Should be an easy fix. Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. Each little block meticulously crafted, its surface a specialized alloy that will hold a sharp edge after repeated pressings. The ink is a cunning portion that will adhere to the metal type face and transfer smoothly and precisely onto the paper.&lt;/p&gt; 
 
 &lt;p&gt;As you work, you wonder what you should print first. What will appeal to your colonial buyers? Most importantly, what will the governor tolerate? You know he hates the press. Last week while the council argued over who was to blame for Bacon&#39;s Rebellion, the governor had stormed, &quot;I thank God, there are no free schools nor printing … for learning has brought disobedience, and heresy, and sects into the world. … God keep us from both!&quot; You don&#39;t know exactly how he will react to news that one of his leading colonists is actually running a press. You&#39;ve been telling yourself it will be better to ask for forgiveness than permission ... but you&#39;re feeling more and more nervous about this.&lt;/p&gt;
 
@@ -3315,16 +2979,9 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
 &lt;li&gt;The situation of servants and apprentices in early Virginia,&lt;/li&gt;
 &lt;li&gt;The relationship between servants or apprentices and their masters.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Done Mining.&quot;.&lt;/p&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Done Mining |serv-choice]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Craft your Choice.&quot;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;serv-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;img src=&quot;images/mineshaft.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
@@ -3338,23 +2995,23 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
 &lt;/map&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="serv-choice" tags="" position="1100,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="serv-choice" tags="" position="1100,400" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
 
-&lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
-
+&lt;div class=&quot;row center&quot;&gt;
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
-&lt;p&gt;What will you do to help John the apprentice and Thomas the indentured servant, and restore productivity in your workshop?&lt;/p&gt;
+&lt;p&gt;So, what will you do to restore productivity in your workshop this morning?&lt;/p&gt;
 &lt;p&gt;Each choice appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
 &lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
-
-&lt;div class=&quot;row crafting&quot;&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div class=&quot;crafting&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Frethorne&#39;s letter&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Contract, 1635)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Indenture Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from Beverley&#39;s &lt;em&gt;History&lt;/em&gt;&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;No comments from the Apprenticeship Contract&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Contract, 1635)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -3364,114 +3021,93 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
       &lt;h2 class=&quot;card-text white&quot;&gt;Have breakfast.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-		  
           &lt;&lt;if $freth1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $freth1&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $freth1&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $freth3Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $freth3&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $freth3&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $freth4Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $freth4&gt;&gt;&quot; (Frethorne, 1629)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-                    &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Form, 1635)&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $freth4&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
            &lt;&lt;if $contract1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contract1&gt;&gt;&quot; (Indenture Form, 1635)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $contract1&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
                      &lt;&lt;if $contract2Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contract2&gt;&gt;&quot; (Indenture Form, 1635)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $contract2&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $indenture1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture1&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $indenture1&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $indenture3Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture3&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $indenture3&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $indenture9Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture9&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $indenture9&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
          &lt;&lt;if $indenture10Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $indenture10&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $beverley2Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $beverley2&gt;&gt;&quot; (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $beverley2&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $beverley4Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $beverley4&gt;&gt;&quot; (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $beverley4&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $beverley5Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $beverley5&gt;&gt;&quot; (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $beverley5&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
+      &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;feed&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
             &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Have breakfast.&lt;/h2&gt;
-            &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
+            &lt;h1&gt;Your choice&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Feed them.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text +10&quot; width=&quot;90%&quot;&gt;
+                        &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice! Bacon is never a mistake. And in the future, it may be useful to have a loyal household. A little kindness and patience now may prove very valuable in days to come.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+            &lt;br&gt;
+            &lt;hr&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -3484,44 +3120,26 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
       &lt;h2 class=&quot;card-text white&quot;&gt;Violence.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Grab the servant and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/p&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-                   &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Form, 1635)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
            &lt;&lt;if $contract1Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contract1&gt;&gt;&quot; (Indenture Form, 1635)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $contract1&gt;&gt;&quot;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-         &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-         &lt;&lt;if $indenture10Save&gt;&gt;
-                &lt;div class=&quot;mined-neg&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;beat&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
-            &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Violence.&lt;/h2&gt;
-            &lt;p&gt;Score +10 &amp;#9733; &amp;#9733;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
-            &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;beat&quot;&gt;&gt;&lt;&lt;set $score to $score - 10&gt;&gt;
+           &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h1&gt;Your choice:&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Violence.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;images/score-tnt10.png&quot; alt=&quot;Minecraft TNT with text -10&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;p&gt;Grab Thomas, the servant, and give him a kick. Yell at him threatening a real beating if he doesn&#39;t pick up the pace. After the kindling, he needs to fetch water, and then sweep. Yell at John, the apprentice, too. He knows how to make nails. There&#39;s no excuse for the wreckage you see on the bench.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;This is all perfectly legal, and quite common. However, in the future, you may wish your servants felt loyalty and good will toward you. This may have been a costly mistake.&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+                        &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
@@ -3533,57 +3151,44 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
       &lt;h2 class=&quot;card-text white&quot;&gt;Minimal intervention.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;Ignore the servant. He&#39;s hopeless. There&#39;s really no way to motivate him and no point in trying to educate him. Explain the apprentice&#39;s mistake with the nails and tell him to start over.&lt;/p&gt;
 &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-		  &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-                    &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Indenture Form, 1635)&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
                 &lt;&lt;if $contract2Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $contract2&gt;&gt;&quot; (Indenture Form, 1635)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
-                &lt;/div&gt;
-                &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;
-                &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $contract2&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $indenture9Save&gt;&gt;
                 &lt;div class=&quot;mined-neg&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture9&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $indenture9&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
                     &lt;&lt;if $indenture10Save&gt;&gt;
                 &lt;div class=&quot;mined-neg&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $indenture10&gt;&gt;&quot; (Apprenticeship Contract, 1742)&lt;/p&gt;
-                &lt;p&gt;Score -2&lt;/p&gt;&lt;&lt;set $score to $score - 2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $indenture10&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
           &lt;&lt;if $beverley5Save&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&quot;&lt;&lt;print $beverley5&gt;&gt;&quot; (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;
-                &lt;p&gt;Score + 2 &amp;#9733; &amp;#9733;&lt;/p&gt;&lt;&lt;set $score to $score +2&gt;&gt;
+                &lt;p&gt;&lt;&lt;print $beverley5&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
       &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $serv to &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score + 5&gt;&gt;
-            &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Minimal intervention.&lt;/h2&gt;
-            &lt;p&gt;Score +5 &amp;#9733; &amp;#9733;&lt;/p&gt;
-            &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+           &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h1&gt;Your choice:&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Minimal intervention.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;images/score-tnt10.png&quot; alt=&quot;Minecraft TNT with text -10&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Ignore Thomas, the servant. He&#39;s hopeless. There&#39;s really no way to motivate him and no point in trying to educate him. Explain John&#39;s mistake with the nails and tell him to start over.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;It&#39;s not a wrong choice, exactly. But, a loyal and happy household can be of great value. In the future, you may regret having lost this opportunity to earn your servants&#39; good will.&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+                        &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
@@ -3591,7 +3196,6 @@ end game</tw-passagedata><tw-passagedata pid="11" name="serv-mine" tags="" posit
     
   &lt;/div&gt;
 
-&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="PassageDone" tags="Utilities" position="100,400" size="100,100">&lt;&lt;script&gt;&gt;
 let tooltipTriggerList = document.querySelectorAll(&#39;[data-bs-toggle=&quot;tooltip&quot;]&#39;);
 let tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =&gt; new bootstrap.Tooltip(tooltipTriggerEl));
@@ -3662,16 +3266,15 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Trinity Stuckey (Cal Poly Humboldt History Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Research and citations&lt;/li&gt;
-&lt;li&gt;Graphic design: &quot;Timecraft&quot; banner, wild child, TNT, Nether star, and other &quot;Timecraft&quot; graphics&lt;/li&gt;
+&lt;li&gt;Graphic design: &quot;Timecraft&quot; banner, wild child, TNT, Nether star, miscellaneous &quot;Timecraft&quot; graphics&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Orlando Trujillo-Oritz (Cal Poly Humboldt Computer Science Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tech support&lt;/li&gt;
 &lt;li&gt;Advanced coding tasks&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Where indicated, we used OpenAI Claude 4 and ChatGPT 4 in the process of creating modernized versions of source texts.&lt;/li&gt;
-&lt;/p&gt;
-&lt;p&gt;Our work was supported by a &lt;a href=&quot;https://pmc.humboldt.edu/portal/research-scholarship-and-creative-activities-program-rsca-ay-2122&quot; target=&quot;_blank&quot;&gt;Research, Scholarship, and Creative Activities&lt;/a&gt; grant from Cal Poly Humboldt.&lt;/p&gt;
+&lt;p&gt;Where indicated, we used OpenAI Claude 4 and ChatGPT 4 in the process of creating modernized versions of source texts.&lt;/p&gt;
+&lt;p&gt;Our work was supported by a &lt;a href=&quot;https://pmc.humboldt.edu/portal/research-scholarship-and-creative-activities-program-rsca-ay-2122&quot; target=&quot;_blank&quot;&gt;Research, Scholarship, and Creative Activities&lt;/a&gt; grant from Cal Poly Humboldt (AY 2024 - 2025).&lt;/p&gt;
 &lt;hr&gt;
 
 &lt;p&gt;We built this game using the Twine interactive fiction platform and the SugarCube story format, with help from the following resources:&lt;/p&gt;
@@ -3785,9 +3388,10 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Go Mining&lt;/h2&gt;
 &lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;serv-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;serv-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-
+&lt;br&gt;
+&lt;br&gt;
 &lt;/div&gt;
 
 
@@ -3840,8 +3444,11 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;Go Mining&lt;/h2&gt;
 &lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;serv-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;braphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;serv-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;br&gt;
+&lt;br&gt;
 
 &lt;/div&gt;
 
@@ -4276,7 +3883,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2&gt;References and Credits&lt;/h2&gt;
-&lt;p&gt;See the [[About page |about]] for information about the game&#39;s creators and the materials we used.&lt;/p&gt;
+&lt;p&gt;See the [[About |about]] page for information about the game&#39;s creators and the materials we used.&lt;/p&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="hall" tags="" position="900,3700" size="100,100">&lt;&lt;set $wealth to 10&gt;&gt;
 [[Go back |portals]]
@@ -4334,7 +3941,9 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;Look for insights into the behaviors and character of ship captains in the seventeenth-century Atlantic system. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
-
+&lt;br&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
@@ -4565,18 +4174,9 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;li&gt;The way they might respond to someone like this role play character, in this context,&lt;/li&gt;
 &lt;li&gt;Their behaviors and sense of identity.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Done Mining.&quot;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;When you&#39;re done mining, choose &quot;Leave the Mine&quot; to return to the story. Then, use the materials saved in your inventory to craft your choice.&lt;/p&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button [[Done Mining |capt-choice]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Craft your Choice.&quot;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot; width=&quot;50%&quot;&gt;&#39; &quot;capt-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;img src=&quot;images/mineshaft.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;minecraft shafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
@@ -4586,20 +4186,23 @@ $(&quot;img[usemap]&quot;).maphilight({
     &lt;area title=&quot;Seventeenth-century European ships and captains&quot; data-passage=&quot;ships&quot; role=&quot;link&quot; coords=&quot;325,119,491,229&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="articles" tags="Source" position="1300,600" size="100,100">source text to be posted ... </tw-passagedata><tw-passagedata pid="27" name="capt-choice" tags="" position="1400,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="articles" tags="Source" position="1300,600" size="100,100">source text to be posted ... </tw-passagedata><tw-passagedata pid="27" name="capt-choice" tags="" position="1400,400" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
 
-&lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
-
+&lt;div class=&quot;row center&quot;&gt;
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
-&lt;p&gt;How will you interact with the ship&#39;s captain?&lt;/p&gt;
-&lt;p&gt;Each option appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
-&lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
-
-&lt;div class=&quot;row crafting&quot;&gt;
-&lt;h2&gt;Your comments&lt;/h2&gt;
-&lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice:&lt;/p&gt;
 &lt;hr&gt;
-&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about the 17th-century maritime paintings) &lt;img src=&quot;images/score-star2-small.png&quot; alt=&quot;Nether star with text Score +2&quot;&gt;&lt;/p&gt;&lt;&lt;else&gt;&gt;&lt;p&gt;(No comments from the paintings)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;h2&gt;So, how will you interact with the ship captain at the dock?&lt;/h2&gt;
+&lt;p&gt;Each choice appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
+&lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div class=&quot;crafting&quot;&gt;
+&lt;h2&gt;Your comments&lt;/h2&gt;
+&lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about seventeenth-century maritime art)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;card-group&quot;&gt;
@@ -4607,8 +4210,8 @@ $(&quot;img[usemap]&quot;).maphilight({
     &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Friendly introduction.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;You make eye contact with the captain and approach. After exchanging polite introductions and greetings, you offer to send your apprentice to the fort with a message for the governor or captain general, or offer to guide their own messanger there. Invite the captain to your house for refreshment as soon as he can spare a moment.&lt;/p&gt;
-&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-          &lt;&lt;if $shipsPostureSave&gt;&gt;
+      &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+	          &lt;&lt;if $shipsPostureSave&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&lt;&lt;print $shipsPosture&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
@@ -4632,11 +4235,21 @@ $(&quot;img[usemap]&quot;).maphilight({
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;friend&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
+      &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;friend&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
             &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Friendly introduction.&lt;/h2&gt;
-            &lt;p&gt;&lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text Score + 10&quot;&gt;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
+            &lt;h1&gt;Your choice&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Friendly introduction.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text +10&quot; width=&quot;90%&quot;&gt;
+                        &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;You make eye contact with the captain and approach. After exchanging polite introductions and greetings, you offer to send your apprentice to the fort with a message for the governor or captain general, or offer to guide their own messanger there. Invite the captain to your house for refreshment as soon as he can spare a moment.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice!&lt;/p&gt;&lt;p&gt;The captain&#39;s name is Thomas Gardner. He gratefully accepts your offer, and you send John jogging up toward the fort with instructions to stop at your shop and send Thomas down to the dock with fresh bacon, bread, and beer. Settling down to wait, you take a seat on some empty tobacco barrels and pass the time in friendly conversation with Gardner and his comrades.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+            &lt;br&gt;
+            &lt;hr&gt;
             &lt;p&gt;&lt;&lt;button [[Continue the Story |trade]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
@@ -4646,26 +4259,9 @@ $(&quot;img[usemap]&quot;).maphilight({
     
     &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
-      &lt;h2 class=&quot;card-text white&quot;&gt;Issue commands.&lt;/h2&gt;
-      &lt;p class=&quot;card-text&quot;&gt;You call out that they must halt. Citing your authority as militia captain and member of the governor&#39;s council, you tell the captain that he must remain on his ship until the governor has granted permission to enter the colony.&lt;/p&gt;
-&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;    
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;command&quot;&gt;&gt;
-            &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Issue commands.&lt;/h2&gt;
-            &lt;p&gt;&lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text Score + 10&quot;&gt;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
-            &lt;p&gt;&lt;&lt;button [[Continue the Story |dock]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-            &lt;/div&gt;
-      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-
-    
-&lt;div class=&quot;card&quot;&gt;
-    &lt;div class=&quot;card-body&quot;&gt;
       &lt;h2 class=&quot;card-text white&quot;&gt;Avoidance.&lt;/h2&gt;
       &lt;p class=&quot;card-text&quot;&gt;You avoid making contact, standing back to watch the scene from a distance. Ship captains are far above you in social status. It would be pointless, or even dangerous, to approach him directly.&lt;/p&gt;
-&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+      &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
 		  &lt;&lt;if $shipsGroupSave&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
                 &lt;p&gt;&lt;&lt;print $shipsGroup&gt;&gt;&lt;/p&gt;
@@ -4678,20 +4274,58 @@ $(&quot;img[usemap]&quot;).maphilight({
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;    
-      &lt;p&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;ignore&quot;&gt;&gt;
-            &lt;div class=&quot;row center evidence&quot;&gt;
-            &lt;h2&gt;Your choice: Avoidance.&lt;/h2&gt;
-            &lt;p&gt;&lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text Score + 10&quot;&gt;&lt;/p&gt;
-            &lt;h2&gt;&lt;&lt;linkreplace &quot;Timecrafting Triumph: Choose a Sticker&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;\&lt;&lt;/linkreplace&gt;&gt;&lt;/h2&gt;
-            &lt;p&gt;&lt;&lt;button [[Continue the Story |trade]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;ignore&quot;&gt;&gt;&lt;&lt;set $score to $score - 10&gt;&gt;
+           &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h1&gt;Your choice:&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Avoidance.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p&gt;&lt;img src=&quot;images/score-tnt10.png&quot; alt=&quot;Minecraft TNT with text -10&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;p&gt;You avoid making contact, standing back to watch the scene from a distance. Ship captains are far above you in social status. It would be pointless, or even dangerous, to approach him directly.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;While you play it safe, a rising tide of colonists flows into the area around the dock. They mill around exchanging news and buying goods from the ship. It&#39;s nearly dark when you manage to retrieve your new printing press. While your servants begin hauling it home, you open conversation with one of the ship&#39;s officers, asking to buy some supplies. He shrugs and says there&#39;s not much left, and the captain has gone to the fort to spend the evening with the governor. You&#39;ll have to come back the next morning.&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+                        &lt;p&gt;&lt;&lt;button [[Continue the Story |trade]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+      &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+
+    
+&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;h2 class=&quot;card-text white&quot;&gt;Issue commands.&lt;/h2&gt;
+      &lt;p class=&quot;card-text&quot;&gt;You call out that they must halt. Citing your authority as Jamestown&#39;s militia captain and member of the House of Burgesses, you tell the captain that he must remain on his ship until the governor has granted permission to enter the colony.&lt;/p&gt;
+      &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+                &lt;&lt;if $shipsGroupSave&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&quot;&lt;&lt;print $shipsGroup&gt;&gt;&quot;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+      &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $capt to &quot;command&quot;&gt;&gt;&lt;&lt;set $score to $score -10&gt;&gt;
+           &lt;div class=&quot;row center evidence&quot;&gt;
+            &lt;h1&gt;Your choice:&lt;/h1&gt;
+            &lt;hr&gt;
+            &lt;h2&gt;Issue commands.&lt;/h2&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;images/score-tnt10.png&quot; alt=&quot;Minecraft TNT with text -10&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;You call out that they must halt. Citing your authority as Jamestown&#39;s militia captain and member of the House of Burgesses, you tell the captain that he must remain on his ship until the governor has granted permission to enter the colony.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;The captain turns away and ignores you. He sends three men from his ship up to the fort. Within an hour, they return, accompanied by the governor and captain general. You send John, the apprentice, back home with orders to bring Thomas and the cart so you can transport the new printing press when it&#39;s unloaded. It&#39;s probably on this ship.&lt;/p&gt;
+&lt;p&gt;For the rest of the day, a rising tide of colonists flows into the area around the dock. They mill around exchanging news and buying goods from the ship. The captain continues to ignore you. It&#39;s nearly dark when you manage to retrieve your new printing press. While your servants load begin hauling it home, you open conversation with one of the ship&#39;s officers, asking to buy some supplies. He shrugs and says there&#39;s not much left, and the captain has gone to the fort to spend the evening with the governor. You&#39;ll have to come back the next morning.&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr&gt;
+                        &lt;p&gt;&lt;&lt;button [[Continue the Story |trade]]&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
       &lt;/div&gt;
     
   &lt;/div&gt;
-
-&lt;/div&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="press-choice" tags="" position="2200,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
@@ -8639,9 +8273,7 @@ what do you do? </tw-passagedata><tw-passagedata pid="80" name="women" tags="" p
 &lt;/div&gt;
 
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="firstcontact-choice-pantribal" tags="" position="1200,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="firstcontact-choice-pantribal" tags="" position="1200,1600" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
 
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;p&gt;So, what will you do about the new European settlement?&lt;/p&gt;
