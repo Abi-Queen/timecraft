@@ -825,7 +825,41 @@ console.log(tooltipList)
 
 
 //jquery for image maps
-!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-tag name="MC" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
+!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});
+
+// map resize js
+(function () {
+  function makeResponsive(img, $map) {
+    if (!$map.length) return;
+    const $areas = $map.find('area');
+    const coords = [];
+    $areas.each(function () {
+      coords.push($(this).attr('coords'));
+    });
+
+    function recalcCoords() {
+      const wRatio = img.width / img.naturalWidth;
+      const hRatio = img.height / img.naturalHeight;
+      $areas.each(function (i, area) {
+        let c = coords[i].split(',');
+        for (let j = 0; j < c.length; ++j) {
+          c[j] = Math.trunc((j % 2 ? hRatio : wRatio) * Number(c[j]));
+        }
+        $(area).attr('coords', c.join(','));
+      });
+    }
+
+    $(img).one('load', recalcCoords);
+    new ResizeObserver(recalcCoords).observe(img);
+  }
+
+  $(document).on(':passagerender', function (ev) {
+    $(ev.content).find('img[usemap]').each(function () {
+      const mapName = $(this).attr('usemap').replace('#', '');
+      makeResponsive(this, $(ev.content).find(`map[name="${mapName}"]`));
+    });
+  });
+})();</script><tw-tag name="Luck" color="red"></tw-tag><tw-tag name="Mobs" color="orange"></tw-tag><tw-tag name="Utilities" color="yellow"></tw-tag><tw-tag name="Source" color="green"></tw-tag><tw-tag name="mc" color="blue"></tw-tag><tw-tag name="MC" color="blue"></tw-tag><tw-passagedata pid="1" name="jackson" tags="" position="900,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-jackson&quot;&gt;
 &lt;div class=&quot;setting-title&quot;&gt;
@@ -2519,16 +2553,16 @@ end game</tw-passagedata><tw-passagedata pid="9" name="serv-mine" tags="" positi
 
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
 &lt;img src=&quot;images/mine-serv.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1749,1331,2309,1578&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[beverley]] [[frethorne]] [[indenture]] [[contract]] 
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
@@ -2834,23 +2868,34 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/ul&gt;
 
 &lt;hr&gt;
-&lt;p&gt;Images credits: Fair use open source and educational files:&lt;/p&gt;
+&lt;h2&gt;Image Credits&lt;/h2&gt;
+&lt;p&gt;Fair use open source and educational files:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;lunar-sea-art, AlanFrijns, ELG21, FaceGuy&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://minecraft.fandom.com/wiki/Block#List_of_blocks&quot; target=&quot;_blank&quot;&gt;Minecraft Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
-&lt;h2&gt;Works Cited&lt;/h2&gt;
-&lt;p&gt;Primary Sources&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;tba&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;h3&gt;Primary Sources&lt;/h3&gt;
+&lt;p&gt;George Mason University. “History Matters.” Accessed June 1, 2025. https://historymatters.gmu.edu/d/6475. &lt;/p&gt;
+
+&lt;p&gt;Reid Jr., John. &lt;em&gt;Indenture of Apprenticeship with Robert Livingston Jr. November 1, 1742.&lt;/em&gt; The Gilder Lehrman Institute of American History. GLC03107.02668. https://www.gilderlehrman.org/history-resources/spotlight-primary-source/indenture-agreement-1742. &lt;/p&gt;
+
+
+&lt;p&gt;Matchlock Military Musket. ca. 1690. Royal Armouries. XII.10399. https://royalarmouries.org/collection/object/object-40145 &lt;/p&gt;
+
+&lt;p&gt;Willaerts, Adam. &lt;em&gt;Shipping in an Estuary.&lt;/em&gt; 1640. Painting, 635 mm x 1041 mm. National Maritime Museum, Greenwich, London, England. https://www.rmg.co.uk/collections/objects/rmgc-object-11759&lt;/p&gt;
+
  
-&lt;p&gt;Secondary Sources&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;tba&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3&gt;Secondary Sources&lt;/h3&gt;
+&lt;p&gt;Norton, Mary Beth. &lt;em&gt;Separated by Their Sex: Women in Public and Private in the Colonial Atlantic World&lt;/em&gt;. Cornell University Press, 2011. http://www.jstor.org/stable/10.7591/j.ctt7z6xj.8. &lt;/p&gt;
+
+&lt;p&gt;Brown, Kathleen M. &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; University of North Carolina Press, 1996. http://www.jstor.org/stable/10.5149/9780807838297_brown.11. &lt;/p&gt;
+
+&lt;p&gt;Norton, Mary Beth. &lt;em&gt;Founding Mothers and Fathers: Gendered Power and the Forming of American Society&lt;/em&gt;. Alfred A. Knopf, 1996. &lt;/p&gt;
+
+&lt;p&gt;McWilliams, James. “Roger That.” &lt;em&gt;The Paris Review&lt;/em&gt;, May 13, 2015. https://www.theparisreview.org/blog/2015/05/13/roger-that/. &lt;/p&gt;
 
 &lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
 &lt;div class=&quot;container header&quot;&gt;
@@ -3718,12 +3763,8 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Ships&quot; alt=&quot;Ships&quot; data-passage=&quot;ships&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[ships]] 
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
@@ -4218,12 +4259,10 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Coffee Houses&quot; alt=&quot;Coffee Houses&quot; data-passage=&quot;coffee&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Licensing Order&quot; alt=&quot;Licensing Order&quot; data-passage=&quot;licensing-order&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Milton&quot; alt=&quot;Milton&quot; data-passage=&quot;milton&quot; role=&quot;link&quot; coords=&quot;1749,1331,2309,1578&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[coffee]] [[licensing-order]] [[milton]] 
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
@@ -5154,12 +5193,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Male Gentility&quot; alt=&quot;Male Gentility&quot; data-passage=&quot;brown-masculinity&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Portraits&quot; alt=&quot;Portraits&quot; data-passage=&quot;berkeley-portraits&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[berkeley-portraits]] [[brown-mascuilnity]] 
+
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
@@ -6012,12 +6049,11 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Indian Hatred&quot; alt=&quot;Indian Hatred&quot; data-passage=&quot;schmidt-bacon&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;The Good Life&quot; alt=&quot;The Good Life&quot; data-passage=&quot;everyday17thc&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Engravings&quot; alt=&quot;Engravings&quot; data-passage=&quot;debry&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[beverley]] [[frethorne]] [[indenture]] [[contract]] 
+
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
