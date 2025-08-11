@@ -901,7 +901,7 @@ console.log(tooltipList)
 &lt;div class=&quot;container choice&quot;&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-sm-3&quot;&gt;
-&lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;img src=&quot;images/score-star10.gif&quot; alt=&quot;Nether star with text +10&quot; width=&quot;90%&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;Get up and start chores. Be a good example. An apprentice needs healthy habits as much as he needs skills and tools.&lt;/p&gt;
@@ -1876,11 +1876,12 @@ console.log(tooltipList)
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;&lt;if ($gov is &quot;lie&quot;) and ($serv isnot &quot;feed&quot;)&gt;&gt;
+&lt;&lt;if $gov is &quot;lie&quot;&gt;&gt;
+&lt;&lt;if $serv isnot &quot;feed&quot;&gt;&gt;
 &lt;div class=&quot;row scenario&quot;&gt;
 &lt;p&gt;The governor is mollified. When he leaves, you and the servants store the press in pieces underneath your store of scrap iron and timber. You load a few rocks into the original crate for weight and nail it closed. By nightfall, the crates have been returned to the ship.&lt;/p&gt;
 &lt;p&gt;The next day, Tom and John betray your secret to friends and neighbors. They feel no great loyalty to you, and good servants are in high demand. It won&#39;t take them long to sign a contracts with new masters.&lt;/p&gt;
-&lt;p&gt;Gossip spreads like wildfire. Before you&#39;ve printed a single page, the governor&#39;s clerk is bursting through your door again, followed by the captain general and soldiers from the fort. You&#39;re arrested, thrown in jail, and convicted of sedition and fraud. The council decides to exile you from the colony (though, mercifully, not to brand or whip you). They pass a new &quot;Act Concerning Printing,&quot; banning all printing presses. You lose your place on the council and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
+&lt;p&gt;Gossip spreads like wildfire. Before you&#39;ve printed a single page, the governor&#39;s clerk is bursting through your door again, followed by the captain general and soldiers from the fort. You&#39;re arrested, thrown in jail, and convicted of sedition and fraud. The council decides to exile you from the colony (though, mercifully, not to brand or whip you). They pass a new &quot;Act Concerning Printing,&quot; banning all printing presses. You lose your seat on the House of Burgesses and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
 &lt;p&gt;Your friends and business associates have vanished. Nobody wants to do risk doing business with a known liar. You are alone.&lt;/p&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -1896,6 +1897,26 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;The governor is mollified. When he leaves, you and the servants store the press in pieces underneath your store of scrap iron and timber. You load a few rocks into the original crate for weight and nail it closed. By nightfall, the crates have been returned to the ship.&lt;/p&gt;
+&lt;p&gt;But gossip spreads like wildfire. Before you&#39;ve printed a single page, the governor&#39;s clerk is bursting through your door again, followed by the captain general and soldiers from the fort. You&#39;re arrested, thrown in jail, and convicted of sedition and fraud. The council decides to exile you from the colony (though, mercifully, not to brand or whip you). They pass a new &quot;Act Concerning Printing,&quot; banning all printing presses. You lose your seat on the House of Burgesses and your militia command. Your lease of land for your home and shop are terminated. Tom&#39;s and John&#39;s contracts are voided, and they sign on with someone else (young servants are always in high demand in the growing colony).&lt;/p&gt;
+&lt;p&gt;Your friends and business associates have vanished. Nobody wants to do risk doing business with a known liar. You are alone.&lt;/p&gt;
+
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;h2&gt;So ... what will you do now?&lt;/h2&gt;
+&lt;h3&gt;&lt;&lt;button [[Rebellion. |battle]]&gt;&gt;&lt;&lt;set $result to &quot;rebellion&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
+&lt;p&gt;Go find Nathaniel Bacon and join his rebellion. Old Berkeley and his gaggle of servile toadies can take your shop and your press ... and your life&#39;s savings. But they can&#39;t take your skills. The rebels will welcome you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[Leave. |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;leave&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
+&lt;p&gt;Return to Europe, maybe to the family business in London, or to the Netherlands, where the gunsmiths and printers outproduce London by a good deal. Maybe in time, you can recover your reputation and become successful again.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;&lt;button [[The Howling Wilderness. |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
+&lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 
 
@@ -1915,13 +1936,16 @@ console.log(tooltipList)
 &lt;h3&gt;&lt;&lt;button [[The Howling Wilderness. |jackson-end]]&gt;&gt;&lt;&lt;set $result to &quot;wilderness&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/h3&gt;
 &lt;p&gt;Strike out into the wilderness - &quot;the howling wilderness,&quot; as folk like to call it. Jamestown is a disgusting, foetid swamp. There&#39;s a wide open country out there. Find a defensible spot with good water and fertile land, and build your homestead. Trade with the local tribes, and via the river. Under Virginia law, anyone who teaches an Indian to use a gun is sentenced to death (the Indian too). What if ... ?&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;&lt;elseif $gov is &quot;ask&quot;&gt;&gt;
-&lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially now, while thousands of other colonists have joined Nathaniel Bacon in violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;&lt;p&gt;And the implied threat in your news about the new muskets is not lost on the old man. If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets .... Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;/p&gt;
+&lt;&lt;elseif ($gov is &quot;ask&quot;)&gt;&gt;
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;The governor has to accept such a modest request from a prominent citizen like yourself - especially now, while thousands of other colonists have joined Nathaniel Bacon in violent rebellion. &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;&lt;p&gt;He is conscious of the implied threat in your news about the new muskets: If you were to join Bacon&#39;s rebels and supply &lt;em&gt;them&lt;/em&gt; with an endless stream of the latest muskets .... Obviously he would be a fool to alienate someone with your capabilities in a crisis like this.&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;p&gt;Berkeley asserts his authority by commanding you to formally submit your request before his council in four days. His dignity affirmed, he turns and leaves, trailed by the clerk and soldiers.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;&lt;elseif ($serv is &quot;feed&quot;) and ($capt is &quot;friend&quot;)&gt;&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;When they&#39;re gone, you all nearly collapse in hysterical laughter. &quot;Babylonical confusion!&quot; You open your storeroom - taking a craftsman&#39;s pride, as always, in its massive lock and iron frame - and bring out two bottles of fine French wine to celebrate.&lt;/p&gt;
@@ -1929,11 +1953,10 @@ console.log(tooltipList)
 &lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. The good folk of Jamestown think this ritual of yours is shockingly unhealthy and dangerous. You&#39;ve heard more than one whisper of &quot;sorcerer&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Canterbury after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at the shop, you stoke the fire, start breakfast, and make enough noise to wake John and Tom (a lot of noise) ... they aren&#39;t used to wine, and this will be an unpleasant morning for them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-Image
-&lt;p class=&quot;caption&quot;&gt;Caption&lt;/p&gt;
+&lt;img src=&quot;images/merry-fiddler.jpg&quot; alt=&quot;man in bright 17th-century clothing smiling and holding a violin and goblet&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Honthorst, &quot;The Merry Fiddler&quot; (Netherlands, 1623). From the &lt;a href=&quot;https://www.rijksmuseum.nl/en/collection/object/The-Merry-Fiddler--5443ebda5154f908c56c0b357db9f53e?tab=data&quot; target=&quot;_blank&quot;&gt;Rijksmuseum&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
 &lt;&lt;/if&gt;&gt;
 
 &lt;p&gt;Settling down with charcoal and a clean sanded plank, you begin listing the arguments that will convince the countil to grant you the first printing license in the English colonies.&lt;/p&gt;
@@ -1978,9 +2001,9 @@ Image
 &lt;br&gt;
 &lt;br&gt;
 
-&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="7" name="scraps" tags="" position="0,0" size="100,100">linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="scraps" tags="" position="0,0" size="100,100">
+linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;h2&gt;What do you do?&lt;/h2&gt;
@@ -2477,7 +2500,15 @@ if $gov is lie and $serv is beat or ignore
 
 if $gov is lie and $serv is feed
 
-</tw-passagedata><tw-passagedata pid="8" name="jackson-end" tags="" position="900,300" size="100,100">div: Choose an ending:
+</tw-passagedata><tw-passagedata pid="8" name="jackson-end" tags="" position="900,300" size="100,100">&lt;&lt;if $result is &quot;wilderness&quot;&gt;&gt;
+
+&lt;&lt;elseif $result is &quot;leave&quot;&gt;&gt;
+
+
+&lt;&lt;/if&gt;&gt;
+
+
+div: Choose an ending:
 
 1. happily ever after
 2. die of dysentery
@@ -2497,50 +2528,7 @@ print to pdf instructions
 
 play again to try new choices
 
-
-
-if $governor is lie
-
-
-if $militia is fail
-set $jackson-end to defeat
-
-if $printing is good and militia is good
-thanks to your printing press, the population around Jamestown is energized by a strong sense of unity against the rebellion; Bacon had planned to swell his forces significantly on his approach to the settlement, arriving at the walls of the fort with a strong army, but instead it&#39;s small and disheartened 
-
-they negotiate with the governor for days. they attempt to strengthen their bargaining position by capturing the docks; your militia company joins the garrison in defense. it&#39;s clear to everyone that your new guns and tactics were the decisive factor as the rebel assault was rolled back and sent fleeing for the shelter of the trees. 
-
-Bacon is defeated and hanged; his followers fined, lands confiscated and auctioned for colony&#39;s treasury; the governor pursues his policies of strong central control, passing new laws to curtail the rights and opportunities of slaves and lower classes
-
-you write and print a flattering account of the rebellion and send several copies to London; the governor and colony receive praise from the king, esp in context of civil war putting down rebellion firmly but w/o excessive bloodshed; immigration surges and growth accellerates 
-
-choice:
-you buy plantations and marry a rich widow
-you use your power on the council to oversee an expansion of the settlement, buying lots at key locations, build new docks and warehouses, new theater and coffeehouse run by servants 
-
-
-if $printing is good and militia is fail
-thanks to your printing press, the population around Jamestown is energized by a strong sense of unity against the rebellion; Bacon had planned to swell his forces significantly on his approach to the settlement, arriving at the walls of the fort with a strong army, but instead it&#39;s small and disheartened 
-
-they negotiate with the governor for days. they attempt to strenghten their bargaining position by capturing the docks; your militia company joins the garrison in defense. your $militia-equip fail and your unit falls apart, creating a vulnerable point in the formation. you&#39;re wounded when a musketball grazes your shoulder. only desperate action on the part of the old capt general and his elite guard company hold the position. eventually, your side holds the docks and the rebels retreat. the rebels have gained a valuable symbolic victory by performing well against the fort&#39;s garrison. 
-
-during negotiations the next day, the governor concedes to Bacon&#39;s demand to allow settlement on tribal land, and lift the restrictions on private trade with the tribes. the rebels withdraw and jamestown is safe.
-
-you continue experimenting with new weapons and tactics; you write and print a flattering account of the rebellion and send several copies to London, shaping the narrative to make the governor appear strong and his concessions to the rebels pragmatic and wise rather than weak; the king had been extremely angry at the gov&#39;s failure to maintain order, esp in context of civil war, but he&#39;s mollified by your story; the governor and colony receive praise from the king; immigration surges and growth accellerates 
-
-if $printing is weak and $militia is good
-your printing press has not had a significant impact on public opinion in the hinterlands around Jamestown; the rebel forces have grown significantly as they approached the settlemtn; many ppl find Bacon&#39;s platform convincing and believe his promises of good government and prosperity 
-
-they negotiate with the governor for days, with an ever-expanding army encamped on the horizon. they attempt to strengthen their bargaining position by capturing the docks; your militia company joins the garrison in defense. it&#39;s clear to everyone that your $militia-equip were the decisive factor as the rebel assault was rolled back and sent fleeing for the shelter of the trees. without your militia company, the old capt general and his garrison would have been overwhelmed by the rebels&#39; superior numbers.
-
-this victory at the docks gives the governor has the high ground at his next negotiation with the rebels; he firmly rejects Bacon&#39;s demands to allow settlement on tribal land and lift the restrictions on private trade with the tribes. he promises pardons for all, but agrees to none of Bacon&#39;s demands; faced with the prospect of military defeat, the rebels withdraw and jamestown is safe.
-
-you continue experimenting with new weapons and tactics; you write and print a flattering account of the rebellion and send several copies to London, shaping the narrative to make the governor appear strong and his concessions to the rebels pragmatic and wise rather than weak; the king had been extremely angry at the gov&#39;s failure to maintain order, esp in context of civil war, but he&#39;s mollified by your story; the governor and colony receive praise from the king; immigration surges and growth accellerates 
-
-
-if $mi
-
-end game</tw-passagedata><tw-passagedata pid="9" name="serv-mine" tags="" position="1100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="serv-mine" tags="" position="1100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 
@@ -3759,6 +3747,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
 &lt;img src=&quot;images/mine-capt.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
@@ -3924,7 +3913,10 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;p&gt;Which arguments will you make to convince the governor&#39;s council to grant you permission to operate your printing press?&lt;/p&gt;
-&lt;p&gt;Each option appears with the corresponding evidence you have mined. Choose more than one argument to include, and see where your story leads.&lt;/p&gt;
+&lt;p&gt;Each option appears with the corresponding evidence you have mined. Use the checkboxes to select some arguments to present. See where your story leads.&lt;/p&gt;
+&lt;br&gt;
+&lt;br&gt;
+
 
 &lt;div class=&quot;row crafting&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
@@ -3936,7 +3928,8 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;if (def $miltonc) and ($miltonc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $miltonc&gt;&gt;&quot; (Comments by $PlayerName about the Milton&#39;s &lt;em&gt;Aeropagitica&lt;/em&gt;)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-
+&lt;br&gt;
+&lt;br&gt;
 &lt;div class=&quot;row&quot;&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressLicensing&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Licensing: Revenue and control.&lt;/span&gt; Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/label&gt;&lt;/li&gt;
@@ -3972,19 +3965,19 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressTheywill&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;Evidence mined:&lt;/li&gt;
-&lt;&lt;if $coffee2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $coffee3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $print8&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $milton7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print 7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print8&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -4082,18 +4075,18 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Good choice.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $pressTheywill&gt;&gt;
 &lt;br&gt;
 &lt;h3&gt;If we don&#39;t do it, they will.&lt;/h3&gt;
-&lt;p&gt;If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/p&gt;
+&lt;p&gt;Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;
 &lt;p&gt;Good choice.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $pressStatus&gt;&gt;
@@ -4104,7 +4097,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Good choice.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $pressControl&gt;&gt;
@@ -4115,7 +4108,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Good choice.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $pressWrong2&gt;&gt;
@@ -4126,7 +4119,7 @@ $(&quot;img[usemap]&quot;).maphilight({
             &lt;p&gt;This argument does not work, nor does it align with any of your mined evidence.&lt;/p&gt;
             &lt;p&gt;&lt;img src=&quot;images/score-tnt2-sm.png&quot; alt=&quot;score - 2&quot;&gt;&lt;/p&gt;
             &lt;/div&gt;
-            &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;br&gt;
             &lt;&lt;/if&gt;&gt;
 
 
@@ -4185,7 +4178,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $coffee1 to &quot;tradesmen and others wasting time that should be spent on their jobs, and the spread of false, malicious, and damaging rumors about the King’s government, which threaten public peace. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4205,7 +4198,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $coffee2 to &quot;His Majesty, with the advice of his Privy Council, has decided that all coffeehouses are to be shut down. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4226,7 +4219,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;set $coffee3 to &quot;cancel all current licenses for selling these drinks and to stop issuing new ones. Anyone caught selling them without a valid license after this order takes effect will be fined and may face the harshest legal penalties if they continue. (Suppression of Coffeehouses, 1675)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4255,6 +4248,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
 &lt;img src=&quot;images/mine-press.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
@@ -4311,7 +4305,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton1 to &quot;But that’s exactly why we must be careful. To destroy a good book is almost like killing a person. Killing a man ends the life of a rational being made in God’s image; but destroying a good book is like killing reason itself - an attack on the very image of God in human understanding. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4331,7 +4325,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton2 to &quot;we also may never recover a lost truth once it’s been rejected or destroyed, and that loss can bring harm to entire nations. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4352,7 +4346,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton3 to &quot;I will now explain how the greatest civilizations of the past dealt with these issues [presents examples from the Bible, ancient Greece, ancient Rome proving the superiority of a free press policy] (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4370,7 +4364,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton4 to &quot;Knowledge itself is not corrupting: only our use of it can be. Books are like food: some are nourishing, others harmful, but it&#39;s up to each person&#39;s judgment and discipline. Even bad books can help wise readers understand, refute, and guard against error. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4393,7 +4387,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton5 to &quot;People can be seduced by anything - conversation, music, art. So, will we censor all of life? That’s absurd. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4414,7 +4408,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton6 to &quot;In Italy, they said censorship had drained their culture of brilliance, leaving only flattery and nonsense in print. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4436,7 +4430,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $milton7 to &quot;punishing writers only increases their influence. Banned books gain attention and admiration. So, rather than stopping dangerous ideas, this system may actually encourage them. (Milton, &lt;em&gt;Aeropagiticus&lt;/em&gt;, 1644)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4544,8 +4538,8 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $bportraitsWar to &quot;Portraits often include celebrations of military might, with details like battle, swords and armor, and commemorative medals. (Seventeenth-century portraits of elite Virginia men: William Berkeley, Robert &quot;King&quot; Carter, Daniel Parke II)&quot;&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $bportraitsWar to &quot;Portraits often include celebrations of military might, with details like battle, swords and armor, and commemorative medals. (Seventeenth-century portraits of elite Virginia men: William Berkeley, Robert &#39;King&#39; Carter, Daniel Parke II)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
@@ -4560,7 +4554,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;&lt;set $bportraitsDress to &quot;Clothing often serves as a central expression of wealth, status, and fashionable taste: e.g., ample folds of costly textiles such as lace, velvet, silk; ornamentation like buttons and embroidery; voluminous wigs. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
@@ -4577,8 +4571,8 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $bportraitsItems to &quot;The items included in these portraits celebrate elite men&#39;s enthusiasm for a variety of pursuits including war, landscaping (&quot;improving&quot; their estates), mercantile or naval ventures, fine furniture and interiors, fashionable dress, books and writing. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $bportraitsItems to &quot;The items included in these portraits celebrate elite men&#39;s enthusiasm for a variety of pursuits including war, landscaping (&#39;improving&#39; their estates), mercantile or naval ventures, fine furniture and interiors, fashionable dress, books and writing. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
@@ -4594,7 +4588,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;&lt;set $bportraitsLabor to &quot;The portraits present their subjects as people who are free from physical labor. The clothing, items, and scenery are incongruous with the performance physical labor. (Seventeenth-century portraits of elite Virginia men)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
@@ -4713,7 +4707,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print1 to &quot;growing abuse and disorder in printing. Many false, forged, offensive, and unapproved papers, pamphlets, and books have been published, damaging both religion and government. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4732,7 +4726,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print2 to &quot;many printers have set up secret printing presses to produce and distribute large numbers of unlicensed materials, making it nearly impossible to find and punish all offenders. Some have ignored the rules and reprinted profitable books without permission (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4763,7 +4757,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print3 to &quot;Officials may search any location for unlicensed printing presses and materials used to print unauthorized or scandalous content.&quot;&gt;&gt;&lt;&lt;set $print3 to &quot;Search any location for unlicensed printing presses and materials used to print unauthorized or scandalous content. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4780,7 +4774,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print4 to &quot;Officials may confiscate presses and printing equipment, and destroy them, as traditionally done. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4797,7 +4791,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print5 to &quot;Officials may search suspected print shops, warehouses, and homes for unlicensed publications and seize them. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4814,7 +4808,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print6 to &quot;Officials may arrest any authors, printers, binders, publishers, or distributors involved in creating or spreading such content, and arrest anyone for resisting enforcement. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4835,7 +4829,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;set $print8 to &quot;Authorities may break locks or doors to conduct their searches. (Licensing Order of 1643)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -4907,7 +4901,6 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;replace &quot;#stickerbox&quot;&gt;&gt;
 &lt;div class=&quot;sticker-box center&quot;&gt;
 &lt;p&gt;Well done!&lt;/p&gt;
-&lt;p&gt;(add animated stars or something)&lt;/p&gt;
 &lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
@@ -5189,6 +5182,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
 &lt;img src=&quot;images/mine-council.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
@@ -5204,12 +5198,11 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="council-choice" tags="" position="2600,400" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
-[[printbacon]] 
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;hr&gt;
-&lt;h2&gt;So, how will you interact with the ship captain at the dock?&lt;/h2&gt;
+&lt;h2&gt;So, how will you address the governor&#39;s council?&lt;/h2&gt;
 &lt;p&gt;Each choice appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
 &lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
 &lt;br&gt;
@@ -5219,7 +5212,8 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
 &lt;hr&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about seventeenth-century maritime art)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $bportraitsc) and ($bportraitsc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $bportraitsc&gt;&gt;&quot; (Comments by $PlayerName about portraits of elite men in 18th-century Virginia)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $anxiousc) and ($anxiousc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $anxiousc&gt;&gt;&quot; (Comments by $PlayerName about Brown, &quot;Anxious Patriarchs&quot;)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5232,10 +5226,53 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
 &lt;p class=&quot;card-text&quot;&gt;Mention your newfound ability to manufacture the latest military muskets, but be careful to present this advantage as a service you can perform for them. Avoid challenging their claims to military leadership.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
+
       &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-	          &lt;&lt;if $shipsPosture&gt;&gt;
+	          &lt;&lt;if $bportraitsWar&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&lt;&lt;print $shipsPosture&gt;&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $bportraitsWar&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          	          &lt;&lt;if $bportraitsDress&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $bportraitsDress&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          	          &lt;&lt;if $bportraitsItems&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $bportraitsItems&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          	          &lt;&lt;if $bportraitsLabor&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $bportraitsLabor&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+          	          &lt;&lt;if $anxious1&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $anxious1&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+                    	          &lt;&lt;if $anxious2&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $anxious2&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+                    	          &lt;&lt;if $anxious3&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $anxious3&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+          &lt;&lt;/if&gt;&gt;
+                    	          &lt;&lt;if $anxious4&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $anxious4&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
           &lt;&lt;/if&gt;&gt;
@@ -5975,7 +6012,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepLady&quot; false true&gt;&gt;  Befriend Lady Berkeley.&lt;/label&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepLady&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Befriend Lady Berkeley.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;It&#39;s worthwhile to visit the governor&#39;s wife, Lady Frances, and make a favorable impression. You know she&#39;s leaving soon for London, (probably on Captain Gardner&#39;s ship), as a diplomat to speak in defense of her husband&#39;s actions, and to ask for troops and ships to crush Bacon&#39;s dangerous, treasonous rebellion. Since he married Lady Frances, Governor Berkeley&#39;s policies have shifted significantly. Many have blamed her for Bacon&#39;s Rebellion. She isn&#39;t likely to refuse an offer of friendship now. If you can win her support, you&#39;ll have the governor on your side.&lt;/p&gt;
 &lt;p&gt;Better bring her a thoughtful gift. How much will you spend? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
 &lt;p&gt;&lt;&lt;numberbox &quot;$gift&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $gift)&gt;&gt;
@@ -5991,7 +6028,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepClothes&quot; false true&gt;&gt;  Get some decent clothes.&lt;/label&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepClothes&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Get some decent clothes.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Spend some money to have your neighbor, the tailor, improve your best set of clothes. Maybe even make something new, if he has time. Appearances are important to the high-ranking petty tyrants (&quot;gentlemen,&quot; they call themselves) of the Governor&#39;s Council. They think you are a peasant, and they will ignore everything you say. No need to fulfil their expectations and arrive in dirty rags. If you look like you belong there, there&#39;s a chance they will listen to you. Maybe.&lt;/p&gt;
 &lt;p&gt;How much will you spend to level up your look? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
 &lt;p&gt;&lt;&lt;numberbox &quot;$clothes&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $clothes)&gt;&gt;
@@ -6007,14 +6044,14 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepTalk&quot; false true&gt;&gt;  Spread the word.&lt;/label&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepTalk&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Spread the word.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Tell everyone what you&#39;re trying to do. It will be a popular idea with the vast majority of folk in and near Jamestown. The more pro-printing talk the councilmembers hear between now and the meeting, the better.&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row hr center&quot;&gt;
 &lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepMilitia&quot; false true&gt;&gt;  Muster the militia.&lt;/label&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepMilitia&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Muster the militia.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Flex your power by calling a militia muster. Lead your company in drill practice. The town loves to see this. Everyone comes to watch (hoping to witness humiliating mistakes, preferably involving trauma and bloodshed). Treat the company to refreshments afterwards. The spectacle always enhances your status and boosts your troop&#39;s morale. Enhancing your public power before the meeting can only help your cause.&lt;/p&gt;
 &lt;p&gt;How much will you spend on food and drink? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
 &lt;p&gt;&lt;&lt;numberbox &quot;$muster&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $muster)&gt;&gt;
@@ -6045,15 +6082,16 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 
 &lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
 &lt;img src=&quot;images/mine-printbacon.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area target=&quot;Indian Hatred&quot; alt=&quot;Indian Hatred&quot; data-passage=&quot;schmidt-bacon&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
-    &lt;area target=&quot;The Good Life&quot; alt=&quot;The Good Life&quot; data-passage=&quot;everyday17thc&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
-    &lt;area target=&quot;Engravings&quot; alt=&quot;Engravings&quot; data-passage=&quot;debry&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Bacon&#39;s Declaration&quot; alt=&quot;Bacon&#39;s Declaration&quot; data-passage=&quot;bacon-declaration&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Masculinity&quot; alt=&quot;Masculinity&quot; data-passage=&quot;brown-bacon&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;The Rebellion&quot; alt=&quot;The Rebellion&quot; data-passage=&quot;beverley-bacon&quot; role=&quot;link&quot; coords=&quot;1749,1331,2309,1578&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
@@ -6147,8 +6185,71 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;(To do: Add ifs to comment on result of prep choices.)&lt;/p&gt;
+&lt;div class=&quot;scenario&quot;&gt;
+&lt;&lt;if $prepCol is true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h2&gt;A Powerful Friend&lt;/h2&gt;
+&lt;p&gt;Colonel Price has been frustrated by Governor Berkeley&#39;s indecision and contradictory policies regarding Bacon&#39;s Rebellion. He cheered up considerably when you took him shooting for an afternoon and chatted about the possibility of producing a high volume of the new model flintlock muskets. You can count on his support you at the council meeting and beyond.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $prepClothes is true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h2&gt;Appearances Matter&lt;/h2&gt;
+&lt;p&gt;The timely upgrade to your wardrobe will enhance your confidence and status.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $prepTalk is true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h2&gt;&lt;em&gt;Vox Populi&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Your printing project is the talk of Jamestown, and public opinion is overwhelmingly positive. In this time of violent, open rebellion, the elite will hesitate to risk alienating ordinary folk.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $prepLady is true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h2&gt;Lady Berkeley&lt;/h2&gt;
+&lt;p&gt;Your visit to Lady Berkeley tested your patience. Her fussy, officious, condescending manner reminded you of a mother hen. Her manners constantly reminded you of your inferior social status. But it was worth it. You feel sure that she understands the value of your friendship - for herself as well as for the entire Green Springs faction. And Governor Berkeley will not do anything that might displease Lady Berkeley. It was time (and money) well spent.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $prepMilitia is true&gt;&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; width=&quot;90%&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h2&gt;The Value of a Good Time&lt;/h2&gt;
+&lt;p&gt;Jamestown is yours. The whole county will be talking about your militia muster and the epic feasting for generations to come. There were spectacular brawls. Dancing and music. Nobody was up early the next day. The governor and his council cannot afford to offend you after this. It was money (very) well spent.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
 &lt;p&gt;On your way to the council meeting, your mind is absorbed with the question of tone. You know what you will say. But how will you say it?&lt;/p&gt;
 &lt;p&gt;The men whose will you must direct are extremely wealthy and powerful. Most own vast estates in England, some in the Sugar Islands, too. In the small region of Jamestown, you are wealthy and influential. But you&#39;re stepping into the wider world of transatlantic politics, society, and finance. &quot;What&quot; you say matters a great deal. &quot;How&quot; you say it may matter even more.&lt;/p&gt;
@@ -6297,30 +6398,25 @@ div class=&quot;row center&quot;&gt;
 &lt;li&gt;The grievances, needs, and hopes of ordinary colonits&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-
-&lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
-&lt;p&gt;Explore the branches in the mineshaft below, looking for insights into the colonists attitude toward Native Americans during Bacon&#39;s Rebellion.&lt;/p&gt;
 &lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Craft your Choice.&quot;&lt;/p&gt;
 
-
 &lt;div class=&quot;row&quot;&gt;
-&lt;img src=&quot;images/mine-serv.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
+&lt;img src=&quot;images/mine-printtribes.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
 &lt;/div&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
-    &lt;area title=&quot;Beverley&#39;s History&quot; alt=&quot;Beverley&#39;s History&quot; data-passage=&quot;beverley&quot; role=&quot;link&quot; coords=&quot;369,588,1051,877&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Servant&#39;s Letter&quot; alt=&quot;Servant&#39;s Letter&quot; data-passage=&quot;frethorne&quot; role=&quot;link&quot; coords=&quot;1010,205,1749,515&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Apprentice Contract&quot; alt=&quot;Apprentice Contract&quot; data-passage=&quot;contract&quot; role=&quot;link&quot; coords=&quot;1640,1206,2344,1513&quot; shape=&quot;rect&quot;&gt;
-    &lt;area title=&quot;Indenture Contract&quot; alt=&quot;Indenture Contract&quot; data-passage=&quot;indenture&quot; role=&quot;link&quot; coords=&quot;493,1583,1219,1893&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Indian Hatred&quot; alt=&quot;Indian Hatred&quot; data-passage=&quot;schmidt-bacon&quot; role=&quot;link&quot; coords=&quot;452,678,1017,951&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;The Good Life&quot; alt=&quot;The Good Life&quot; data-passage=&quot;everyday17thc&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Engravings&quot; alt=&quot;Engravings&quot; data-passage=&quot;debry&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
 &lt;/map&gt;
-[[schmidt-bacon]] [[debry]] [[everyday17thc]] 
 
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-cc.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Craft your Choice&quot;&gt;&#39; &quot;printtribes-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="battle" tags="" position="3500,200" size="100,100">&lt;&lt;if ($gov is &quot;lie&quot;) or ($council is &quot;defiance&quot;)&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="battle" tags="" position="3500,200" size="100,100">&lt;&lt;if ($result is &quot;rebellion&quot;) or ($council is &quot;defiance&quot;)&gt;&gt;
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-printtribes&quot;&gt;
@@ -6434,7 +6530,34 @@ to end
 if $printbacon is join
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="56" name="battle-mine" tags="" position="3500,300" size="100,100"></tw-passagedata><tw-passagedata pid="57" name="battle-choice" tags="" position="3500,400" size="100,100"></tw-passagedata><tw-passagedata pid="58" name="matchlock-videos" tags="Source" position="1250,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="56" name="battle-mine" tags="" position="3500,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+
+&lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
+&lt;p&gt;Explore the branches in the mineshaft below, looking for information about mid-17th-century English warfare. Look for evidence about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The utility of various weapons and tactics in various contexts.&lt;/li&gt;
+&lt;li&gt;How to achieve battlefield success.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Craft your Choice.&quot;&lt;/p&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;p&gt;Tip: On a phone, turn your screen sideways for optimal viewing.&lt;/p&gt;
+&lt;img src=&quot;images/mine-battle.jpg&quot; class=&quot;inset-border imagemap&quot; alt=&quot;Minecraft mineshafts labeled with source titles&quot; usemap=&quot;#image-map&quot; &gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area target=&quot;Militia&quot; alt=&quot;Militia&quot; data-passage=&quot;va-militia&quot; role=&quot;link&quot; coords=&quot;1111,337,1687,579&quot; shape=&quot;rect&quot;&gt;
+    &lt;area target=&quot;Warfare&quot; alt=&quot;Warfare&quot; data-passage=&quot;donagan&quot; role=&quot;link&quot; coords=&quot;739,1594,1273,1865&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;p class=&quot;center&quot;&gt;Craft your choice:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-cc.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Craft your Choice&quot;&gt;&#39; &quot;battle-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="battle-choice" tags="" position="3500,400" size="100,100"></tw-passagedata><tw-passagedata pid="58" name="matchlock-videos" tags="Source" position="1250,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h1&gt;Matchlock Muskets at Jamestown&lt;/h1&gt;
@@ -8164,115 +8287,77 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;set $council to &quot;&quot;&gt;&gt;
 &lt;&lt;set $test to &quot;&quot;&gt;&gt;
 
-&lt;&lt;set $frethc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $freth1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $freth2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $freth3 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $freth4 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $frethc&gt;&gt;
+&lt;&lt;unset $freth1&gt;&gt;
+&lt;&lt;unset $freth2&gt;&gt;
+&lt;&lt;unset $freth3&gt;&gt;
+&lt;&lt;unset $freth4&gt;&gt;
 
-&lt;&lt;set $indenturec to &quot;&quot;&gt;&gt;
-&lt;&lt;set $indenture1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $indenture2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $indenture9 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $indenture10 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $indenturec&gt;&gt;
+&lt;&lt;unset $indenture1&gt;&gt;
+&lt;&lt;unset $indenture2&gt;&gt;
+&lt;&lt;unset $indenture9&gt;&gt;
+&lt;&lt;unset $indenture10&gt;&gt;
 
-&lt;&lt;set $contractc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $contractcSave to false&gt;&gt;
-&lt;&lt;set $contractSelect to false&gt;&gt;
-&lt;&lt;set $contract1Save to false&gt;&gt;
-&lt;&lt;set $contract1Select to false&gt;&gt;
-&lt;&lt;set $contract2Save to false&gt;&gt;
-&lt;&lt;set $contract2Select to false&gt;&gt;
+&lt;&lt;unset $contractc&gt;&gt;
+&lt;&lt;unset $contract1&gt;&gt;
+&lt;&lt;unset $contract2&gt;&gt;
 
-&lt;&lt;set $beverleyc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $beverley1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $beverley2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $beverley3 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $beverley4 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $beverley5 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $beverleyc&gt;&gt;
+&lt;&lt;unset $beverley1&gt;&gt;
+&lt;&lt;unset $beverley2&gt;&gt;
+&lt;&lt;unset $beverley3&gt;&gt;
+&lt;&lt;unset $beverley4&gt;&gt;
+&lt;&lt;unset $beverley5&gt;&gt;
 
-&lt;&lt;set $shipsc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $shipsPosture to &quot;&quot;&gt;&gt;
-&lt;&lt;set $shipsItems to &quot;&quot;&gt;&gt;
-&lt;&lt;set $shipsGroup to &quot;&quot;&gt;&gt;
-&lt;&lt;set $shipsTech to &quot;&quot;&gt;&gt;
-&lt;&lt;set $shipsMoney to &quot;&quot;&gt;&gt;
 
-&lt;&lt;set $shipscSave to false&gt;&gt;
-&lt;&lt;set $shipscSelect to false&gt;&gt;
-&lt;&lt;set $ships1PostureSave to false&gt;&gt;
-&lt;&lt;set $ships1PostureSelect to false&gt;&gt;
-&lt;&lt;set $ships1FacesSave to false&gt;&gt;
-&lt;&lt;set $ships1FacesSelect to false&gt;&gt;
-&lt;&lt;set $ships1WrongSave to false&gt;&gt;
-&lt;&lt;set $ships1WrongSelect to false&gt;&gt;
-&lt;&lt;set $ships1ClothingSave to false&gt;&gt;
-&lt;&lt;set $ships1ClothingSelect to false&gt;&gt;
-&lt;&lt;set $ships1ItemsSave to false&gt;&gt;
-&lt;&lt;set $ships1ItemsSelect to false&gt;&gt;
-&lt;&lt;set $ships1YouthSave to false&gt;&gt;
-&lt;&lt;set $ships1YouthSelect to false&gt;&gt;
-&lt;&lt;set $ships2DangerSave to false&gt;&gt;
-&lt;&lt;set $ships2DangerSelect to false&gt;&gt;
-&lt;&lt;set $ships2WrongSave to false&gt;&gt;
-&lt;&lt;set $ships2WrongSelect to false&gt;&gt;
-&lt;&lt;set $ships2GroupSave to false&gt;&gt;
-&lt;&lt;set $ships2GroupSelect to false&gt;&gt;
-&lt;&lt;set $ships2TechSave to false&gt;&gt;
-&lt;&lt;set $ships2TechSelect to false&gt;&gt;
-&lt;&lt;set $ships3GunsSave to false&gt;&gt;
-&lt;&lt;set $ships3GunsSelect to false&gt;&gt;
-&lt;&lt;set $ships3TradeSave to false&gt;&gt;
-&lt;&lt;set $ships3TradeSelect to false&gt;&gt;
-&lt;&lt;set $ships3WrongSave to false&gt;&gt;
-&lt;&lt;set $ships3WrongSelect to false&gt;&gt;
-&lt;&lt;set $ships4CostSave to false&gt;&gt;
-&lt;&lt;set $ships4CostSelect to false&gt;&gt;
-&lt;&lt;set $ships5WrongSave to false&gt;&gt;
-&lt;&lt;set $ships5WrongSelect to false&gt;&gt;
-&lt;&lt;set $ships5MixingSave to false&gt;&gt;
-&lt;&lt;set $ships5MixingSelect to false&gt;&gt;
+&lt;&lt;unset $shipsc&gt;&gt;
+&lt;&lt;unset $shipsPosture&gt;&gt;
+&lt;&lt;unset $shipsItems&gt;&gt;
+&lt;&lt;unset $shipsGroup&gt;&gt;
+&lt;&lt;unset $shipsTech&gt;&gt;
+&lt;&lt;unset $shipsMoney&gt;&gt;
 
-&lt;&lt;set $coffeec to &quot;&quot;&gt;&gt;
-&lt;&lt;set $coffee1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $coffee2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $coffee3 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $coffeec&gt;&gt;
+&lt;&lt;unset $coffee1&gt;&gt;
+&lt;&lt;unset $coffee2&gt;&gt;
+&lt;&lt;unset $coffee3&gt;&gt;
 
-&lt;&lt;set $miltonc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton3 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton4 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton5 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton6 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $milton7 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $miltonc&gt;&gt;
+&lt;&lt;unset $milton1&gt;&gt;
+&lt;&lt;unset $milton2&gt;&gt;
+&lt;&lt;unset $milton3&gt;&gt;
+&lt;&lt;unset $milton4&gt;&gt;
+&lt;&lt;unset $milton5&gt;&gt;
+&lt;&lt;unset $milton6&gt;&gt;
+&lt;&lt;unset $milton7&gt;&gt;
 
-&lt;&lt;set $printc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print3 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print4 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print5 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print6 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $print8 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $printc&gt;&gt;
+&lt;&lt;unset $print1&gt;&gt;
+&lt;&lt;unset $print2&gt;&gt;
+&lt;&lt;unset $print3&gt;&gt;
+&lt;&lt;unset $print4&gt;&gt;
+&lt;&lt;unset $print5&gt;&gt;
+&lt;&lt;unset $print6&gt;&gt;
+&lt;&lt;unset $print7&gt;&gt;
+&lt;&lt;unset $print8&gt;&gt;
 
-&lt;&lt;set $bportraitsc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bportraitsItems to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bportraitsLabor to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bportraitsPosture to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bportraitsDress to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bportraitsWar to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $bportraitsc&gt;&gt;
+&lt;&lt;unset $bportraitsItems&gt;&gt;
+&lt;&lt;unset $bportraitsLabor&gt;&gt;
+&lt;&lt;unset $bportraitsPosture&gt;&gt;
+&lt;&lt;unset $bportraitsDress&gt;&gt;
+&lt;&lt;unset $bportraitsWar&gt;&gt;
 
-&lt;&lt;set $anxiousc to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious1 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious2 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious3 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious4 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious5 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious6 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious7 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious8 to &quot;&quot;&gt;&gt;
-&lt;&lt;set $anxious8 to &quot;&quot;&gt;&gt;
+&lt;&lt;unset $anxiousc&gt;&gt;
+&lt;&lt;unset $anxious1&gt;&gt;
+&lt;&lt;unset $anxious2&gt;&gt;
+&lt;&lt;unset $anxious3&gt;&gt;
+&lt;&lt;unset $anxious4&gt;&gt;
+&lt;&lt;unset $anxious5&gt;&gt;
+&lt;&lt;unset $anxious6&gt;&gt;
+&lt;&lt;unset $anxious7&gt;&gt;
+&lt;&lt;unset $anxious8&gt;&gt;
 
 
 &lt;div class=&quot;container&quot;&gt;
