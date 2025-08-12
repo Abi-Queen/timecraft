@@ -5801,14 +5801,14 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="bacon-declaration" tags="Source" position="2800,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-11&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
 &lt;h1&gt;Bacon&#39;s Declaration&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Virginia, 1676&lt;/p&gt;
 &lt;p&gt;Nathaniel Bacon drafted this statement of grievances to justify his rebellion against Governor Berkeley&#39;s regime. This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://historymatters.gmu.edu/d/5800&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-1&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -5823,7 +5823,6 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;li&gt;Motives and objectives of those who support the rebellion.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Choose a link to save the text to your inventory.&lt;/p&gt;
-&lt;p&gt;When you&#39;re done with this source, close the window and return to the mineshaft. Explore more sources or return to the story and craft your choice.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -5831,26 +5830,165 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;&lt;&lt;textarea &quot;$baconc&quot; `$baconc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;hr&gt;
 &lt;p&gt;Governor Berkeley has:&lt;/p&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Raised unfairly high taxes and used the money to enrich his friends instead of benefiting the common people by building fortifications or towns, or encouraging trade.&quot;&gt;&gt;&lt;&lt;set $bacon1 to &quot;Berkeley has raised unfairly high taxes and used the money to enrich his friends instead of benefiting the common people by building fortifications or towns, or encouraging trade.&quot;&gt;&gt;&lt;&lt;set $bacon1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon1 to &quot;Berkeley has levied unfairly high taxes and used the money to enrich his friends. Instead, taxes should be uesd to benefit the common people by building fortifications or towns, or encouraging trade. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Levied unfairly high taxes and used the money to enrich his friends. Instead, taxes should be uesd to benefit the common people by building fortifications or towns, or encouraging trade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges.&quot;&gt;&gt;&lt;&lt;set $bacon2 to &quot;Berkeley has undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges.&quot;&gt;&gt;&lt;&lt;set $bacon2Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon2 to &quot;Berkeley has undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Undermined the courts and the whole judicial system by appointing corrupt and ignorant friends as magistrates and judges.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer.&quot;&gt;&gt;&lt;&lt;set $bacon3 to &quot;Berkeley has violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer.&quot;&gt;&gt;&lt;&lt;set $bacon3Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon3 to &quot;Berkeley has violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Violated the king&#39;s rights by monopolizing the beaver trade for himself and empowering hostile tribes who trade with him. This is an unjust betrayal of the colony and the loyal colonists whose lives are now in danger, while Berkeley gets richer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4 to &quot;Berkeley repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon4 to &quot;Berkeley has repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4 to &quot;Berkeley repeatedly protected tribes who have raided, killed, and stolen from colonists. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Repeatedly protected tribes who have raided, killed, and stolen from colonists.&quot;&gt;&gt;&lt;&lt;set $bacon4 to &quot;Berkeley repeatedly protected tribes who have raided, killed, and stolen from colonists.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever.&quot;&gt;&gt;&lt;&lt;set $bacon5 to &quot;Berkeley forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever.&quot;&gt;&gt;&lt;&lt;set $bacon5Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon5 to &quot;Berkeley has forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Forced colonial troops to retreat when they were defeating the hostile tribes. He assured us the tribes would be peaceful, but they continued to raid, kill, burn homes, spread terror, and grew stronger than ever.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Ignored the assembly&#39;s decision to raise an army to fight hostile tribes.&quot;&gt;&gt;&lt;&lt;set $bacon6 to &quot;Berkeley ignored the assembly&#39;s decision to raise an army to fight hostile tribes.&quot;&gt;&gt;&lt;&lt;set $bacon6Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon6 to &quot;Berkeley has ignored the assembly&#39;s decision to raise an army to fight hostile tribes. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Ignored the assembly&#39;s decision to raise an army to fight hostile tribes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&quot;&gt;&gt;&lt;&lt;set $bacon7 to &quot;Berkeley forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&quot;&gt;&gt;&lt;&lt;set $bacon7Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon7 to &quot;Berkeley has forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Forged documents to raise troops for a civil war, weakening defenses on the vulnerable frontier.&quot;&gt;&gt;&lt;&lt;set $bacon8 to &quot;Berkeley forged documents to raise troops for a civil war, weakening defenses on the vulnerable frontier.&quot;&gt;&gt;&lt;&lt;set $bacon8Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We accuse Sir William Berkeley of being guilty of all these charges. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;His actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks.&quot;&gt;&gt;&lt;&lt;set $bacon9 to &quot;Berkeley&#39;s actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks.&quot;&gt;&gt;&lt;&lt;set $bacon9Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Furthermore, we identify the following individuals as his corrupt advisors, collaborators, and supporters who helped him harm the common people during these troubled times:&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon8 to &quot;Berkeley has forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Forged documents to raise troops for a civil war against dissenting colonists, diverting troops from the frontier and leaving settlers unprotected from tribal raids.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;We accuse Sir William Berkeley of being guilty of all these charges.&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon9 to &quot;Berkeley&#39;s actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;His actions have betrayed the king&#39;s authority, cost many innocent lives, and exposed the colony to brutal attacks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Furthermore, we identify the following individuals as his corrupt advisors, collaborators, and supporters who helped him harm the common people during these troubled times:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sir Henry Chichley&lt;/li&gt;
 &lt;li&gt;William Claiburne Junior&lt;/li&gt;
@@ -5877,8 +6015,42 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;li&gt;Math. Kempe&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We also demand that Sir William Berkeley and all those named in the accompanying list immediately surrender or be handed over within four days of receiving this notice. If they fail to do so, we declare the following:&lt;/p&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&quot;&gt;&gt;&lt;&lt;set $bacon10 to &quot;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&quot;&gt;&gt;&lt;&lt;set $bacon10Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.&quot;&gt;&gt;&lt;&lt;set $bacon11 to &quot;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.&quot;&gt;&gt;&lt;&lt;set $bacon11Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Let us not blame the innocent for the crimes of the guilty, nor let the wrongdoing of our oppressors divide those of us who have suffered under their rule.&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon10 to &quot;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated. (&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Anyone who shelters, hides, or protects any of these individuals ... will be considered an accomplice and traitor to the people. The property of those who aid these offenders, along with the estates of the offenders themselves, will be confiscated.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bacon11 to &quot;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.(&lt;em&gt;Bacon&#39;s Declaration&lt;/em&gt;, 1676)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;We, the common people of Virginia, make this declaration as a call for unity among ourselves, so that we may stand together in defending against our true enemies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Let us not blame the innocent for the crimes of the guilty, nor let the wrongdoing of our oppressors divide those of us who have suffered under their rule.&lt;/p&gt;
 &lt;p&gt;Therefore, in His Majesty’s name, we command you to seize the individuals named above as traitors to both the King and this country. Bring them to Middle Plantation and hold them securely until further instructions are given.&lt;/p&gt;
 &lt;p&gt;If anyone resists or you face opposition, you are authorized to request reinforcements in the name of the people from any and all counties in Virginia.&lt;/p&gt;
 
@@ -5971,13 +6143,14 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="brown-bacon" tags="Source" position="2800,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;Brown, &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; (University of North Carolina Press, 1996)&lt;/h1&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;&quot;Vile Rogues and Honorable Men&quot;&lt;/h1&gt;
+&lt;p class=&quot;subtitle&quot;&gt;Brown, &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; (University of North Carolina Press, 1996)&lt;/p&gt;
 &lt;p&gt;This classic work on gender, race, and power in colonial Virginia by leading historian Kathleen Brown shows that ideas about masculinity intersected with class and race identities in important ways to shape the colonists&#39; choices during Bacon&#39;s Rebellion. The authors reviewed, edited, and curated the following collection of excerpts extracted by ChatGPT from the chapter called, &quot;Vile Rogues and Honorable Men: Nathaniel Bacon and the Dilemma of Colonial Masculinity.&quot;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;secondary source label&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block gold ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
 
@@ -5993,87 +6166,254 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;&lt;&lt;textarea &quot;$vilec&quot; `$vilec ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Their homes expressed power and wealth&quot;&gt;&gt;&lt;&lt;set $anxious1 to &quot;Their homes expressed power and wealth: &#39;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&#39;&quot;&gt;&gt;&lt;&lt;set $anxious1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;: &quot;The construction of Georgian edifices was ... not simply the proud display of accumulated wealth and power but an anxious attempt to call attention to those privileges. ... Planters performed their wealth and status with imported props ... furniture, table settings, food, clothing, and well-dressed wives provided tangible evidence of gentility.&quot;&lt;/li&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $vile1 to &quot;In the 1670s, economic hardship for ordinary colonists generated skepticism about who held legitimate political authority and what it meant to be a male citizen: &#39;The inability of many men to become householders (the standard of English manhood) fueled resentment and eroded deference to elites.&#39; Bacon successfully manipulated these tensions to &#39;forge a language of political resistance expressive of the discontents of men&#39; who felt insecure about their masculine identities as providers. Bacon’s populist message resonated because it validated the gender-based grievances of disenfranchised men who felt that their patriarchal ambitions were being deliberately, unjustly thwarted by the elite. (Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;In the 1670s, economic hardship for ordinary colonists generated skepticism about who held legitimate political authority and what it meant to be a male citizen: &quot;The inability of many men to become householders (the standard of English manhood) fueled resentment and eroded deference to elites.&quot; Bacon successfully manipulated these tensions to &quot;forge a language of political resistance expressive of the discontents of men&quot; who felt insecure about their masculine identities as providers. Bacon’s populist message resonated because it validated the gender-based grievances of disenfranchised men who felt that their patriarchal ambitions were being deliberately, unjustly thwarted by the elite.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $vile2 to &quot;Elite and middle class men defined masculine gender ideals differently: Elite masculinity was deeply tied to &#39;the emotionally freighted terms of male&#39; honor and social hierarchy, in contrast to the more action-oriented masculinity of backcountry men who valued arms, land defense, and resistance. (Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Elite and middle class men defined masculine gender ideals differently: Elite masculinity was deeply tied to &quot;the emotionally freighted terms of male honor&quot; and social hierarchy, in contrast to the more action-oriented masculinity of backcountry men who valued arms, land defense, and resistance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $vile3 to &quot;Wealthy and middle class men defined masculine gender ideals differently. Elite masculinity was deeply tied to &#39;emotionally freighted terms of male honor&#39; and social hierarchy, in contrast to the more action-oriented masculinity of backcountry men who valued arms, land defense, and resistance. These different definitions of masculinity collided during the rebellion: &#39;Bacon’s Rebellion became a veritable cacophony of voices competing to define honor, manhood, and authority.&#39; (Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Wealthy and middle class men defined masculine gender ideals differently. Elite masculinity was deeply tied to &quot;emotionally freighted terms of male honor&quot; and social hierarchy, in contrast to the more action-oriented masculinity of backcountry men who valued arms, land defense, and resistance. These different definitions of masculinity collided during the rebellion: &quot;Bacon’s Rebellion became a veritable cacophony of voices competing to define honor, manhood, and authority.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
 
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $vile4 to &quot;The elite worried about &#39;arming lower-class men who could now assert masculine agency through violence.&#39; As Berkeley lamented, &#39;How miserable that man is that Governs a People when six parts of Seaven at least are Poore Endebted Discontented and Armed.&#39; The colony had distributed guns when a Dutch attack seemed immanent c. 1670. (Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The elite worried about &quot;arming lower-class men who could now assert masculine agency through violence.&quot; As Berkeley lamented, &quot;How miserable that man is that Governs a People when six parts of Seaven at least are Poore Endebted Discontented and Armed.&quot; The colony had distributed guns when a Dutch attack seemed immanent c. 1670.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-1. **“Questions about who constituted legitimate political authority in the colony and about what it meant to be a male citizen came to a head during the 1670s…”**
-   Brown explains that the inability of many men to become householders—the standard of English manhood—fueled resentment and eroded deference to elites, contributing to rebellion.
-
-2. **“In the years before 1676, elite planters articulated political dissent in the emotionally freighted terms of male honor.”**
-   Elite masculinity was deeply tied to honor and social hierarchy, in contrast to the more action-oriented masculinity of backcountry men who valued arms, land defense, and resistance.
-
-3. **“Fueled by rebellious speech as well as by acts of destruction and violence, Bacon’s Rebellion became a veritable cacophony of voices competing to define honor, manhood, and authority…”**
-   Competing masculinities—elite versus populist—collided during the rebellion, each asserting different standards for what defined a man.
-
-4. **“Friend then proposed direct action: They would get a matter of 40 of them together and get Gunnes and hee would be the ist and lead them…”**
-   In this servant plot, Isaac Friend frames armed resistance as a masculine, honorable quest for liberty—“who would be for liberty and freed from bondage?”—exemplifying how martial masculinity appealed to marginalized men.
-
-5. **“Too late, Berkeley recognized the dangers of an armed populace, many of whom had been given guns during the Dutch threat of the early 1670s: ‘How miserable that man is that Governs a People when six parts of Seaven at least are Poore Endebted Discontented and Armed…’”**
-   Berkeley&#39;s reflection captures elite anxiety over the arming of lower-class men who could now assert masculine agency through violence.
-
-6. **“Bacon also used oath taking… to cement the loyalty of his followers… they were enjoined to swear ‘from \[their] hearts’ that Bacon had obtained his commission lawfully.”**
-   Bacon&#39;s reliance on oath-taking underscores how masculine honor was performed through verbal pledges of loyalty, aligning rebellion with perceived virtue and duty.
-
-7. **“Come on, my hearts of gold, hee that dyes in the field lyes in the Bedd of honour.”**
-   Bacon&#39;s battlefield rhetoric invokes the chivalric ideal of a glorious death, reframing violence as a noble masculine act.
-
-8. **“Bacon’s use of these women, known as the ‘white aprons,’ also revealed the complex intertwining of gender and class relations…”**
-   By using elite women as human shields, Bacon exploited gender norms to neutralize enemy fire, simultaneously mocking elite masculinity and asserting his own martial cunning.
-
-9. **“Many of Bacon’s white men may have found the analogy to slavery a persuasive and effective way of communicating their own sense of powerlessness.”**
-   This statement reveals how some white men saw threats to their masculine independence as akin to enslavement, driving their militancy.
-
-10. **“Much of Bacon’s early success had derived from his ability to forge a language of political resistance expressive of the discontents of men who found their identities as providers and English men challenged…”**
-    Bacon’s populism resonated because it validated the masculine grievances of disenfranchised men, giving political voice to their thwarted patriarchal ambitions.
-
-
-
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $vile5 to &quot;Bacon&#39;s reliance on oath-taking illustrates how masculine honor was performed through verbal pledges of loyalty, aligning the rebellion with masculine virtue and duty: &#39;Bacon also used oath taking… to cement the loyalty of his followers ...&#39; (Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Bacon&#39;s reliance on oath-taking illustrates how masculine honor was performed through verbal pledges of loyalty, aligning the rebellion with masculine virtue and duty: &quot;Bacon also used oath taking… to cement the loyalty of his followers ...&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="beverley-bacon" tags="Source" position="2800,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-11&quot;&gt;
-&lt;h1&gt;Beverley Explains Bacon&#39;s Rebellion&lt;/h1&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;Beverley&#39;s Account of Bacon&#39;s Rebellion&lt;/h1&gt;
 &lt;p class=&quot;subtitle&quot;&gt;&lt;em&gt;The History and Present State of Virginia&lt;/em&gt; (1705)&lt;/p&gt;
 &lt;p&gt;Robert Beverley was a wealthy planter who actively supported Governor Berkeley&#39;s regime during Bacon&#39;s Rebellion, leading successful attacks on the rebel forces. Later, he served on the Virginia House of Burgesses (legislature). This text has been modernized by ChatGPT and edited by the authors, using the edition in Mintz and McNiel, &lt;a href=&quot;https://www.digitalhistory.uh.edu/disp_textbook.cfm?smtID=3&amp;psid=3998&quot; target=&quot;_blank&quot;&gt;History Matters&lt;/a&gt; (George Mason University).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-1&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;br&gt; 
 
-&lt;div class=&quot;row center&quot;&gt;
-&lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$beverleyc&quot; `$beverleyc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for information about the causes and dynamics of Bacon&#39;s Rebellion, especially class and race-based divisions. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;p&gt;The exact cause of Bacon’s Rebellion isn’t easy to pinpoint, but it’s clear that multiple problems contributed to it. It’s unlikely the entire colony would risk their lives in open rebellion just because a few traders wanted a monopoly on trade with the Native Americans, as some claim. After all, the colonists had long admired and chosen Governor Berkeley, who had spent decades serving the colony faithfully without serious complaint. It seems improbable they would abandon such a respected leader for someone they barely knew—unless something deeper was troubling them.&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;textarea &quot;$bevbaconc&quot; `$bevbaconc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;The exact cause of Bacon’s Rebellion isn’t easy to pinpoint, but it’s clear that multiple problems contributed to it. It’s unlikely the entire colony would risk their lives in open rebellion just because a few traders wanted a monopoly on trade with the Native Americans, as some claim.&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon1 to &quot;The colonists had long admired and chosen Governor Berkeley, who had spent decades serving the colony faithfully without serious complaint. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;After all, the colonists had long admired and chosen Governor Berkeley, who had spent decades serving the colony faithfully without serious complaint.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;It seems improbable they would abandon such a respected leader for someone they barely knew, unless something deeper was troubling them.&lt;/p&gt;
 
 &lt;p&gt;Four major issues likely sparked the unrest:&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;Tobacco Prices and Exploitation of Planters: Tobacco prices had fallen dramatically. Planters were treated unfairly when trading their goods and couldn&#39;t fix the problem despite their best efforts.&lt;/li&gt;
-&lt;li&gt;Land Grants That Undermined the Colony: King Charles II gave away large sections of the colony—including already-settled and cultivated lands—to reward his noble friends. This violated earlier royal promises. The grants (known as the Northern and Southern grants) angered the colonists, who sent representatives to England to plead for their cancellation. To pay for this effort, colonists were taxed heavily, especially poor farmers, who could barely provide for their families.
-&lt;li&gt;Trade Restrictions from England: A new law (25 Charles II) placed harsh duties on goods traded between colonies. This money didn’t benefit the colonies—it mostly went to British officials. It even taxed fishing products made by colonists more than those made in England, which felt extremely unfair.&lt;/li&gt;
-&lt;li&gt;Native American Attacks: Amidst all this economic stress, Native American raids on frontier settlements pushed colonists to their breaking point.&lt;/li&gt;
-&lt;li&gt;Bacon Rises as a Leader: Frustrated and desperate, poorer colonists volunteered to fight the Native Americans. Initially, they had no clear leader. Then Nathaniel Bacon—a young, charismatic, and well-educated man—joined their cause. Though new to the colony, he quickly gained popularity and was appointed to the council. Once he aligned with the militia, they rallied around him and made him their general. Bacon gave passionate speeches blaming the government for failing to stop the Native attacks and ignoring colonists’ grievances. He promised to protect the people and fight for justice, which further united his followers.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Bacon asked Governor Berkeley for official permission (a commission) to lead an army against the Native Americans. The governor hesitated but didn’t say no outright. Bacon didn’t wait—he armed his men and marched off, urging the governor to hurry up with the commission.&lt;/p&gt;
-&lt;p&gt;Instead of approval, Berkeley ordered Bacon to disband and report to him—or be declared a rebel. Shocked, Bacon refused. He brought a small group with him to Jamestown to confront the governor but left angrily after being suspended from the council for speaking out.&lt;/p&gt;
-&lt;p&gt;Despite the conflict, Berkeley welcomed Bacon back and restored him to the council—perhaps realizing he’d overstepped. But Bacon still demanded his commission. When denied again, he left secretly, gathered 600 armed supporters, and returned to Jamestown, where the assembly was meeting. He pressured them to approve his authority.&lt;/p&gt;
-&lt;p&gt;Berkeley, furious, refused—at one point even baring his chest to Bacon’s armed men, daring them to shoot. Fearing violence, the assembly gave in and signed the commission, officially making Bacon commander of Virginia’s forces.&lt;/p&gt;
-&lt;p&gt;As soon as Bacon left with his troops, Berkeley and the assembly declared him a rebel and called for his arrest. But Bacon had won the people over. They refused to turn against him, instead returning to Jamestown to confront their own leaders. At this point, the rebellion turned inward—Virginians fighting Virginians.&lt;/p&gt;
-&lt;p&gt;Berkeley gathered loyal troops and armed boats, launching attacks against the rebels. Several were killed or captured in skirmishes. The colony seemed headed for full-blown civil war.&lt;/p&gt;
-&lt;p&gt;Then, unexpectedly, Bacon died of natural causes at Dr. Green’s in Gloucester County. His death ended the rebellion. His burial site was kept secret to prevent his body from being dishonored.&lt;/p&gt;
-&lt;p&gt;With Bacon gone, his followers lost unity and began fighting among themselves. ... Governor Berkeley resumed control and tried to restore order. When English troops arrived to suppress the rebellion, it was already over. They saw no fighting.&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon2 to &quot;The economy was bad because tobacco prices had fallen dramatically and planters were being exploited financially. All their efforts to solve the financial crisis had failed. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;First: The economy was bad because tobacco prices had fallen dramatically and planters were being exploited financially. All their efforts to solve the financial crisis had failed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon3 to &quot;Betraying earlier promises, King Charles II gave away large sections of the colony, including parcels already settled and planted, to reward his noble friends. ... The colonial elite levied crushing new taxes to pay for diplomatic missions to protest these grants, and the burden fell mostly on poor farmers who could barely provide for their families. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Second: Broken promises and unfair taxes. Betraying earlier promises, King Charles II gave away large sections of the colony, including parcels already settled and planted, to reward his noble friends. These grants (known as the Northern and Southern grants) angered the colonists, who sent representatives to England to plead for their cancellation. The colonial elite levied crushing new taxes to pay for these diplomatic missions, and the burden fell mostly on poor farmers who could barely provide for their families.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon4 to &quot;Unfair trade restrictions. Parliament placed harsh duties on goods traded between colonies. This money didn’t benefit the colonies, but mostly went to British officials. It even taxed fishing products made by colonists more than those made in England, which felt extremely unfair. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Third: Unfair trade restrictions. Parliament placed harsh duties on goods traded between colonies. This money didn’t benefit the colonies, but mostly went to British officials. It even taxed fishing products made by colonists more than those made in England, which felt extremely unfair.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon5 to &quot;Native American attacks. Amidst all this economic stress, Native American raids on frontier settlements pushed colonists to their breaking point. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Fourth: Native American attacks. Amidst all this economic stress, Native American raids on frontier settlements pushed colonists to their breaking point.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Frustrated and desperate, poorer colonists volunteered to fight the Native Americans. Initially, they had no clear leader. Then Nathaniel Bacon - a young, charismatic, and well-educated man - rose to prominence. Though new to the colony, he quickly gained popularity and was appointed to the council.&lt;/p&gt;
+
+&lt;/li&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon6 to &quot;Once Bacon aligned with the militia, they rallied around him and made him their general. He gave passionate speeches blaming the government for failing to stop the Native attacks and for ignoring colonists’ grievances. He promised to protect the people and fight for justice, which further united his followers. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Once Bacon aligned with the militia, they rallied around him and made him their general. He gave passionate speeches blaming the government for failing to stop the Native attacks and for ignoring colonists’ grievances. He promised to protect the people and fight for justice, which further united his followers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Bacon asked Governor Berkeley for official permission (a commission) to lead an army against the Native Americans. The governor hesitated but didn’t say no outright. Bacon didn’t wait: he armed his men and marched off, urging the governor to hurry up with the commission.&lt;/p&gt;
+&lt;p&gt;Instead of approval, Berkeley ordered Bacon to disband and report to him, or be declared a rebel. Bacon refused. Instead, he returned to Jamestown a small group of militia to confront the governor. Berkeley ordered him suspended from the council, and Bacon left angrily. Then, perhaps realizing that he had overstepped, Berkeley reinstated Bacon to his seat on the council. But,&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $bevbacon7 to &quot;when Bacon again demanded permission to attack the tribes, Berkeley again refused. Bacon then left in secret, gathered 600 armed supporters, and returned to Jamestown, where the assembly was meeting and he was able to pressure them into approving his demands. Berkeley was furious, and refused to agree. At one point, he dramatically bared his chest to Bacon’s armed men, daring them to shoot. Fearing violence, the assembly gave in and signed the commission, officially making Bacon commander of Virginia’s forces. As soon as Bacon and his troops left Jamestown, Berkeley and the assembly declared him a rebel and called for his arrest. But Bacon had won the people over. They refused to turn against him. Instead, they joined him and returned to Jamestown to confront their own leaders. (Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;when Bacon again demanded permission to attack the tribes, Berkeley again refused. Bacon then left in secret, gathered 600 armed supporters, and returned to Jamestown, where the assembly was meeting and he was able to pressure them into approving his demands. Berkeley was furious, and refused to agree. At one point, he dramatically bared his chest to Bacon’s armed men, daring them to shoot. Fearing violence, the assembly gave in and signed the commission, officially making Bacon commander of Virginia’s forces. As soon as Bacon and his troops left Jamestown, Berkeley and the assembly declared him a rebel and called for his arrest. But Bacon had won the people over. They refused to turn against him. Instead, they joined him and returned to Jamestown to confront their own leaders.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Virginians were now fighting Virginians.&lt;/p&gt;
+&lt;p&gt;Berkeley gathered loyal troops and armed boats, launching attacks against the rebels. Several were killed or captured in skirmishes. ... &lt;/p&gt;
+&lt;p&gt;Then, unexpectedly, Bacon became ill and died of natural causes. His followers lost unity and began fighting among themselves. ... Governor Berkeley resumed control. ... When English troops arrived to suppress the rebellion, it was already over. They saw no fighting.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
@@ -6195,86 +6535,256 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-cc.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Craft your Choice&quot;&gt;&#39; &quot;printbacon-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="printbacon-choice" tags="" position="2900,400" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row scenario center&quot; id=&quot;choose&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="printbacon-choice" tags="" position="2900,400" size="100,100">&lt;div class=&quot;container scenario center&quot; id=&quot;choose&quot;&gt;
 
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;h2&gt;Outline some messages for your anti-Bacon broadside.&lt;/h2&gt;
 &lt;p&gt;How will you portray Bacon as a villain and his rebellion as a sham? (Or will you ...)&lt;/p&gt;
-&lt;p&gt;Each option appears with the corresponding evidence you have mined. Which choice is best supported by your evidence?&lt;/p&gt;
-&lt;p&gt;Make a choice, and see where your story leads.&lt;/p&gt;
+&lt;p&gt;Each option appears with the corresponding evidence you have mined. Use the checkboxes to select some arguments to present. See where your story leads.&lt;/p&gt;
 &lt;br&gt;
 
-&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;row crafting&quot;&gt;
 &lt;h2&gt;Your comments&lt;/h2&gt;
 &lt;p&gt;Here are your comments on the sources from this mineshaft. These might help you craft this choice.&lt;/p&gt;
-&lt;ul class=&quot;nodot crafting&quot;&gt;
-&lt;&lt;if (def $baconc) and ($baconc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $baconc&gt;&gt;&quot; (Comments by $PlayerName about Bacon&#39;s Declaration)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from Bacon&#39;s Declaration)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if (def $vilec) and ($vilec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $vilec&gt;&gt;&quot; (Comments by $PlayerName about Brown, &quot;Vile Rogues&quot;)&lt;/li&gt;&lt;&lt;else&gt;&gt;&lt;li&gt;(No comments from the Brown, &quot;Vile Rogues&quot;)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;&lt;if (def $baconc) and ($baconc isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $baconc&gt;&gt;&quot; (Comments by $PlayerName about &quot;Bacon&#39;s Declaration,&quot; 1676)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $vilec) and ($vilec isnot &quot;&quot;)&gt;&gt;&lt;li&gt;&quot;&lt;&lt;print $vilec&gt;&gt;&quot; (Comments by $PlayerName about Brown, &quot;Vile Rogues&quot;)&lt;/li&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-
+&lt;br&gt;
+&lt;br&gt;
 &lt;div class=&quot;row&quot;&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconAH&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Go &lt;em&gt;Ad Hominem&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Mockery. Make an ass of Bacon on a personal level (honestly, it won&#39;t be hard).&lt;/p&gt;
-&lt;p&gt;Evidence mined:&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressLicensing&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Licensing: Revenue and control.&lt;/span&gt; Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/label&gt;&lt;/li&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee3&gt;&gt; &lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print8&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconTreason&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Treason and Sin&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Present rebellion as treason against God, king, and country.&lt;/p&gt;
-&lt;p&gt;Evidence mined:&lt;/li&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
 
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconMasculinity&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Masculinity&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Expose Bacon and his rebellion as violations of masculine virtue.&lt;/p&gt;
-&lt;p&gt;Evidence mined:&lt;/li&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconRacism&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Racism&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Fuel and feed on colonists&#39; fears of racial mixing ... which Bacon&#39;s Rebellion seems to be facilitatingby uniting White and free Black laborers against the elites and Native Americans.&lt;/p&gt;
-&lt;p&gt;Evidence mined:&lt;/li&gt;
+
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressPaper&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Paper tax&lt;/span&gt;: Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
+
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconConfusion&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Babylonical Confusion&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Fuel and feed fears anarchy, &quot;a war of all against all,&quot; in the absence of good government and right order.&lt;/p&gt;
-&lt;p&gt;Evidence mined:&lt;/li&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressTheywill&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  If we don&#39;t do it, they will:&lt;/span&gt; Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print 7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print8&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$printbaconJoin&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Join the Rebels&lt;/em&gt;&lt;/span&gt;&lt;/label&gt;&lt;/h3&gt;
-&lt;p&gt;Defend and promote Bacon&#39;s Rebellion. Attack the status quo. Harness the power of your new machine to conjure bloody revolution here and now. &lt;em&gt;Carpe diem.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Evidence mined:&lt;/li&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressStatus&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Virginia&#39;s status:&lt;/span&gt; No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/label&gt;&lt;/li&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
-&lt;&lt;if $coffee1Save&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&quot;&lt;&lt;print $coffee1&gt;&gt;&quot; (Coffeehouse bans) Score + 2 &amp;#9733; &amp;#9733;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;hr&gt;
-&lt;br&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressControl&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  Control the narrative&lt;/span&gt; When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own clear and persuasive statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/label&gt;&lt;/li&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print8&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong1&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A printing press is not important.&lt;/span&gt; There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
+&lt;hr&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressKnowledge&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  A more prosperous, powerful society:&lt;/span&gt; A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/label&gt;&lt;/li&gt;
+&lt;ul class=&quot;nodot&quot;&gt;
+&lt;li&gt;Evidence mined:&lt;/li&gt;
+&lt;&lt;if $coffee1e&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $coffee1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $print3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton1&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton2&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton3&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton4&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton5&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton6&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7&gt;&gt;&lt;li class=&quot;mined&quot;&gt;&lt;&lt;print $milton7&gt;&gt;&lt;/li&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;br&gt;&lt;&lt;/if&gt;&gt;
+
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$pressWrong2&quot; false true&gt;&gt;&lt;span class=&quot;bi&quot;&gt;  As an English citizen, you have the right to free speech.&lt;/span&gt; The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;/label&gt;&lt;/li&gt;&lt;br&gt;
+
+&lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
+            &lt;div class=&quot;row center&quot;&gt;
+            &lt;h2&gt;Here are the arguments you plan to make:&lt;/h2&gt;
+            &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;&lt;if $pressWrong1&gt;&gt;
+            &lt;br&gt;
+            &lt;h3&gt;A printing press is not important.&lt;/h3&gt;
+            &lt;p&gt;There&#39;s really no need for the governor and his council to waste time discussing a printing press. A print shop can have no impact on the colony. This whole matter should be passed over as beneath their dignity as elite statesmen.&lt;p&gt;
+            &lt;div class=&quot;feedback-bad&quot;&gt;
+            &lt;p&gt;This argument does not work, nor does it align with any of your mined evidence.&lt;/p&gt;
+            &lt;p&gt;&lt;img src=&quot;images/score-tnt2-sm.png&quot; alt=&quot;score - 2&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressLicensing&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;Licensing: Revenue and control.&lt;/h3&gt;
+&lt;p&gt;Licensing presses will bring in revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;). They can use licenses to control what is printed. It may not be necessary to hint that people who want licenses will offer gifts (uncharitably known as bribes) to council members who can facilitate their needs.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="51" name="council" tags="" position="2600,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressPaper&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;Paper tax.&lt;/h3&gt;
+&lt;p&gt;Paper is often subject to special taxes. Printing presses will fuel the growth of new businesses, especially papermaking, which will generate revenue for the colonial government (i.e., for &lt;em&gt;them&lt;/em&gt;).&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressTheywill&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;If we don&#39;t do it, they will.&lt;/h3&gt;
+&lt;p&gt;Parliament already regulates printing in England. If they see a source of revenue, they will find a way to start taxing printing and papermaking here, too. Do they really want that stream of revenue channeled into the bottomless maw of the imperial purse?&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressStatus&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;Virginia&#39;s status.&lt;/h3&gt;
+&lt;p&gt;No other North American colony has developed printing industry. Virginia has a chance to lead, to enhance its reputation as a cultured and prosperous colony. This will draw in immigrants, which the colony desperately needs if it&#39;s going to continue to grow.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressControl&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;Control the narrative.&lt;/h3&gt;
+&lt;p&gt;When a dangerous, violent, widespread rebellion explodes across the colony, wouldn&#39;t it be nice if the government and its loyal citizens had a fast way to communicate with its colonists? At this present moment, Nathaniel Bacon&#39;s minions are &lt;em&gt;hand copy&lt;/em&gt; (eye roll) his ridiculous, pompous &quot;Declaration of the People of Virginia,&quot; in defiance of Governor Berkeley and this council. Bacon and his declaration may be contemptible, but they have power. People are reading and listening. What if the government had a press to produce a hundred copies of their own statements for every one of Bacon&#39;s hand-copied, seditious rags? A month ago, the council may have argued that the thoughts of average farmers were unimportant. But today, with Bacon&#39;s Rebellion literally burning across their colony, supported by ordinary folk, even &lt;em&gt;this&lt;/em&gt; crowd has to admit the value of influencing ordinary colonists.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $pressWrong2&gt;&gt;
+            &lt;br&gt;
+            &lt;h3&gt;As an English citizen, you have the right to free speech.&lt;/h3&gt;
+            &lt;p&gt;The Virginia governor and his council have no legal mandate to restrict your printing press, and if they try, you can appeal to the higher authority of Parliament or the London courts.&lt;p&gt;
+            &lt;div class=&quot;feedback-bad&quot;&gt;
+            &lt;p&gt;This argument does not work, nor does it align with any of your mined evidence.&lt;/p&gt;
+            &lt;p&gt;&lt;img src=&quot;images/score-tnt2-sm.png&quot; alt=&quot;score - 2&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;&lt;/if&gt;&gt;
+
+
+&lt;&lt;if $pressKnowledge&gt;&gt;
+&lt;br&gt;
+&lt;h3&gt;Knowledge: A more prosperous, powerful society.&lt;/h3&gt;
+&lt;p&gt;A more literate society, with a bounty of printed material to consume, is a more prosperous, productive, powerful society. Farmers and mechanics can benefit from the quick exchange of information facilitated by almanacs and technical manuals. You give the example of your own workshop. Books are a key difference between your high-end shop and the simple smithies on their own plantations. The technical reference volumes on your shelf make your shop far more productive. What if Virginia farmers could circulate information in a printed periodical - planting times, harvest and storage techniques, runaway slave ads? Imagine the improved productivity of every farmer and mechanic in the colony, if such print resources were more widely available.&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Good choice.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2-sm.png&quot; alt=&quot;score + 2&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;/div&gt;
+
+&lt;&lt;if $coffeec or $coffee1 or $coffee2 or $coffee3 or $miltonc or $milton1 or $milton2 or $milton3 or $milton4 or $milton5 or $milton6 or $milton7 or $printc or $print1 or $print2 or $print3 or $print4 or $print5 or $print6 or $print7 or $print8 or $portraitc or $portraitItems or $portraitDress or $portraitWar or $portraitPosture or $postureLabor or $anxiousc or $anxious1 or $anxious2 or $anxious3 or $anxious4 or $anxious5 or $anxious6 or $anxious7 or $anxious8&gt;&gt;
+&lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
+&lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;prepare&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
+&lt;&lt;elseif (not $pressKnowledge) and (not $pressControl) and (not $pressStatus) and (not $pressTheywill) and (not $pressPaper) and (not $pressLicensing)&gt;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p&gt;&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text -2&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;p&gt;No choices were made.&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;No messages at all? Just stick figures? Well, that could be fun ...&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;prepare&quot;&gt;&gt;&lt;&lt;set $score to $score - 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;&lt;else&gt;&gt;
+&lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;printtribes&quot;&gt;&gt;&lt;&lt;set $score to $score - 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="council" tags="" position="2600,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
 &lt;&lt;set $wealth to $wealthstart&gt;&gt;
 &lt;&lt;set $spend to 0&gt;&gt;
 &lt;&lt;set $gift to 0&gt;&gt;
@@ -8473,6 +8983,37 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;unset $anxious6&gt;&gt;
 &lt;&lt;unset $anxious7&gt;&gt;
 &lt;&lt;unset $anxious8&gt;&gt;
+
+&lt;&lt;unset $baconc&gt;&gt;
+&lt;&lt;unset$bacon1&gt;&gt;
+&lt;&lt;unset$bacon2&gt;&gt;
+&lt;&lt;unset$bacon3&gt;&gt;
+&lt;&lt;unset$bacon4&gt;&gt;
+&lt;&lt;unset$bacon5&gt;&gt;
+&lt;&lt;unset$bacon6&gt;&gt;
+&lt;&lt;unset$bacon7&gt;&gt;
+&lt;&lt;unset$bacon8&gt;&gt;
+&lt;&lt;unset$bacon9&gt;&gt;
+&lt;&lt;unset$bacon10&gt;&gt;
+&lt;&lt;unset$bacon11&gt;&gt;
+
+&lt;&lt;unset $vilec&gt;&gt;
+&lt;&lt;unset $vile1&gt;&gt;
+&lt;&lt;unset $vile2&gt;&gt;
+&lt;&lt;unset $vile3&gt;&gt;
+&lt;&lt;unset $vile4&gt;&gt;
+&lt;&lt;unset $vile5&gt;&gt;
+
+&lt;&lt;unset $bevbaconc&gt;&gt;
+&lt;&lt;unset $bevbacon1&gt;&gt;
+&lt;&lt;unset $bevbacon2&gt;&gt;
+&lt;&lt;unset $bevbacon3&gt;&gt;
+&lt;&lt;unset $bevbacon4&gt;&gt;
+&lt;&lt;unset $bevbacon5&gt;&gt;
+&lt;&lt;unset $bevbacon6&gt;&gt;
+&lt;&lt;unset $bevbacon7&gt;&gt;
+
+
 
 
 &lt;div class=&quot;container&quot;&gt;
