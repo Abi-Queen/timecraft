@@ -1952,7 +1952,7 @@ console.log(tooltipList)
 &lt;p&gt;Much later, you rise in the predawn darkness and pick your way across the snoring forms strewn about the shop floor. Your head feels thick, and you go down to the dock to swim. The good folk of Jamestown think this ritual of yours is shockingly unhealthy and dangerous. You&#39;ve heard more than one whisper of &quot;sorcerer&quot; and &quot;warlock.&quot; Good. It&#39;s not uncommon for gunners and smiths to be suspected of unnatural dealings and black arts. Your grandfather was once forced to take a &quot;cleansing&quot; pilgrimage to Canterbury after his cannon shot twice as far as anyone believed possible at Calais, and they all thought he must have used witchcraft and made a deal with the Devil. Walking back up from the dock, you smile, thinking of the way he used to tell those stories. The pallisades of the fort loom black against the soft glow of dawn on the horizon. You feel ready for anything. Back at the shop, you stoke the fire, start breakfast, and make enough noise to wake John and Tom (a lot of noise) ... they aren&#39;t used to wine, and this will be an unpleasant morning for them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;img src=&quot;images/merry-fiddler.jpg&quot; alt=&quot;man in bright 17th-century clothing smiling and holding a violin and goblet&quot; width=&quot;90%&quot;&gt;
+&lt;img class=&quot;border&quot; src=&quot;images/merry-fiddler.jpg&quot; alt=&quot;man in bright 17th-century clothing smiling and holding a violin and goblet&quot; width=&quot;90%&quot;&gt;
 &lt;p class=&quot;caption&quot;&gt;Honthorst, &quot;The Merry Fiddler&quot; (Netherlands, 1623). From the &lt;a href=&quot;https://www.rijksmuseum.nl/en/collection/object/The-Merry-Fiddler--5443ebda5154f908c56c0b357db9f53e?tab=data&quot; target=&quot;_blank&quot;&gt;Rijksmuseum&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -2665,15 +2665,20 @@ play again to try new choices
             &lt;/div&gt;
             &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;p&gt;Tell them to stop chores and clean up while you cook some bacon and meal for all of you. They&#39;ll work better if they&#39;re not hungry.&lt;/p&gt;
-&lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice! Bacon is never a mistake. And in the future, it may be useful to have a loyal household. A little kindness and patience now may prove very valuable in days to come.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice! Bacon is never a mistake (unless it&#39;s a dude named Nathaniel). And in the future, it may be useful to have a loyal household. A little kindness and patience now may prove very valuable in days to come.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
                         &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;&lt;if $frethc or $freth1 or $freth2 or $freth3 or $freth4 or $indenture1 or $indenture2 or $indenture9 or $indenture10 or $contract1 or $contract2 or $beverley1 or $beverley2 or $beverley3 or $beverley4 or $beverley5&gt;&gt;
             &lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;dock&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;dock&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
@@ -3824,12 +3829,23 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
             &lt;br&gt;
                         &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+                        &lt;&lt;unset $shipsc&gt;&gt;
+&lt;&lt;unset $shipsPosture&gt;&gt;
+&lt;&lt;unset $shipsItems&gt;&gt;
+&lt;&lt;unset $shipsGroup&gt;&gt;
+&lt;&lt;unset $shipsTech&gt;&gt;
+&lt;&lt;unset $shipsMoney&gt;&gt;
+            &lt;&lt;if $shipsc or $shipsPosture or $shipsItems or $shipsGroup or $shipsTech or $shipsMoney&gt;&gt;
             &lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;trade&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;trade&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
@@ -4134,12 +4150,29 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;/div&gt;
 
+&lt;&lt;if $coffeec or $coffee1 or $coffee2 or $coffee3 or $miltonc or $milton1 or $milton2 or $milton3 or $milton4 or $milton5 or $milton6 or $milton7 or $printc or $print1 or $print2 or $print3 or $print4 or $print5 or $print6 or $print7 or $print8 or $portraitc or $portraitItems or $portraitDress or $portraitWar or $portraitPosture or $postureLabor or $anxiousc or $anxious1 or $anxious2 or $anxious3 or $anxious4 or $anxious5 or $anxious6 or $anxious7 or $anxious8&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;prepare&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
-
+&lt;&lt;elseif (not $pressKnowledge) and (not $pressControl) and (not $pressStatus) and (not $pressTheywill) and (not $pressPaper) and (not $pressLicensing)&gt;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-3&quot;&gt;
+            &lt;p&gt;&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text -2&quot; width=&quot;90%&quot;&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-9&quot;&gt;
+            &lt;p&gt;Nothing, eh?&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;&lt;p&gt;Sometimes this works out. It&#39;s a risk ... &lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;prepare&quot;&gt;&gt;&lt;&lt;set $score to $score - 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;&lt;else&gt;&gt;
+&lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;prepare&quot;&gt;&gt;&lt;&lt;set $score to $score - 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="coffee" tags="Source" position="2100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -5297,11 +5330,16 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
             &lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;trade&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;printbacon&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;else&gt;&gt;
+&lt;p&gt;No mined evidence was used. No stickers were earned.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;printbacon&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
+      
       &lt;/div&gt;
       &lt;/div&gt;
       
@@ -5384,9 +5422,16 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;feedback-good&quot;&gt;&lt;p&gt;Good choice.&lt;/p&gt;
 &lt;p&gt;The council agrees to let you run your press. They will draft a (surprisingly liberal) &quot;Act Concerning Printing&quot; for consideration by the House of Burgesses. In the meantime, you have special permission to begin your printing operation. Overall, and despite their prejudice against tradesmen like yourself, they show an appreciation of your value in the current crisis. You expect to be invited to take a more active role in leadership from now on.&lt;/p&gt;
             &lt;/div&gt;
-            &lt;/div&gt;
+&lt;br&gt;
+&lt;/div&gt;
+            &lt;br&gt;
+                        &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+            &lt;p class=&quot;center&quot;&gt;Choose a sticker for your treasure chest:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;printbacon&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
             &lt;/div&gt;
       &lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt;
       &lt;/div&gt;
@@ -5448,15 +5493,16 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
     
   &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="brown-mascuilnity" tags="Source" position="2500,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="brown-masculinity" tags="Source" position="2500,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;Kathleen M. Brown, &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; (University of North Carolina Press, 1996)&lt;/h1&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;Male Gentility&lt;/h1&gt;
+&lt;p class=&quot;subtitle&quot;&gt;Kathleen M. Brown, &lt;em&gt;Good Wives, Nasty Wenches, and Anxious Patriarchs: Gender, Race, and Power in Colonial Virginia&lt;/em&gt; (University of North Carolina Press, 1996)&lt;/p&gt;
 &lt;p&gt;This classic work on gender, race, and power in colonial Virginia by leading historian Kathleen Brown can tell us a lot about the outlook and behaviors of the men on Governor Berkeley&#39;s council in 1676. The authors reviewed, edited, and curated the following collection of excerpts extracted by ChatGPT from the chapter called, &quot;Marriage, Class Formation, and the Performance of Male Gentility.&quot;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;secondary source label&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block gold ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
 
@@ -5464,7 +5510,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the situation of indentured servants in plantation colonies and relationships with their masters. Select the links to save the text to your inventory.&lt;/p&gt;
+&lt;p&gt;Look for information about the behaviors and attitudes of wealthy, powerful men in mid-eighteenth-century Virginia. Select the links to save the text to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
@@ -5479,7 +5525,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious1 to &quot;Elite men&#39;s homes displayed power and wealth (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5496,7 +5542,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious2 to &quot;Land ownership was key (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5513,7 +5559,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious3 to &quot;Personal fitness and beauty were important (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5530,7 +5576,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious4 to &quot;Ideal elite masculinity was achieved and expressed across systems of kinship, race, and social class: &#39;Rooted firmly in familial, race, and class relations, Virginia planters’ material and social representations of self were the bedrock of gentry masculinity.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5547,7 +5593,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious5 to &quot;Self-control was prized: &#39;Habitual self-control, rooted in rural plantation life, was the key to exercising power over others.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5564,7 +5610,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;set $anxious6 to &quot;Bacon&#39;s Rebellion made race and gender more important than class divisions, unifying White males. (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5578,10 +5624,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;set $anxious7to &quot;Bacon&#39;s Rebellion made non-elite White men more assertive toward the elite: &#39;Ordinary men became unwilling to defer to the gentlemen who were supposed to be their leaders and demanded redress through armed resistance. ... [The rebels] derived a sense of power from collectively killing Indians, plundering the homes of the wealthy, and burning the seat of colonial government at Jamestown.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious7 to &quot;Bacon&#39;s Rebellion made non-elite White men more assertive toward the elite: &#39;Ordinary men became unwilling to defer to the gentlemen who were supposed to be their leaders and demanded redress through armed resistance. ... [The rebels] derived a sense of power from collectively killing Indians, plundering the homes of the wealthy, and burning the seat of colonial government at Jamestown.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5595,10 +5641,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;set $anxious8to &quot;Bacon&#39;s Rebellion drew power from a populist, racist, militant message: &#39;...fashioning a new ethic that incorporated racist violence, populist politics, and military coercion.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious8 to &quot;Bacon&#39;s Rebellion drew power from a populist, racist, militant message: &#39;...fashioning a new ethic that incorporated racist violence, populist politics, and military coercion.&#39; (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -5612,10 +5658,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;set $anxious9to &quot;Non-elite White men were politically active: &#39;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law. (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
+&lt;&lt;set $anxious9 to &quot;Non-elite White men were politically active: &#39;Indentured servants asserted their manhood and legal rights through the framework of English civility and contract law. (Brown, &#39;Anxious Patriarchs&#39;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
@@ -6031,7 +6077,10 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="48" name="prepare" tags="" position="2400,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="48" name="prepare" tags="" position="2400,200" size="100,100">&lt;&lt;set $spend to 0&gt;&gt;
+&lt;&lt;set $wealthstart to $wealth&gt;&gt;
+
+&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-result&quot;&gt;
 &lt;div class=&quot;setting-title&quot;&gt;
@@ -6046,87 +6095,75 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;h2&gt;Preparing for the Council Meeting&lt;/h2&gt;
 &lt;p&gt;There are four days until the council meeting. A lot can happen in four days. How will you use that time to strengthen your position? You can select more than one option.&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;choice&quot;&gt;
 &lt;h2&gt;You are starting with &amp;#163;&lt;&lt;print $wealth&gt;&gt; to spend.&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
 &lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;/div&gt;
+&lt;div class=&quot;col-md&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 
 &lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
-&lt;div class=&quot;row hr center&quot;&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepCol&quot; false true&gt;&gt;  Meet with the colonel at the fort.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Go to the fort to find Colonel Price who commands the garrison of regular troops. He&#39;s an old friend, well-respected by the wealthy men of the governor&#39;s council. Tell him you can produce the new firelocks, as many as he needs. With his support, success is guaranteed.&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
-&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;br&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepLady&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Befriend Lady Berkeley.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;It&#39;s worthwhile to visit the governor&#39;s wife, Lady Frances, and make a favorable impression. You know she&#39;s leaving soon for London, (probably on Captain Gardner&#39;s ship), as a diplomat to speak in defense of her husband&#39;s actions, and to ask for troops and ships to crush Bacon&#39;s dangerous, treasonous rebellion. Since he married Lady Frances, Governor Berkeley&#39;s policies have shifted significantly. Many have blamed her for Bacon&#39;s Rebellion. She isn&#39;t likely to refuse an offer of friendship now. If you can win her support, you&#39;ll have the governor on your side.&lt;/p&gt;
 &lt;p&gt;Better bring her a thoughtful gift. How much will you spend? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
-&lt;p&gt;&lt;&lt;numberbox &quot;$gift&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $gift)&gt;&gt;
+&lt;div&gt;
+&lt;&lt;numberbox &quot;$gift&quot; 0&gt;&gt;
+&lt;&lt;button &quot;Spend&quot;&gt;&gt;
+&lt;&lt;set $spend to ($spend + $gift)&gt;&gt;
 &lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
 &lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;br&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepClothes&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Get some decent clothes.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Spend some money to have your neighbor, the tailor, improve your best set of clothes. Maybe even make something new, if he has time. Appearances are important to the high-ranking petty tyrants (&quot;gentlemen,&quot; they call themselves) of the Governor&#39;s Council. They think you are a peasant, and they will ignore everything you say. No need to fulfil their expectations and arrive in dirty rags. If you look like you belong there, there&#39;s a chance they will listen to you. Maybe.&lt;/p&gt;
 &lt;p&gt;How much will you spend to level up your look? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
-&lt;p&gt;&lt;&lt;numberbox &quot;$clothes&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $clothes)&gt;&gt;
+&lt;div&gt;
+&lt;&lt;numberbox &quot;$clothes&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $clothes)&gt;&gt;
 &lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
 &lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;br&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepTalk&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Spread the word.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Tell everyone what you&#39;re trying to do. It will be a popular idea with the vast majority of folk in and near Jamestown. The more pro-printing talk the councilmembers hear between now and the meeting, the better.&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;row hr center&quot;&gt;
-&lt;br&gt;
 &lt;h3&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$prepMilitia&quot; false true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;  Muster the militia.&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Flex your power by calling a militia muster. Lead your company in drill practice. The town loves to see this. Everyone comes to watch (hoping to witness humiliating mistakes, preferably involving trauma and bloodshed). Treat the company to refreshments afterwards. The spectacle always enhances your status and boosts your troop&#39;s morale. Enhancing your public power before the meeting can only help your cause.&lt;/p&gt;
 &lt;p&gt;How much will you spend on food and drink? (Enter a number and select &quot;Spend.&quot;)&lt;/p&gt;
-&lt;p&gt;&lt;&lt;numberbox &quot;$muster&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $muster)&gt;&gt;
+&lt;div&gt;
+&lt;&lt;numberbox &quot;$muster&quot; 0&gt;&gt;&lt;&lt;button &quot;Spend&quot;&gt;&gt;&lt;&lt;set $spend to ($spend + $muster)&gt;&gt;
 &lt;&lt;replace #budget&gt;&gt;
-&lt;div class=&quot;col-md&quot; id=&quot;budget&quot;&gt;
 &lt;br&gt;
 &lt;p&gt;Remaining funds: &lt;span class=&quot;accent&quot;&gt;&amp;#163;&lt;&lt;print ($wealth) - ($spend)&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 
+&lt;/div&gt;
 
+&lt;div class=&quot;row scenario&quot;&gt;
 &lt;p class=&quot;center&quot;&gt;You&#39;re ready. Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;council&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="printbacon-mine" tags="" position="2900,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
@@ -6237,7 +6274,18 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="51" name="council" tags="" position="2600,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="51" name="council" tags="" position="2600,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
+&lt;&lt;set $wealth to $wealthstart&gt;&gt;
+&lt;&lt;set $spend to 0&gt;&gt;
+&lt;&lt;set $gift to 0&gt;&gt;
+&lt;&lt;set $clothes to 0&gt;&gt;
+&lt;&lt;set $muster to 0&gt;&gt;
+
+[[Looks like you overspent. Try again. Your wealth cannot be below zero. |prepare]]
+
+&lt;&lt;elseif $wealth gt 0&gt;&gt;
+
+&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-council&quot;&gt;
 &lt;div class=&quot;setting-title&quot;&gt;
@@ -6311,6 +6359,11 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if (not $prepMilitia) and (not $prepLady) and (not $prepCol) and (not $prepTalk) and (not $prepClothes)&gt;&gt;
+&lt;p&gt;Not using time or money to set yourself up for success? Ok. Fate will decide. Or luck. Or chance, destiny, &lt;em&gt;wyrd&lt;/em&gt; ... Why bother trying?&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
 &lt;p&gt;On your way to the council meeting, your mind is absorbed with the question of tone. You know what you will say. But how will you say it?&lt;/p&gt;
 &lt;p&gt;The men whose will you must direct are extremely wealthy and powerful. Most own vast estates in England, some in the Sugar Islands, too. In the small region of Jamestown, you are wealthy and influential. But you&#39;re stepping into the wider world of transatlantic politics, society, and finance. &quot;What&quot; you say matters a great deal. &quot;How&quot; you say it may matter even more.&lt;/p&gt;
 &lt;/div&gt;
@@ -6351,7 +6404,9 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;br&gt;
 &lt;br&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="mc-jackson1" tags="MC" position="1500,100" size="100,100">answer mc question, disappears on timer 
+&lt;/div&gt;
+
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="mc-jackson1" tags="MC" position="1500,100" size="100,100">answer mc question, disappears on timer 
 
 anachronism
 jefferson
