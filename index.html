@@ -532,6 +532,18 @@ background-image: url("images/hero-result.jpg");
   justify-content: space-around;
 }
 
+.hero-jacksonbattle {
+  background-image: url("images/hero-jacksonbattle.jpg");
+  box-shadow: inset 0px 0px 5px 5px #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .hero-pantribal {
   background-image: url("images/hero-pantribal.jpg");
   box-shadow: inset 0px 0px 5px 5px #000;
@@ -780,10 +792,12 @@ background-image: url("images/hero-result.jpg");
 }
 
 .leaflet-box {
-  min-height: 100px; 
+  background-image: url("images/leaflet-frame.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px; 
   align-content: center;
-  border: 2px black;
-  border-style: groove;
 }
 
 @media (max-width: 576px) {
@@ -5599,7 +5613,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="44" name="schmidt-bacon" tags="Source" position="3100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="44" name="schmidt-bacon" tags="Source" position="3100,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
@@ -6461,96 +6475,7 @@ anachronism
 jefferson
 frances berkeley
 militia 
-law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="52" name="debry" tags="Source" position="3250,625" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row choice&quot;&gt;
-&lt;div class=&quot;col-md-9&quot;&gt;
-&lt;h1&gt;Theodor de Bry&#39;s Engravings&lt;/h1&gt;
-&lt;p class=&quot;subtitle&quot;&gt;Netherlands, 1590&lt;/p&gt;
-&lt;p&gt;The first English colony in North America was Roanoke, founded by Sir Walter Raleigh on the coast of North Carolina in 1584. The colony mysteriously disappeared. John White was an artist who lived in the colony for a year before returning to England with a collection of watercolor images of the indigenous people he enountered. Later, Dutch artist Theodor de Bry created engravings based on White&#39;s paintings, for printing in Thomas Hariot&#39;s book, &lt;em&gt;A Brief and True Report of the New Found Land of Virginia&lt;/em&gt;. Hariot&#39;s book was hugely popular, and was widely reprinted in various formats for a good century. De Bry&#39;s images became popular and influential representations of Native Americans, shaping European colonists&#39; ideas about their indigenous neighbors.&lt;/p&gt;
-&lt;p&gt;The following examples are from the &lt;a href=&quot;https://jcb.lunaimaging.com/&quot; target=&quot;_blank&quot;&gt;John Carter Brown Library&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-sm-3&quot;&gt;
-&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;hr&gt;&lt;br&gt;
-
-&lt;h2&gt;Choose some images for your leaflet&lt;/h2&gt;
-&lt;p&gt;Use the checkmarks to select some images to adapt in your leaflet.&lt;/p&gt;
-&lt;p&gt;Draft a caption to print next to each image.&lt;/p&gt;
-&lt;p&gt;Remember, the purpose of this leaflet is to minimize the colonists&#39; fears and prejudices against the tribes. You want to encourage viewers to relate to the indingenous subjects as fellow humans, and to feel interested in engaging in peaceful interactions. The evidence you have mined (listed above) will help you understand your viewers&#39; mindsets.&lt;/p&gt;
-
-&lt;br&gt;
-
-&lt;div class=&quot;row center&quot;&gt;
-&lt;h2&gt;De Bry Title&lt;/h2&gt;
-&lt;p&gt;De Bry description&lt;/p&gt;
-&lt;img src=&quot;images/gothis.jpg&quot; alt=&quot;placeholder&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$debry1Save&quot; false true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt; Add this image to your leaflet?&lt;/label&gt;&lt;/p&gt;
-&lt;h3&gt;Add a comment?&lt;/h3&gt;
-&lt;p&gt;Save a comment about how you will use this image to influence colonists&#39; attitudes toward the tribes.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$debry1c&quot; `$debry1c ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h2&gt;De Bry Title&lt;/h2&gt;
-&lt;p&gt;De Bry description&lt;/p&gt;
-&lt;img src=&quot;images/gothis.jpg&quot; alt=&quot;placeholder&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$debry2Save&quot; false true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt; Add this image to your leaflet?&lt;/label&gt;&lt;/p&gt;
-&lt;h3&gt;Add a comment?&lt;/h3&gt;
-&lt;p&gt;Save a comment about how you will use this image to influence colonists&#39; attitudes toward the tribes.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$debry2c&quot; `$debry2c ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h2&gt;De Bry Title&lt;/h2&gt;
-&lt;p&gt;De Bry description&lt;/p&gt;
-&lt;img src=&quot;images/gothis.jpg&quot; alt=&quot;placeholder&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$debry3Save&quot; false true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt; Add this image to your leaflet?&lt;/label&gt;&lt;/p&gt;
-&lt;h3&gt;Add a comment?&lt;/h3&gt;
-&lt;p&gt;Save a comment about how you will use this image to influence colonists&#39; attitudes toward the tribes.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$debry3c&quot; `$debry3c ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-
-&lt;h2&gt;De Bry Title&lt;/h2&gt;
-&lt;p&gt;De Bry description&lt;/p&gt;
-&lt;img src=&quot;images/gothis.jpg&quot; alt=&quot;placeholder&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$debry4Save&quot; false true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt; Add this image to your leaflet?&lt;/label&gt;&lt;/p&gt;
-&lt;h3&gt;Add a comment?&lt;/h3&gt;
-&lt;p&gt;Save a comment about how you will use this image to influence colonists&#39; attitudes toward the tribes.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$debry4c&quot; `$debry4c ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;h2&gt;De Bry Title&lt;/h2&gt;
-&lt;p&gt;De Bry description&lt;/p&gt;
-&lt;img src=&quot;images/gothis.jpg&quot; alt=&quot;placeholder&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;h3&gt;Save evidence from this painting?&lt;/h3&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$debry5Save&quot; false true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt; Add this image to your leaflet?&lt;/label&gt;&lt;/p&gt;
-&lt;h3&gt;Add a comment?&lt;/h3&gt;
-&lt;p&gt;Save a comment about how you will use this image to influence colonists&#39; attitudes toward the tribes.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$debry5c&quot; `$debry5c ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-
-&lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="printtribes-mine" tags="" position="3200,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="52" name="printtribes-mine" tags="" position="3200,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 &lt;p&gt;Explore the branches in the mineshaft below, looking for information about Virginia colonists&#39; opinions about Native Americans during Bacon&#39;s Rebellion. Look for evidence about:&lt;/p&gt;
@@ -6578,79 +6503,82 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="52" name="
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-cc.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Craft your Choice&quot;&gt;&#39; &quot;printtribes-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="battle" tags="" position="3500,200" size="100,100">&lt;&lt;if ($result is &quot;rebellion&quot;) or ($council is &quot;defiance&quot;)&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="53" name="battle" tags="" position="3500,200" size="100,100">&lt;&lt;if ($result is &quot;rebellion&quot;) or ($council is &quot;defiance&quot;) or ($baconJoin)&gt;&gt;
+
 &lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row hero-printtribes&quot;&gt;
-&lt;div class=&quot;row transbox-hero&quot;&gt;
-&lt;h1&gt;&quot;Joining the Rebellion&quot;&lt;/h1&gt;
+&lt;div class=&quot;row hero-jacksonbattle&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;Joining the Rebellion&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p class=&quot;rt&quot;&gt;Above: Caption. From &lt;a href=&quot;https://oll.libertyfund.org/pages/images-of-liberty-and-power-diderot-encyclopedic-liberty-industry&quot; target=&quot;_blank&quot;&gt; Source&lt;/a&gt;.&lt;/p&gt;
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from the title page of a manual of pike and musket drill printed in England in 1639. From &lt;a href=&quot;https://www.britishmuseum.org/collection/image/581872001&quot; target=&quot;_blank&quot;&gt;The British Museum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;You manage to escape Jamestown just seconds ahead of the soldiers Berkeley has sent to arrest you. You hide in the thick riverine brush near the bank of the James River. You feel strange, like a stranger to yourself. You have no smithy, no servants, no business or home or tools or books. There&#39;s just you and the wind rushing through the willow leaves. Who are you?&lt;/p&gt;
+&lt;p&gt;You manage to escape Jamestown seconds ahead of the soldiers Berkeley has sent to arrest you. You hide in the thick riverine brush near the bank of the James River. You feel strange, like a stranger to yourself. You have no smithy, no servants, no business or home or tools or books. There&#39;s just you and the wind rushing through the willow leaves. Who are you?&lt;/p&gt;
 
-&lt;p&gt;When night falls, you venture out into the open. There&#39;s a good moon, and it&#39;s easy to find a well-traveled wagon road leading away from Jamestown. As dawn slowly spreads, it shows you a dark column of smoke rising in the distance. Bacon&#39;s army is burning and looting. Bacon has declared that he is the legitimate representative of the people, and that his opponents are outlaws. By ancient custom, an outlaw is &lt;em&gt;outside&lt;/em&gt; the protection of the law: Every loyal citizen has a duty to attack him. The smoke billowing on the horizon seems to confirm the rumors you heard in Jamestown - that Bacon&#39;s followers have welcomed the opportunity to redistribute the planters&#39; wealth (to themselves), and are burning and looting with glee.&lt;/p&gt;
+&lt;p&gt;When night falls, you venture out into the open. There&#39;s a good moon, and it&#39;s easy to find a well-traveled wagon road leading away from Jamestown. As dawn slowly spreads, it shows you a dark column of smoke rising in the distance. Bacon&#39;s army is burning and looting. Bacon has declared that he is the legitimate representative of the people, and that his opponents are outlaws. By ancient custom, an outlaw is &lt;em&gt;outside&lt;/em&gt; the protection of the law: Every loyal citizen has a duty to attack him. The smoke billowing on the horizon seems to confirm the rumors you heard in Jamestown - that Bacon&#39;s followers have welcomed the opportunity to redistribute the planters&#39; wealth (to themselves), and are burning and looting with glee. It is an appealing notion, in this moment.&lt;/p&gt;
 
-&lt;p&gt;By daybreak, you&#39;re approaching a handsome, columned mansion, surrounded by a dozen small outbuildings and acres of tobacco. Some of the bulidings are charred and smouldering, but the mansion itself seems to have been spared. Strewn about its grounds is a haphazard encampment of shoddy tents - a noisy and foul-smelling litter of humanity (&lt;em&gt;much like Jamestown&lt;/em&gt;, you think). Women have found a ready welcome here, as they do with any army. One group washes clothes in the stream. Others sit on a bench, spinning and sewing, chatting with still more who are cooking and serving food. A swarm of children runs past you at top speed. In the shade of the trees, a group of men sit in idle conversation. There&#39;s a mix of European and African faces.&lt;/p&gt;
+&lt;p&gt;By daybreak, you&#39;re approaching a handsome, columned mansion, surrounded by a dozen small outbuildings and acres of tobacco. Some of the bulidings are charred and smouldering, but the mansion itself seems to have been spared. Strewn about its grounds is a haphazard encampment of shoddy tents - a noisy and foul-smelling litter of humanity (&lt;em&gt;almost as bad as Jamestown&lt;/em&gt;, you think). Women have found a ready welcome here, as they do with any army. One group washes clothes in the stream. Others sit on a bench, spinning and sewing, chatting with still more who are cooking and serving food. A swarm of children runs past you at top speed. In the shade of the trees, a group of men sit in idle conversation. You notice the mix of European and African faces.&lt;/p&gt;
 
 &lt;p&gt;A month ago, this hurly-burly mix of people would have disturbed you, but your expulsion from Jamestown has left you embittered against the establishment, the status quo, the orderly system. But when the guards escort you into the cool and elegant dining room, Bacon and his council of wealthy planters dismiss the guards with firm authority and then look at you the way gentlemen always look at a smith. So. The gentry are still up there, and you&#39;re still down here. You smirk sardonically to yourself: &lt;em&gt;Berkeley or Bacon, what&#39;s the difference, really?&lt;/em&gt;. Bacon condescendingly offers you refreshment before asking your business.&lt;/p&gt;
 
-&lt;p&gt;You tell Bacon that you have brought Jamestown within his reach. The populace is ready to join him. They will open the gates to him. They don&#39;t trust you. But, they&#39;re not risking anything when they ask your opinion on how to achieve a decisive military victory at Jamestown.&lt;/p&gt;
+&lt;p&gt;You tell Bacon that you have brought Jamestown within his reach, that the people are ready to open the gates to him.&lt;/p&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;h2&gt;What is your plan for defeating Berkeley and his coalition in their stronghold?&lt;/h2&gt;
+&lt;p&gt;They are silent. They don&#39;t trust you. But, they&#39;re not risking anything when they ask your opinion on how to achieve a decisive military victory at Jamestown. This is your chance to secure a leading role in the birth of a new colony, and a new life for yourself. What will you say?&lt;/p&gt;
+
+&lt;div class=&quot;center choice&quot;&gt;
+&lt;h2&gt;Come up with a plan for defeating Berkeley and his coalition in their stronghold at Jamestown. Choose one of these options:&lt;/h2&gt;
 &lt;hr&gt;
-&lt;h3&gt;Fire&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$rebel&quot; &quot;fire&quot;&gt;&gt;  Fire&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Burn Jamestown. Berkeley and his cronies don&#39;t care about the settlement except as a fortification with strategic value. Burn the stinking midden heap and move on to Berkeley&#39;s plantation at Green Spring. That&#39;s his real power base.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Siege and Battle&lt;/h3&gt;
-&lt;p&gt;Surround the settlement. The rebels are motivated and united, which will make up for any disadvantage in the quality of their weapons or training. They will easily defeat Jamestown&#39;s small garrison of regular troops and the militia.&lt;/p&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$rebel&quot; &quot;siege&quot;&gt;&gt;  Siege and Battle&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;Surround Jamestown. The rebels are motivated and united, which will make up for any disadvantage in the quality of their weapons or training. They will easily defeat the fort&#39;s small garrison of regular troops and the militia.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Stealth&lt;/h3&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$rebel&quot; &quot;stealth&quot;&gt;&gt;  Stealth&lt;/label&gt;&lt;/h3&gt;
 &lt;p&gt;Send small detatchments of competent fighters to penetrate the fort&#39;s defenses at night. They can overwhelm or evade the troops inside, and then open the gates to the main rebel army. The rebels have lower-quality weapons and less training than the regular troops. But the context of a chaotic night attack and close-quarters fighting will minimize or even remove the impact of these disadvantages. The rebels will win.&lt;/p&gt;
 &lt;hr&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;p&gt;Before making a choice, grab the pickaxe and mine for knowledge.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;battle-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;h3&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$rebel&quot; &quot;bigger&quot;&gt;&gt;  The Bigger Picture&lt;/label&gt;&lt;/h3&gt;
+&lt;p&gt;Avoid Jamestown and its professional troops. Instead, build support in the hinterlands among ordinary colonists. Establish legitimacy and financing by sending multiple delegations to London, pledging loyalty to the king and defaming Berkeley&#39;s tyrannical misrule, presenting him as a usurper and traitor.&lt;/p&gt;
+&lt;hr&gt;
 
 &lt;/div&gt;
 
-&lt;&lt;elseif $printbacon is &quot;join&quot;&gt;&gt;
-
-&lt;div class=&quot;container&quot;&gt;
-
-&lt;p&gt;You manage to escape Jamestown just seconds ahead of the soldiers Berkeley has sent to arrest you. You&#39;re hiding in the thick riverine brush near the bank of the James River. Tom and John and your militia company have pledged loyalty to you and the rebellion. They will stay in Jamestown to encourage people to resist Berkeley. They will be ready to open the city gates when you return with Bacon and his army.&lt;/p&gt;
-
-&lt;p&gt;When night falls, you venture out into the open. There&#39;s a good moon, and it&#39;s easy to find a well-traveled wagon road leading away from Jamestown. As dawn slowly spreads, it shows you a dark column of smoke rising in the distance. Bacon&#39;s army is burning and looting. Bacon has declared that he is the legitimate representative of the people, and that his opponents are outlaws. By ancient custom, an outlaw is &lt;em&gt;outside&lt;/em&gt; the protection of the law: Every loyal citizen has a duty to attack him. The smoke billowing on the horizon seems to confirm the rumors you heard in Jamestown - that Bacon&#39;s followers have welcomed the opportunity to redistribute the planters&#39; wealth (to themselves), and are burning and looting with glee.&lt;/p&gt;
-
-&lt;p&gt;By daybreak, you&#39;re approaching a handsome, columned mansion, surrounded by a dozen small outbuildings and acres of tobacco. Some of the bulidings are charred and smouldering, but the mansion itself seems to have been spared. Strewn about its grounds is a haphazard encampment of shoddy tents - a noisy and foul-smelling litter of humanity - &lt;em&gt;much like Jamestown&lt;/em&gt;, you think. Women have found a ready welcome here, as they do with any army. One group washes clothes in the stream. Others sit on a bench, spinning and sewing, chatting with still more who are cooking and serving food. A swarm of children runs past you at top speed, and $dog growls a warning. In the shade of the trees, a group of men sit in idle conversation. There&#39;s a mix of European and African faces.&lt;/p&gt;
-
-&lt;p&gt;A month ago, this hurly-burly mix of people would have disturbed you, but your expulsion from Jamestown has left you embittered against the establishment, the status quo, the orderly system. But when the guards escort you into the cool and elegant dining room, Bacon and his council of wealthy planters dismiss the guards with firm authority and then look at you the way gentlemen always look at a smith. So. The gentry are still up there, and you&#39;re still down here. You smirk sardonically to yourself: &lt;em&gt;Berkeley or Bacon, what&#39;s the difference, really?&lt;/em&gt;. Bacon condescendingly offers you refreshment before asking your business.&lt;/p&gt;
-
-&lt;p&gt;You tell Bacon that you have brought Jamestown within his reach. The populace is ready to join him. They will open the gates to him. They don&#39;t trust you. But, they&#39;re not risking anything when they ask your opinion on how to achieve a decisive military victory at Jamestown. What is your plan for defeating Berkeley and his coalition in their stronghold?&lt;/p&gt;
 
 
-
-
+&lt;div class=&quot;center&quot;&gt;
+&lt;h1&gt;The End&lt;/h1&gt;
+&lt;p&gt;You&#39;ve arrived at an ending to William Jackson&#39;s tale. See how it looks.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-end.png&quot; class=&quot;graphicbtn&quot; alt=&quot;The End&quot;&gt;&#39; &quot;jackson-end&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
-
 
 &lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container&quot;&gt;
 
-rebels moving toward jamestown, been burning and looting
+&lt;div class=&quot;row hero-jacksonbattle&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;Joining the Rebellion&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;rt&quot;&gt;Above: Detail from the title page of a manual of pike and musket drill printed in England in 1639. From &lt;a href=&quot;https://www.britishmuseum.org/collection/image/581872001&quot; target=&quot;_blank&quot;&gt;The British Museum&lt;/a&gt;.&lt;/p&gt;
 
-if $printbacon isnot join
-you&#39;ve been mfg lots of flintlocks and updating militia; capt gen doing same w garrison troops
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;Your leaflet is working. In the region around Jamestown, people seem far more complaisant about the Native Americans. Far less fear and aggression. There&#39;s a new target for those feelings, now. There&#39;s smoke on the horizon. You can smell it in the air - a layer of doom ebbing and flowing over the familiar miasma of Jamestown itself. Bacon and his rebel army are closing in, burning and looting as they go. Refugees arrive at the fort each day, bringing panic and tales of horror.&lt;/p&gt; 
 
-count on poor weapons: bacon&#39;s militia mostly old matchlocks, used to fighting tribes/villagers/civilians 
+&lt;p&gt;One of these is a young woman named Meg. She is lady&#39;s maid to Mrs. Davis, whose large tobaccco plantation is just a day&#39;s ride from Jamestown. You often hunt with Mr. Davis. His favorite wheellock is on your workbench at this moment - a project you set aside when the printing press arrived. You&#39;ve seen Meg before, and wanted to know her better. There are very, very few female colonists whose social status is anywhere near your own ... and Meg would be impossible to ignore anywhere. Small and plump with laughing eyes, always in motion, quick and light and feminine - she&#39;s very much &quot;your style,&quot; as folks say.&lt;/p&gt;
+
+&lt;p&gt;And now she in the fort, under the protection of Lady Berkeley. Mr. and Mrs. Davis are being held as prisoners by the rebels, who looted the plantation house yesterday. Meg narrowly escaped capture herself - riding one of Mr. Davis&#39; horses, racing for her life just a breath ahead of Bacon&#39;s thugs. You refuse to think about what might have happened. Meg&#39;s presence here changes things. Your anxiety to defend the town has a new intensity.&lt;/p&gt; 
+
+&lt;p&gt;You&#39;re walking toward the fort now, with three friends from the militia company, to talk to Colonel Price about the military situation. Back in the shop, Thomas and John hard at work, producing the new flintlocks. They have made five so far - yet to be tested, and not your best work. But quality can wait. Right now, you&#39;re focused on speed. If you can arm most of your militia company with these new pieces, and have several spares locked in your storeroom before the rebels are at the gates, you will be satisfied.&lt;/p&gt;
+
+&lt;p&gt;The four of you have come up with a plan to present to Colonel Price. He&#39;s ultimately the leader in military matters here, but he&#39;s an old friend and a good person. He will want to hear your opinion. What will you do to defend Jamestown as Bacon&#39;s rebel army closes in?&lt;/p&gt; 
+
+if capt friend 
+
+bacon&#39;s militia disadvantages: poor supply, poor discipline, vulnerable to internal div
+
+mostly old matchlocks, used to fighting tribes/villagers/civilians 
 
 strategy? tactics? 
 
@@ -6689,10 +6617,10 @@ pikes
 to end 
 
 
-if $printbacon is join
+&lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="55" name="battle-mine" tags="" position="3500,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="54" name="battle-mine" tags="" position="3500,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 &lt;p&gt;Explore the branches in the mineshaft below, looking for information about mid-17th-century English warfare. Look for evidence about:&lt;/p&gt;
@@ -6719,7 +6647,11 @@ if $printbacon is join
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-cc.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Craft your Choice&quot;&gt;&#39; &quot;battle-choice&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="battle-choice" tags="" position="3500,400" size="100,100"></tw-passagedata><tw-passagedata pid="57" name="matchlock-videos" tags="Source" position="1250,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="battle-choice" tags="" position="3500,400" size="100,100">&lt;div class=&quot;center&quot;&gt;
+&lt;h1&gt;The End&lt;/h1&gt;
+&lt;p&gt;You&#39;ve arrived at an ending to William Jackson&#39;s tale. See how it looks.&lt;/p&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-end.png&quot; class=&quot;graphicbtn&quot; alt=&quot;The End&quot;&gt;&#39; &quot;jackson-end&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="matchlock-videos" tags="Source" position="1250,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h1&gt;Matchlock Muskets at Jamestown&lt;/h1&gt;
@@ -6877,7 +6809,7 @@ if $printbacon is join
 &lt;hr&gt;
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="donagan" tags="Source" position="3400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="donagan" tags="Source" position="3400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -6923,7 +6855,7 @@ if $printbacon is join
 &lt;/div&gt; 
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="va-militia" tags="Source" position="3400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="va-militia" tags="Source" position="3400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -6970,9 +6902,9 @@ if $printbacon is join
 &lt;/div&gt; 
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="powhatan-archer" tags="Source" position="1250,1750" size="100,100">Powhatan Archer&#39;s Rate of Fire
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="powhatan-archer" tags="Source" position="1250,1750" size="100,100">Powhatan Archer&#39;s Rate of Fire
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cUM70jrZt8w?si=ECgqvxM2JLzSbdWP&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="61" name="powhatan-war-peace" tags="Source" position="1600,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cUM70jrZt8w?si=ECgqvxM2JLzSbdWP&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="60" name="powhatan-war-peace" tags="Source" position="1600,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -7052,7 +6984,7 @@ Soon after, a group of Indians arrived with food and urged Smith to put out thei
 More messengers came and went through the night. Smith remained alert, pretending friendliness. In a show of goodwill, he left Edward Brynton to hunt fowl for Powhatan, and the Dutchmen to finish building his house—unaware that these men would soon betray him.
 
 
-</tw-passagedata><tw-passagedata pid="62" name="percy" tags="Source" position="1600,1800" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="61" name="percy" tags="Source" position="1600,1800" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -7159,7 +7091,7 @@ We sailed a few miles downriver. I, being weary and not strong on foot, remained
 My Lord General was unwell and stayed aboard ship. We rowed out to report to him. He rejoiced at our safe return but expressed displeasure that the queen had been spared. Captain Davis told me it was the General’s wish that she be executed—burned. I responded that, after so much bloodshed that day, I had no desire in cold blood to witness more. I also said burning her seemed cruel and unfit, and that if it must be done, a quicker death by gun or sword was more honorable.
 
 Turning away, Captain Davis then took the queen ashore with two soldiers and put her to the sword in the woods. Though he claimed it was by order of the Lord General, I am not fully persuaded that it was so.
-</tw-passagedata><tw-passagedata pid="63" name="chickahominy" tags="Source" position="1100,1800" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="62" name="chickahominy" tags="Source" position="1100,1800" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -7221,7 +7153,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="64" name="powhatan" tags="" position="900,1400" size="100,100">&lt;&lt;set $wealth to 500&gt;&gt;
+</tw-passagedata><tw-passagedata pid="63" name="powhatan" tags="" position="900,1400" size="100,100">&lt;&lt;set $wealth to 500&gt;&gt;
 
 &lt;div class=&quot;container&quot;&gt;
 
@@ -7278,7 +7210,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="powhatan-gov" tags="Source" position="1100,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="powhatan-gov" tags="Source" position="1100,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -7348,8 +7280,8 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="white-villages" tags="Source" position="2000,1900" size="100,100">John White Pomeioc, Secoton, Dance
-</tw-passagedata><tw-passagedata pid="67" name="white" tags="Source" position="2000,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="white-villages" tags="Source" position="2000,1900" size="100,100">John White Pomeioc, Secoton, Dance
+</tw-passagedata><tw-passagedata pid="66" name="white" tags="Source" position="2000,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-10&quot;&gt;
 &lt;h1&gt;John White&#39;s Paintings of Indigenous People in North Carolina, 1585&lt;/h1&gt;
@@ -7572,7 +7504,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;/html&gt;
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="white-women" tags="Source" position="2000,1800" size="100,100">John White women</tw-passagedata><tw-passagedata pid="69" name="smith-tribes" tags="Source" position="1600,1700" size="100,100">
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="67" name="white-women" tags="Source" position="2000,1800" size="100,100">John White women</tw-passagedata><tw-passagedata pid="68" name="smith-tribes" tags="Source" position="1600,1700" size="100,100">
 
 
 ### **Exploring, Trading, and Fighting in Virginia (Student Edition)**
@@ -7620,7 +7552,7 @@ To avoid treachery, Captain Smith followed a regular strategy: demand the native
 Despite the dangers, Smith and his men explored widely, traded when they could, and fought when they had to—always pressing forward in their efforts to secure the colony&#39;s survival.
 
 
-</tw-passagedata><tw-passagedata pid="70" name="huskanaw" tags="Source" position="2000,2000" size="100,100">smith&#39;s huskanaw w commentary</tw-passagedata><tw-passagedata pid="71" name="delawarr" tags="Source" position="2400,1800" size="100,100">
+</tw-passagedata><tw-passagedata pid="69" name="huskanaw" tags="Source" position="2000,2000" size="100,100">smith&#39;s huskanaw w commentary</tw-passagedata><tw-passagedata pid="70" name="delawarr" tags="Source" position="2400,1800" size="100,100">
 
 
 I left more than two hundred men in Virginia, most of them healthy and supplied with at least ten months’ worth of victuals in the storehouse. These stores were distributed daily, and Captain Argall had also recently discovered new food sources through trade with nearby petty kings. For small items like pieces of iron or copper, the natives willingly exchanged large amounts of corn and showed clear signs of friendship and trade.
@@ -7652,7 +7584,7 @@ North of our bay lies a rich fishing ground for cod and ling, as good as any in 
 Much land has already been partially prepared to receive corn, and during the winter I had it planted with root crops, which gave great relief to our people. Many grape vines have been planted throughout the region and are growing well. Truly, there is no shortage of anything—so long as we continue the work with courage and commitment.
 
 
-</tw-passagedata><tw-passagedata pid="72" name="virginia-co" tags="Source" position="2400,1700" size="100,100">
+</tw-passagedata><tw-passagedata pid="71" name="virginia-co" tags="Source" position="2400,1700" size="100,100">
 ### **Instructions for the First Settlers in Virginia (Student Edition)**
 
 We trust you will follow the orders given under the King’s Privy Seal, but to help you upon landing, we offer these further directions.
@@ -7741,7 +7673,7 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 
 
 
-</tw-passagedata><tw-passagedata pid="73" name="first-contact" tags="" position="1200,1400" size="100,100">&lt;&lt;if $firstsight is &quot;pantribal&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="72" name="first-contact" tags="" position="1200,1400" size="100,100">&lt;&lt;if $firstsight is &quot;pantribal&quot;&gt;&gt;
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-pantribal&quot;&gt;
@@ -7900,11 +7832,11 @@ Negotiate trade.What do they need? what do you want?
 &lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="74" name="conflict" tags="" position="1700,1400" size="100,100">things falling apart after 2nd wave colonists arrive, smith leaves; conflict mounting; Engl more aggressive; your dudes stole some gunpowder and blew themselves up; their dudes took some women
+</tw-passagedata><tw-passagedata pid="73" name="conflict" tags="" position="1700,1400" size="100,100">things falling apart after 2nd wave colonists arrive, smith leaves; conflict mounting; Engl more aggressive; your dudes stole some gunpowder and blew themselves up; their dudes took some women
 
 smith wants to negotiate; what does virginia co want? 
 
-what do you do? </tw-passagedata><tw-passagedata pid="75" name="women" tags="" position="2100,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;
+what do you do? </tw-passagedata><tw-passagedata pid="74" name="women" tags="" position="2100,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row hero-women&quot;&gt;
 &lt;div class=&quot;row setting-title&quot;&gt;
@@ -7955,7 +7887,7 @@ what do you do? </tw-passagedata><tw-passagedata pid="75" name="women" tags="" p
 &lt;&lt;button &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; alt=&quot;minecraft pickaxe&quot; width=&quot;70%&quot;&gt;&#39; &quot;women-mine&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="76" name="firstcontact-mine" tags="" position="1200,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="75" name="firstcontact-mine" tags="" position="1200,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;&lt;if $firstsight is &quot;pantribal&quot;&gt;&gt;
 
@@ -8008,7 +7940,7 @@ what do you do? </tw-passagedata><tw-passagedata pid="75" name="women" tags="" p
 &lt;/map&gt;
 
 &lt;&lt;/if&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="firstcontact-choice-pantribal" tags="" position="1200,1600" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="firstcontact-choice-pantribal" tags="" position="1200,1600" size="100,100">&lt;div class=&quot;container scenario scenter&quot; id=&quot;choose&quot;&gt;
 
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
 &lt;p&gt;So, what will you do about the new European settlement?&lt;/p&gt;
@@ -8260,7 +8192,7 @@ what do you do? </tw-passagedata><tw-passagedata pid="75" name="women" tags="" p
   &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="rountree" tags="Source" position="2000,2100" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="rountree" tags="Source" position="2000,2100" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -8326,15 +8258,15 @@ what do you do? </tw-passagedata><tw-passagedata pid="75" name="women" tags="" p
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="frances" tags="" position="900,2600" size="100,100">Frances Byrd 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="frances" tags="" position="900,2600" size="100,100">Frances Byrd 
 
 wealth a million 
 
-super chiaroscuro, terrifying world of darkness surrounds bright gentry life</tw-passagedata><tw-passagedata pid="80" name="sisters" tags="Source" position="2000,2200" size="100,100">three sisters legend</tw-passagedata><tw-passagedata pid="81" name="trade-diplomacy" tags="" position="2500,1400" size="100,100">establish trade patterns, diplomatic relations
+super chiaroscuro, terrifying world of darkness surrounds bright gentry life</tw-passagedata><tw-passagedata pid="79" name="sisters" tags="Source" position="2000,2200" size="100,100">three sisters legend</tw-passagedata><tw-passagedata pid="80" name="trade-diplomacy" tags="" position="2500,1400" size="100,100">establish trade patterns, diplomatic relations
 
 what do you want
 
-what do they want</tw-passagedata><tw-passagedata pid="82" name="caveat" tags="" position="100,1100" size="100,100">&lt;div class=&quot;container caveat&quot;&gt;
+what do they want</tw-passagedata><tw-passagedata pid="81" name="caveat" tags="" position="100,1100" size="100,100">&lt;div class=&quot;container caveat&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -8354,7 +8286,7 @@ what do they want</tw-passagedata><tw-passagedata pid="82" name="caveat" tags=""
 &lt;/div&gt;
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="83" name="percy-battle" tags="Source" position="1250,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="82" name="percy-battle" tags="Source" position="1250,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -8436,8 +8368,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="powhatan-end" tags="" position="900,1500" size="100,100">end screen
-</tw-passagedata><tw-passagedata pid="85" name="jackson-setting" tags="" position="900,100" size="100,100">&lt;&lt;set $psg to &quot;jackson&quot;&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="powhatan-end" tags="" position="900,1500" size="100,100">end screen
+</tw-passagedata><tw-passagedata pid="84" name="jackson-setting" tags="" position="900,100" size="100,100">&lt;&lt;set $psg to &quot;jackson&quot;&gt;&gt;
 
 &lt;&lt;set $wealth to 500&gt;&gt;
 &lt;&lt;set $score to 50&gt;&gt;
@@ -8590,7 +8522,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;/div&gt;
 
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="women-choice" tags="" position="2100,1500" size="100,100"></tw-passagedata><tw-passagedata pid="87" name="Untitled Passage" tags="" position="2100,1600" size="100,100"></tw-passagedata><tw-passagedata pid="88" name="powhatan-setting" tags="" position="900,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="women-choice" tags="" position="2100,1500" size="100,100"></tw-passagedata><tw-passagedata pid="86" name="Untitled Passage" tags="" position="2100,1600" size="100,100"></tw-passagedata><tw-passagedata pid="87" name="powhatan-setting" tags="" position="900,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row scenario center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -8608,7 +8540,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="PassageFooter" tags="Utilities" position="200,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="88" name="PassageFooter" tags="Utilities" position="200,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;)&gt;&gt;
 &lt;div class=&quot;container header&quot;&gt;
 &lt;br&gt;
 &lt;div class=&quot;row center&quot;&gt;
@@ -8616,7 +8548,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="printtribes-choice" tags="" position="3200,400" size="100,100">&lt;div class=&quot;container scenario scenter&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="printtribes-choice" tags="" position="3200,400" size="100,100">&lt;div class=&quot;container scenario scenter&quot;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h1&gt;Craft your Choice&lt;/h1&gt;
@@ -8808,7 +8740,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;leaflet&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="firstcontact-choice" tags="" position="1300,1600" size="100,100"></tw-passagedata><tw-passagedata pid="92" name="shop" tags="" position="1900,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="firstcontact-choice" tags="" position="1300,1600" size="100,100"></tw-passagedata><tw-passagedata pid="91" name="shop" tags="" position="1900,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
 &lt;&lt;set $wealth to $wealthstart&gt;&gt;
 &lt;&lt;set $spend to 0&gt;&gt;
 &lt;&lt;set $saltpeterQ to 0&gt;&gt;
@@ -8900,7 +8832,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="everyday17thc" tags="Source" position="3100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="everyday17thc" tags="Source" position="3100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;h1&gt;Visions of a Good Life&lt;/h1&gt;
@@ -9134,7 +9066,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;/html&gt;
 
 &lt;hr&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="leaflet" tags="" position="3200,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="leaflet" tags="" position="3350,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;br&gt;
 &lt;p&gt;Here is what your leaflet will look like:&lt;/p&gt;
 &lt;br&gt;
