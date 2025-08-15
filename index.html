@@ -6585,62 +6585,57 @@ law vs teaching indians to shoot</tw-passagedata><tw-passagedata pid="52" name="
 &lt;p class=&quot;rt&quot;&gt;Above: Detail from the title page of a manual of pike and musket drill printed in England in 1639. From &lt;a href=&quot;https://www.britishmuseum.org/collection/image/581872001&quot; target=&quot;_blank&quot;&gt;The British Museum&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;p&gt;Your leaflet is working. In the region around Jamestown, people seem far more complaisant about the Native Americans. Far less fear and aggression. There&#39;s a new target for those feelings, now. There&#39;s smoke on the horizon. You can smell it in the air - a layer of doom ebbing and flowing over the familiar miasma of Jamestown itself. Bacon and his rebel army are closing in, burning and looting as they go. Refugees arrive at the fort each day, bringing panic and tales of horror.&lt;/p&gt; 
+&lt;p&gt;Your leaflet is working. In the region around Jamestown, the hysterical fear and hatred of Indians has passed. And there&#39;s a new target for such feelings, now. Nathaniel Bacon has arrived. There&#39;s smoke on the horizon and wafting over the town - a layer of dread ebbing and flowing across the familiar stink of Jamestown itself. The rebel army is closing in, burning and looting as they go. Refugees arrive at the fort each day, bringing panic and tales of horror.&lt;/p&gt; 
 
 &lt;p&gt;One of these is a young woman named Meg. She is lady&#39;s maid to Mrs. Davis, whose large tobaccco plantation is just a day&#39;s ride from Jamestown. You often hunt with Mr. Davis. His favorite wheellock is on your workbench at this moment - a project you set aside when the printing press arrived. You&#39;ve seen Meg before, and wanted to know her better. There are very, very few female colonists whose social status is anywhere near your own ... and Meg would be impossible to ignore anywhere. Small and plump with laughing eyes, always in motion, quick and light and feminine - she&#39;s very much &quot;your style,&quot; as folks say.&lt;/p&gt;
 
 &lt;p&gt;And now she in the fort, under the protection of Lady Berkeley. Mr. and Mrs. Davis are being held as prisoners by the rebels, who looted the plantation house yesterday. Meg narrowly escaped capture herself - riding one of Mr. Davis&#39; horses, racing for her life just a breath ahead of Bacon&#39;s thugs. You refuse to think about what might have happened. Meg&#39;s presence here changes things. Your anxiety to defend the town has a new intensity.&lt;/p&gt; 
 
-&lt;p&gt;You&#39;re walking toward the fort now, with three friends from the militia company, to talk to Colonel Price about the military situation. Back in the shop, Thomas and John hard at work, producing the new flintlocks. They have made five so far - yet to be tested, and not your best work. But quality can wait. Right now, you&#39;re focused on speed. If you can arm most of your militia company with these new pieces, and have several spares locked in your storeroom before the rebels are at the gates, you will be satisfied.&lt;/p&gt;
+&lt;p&gt;You&#39;re walking toward the fort now, with several friends from the militia company&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;, along with Captain Gardner and De Pareja,&lt;&lt;/if&gt;&gt; to talk to Colonel Price about the military situation.&lt;/p&gt;
 
-&lt;p&gt;The four of you have come up with a plan to present to Colonel Price. He&#39;s ultimately the leader in military matters here, but he&#39;s an old friend and a good person. He will want to hear your opinion. What will you do to defend Jamestown as Bacon&#39;s rebel army closes in?&lt;/p&gt; 
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p&gt;Back in the shop, Thomas and John hard at work, producing the new flintlocks. If you can arm most of your militia company with these new pieces, and stockpile more before the rebels are at the gates, you will be satisfied.&lt;/p&gt;
 
-if capt friend 
+&lt;p&gt;Gardner keeps glancing out toward the coast, uneasy about leaving his ship. It has moved farther out into the bay, out of range of any cannons the rebels may have hauled down from the frontier forts. You&#39;re glad he has agreed to stay and help.&lt;/p&gt; 
+&lt;&lt;/if&gt;&gt;
 
-bacon&#39;s militia disadvantages: poor supply, poor discipline, vulnerable to internal div
-
-mostly old matchlocks, used to fighting tribes/villagers/civilians 
-
-strategy? tactics? 
-
-focus on defense? or go on offense? formations, weapons? capt gen make big decisions but you can prep your militia unit for sthng and he&#39;ll listen he&#39;s pragmatic if old fashioned 
-
-wheellocks
-lots of cheap matchlocks
-try to get a flintlock going; there&#39;s one at the fort (Bacon has a pistol), maybe he would let you look at it
-pistols for close quarters
-pikes
-
-meanwhile, you&#39;re experimenting with new weapons and tactics for your militia unit. you have a large standing order for muskets and pikes and powder for the garrison. the capt-gen is old and conservative, not open to experimentation w garrison but tolerates what you do w your own militia company
-
-focus on defense? or go on offense? formations, weapons? capt gen make big decisions but you can prep your militia unit for sthng and he&#39;ll listen he&#39;s pragmatic if old fashioned 
-
-if bought gunpowder supplies, make lots of powder; choice: all same formula and corning, or experiment?
-
-if capt is friend, you have lots of ideas for innovations to test. choose one to three to test.
-stick w matchlocks for simplicity, economy 
-convert entirely to flintlocks
-keep the drills simple bc some of the militia co lives far from the settlement and can&#39;t practice as a unit very often
-drill with configs of matchlocks, flintlocks, pike firing in rotation two rows at a time
-revolving barrels
-rifling for sharpshooting 
-bayonets: sword or halberd 
-pistols for close quarters
-crossbows
-
-else limited choices:
-wheel locks
-lots of cheap matchlocks
-try to get a flintlock going; there&#39;s one at the fort (capt gen has a pistol), maybe he would let you look at it
-pistols for close quarters
-pikes
-
-to end 
-
-
+&lt;p&gt;Colonel Price is ultimately the leader in military matters here, but he&#39;s a pragmatist and an old friend. He will want to hear your opinion.&lt;/p&gt; 
 &lt;/div&gt;
 
+&lt;p class=&quot;subtitle&quot;&gt;N.B. This is the last choice to be made in William Jackson&#39;s story. Next: The end.&lt;/p&gt;
+
+&lt;div class=&quot;row center choice&quot;&gt;
+&lt;h2&gt;What kind of plan have you and your comrades developed for defending Jamestown against Bacon?&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;h3&gt;Pitched Battle&lt;/h3&gt;
+&lt;p&gt;Bait the rebel forces into pitched battle at a site of your choosing. For instance, offer battle close to the river bank to minimize their numerical advantage. Battle is always a risk, but in this case, your troops have significant advantages in the quality of their equipment and their training. Bacon&#39;s &quot;troops&quot; are servants, slaves, and farmers who have been raiding soft targets like Indian villages and plantations. They&#39;re bandits, not soldiers. They will crumble in an open contest against well-equipped and disciplined troops like the Jamestown garrison and local militia companies.&lt;/p&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p&gt;Furthermore, the new model flintlocks you&#39;ve been making have a higher rate of fire. The rebels have some flintlocks, but many are in poor repair, and many of them probably have primitive, old matchlocks instead (also in poor repair). The rebel companies&#39; rate of fire will be far slower than your troops, due to inferior equipment and poor training.&lt;/p&gt;
+&lt;p&gt;Choosing a battle site near the navigable river channel will allow Captain Gardner to fire on the enemy&#39;s flanks with his ship&#39;s cannons. This will cause chaos in their already loose formation and force them to bunch together instead of encircling your smaller force.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;h3&gt;Prepare for a Siege.&lt;/h3&gt;
+&lt;p&gt;Battle is far too risky, considering the rebels&#39; numerical advantage and proven success in their fights against Native Americans and hostile plantations. Refuse to do battle. Instead, focus on fortifying the town&#39;s defensive pallisades with spikes, ditches, and plenty of cannons. Gather as much food and water as possible. Organize the populace to respond with specific tasks in case of an attack.&lt;/p&gt;
+&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;
+&lt;p&gt;Commission Captain Gardner to travel to England with all possible speed. There, he should requrest a large detatchment of troops to quell the rebellion immediately, before the king&#39;s loyal government is completely destroyed. Reduce the danger of starvation by securing passage for anyone not suited to the rigors of a siege on Garnder&#39;s ship (why feed them if they&#39;re not able to help?).&lt;/p&gt;
+&lt;p&gt;Meanwhile, make as many muskets and cast as much ammunition as possible so that shortages are not a problem during an attack.&lt;/p&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;h2&gt;Go Mining&lt;/h2&gt;
+&lt;p&gt;To make this choice, you need some evidence from history. Go mining and save useful items to your inventory.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-pickaxe.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Mine for Knowledge&quot;&gt;&#39; &quot;battle-mine&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+
+
 </tw-passagedata><tw-passagedata pid="54" name="battle-mine" tags="" position="3500,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
@@ -6648,6 +6643,7 @@ to end
 &lt;ul&gt;
 &lt;li&gt;The utility of various weapons and tactics in various contexts.&lt;/li&gt;
 &lt;li&gt;How to achieve battlefield success.&lt;/li&gt;
+&lt;li&gt;How to best fortify Jamestown against an attack.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;Think about the choice you need to make. Save useful items to your inventory. When you&#39;re ready to return to the story, choose &quot;Craft your Choice.&quot;&lt;/p&gt;
@@ -6832,17 +6828,16 @@ to end
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="donagan" tags="Source" position="3400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;English Warfare in the Mid Seventeenth Century&lt;/h1&gt;
-&lt;p&gt;Barbara Donagan&#39;s book, &lt;em&gt;War in England, 1642-1649&lt;/em&gt; (Oxford: Oxford University Press, 2008), tells us a lot about the weapons, tactics, strategies, and experiences of English warfare during the mid seventeenth century. The authors reviewed, edited, and curated the following collection of excerpts extracted by ChatGPT from the chapter called, &quot;The Means of Violence.&quot;&lt;/p&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;English Warfare c. 1650&lt;/h1&gt;
+&lt;p&gt;Barbara Donagan&#39;s book, &lt;em&gt;War in England, 1642-1649&lt;/em&gt; (Oxford: Oxford University Press, 2008), tells us a lot about the weapons, tactics, strategies, and experiences of English warfare during the mid seventeenth century. The authors reviewed, edited, and curated the following collection of excerpts generated by ChatGPT from the chapter called, &quot;The Means of Violence.&quot;&lt;/p&gt;
 &lt;hr&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block gold ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block redstone ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
-
 &lt;br&gt; 
 
 &lt;div class=&quot;row&quot;&gt;
@@ -6855,74 +6850,212 @@ to end
 &lt;p&gt;&lt;&lt;textarea &quot;$donaganc&quot; `$donaganc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Close quarters combat&quot;&gt;&gt;&lt;&lt;set $donagan1 to &quot;Close quarters combat&quot;&gt;&gt;&lt;&lt;set $donagan1Save to true&gt;&gt;&lt;&lt;set $score to $score +2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&quot;Hostilities were still conducted at close quarters and even artillery often dealt death at short range. The process of killing and wounding was intimate; death was rarely distant. Guns were limited in range and accuracy and a pike was ideally 18 feet long but usually 16 feet or less.&quot;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan1 to &quot;Close quarters combat: &#39;The process of killing and wounding was intimate; death was rarely distant. Guns were limited in range and accuracy and a pike was ideally 18 feet long but usually 16 feet or less.&#39; (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Close quarters combat: &quot;The process of killing and wounding was intimate; death was rarely distant. Guns were limited in range and accuracy and a pike was ideally 18 feet long but usually 16 feet or less.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link “Close quarters combat combined with firearms and primitive weapons like rocks and bow and arrow&quot;&gt;&gt;&lt;&lt;set $donagan2 to &quot;Close quarters combat combined with firearms and primitive weapons like rocks and bow and arrow&quot;&gt;&gt;&lt;&lt;set $donagan2Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&quot;Armies still employed a transitional mixture of firearms and ‘muscle-powered weapons’ that ranged from heavy artillery to clubs. Even the bow and arrow marginally survived ... while soldiers at Sherborne were so close that they threw stones rather than fire their muskets.&quot;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan2 to &quot;Typical weapons were firearms, pike, halberd, bow and arrow, and even primitive objects like rocks, sticks, and pitchforks. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Typical weapons were firearms, pike, halberd, bow and arrow, and even primitive objects like rocks, sticks, and pitchforks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link “Training was important to success in combat&quot;&gt;&gt;&lt;&lt;set $donagan3 to &quot;Training was important to success in combat&quot;&gt;&gt;&lt;&lt;set $donagan3Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&quot;Pistols were of doubtful accuracy beyond about seven yards, and body contact was ideal. Trained troops would hold their fire until the enemy was nearly upon them… [Sometimes] cavalry… held their fire until they could ‘discharge… just at their breasts’ ... combination of firepower and hand combat; ... [for example:] after one volley, his men advanced smartly ‘up to push of pike and the butt end of muskets’. ... combination of firepower and hand combat; ... [for example,] after one volley, his men advanced smartly ‘up to push of pike and the butt end of muskets’.&quot;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan3 to &quot;&#39;Trained troops would hold their fire until the enemy was nearly upon them.&#39; (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;&quot;Trained troops would hold their fire until the enemy was nearly upon them.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link “Cannons were unpredictable and had to be operated by highly skilled, experienced gunners&quot;&gt;&gt;&lt;&lt;set $donagan4 to &quot;Artillery was unpredictable and had to be operated by highly skilled, experienced gunners&quot;&gt;&gt;&lt;&lt;set $donagan4Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;Each cannon, by the nature of its manufacture, was an individual piece… a gunner had to come to terms with the quirks of his cannon much as a rider did with the ways of his horse. Hence… the survival of individual names for some guns, like ‘Roaring Megge’ or… ‘Sweet-lips’.&quot;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan4 to &quot;Cannons were unpredictable and had to be operated by highly skilled, experienced gunners. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Cannons were unpredictable and had to be operated by highly skilled, experienced gunners: &quot;Each cannon, by the nature of its manufacture, was an individual piece … a gunner had to come to terms with the quirks of his cannon much as a rider did with the ways of his horse. Hence … the survival of individual names for some guns, like ‘Roaring Megge’ or… ‘Sweet-lips’.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link “Cannons were crucial for large battles or sieges&quot;&gt;&gt;&lt;&lt;set $donagan5 to &quot;Cannons were crucial for large battles or sieges&quot;&gt;&gt;&lt;&lt;set $donagan5Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;“Artillery was valued for its ability to blast men as well as walls. At the siege of Plymouth in 1643 royalists planted batteries within pistol shot of a parliamentarian outer fort and the barrage ... forced its surrender. ... Bombardments ... joined with food shortage, prolonged discomfort, and dislocation ... to incite civilians to unrest. [Cannon bombardments could] … set fire to houses ... [and the] fire, smoke, and noise joined to frighten and demoralize [the residents].&quot;&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan5 to &quot;Cannons were valued for their ability to destroy troops in battle or walls in a siege. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Cannons were valued for their ability to destroy troops in battle or walls in a siege: &quot;Artillery was valued for its ability to blast men as well as walls. At the siege of Plymouth in 1643 royalists planted batteries within pistol shot of a parliamentarian outer fort and the barrage ... forced its surrender. ... Bombardments ... joined with food shortage, prolonged discomfort, and dislocation ... to incite civilians to unrest. [Cannon bombardments could] … set fire to houses ... [and the] fire, smoke, and noise joined to frighten and demoralize [the residents].&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
-&lt;h3&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link “Firearms were dangerously unpredictable&quot;&gt;&gt;&lt;&lt;set $donagan6 to &quot;Firearms were dangerously unpredictable&quot;&gt;&gt;&lt;&lt;set $donagan6Save to true&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/h3&gt;
-&lt;p&gt;&quot;[To make musket balls,] troops carried moulds and nippers ... but ... their home-made ammunition did not fit their muskets. The subsequent ‘gnawing’ or ‘shaving’ of bullets ... caused a tumbling motion that produced tearing wounds and led to accusations of atrocity.&quot;&lt;/p&gt;
-&lt;/div&gt; 
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan6 to &quot;Firearms were dangerously unpredictable. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Firearms were dangerously unpredictable: [To make musket balls,] troops carried moulds and nippers ... but ... their home-made ammunition did not fit their muskets. The subsequent ‘gnawing’ or ‘shaving’ of bullets ... caused a tumbling motion that produced tearing wounds and led to accusations of atrocity.&quot;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="va-militia" tags="Source" position="3400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;Matchlock Muskets at Jamestown&lt;/h1&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;Matchlock Muskets&lt;/h1&gt;
 &lt;p&gt;By the time of Bacon&#39;s Rebellion, the British military was using more efficient flintlock muskets, rather than the old matchlocks. The soldiers at the Jamestown fort would have had flintlocks. But many colonists - like those in Bacon&#39;s rebel army - still relied on the simple and primitive matchlocks of their parents&#39; generation.&lt;/p&gt;
 &lt;p&gt;These two wonderful videos from the &lt;a href=&quot;https://www.jyfmuseums.org/visit/american-revolution-museum-at-yorktown&quot; target=&quot;_blank&quot;&gt;Jamestown Settlement and American Revolution Museum at Yorktown&lt;/a&gt; show us how colonists would have used matchlock muskets in a military context.&lt;/p&gt;
 &lt;hr&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block gold ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block redstone ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
 &lt;/div&gt;
-
 &lt;br&gt; 
 
-&lt;div class=&quot;row&quot;&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the tactics, strategies, and weapons commonly used by English soldiers in the mid seventeenth century. Select the links to save the text to your inventory.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;Look for information about the tactics, strategies, and weapons commonly used by English soldiers in the mid seventeenth century. Save useful items to your inventory by choosing some of the links below each video.&lt;/p&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$musketvc&quot; `$musketvc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+
+&lt;h2&gt;Video 1: Matchlock Musket Rate of Fire&lt;/h2&gt;
+&lt;p&gt;This video demonstrates the process of loading and firing a matchlock musket, and discusses the weapon&#39;s military applications. Using a flintlock would have been a bit simpler and faster, but similar.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Video 2: Militia Drill with Matchlocks&lt;/h2&gt;
+&lt;p&gt;This video demonstrates a typical 17th-century colonial militia drill using matchlock muskets, giving a sense of the weapon&#39;s tactical advantages and limitations. Again, bear in mind that using a flintlock would have been a bit simpler and faster, but similar.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;Matchlock Musket Rate of Fire&lt;/h2&gt;
-&lt;p&gt;This video demonstrates the process of loading and firing a matchlock musket, and discusses the weapon&#39;s military applications.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;br&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$musketv1ItemSave&quot; false true&gt;&gt;&lt;&lt;set $musketv1Item to &quot;Item.&quot;&gt;&gt; Item.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $musketv1 to &quot;It takes a long time to load, prime, and fire a matchlock musket. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;It takes a long time to load, prime, and fire a matchlock musket.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;h2&gt;Militia Drill with Matchlocks&lt;/h2&gt;
-&lt;p&gt;This video demonstrates a typical 17th-century colonial militia drill using matchlock muskets, giving a sense of the weapon&#39;s tactical advantages and limitations.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;br&gt;
-&lt;ul class=&quot;nodot&quot;&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;checkbox &quot;$musketv1ItemSave&quot; false true&gt;&gt;&lt;&lt;set $musketv1Item to &quot;Item.&quot;&gt;&gt; Item.&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt; 
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $musketv2 to &quot;Lots of practice to develop muscle memory for quick reloading would greatly improve the effectiveness of a matchlock musketeer. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Lots of practice to develop muscle memory for quick reloading would greatly improve the effectiveness of a matchlock musketeer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;&lt;set $musketv3 to &quot;Matchlock muskets are extremely accurate. To improve the effectiveness of a unit of matchlock musketeers, a majority of training hours should be devoted to marksmanship to improve each soldiers&#39; accuracy. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Matchlock muskets are extremely accurate. To improve the effectiveness of a unit of matchlock musketeers, a majority of training hours should be devoted to marksmanship to improve each soldiers&#39; accuracy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $musketv4 to &quot;Practicing as a group would be crucial so that a unit of musketeers could maintain a maximum rate of fire, and move across terrain without breaking formation. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Practicing as a group would be crucial so that a unit of musketeers could maintain a maximum rate of fire, and move across terrain without breaking formation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;hr&gt;
+&lt;/div&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="powhatan-archer" tags="Source" position="1250,1750" size="100,100">Powhatan Archer&#39;s Rate of Fire
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cUM70jrZt8w?si=ECgqvxM2JLzSbdWP&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="60" name="powhatan-war-peace" tags="Source" position="1600,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;
