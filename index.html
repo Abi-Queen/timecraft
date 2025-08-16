@@ -2038,6 +2038,8 @@ console.log(tooltipList)
 &lt;/div&gt;
 
 &lt;div class=&quot;scenario&quot;&gt;
+&lt;p&gt;Congratulations, $PlayerName! Your time travel journey has come to an end.&lt;/p&gt;
+
 &lt;&lt;if $result is &quot;wilderness&quot;&gt;&gt;
 &lt;p&gt;To write: One paragraph &quot;end&quot; if exile to the wilderness.&lt;/p&gt;
 
@@ -2484,7 +2486,13 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;br&gt;
 &lt;ul&gt;
 &lt;li class=&quot;evidence&quot;&gt;Score: $score&lt;/li&gt;
-&lt;li class=&quot;evidence&quot;&gt;Wealth: &amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/li&gt;
+&lt;&lt;if $psg isnot &quot;powhatan&quot;&gt;&gt;
+&lt;li class=&quot;evidence&quot;&gt;
+&lt;&lt;if $psg is &quot;jackson&quot;&gt;&gt;Wealth: &amp;#163;&lt;&lt;print $wealth&gt;&gt;
+&lt;&lt;else&gt;&gt;Wealth: $&lt;&lt;print $wealth&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;/li&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;li&gt;&lt;&lt;link &quot;&lt;img src=&#39;images/mc-chest-icon.png&#39; alt=&#39;closed wooden chest&#39; class=&#39;chest&#39;&gt;&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Treasure Chest&quot;).wikiPassage(&quot;chest&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -8763,6 +8771,13 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;unset $bevbacon6&gt;&gt;
 &lt;&lt;unset $bevbacon7&gt;&gt;
 
+&lt;&lt;unset $schmidtc&gt;&gt;
+&lt;&lt;unset $schmidt1&gt;&gt;
+&lt;&lt;unset $schmidt2&gt;&gt;
+&lt;&lt;unset $schmidt3&gt;&gt;
+&lt;&lt;unset $schmidt4&gt;&gt;
+&lt;&lt;unset $schmidt5&gt;&gt;
+
 &lt;&lt;unset $baconAH&gt;&gt;
 &lt;&lt;unset $baconTreason&gt;&gt;
 &lt;&lt;unset $baconMasculinity&gt;&gt;
@@ -8771,12 +8786,41 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;unset $baconJoin&gt;&gt;
 &lt;&lt;unset $baconNothing&gt;&gt;
 
+&lt;&lt;unset $donaganc&gt;&gt;
 &lt;&lt;unset $donagan1&gt;&gt;
 &lt;&lt;unset $donagan2&gt;&gt;
 &lt;&lt;unset $donagan3&gt;&gt;
 &lt;&lt;unset $donagan4&gt;&gt;
 &lt;&lt;unset $donagan5&gt;&gt;
 &lt;&lt;unset $donagan6&gt;&gt;
+
+&lt;&lt;unset $lifesevc&gt;&gt;
+&lt;&lt;unset $lifesevAg&gt;&gt;
+&lt;&lt;unset $lifesevCommunity&gt;&gt;
+&lt;&lt;unset $lifesevDress&gt;&gt;
+&lt;&lt;unset $lifesevMetal&gt;&gt;
+
+&lt;&lt;unset $leafletTitle&gt;&gt;
+&lt;&lt;unset $leafletPomeioc&gt;&gt;
+&lt;&lt;unset $captionPomeioc&gt;&gt;
+&lt;&lt;unset $leafletArchers&gt;&gt;
+&lt;&lt;unset $captionArchers&gt;&gt;
+&lt;&lt;unset $leafletBoats&gt;&gt;
+&lt;&lt;unset $captionBoats&gt;&gt;
+&lt;&lt;unset $leafletDance&gt;&gt;
+&lt;&lt;unset $captionDance&gt;&gt;
+&lt;&lt;unset $leafletPrayer&gt;&gt;
+&lt;&lt;unset $captionPrayer&gt;&gt;
+&lt;&lt;unset $leafletFish&gt;&gt;
+&lt;&lt;unset $captionFish&gt;&gt;
+&lt;&lt;unset $leafletFishing&gt;&gt;
+&lt;&lt;unset $captionFishing&gt;&gt;
+&lt;&lt;unset $leafletConjurer&gt;&gt;
+&lt;&lt;unset $captionConjurer&gt;&gt;
+&lt;&lt;unset $leafletLady&gt;&gt;
+&lt;&lt;unset $captionLady&gt;&gt;
+&lt;&lt;unset $leafletSeething&gt;&gt;
+&lt;&lt;unset $captionSeething&gt;&gt;
 
 &lt;&lt;unset $musketvc&gt;&gt;
 &lt;&lt;unset $musketv1&gt;&gt;
