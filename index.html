@@ -2030,34 +2030,65 @@ console.log(tooltipList)
 &lt;br&gt;
 
 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="jackson-end" tags="" position="900,300" size="100,100">&lt;&lt;if $result is &quot;wilderness&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="jackson-end" tags="" position="900,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row hero-jackson&quot;&gt;
+&lt;div class=&quot;setting-title&quot;&gt;
+&lt;h1&gt;The End&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;scenario&quot;&gt;
+&lt;&lt;if $result is &quot;wilderness&quot;&gt;&gt;
+&lt;p&gt;To write: One paragraph &quot;end&quot; if exile to the wilderness.&lt;/p&gt;
 
 &lt;&lt;elseif $result is &quot;leave&quot;&gt;&gt;
+&lt;p&gt;To write: One paragraph &quot;end&quot; if returning to Europe.&lt;/p&gt;
 
+&lt;&lt;elseif $battle is &quot;siege&quot;&gt;&gt;
+&lt;p&gt;To write: One paragraph &quot;end&quot; if siege was chosen.&lt;/p&gt;
+
+&lt;&lt;elseif $battle is &quot;battle&quot;&gt;&gt;
+&lt;p&gt;To write: One paragraph &quot;end&quot; if battle was chosen.&lt;/p&gt;
 
 &lt;&lt;/if&gt;&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
+&lt;div class=&quot;center choice&quot;&gt;
+&lt;h2&gt;$PlayerName: Your Stats&lt;/h2&gt;
+&lt;p&gt;Here are your stats from this session.&lt;/p&gt;
+&lt;h3&gt;Score: &lt;&lt;print $score&gt;&gt;&lt;/h3&gt;
+&lt;h3&gt;Wealth: &amp;#163;&lt;&lt;print $wealth&gt;&gt;&lt;/h3&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-div: Choose an ending:
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;img src=&quot;images/mc-chest-open.jpg&quot; alt=&quot;Minecraft chest with lid open&quot;&gt;&lt;/div&gt;
+&lt;h2&gt;$PlayerName: Your Treasure and Knowledge&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Here are the stickers you have earned and the knowledge you have mined from history.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;&lt;include &quot;chest&quot;&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-1. happily ever after
-2. die of dysentery
-3. something else
-4. write your own (textarea)
-submit = reload page, disappear this div 
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;p&gt;Thank you for playing, $PlayerName! Next time, see how your story changes when you make different choices.&lt;/p&gt;
+&lt;img src=&quot;images/wildchild2.png&quot; alt=&quot;furry and naked child with claws&quot; width=&quot;60%&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
-Display stats
+&lt;div class=&quot;row scenario&quot;&gt;
+&lt;h2&gt;Save your Story&lt;/h2&gt;
+&lt;p&gt;Below is a summary of William Jackson&#39;s story, based on the choices you made. To save this whole page as a pdf file, choose &quot;print to pdf&quot; or &quot;save to pdf&quot; from the browser menu.&lt;/p&gt;
 
-Treasure chest w/ stickers 
+&lt;p&gt;(To do: Build story framework w if choices and a few images.)&lt;/p&gt;
+&lt;/div&gt;
 
-Inventory of saved evidence; each box of inventory is a scroll background 
-
-Print story w images and evidence and selected ending and works cited
-
-print to pdf instructions
-
-play again to try new choices
-
+&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="8" name="serv-mine" tags="" position="1100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
@@ -4466,6 +4497,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;div class=&quot;row center source-chest&quot;&gt;
 &lt;h2&gt;Knowledge You Have Mined&lt;/h2&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About servants:&lt;/h3&gt;
 &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $freth1&gt;&gt;&lt;p&gt;&lt;&lt;print $freth1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
@@ -4487,16 +4519,51 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;if $beverley4&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $beverley5&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley5&gt;&gt;&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About ship captains:&lt;/h3&gt;
+&lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about Seventeenth-Century Paintings)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $shipsPosture&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsPosture&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $shipsItems&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsItems&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $shipsGroup&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsGroup&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $shipsTech&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsTech&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $shipsMoney&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsMoney&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About the press:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;if (def $coffeec) and ($coffeec isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $coffeec&gt;&gt;&quot; (Comments by $PlayerName about Seventeenth-Century London Coffeehouse Bans)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee1&gt;&gt;&lt;p&gt;&lt;&lt;print $coffee1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee2&gt;&gt;&lt;p&gt;&lt;&lt;print $coffee2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee3&gt;&gt;&lt;p&gt;&lt;&lt;print $coffee3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $coffee4&gt;&gt;&lt;p&gt;&lt;&lt;print $coffee4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $miltonc) and ($miltonc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $miltonc&gt;&gt;&quot; (Comments by $PlayerName about Milton, &lt;em&gt;Aeropagitica&lt;/em&gt;, 1644)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton1&gt;&gt;&lt;p&gt;&lt;&lt;print $milton1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton2&gt;&gt;&lt;p&gt;&lt;&lt;print $milton2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton3&gt;&gt;&lt;p&gt;&lt;&lt;print $milton3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton4&gt;&gt;&lt;p&gt;&lt;&lt;print $milton4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton5&gt;&gt;&lt;p&gt;&lt;&lt;print $milton5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton6&gt;&gt;&lt;p&gt;&lt;&lt;print $milton6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $milton7&gt;&gt;&lt;p&gt;&lt;&lt;print $milton7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $printc) and ($printc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $printc&gt;&gt;&quot; (Comments by $PlayerName about the Licensing Order of 1643)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print1&gt;&gt;&lt;p&gt;&lt;&lt;print $print1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print2&gt;&gt;&lt;p&gt;&lt;&lt;print $print2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print3&gt;&gt;&lt;p&gt;&lt;&lt;print $print3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print4&gt;&gt;&lt;p&gt;&lt;&lt;print $print4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print5&gt;&gt;&lt;p&gt;&lt;&lt;print $print5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print6&gt;&gt;&lt;p&gt;&lt;&lt;print $print6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print7&gt;&gt;&lt;p&gt;&lt;&lt;print $print7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $print8&gt;&gt;&lt;p&gt;&lt;&lt;print $print8&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About elite Virginia men:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About Bacon&#39;s Rebellion:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About Native Americans and Bacon&#39;s Rebellion:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
 &lt;h3&gt;About war:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;/div&gt;
@@ -6528,14 +6595,55 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p class=&quot;card-text&quot;&gt;Furthermore, the new model flintlocks you&#39;ve been making have a higher rate of fire. The rebels have some flintlocks, but many are in poor repair, and many of them probably have primitive, old matchlocks instead (also in poor repair). The rebel companies&#39; rate of fire will be far slower than your troops, due to inferior equipment and poor training.&lt;/p&gt;
 &lt;p class=&quot;card-text&quot;&gt;Choosing a battle site near the navigable river channel will allow Captain Gardner to fire on the enemy&#39;s flanks with his ship&#39;s cannons. This will cause chaos in their already loose formation and force them to bunch together instead of encircling your smaller force.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
-      &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-	          &lt;&lt;if $bportraitsWar&gt;&gt;
+&lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
+&lt;&lt;if $donagan7&gt;&gt;
                 &lt;div class=&quot;mined&quot;&gt;
-                &lt;p&gt;&lt;&lt;print $bportraitsWar&gt;&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;&lt;print $donagan7&gt;&gt;&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;br&gt;
-          &lt;&lt;/if&gt;&gt;
-          
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan5&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $donagan5&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan4&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $donagan4&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan3&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $donagan3&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv1&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $musketv1&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv2&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $musketv2&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv4&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $musketv4&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv5&gt;&gt;
+                &lt;div class=&quot;mined&quot;&gt;
+                &lt;p&gt;&lt;&lt;print $musketv5&gt;&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;br&gt;
+&lt;&lt;/if&gt;&gt;
       &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $battle to &quot;fight&quot;&gt;&gt;&lt;&lt;set $score to $score + 10&gt;&gt;
             &lt;div class=&quot;row center evidence&quot;&gt;
             &lt;h1&gt;Your choice&lt;/h1&gt;
@@ -6584,13 +6692,24 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;Meanwhile, make as many muskets and cast as much ammunition as possible so that shortages are not a problem during an attack.&lt;/p&gt;
 &lt;&lt;/if&gt;&gt;
       &lt;br&gt;&lt;h3 class=&quot;card-text&quot;&gt;Evidence Mined:&lt;/h3&gt;
-&lt;&lt;if $bportraitsWar&gt;&gt;
+&lt;&lt;if $donagan6&gt;&gt;
 &lt;div class=&quot;mined&quot;&gt;
-&lt;p&gt;&lt;&lt;print $bportraitsWar&gt;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&lt;print $donagan6&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;br&gt;
 &lt;&lt;/if&gt;&gt;
-
+&lt;&lt;if $donagan2&gt;&gt;
+&lt;div class=&quot;mined&quot;&gt;
+&lt;p&gt;&lt;&lt;print $donagan2&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan1&gt;&gt;
+&lt;div class=&quot;mined&quot;&gt;
+&lt;p&gt;&lt;&lt;print $donagan1&gt;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
       &lt;p class=&quot;center&quot;&gt;&lt;&lt;button &quot;Choose&quot;&gt;&gt;&lt;&lt;replace &quot;#choose&quot;&gt;&gt;&lt;&lt;set $battle to &quot;siege&quot;&gt;&gt;&lt;&lt;set $score to $score - 10&gt;&gt;
            &lt;div class=&quot;row center evidence&quot;&gt;
             &lt;h1&gt;Your choice:&lt;/h1&gt;
@@ -6879,7 +6998,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;set $donagan5 to &quot;Cannons were valued for their ability to destroy troops in battle or walls in a siege. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $donagan5 to &quot;Cannons were valued for their ability to destroy troops in battle or walls in a siege, but were expensive and unreliable. Cannons could be devastating in the right circumstances, but were very difficult to operate and move. Sometimes, heavy bombardment failed to breach a strong or well-situated fortification. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
 &lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
@@ -6888,7 +7007,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;Cannons were valued for their ability to destroy troops in battle or walls in a siege: &quot;Artillery was valued for its ability to blast men as well as walls. At the siege of Plymouth in 1643 royalists planted batteries within pistol shot of a parliamentarian outer fort and the barrage ... forced its surrender. ... Bombardments ... joined with food shortage, prolonged discomfort, and dislocation ... to incite civilians to unrest. [Cannon bombardments could] … set fire to houses ... [and the] fire, smoke, and noise joined to frighten and demoralize [the residents].&quot;&lt;/p&gt;
+&lt;p&gt;Cannons were valued for their ability to destroy troops in battle or walls in a siege, but were expensive and unreliable. Cannons could be devastating in the right circumstances, but were very difficult to operate and move. Sometimes, heavy bombardment failed to breach a strong or well-situated fortification: &quot;Artillery was valued for its ability to blast men as well as walls. ... The effectiveness of artillery varied not only with size and number of guns and skill of gunners but also with the nature and strength of fortifications against which it was directed. … sustained heavy bombardment could shatter the walls of Arundel castle and assert the destructive force of seventeenth-century siege artillery … It [artillery] was expensive of manpower, horsepower, and cash; moving was at best cumbersome and slow, at worst it was immobilized by rain and mud.&quot;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -6910,7 +7029,23 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;hr&gt;
 
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $donagan7 to &quot;Bombardment by cannons during a siege inflicted physical as well as psychological harm on the defenders. (Donagan, &lt;em&gt;War in England&lt;/em&gt;)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Bombardment by cannons during a siege inflicted physical as well as psychological harm on the defenders: &quot;Bombardments opened breaches that might pave the way to successful assault or negotiated surrender, but they also joined with food shortage, prolonged discomfort, and dislocation of normal life as factors inciting civilians to unrest that complicated the task of defending commanders. At Chester, Lord Byron faced increasing difficulty in restraining ‘mutinous’ civilians in the face of heavy terror bombardment by parliamentarians. These planned attacks, concentrated at night, used mortars and grenades much as flying bombs and missiles were used in a later age. After the range had been found with stone balls, the town was terrified by huge balls that battered and set fire to houses; fire, smoke and noise joined to frighten and demoralize as well as kill the inhabitants.”&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;hr&gt;
+
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="va-militia" tags="Source" position="3400,500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -7011,6 +7146,24 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;Practicing as a group would be crucial so that a unit of musketeers could maintain a maximum rate of fire, and move across terrain without breaking formation.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $musketv5 to &quot;The overall impression is that, in battle, all else being equal, the side with superior equipment and discipline will win. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;The overall impression is that, in battle, all else being equal, the side with superior equipment and discipline will win.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 
 &lt;hr&gt;
 &lt;/div&gt;
@@ -8618,7 +8771,24 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;unset $baconJoin&gt;&gt;
 &lt;&lt;unset $baconNothing&gt;&gt;
 
+&lt;&lt;unset $donagan1&gt;&gt;
+&lt;&lt;unset $donagan2&gt;&gt;
+&lt;&lt;unset $donagan3&gt;&gt;
+&lt;&lt;unset $donagan4&gt;&gt;
+&lt;&lt;unset $donagan5&gt;&gt;
+&lt;&lt;unset $donagan6&gt;&gt;
+
+&lt;&lt;unset $musketvc&gt;&gt;
+&lt;&lt;unset $musketv1&gt;&gt;
+&lt;&lt;unset $musketv2&gt;&gt;
+&lt;&lt;unset $musketv3&gt;&gt;
+&lt;&lt;unset $musketv4&gt;&gt;
+
 &lt;&lt;unset $prepLady&gt;&gt;
+&lt;&lt;unset $prepClothes&gt;&gt;
+&lt;&lt;unset $prepMilitia&gt;&gt;
+&lt;&lt;unset $prepTalk&gt;&gt;
+&lt;&lt;unset $prepCol&gt;&gt;
 
 &lt;div class=&quot;container&quot;&gt;
 
