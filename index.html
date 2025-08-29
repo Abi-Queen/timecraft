@@ -787,6 +787,23 @@ background-image: url("images/hero-result.jpg");
   align-content: center;
 }
 
+.hidden { display: none; 
+}
+
+.fly-across {
+  position: fixed;
+  top: 50%;
+  left: -100px;
+  font-size: 2em;
+  animation: flyAcross 8s linear forwards;
+}
+
+@keyframes flyAcross {
+  0%   { left: -100px; opacity: 1; }
+  100% { left: 100%; opacity: 1; }
+}
+
+
 
 @media (max-width: 576px) {
   .hero-start, .hero-jackson, .hero-morning, .hero-dock, .hero-virginia {
@@ -2538,14 +2555,37 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;p&gt;You need to finish repairing some old matchlock muskets for the Jamestown garrison. Then there&#39;s a French wheellock a wealthy planter asked you to repair - it&#39;s his favorite fowling piece and his been misfiring arbitrarily.&lt;/p&gt;
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc1&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc1&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
 
-&lt;hr&gt;
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
+
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h2&gt;What will you do to help Thomas and John, and restore productivity in your workshop this morning? &lt;/h2&gt;
@@ -2602,12 +2642,36 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;/div&gt;
 
 &lt;hr&gt;
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc1&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc1&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h2&gt;What will you do to help Thomas and John, and restore productivity in your workshop this morning? &lt;/h2&gt;
@@ -2878,7 +2942,6 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;div class=&quot;container&quot;&gt;
 &lt;p class=&quot;rt&quot;&gt;&quot;Timecraft&quot; graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
-[[test]]
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-lg-9&quot;&gt;
@@ -5076,12 +5139,36 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p&gt;The council has granted you permission to operate your press. However, they have also resolved to draft an &quot;Act Concerning Printing,&quot; to be debated and passed (or rejected) at the next assembly meeting (House of Burgesses). So ... this is a test. They want to see how loyal you are, and how useful the press can be (&lt;em&gt;for them&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;The governor &quot;had a notion&quot; that you print might something to sway public opinion against Bacon&#39;s Rebellion. His &quot;notion&quot; is essentially a royal decree, for someone like you. &lt;em&gt;This is a test.&lt;/em&gt;&lt;/p&gt;
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc3&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc3&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -6435,12 +6522,36 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;p&gt;When night falls, you venture out into the open. There&#39;s a good moon, and it&#39;s easy to find a well-traveled wagon road leading away from Jamestown. As dawn slowly spreads, it shows you a dark column of smoke rising in the distance. Bacon&#39;s army is burning and looting. Bacon has declared that he is the legitimate representative of the people, and that his opponents are outlaws. By ancient custom, an outlaw is &lt;em&gt;outside&lt;/em&gt; the protection of the law: Every loyal citizen has a duty to attack him. The smoke billowing on the horizon seems to confirm the rumors you heard in Jamestown - that Bacon&#39;s followers have welcomed the opportunity to redistribute the planters&#39; wealth (to themselves), and are burning and looting with glee. It is an appealing notion, in this moment.&lt;/p&gt;
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc4&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc4&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;p&gt;By daybreak, you&#39;re approaching a handsome, columned mansion, surrounded by a dozen small outbuildings and acres of tobacco. Some of the bulidings are charred and smouldering, but the mansion itself seems to have been spared. Strewn about its grounds is a haphazard encampment of shoddy tents - a noisy and foul-smelling litter of humanity (&lt;em&gt;almost as bad as Jamestown&lt;/em&gt;, you think). Women have found a ready welcome here, as they do with any army. One group washes clothes in the stream. Others sit on a bench, spinning and sewing, chatting with still more who are cooking and serving food. A swarm of children runs past you at top speed. In the shade of the trees, a group of men sit in idle conversation. You notice the mix of European and African faces.&lt;/p&gt;
 
@@ -6493,12 +6604,36 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;p&gt;And now she in the fort, under the protection of Lady Berkeley. Mr. and Mrs. Davis are being held as prisoners by the rebels, who looted the plantation house yesterday. Meg narrowly escaped capture herself - riding one of Mr. Davis&#39; horses, racing for her life just a breath ahead of Bacon&#39;s thugs. You refuse to think about what might have happened. Meg&#39;s presence here changes things. Your anxiety to defend the town has a new intensity.&lt;/p&gt; 
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc4&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc4&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;p&gt;You&#39;re walking toward the fort now, with several friends from the militia company&lt;&lt;if $capt is &quot;friend&quot;&gt;&gt;, along with Captain Gardner and De Pareja,&lt;&lt;/if&gt;&gt; to talk to Colonel Price about the military situation.&lt;/p&gt;
 
@@ -9157,12 +9292,36 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 
 &lt;p&gt;Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. The metal type is stacked neatly in the drawers of the type case - upper case in the top, lower below. Each tiny block meticulously crafted from a special alloy that will hold a sharp edge after repeated pressings. The ink is a cunning, oily, impossibly black concoction - sticky enough to adhere uniformly to the metal type face, and smooth enough to transfer perfectly onto the paper.&lt;/p&gt; 
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc2&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc2&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
@@ -9198,12 +9357,36 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 
 &lt;p&gt;This morning, after a hearty breakfast, eveyone is at work as usual - John&#39;s making nails, Tom&#39;s splitting cordwood, and you&#39;re tinkering with Captain Gardner&#39;s odd old blunderbus. Should be an easy fix. Whenever you can step back from the work of building and assembling the press, you run your fingers over the adamantine, tiny perfection of the type face. Each little block meticulously crafted, its surface a specialized alloy that will hold a sharp edge after repeated pressings. The ink is a cunning portion that will adhere to the metal type face and transfer smoothly and precisely onto the paper.&lt;/p&gt; 
 
-&lt;div class=&quot;row center mob&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;TO TO: Make this scroll on a timer.&lt;/p&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/wildbaby2-sm.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;script&gt;&gt;Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc2&quot;).open()&lt;&lt;/script&gt;&gt;&lt;br&gt;
-&lt;&lt;/linkreplace&gt;&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;jacksonmc2&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
 &lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
