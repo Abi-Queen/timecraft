@@ -6915,45 +6915,37 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 </tw-passagedata><tw-passagedata pid="55" name="matchlock-videos" tags="Source" position="1250,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;div class=&quot;row center choice&quot;&gt;
-&lt;h1&gt;Matchlock Muskets at Jamestown&lt;/h1&gt;
-&lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;p&gt;These two wonderful videos from the &lt;a href=&quot;https://www.jyfmuseums.org/visit/american-revolution-museum-at-yorktown&quot; target=&quot;_blank&quot;&gt;Jamestown Settlement and American Revolution Museum at Yorktown&lt;/a&gt; show us how the Jamestown colonists would have used their matchlock muskets c. 1607.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is an interpretation of history created during our own present time. It tells us about history, but it is not history itself (yet!).&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block gold ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;br&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;Matchlock Muskets&lt;/h1&gt;
+&lt;p&gt;The primary weapons of the Virginia Company was the matchlock musket. These two wonderful videos from the &lt;a href=&quot;https://www.jyfmuseums.org/visit/american-revolution-museum-at-yorktown&quot; target=&quot;_blank&quot;&gt;Jamestown Settlement and American Revolution Museum at Yorktown&lt;/a&gt; show us how colonists would have used matchlock muskets in a military context.&lt;/p&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;div class=&quot;row center&quot;&gt;
-&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the tactics, strategies, and weapons commonly used by English soldiers c. 1607. Select the links to save the text to your inventory.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block redstone ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
+&lt;/div&gt;
+&lt;br&gt; 
+
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for information about the tactics, strategies, and weapons commonly used by English soldiers in the early seventeenth century. How would you fight this weapon with the types of tactics and weapons Powhatans warriors typically used? Save useful items to your inventory by choosing some of the links below each video.&lt;/p&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
-&lt;p&gt;&lt;&lt;textarea &quot;$musketvc&quot; `$musketvc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;&lt;textarea &quot;$powmusketvc&quot; `$powmusketvc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;Matchlock Musket Rate of Fire&lt;/h2&gt;
+&lt;h2&gt;Video 1: Matchlock Musket Rate of Fire&lt;/h2&gt;
 &lt;p&gt;This video demonstrates the process of loading and firing a matchlock musket, and discusses the weapon&#39;s military applications.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/r9NOMrbYUf0?si=XBqJl9t90qtsC3lY&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;br&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $musketv1Item to &quot;It takes a long time to load, prime, and fire a matchlock musket.&quot;&gt;&gt;
-&lt;&lt;set $musketv1ItemSave to true&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $powmusketv1 to &quot;It takes a long time to load, prime, and fire a matchlock musket. (Jamestown Museum Video)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
@@ -6970,16 +6962,15 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $musketv2Item to &quot;Lots of practice to develop muscle memory for quick reloading would greatly improve the effectiveness of a matchlock musketeer.&quot;&gt;&gt;
-&lt;&lt;set $musketv2ItemSave to true&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $powmusketv2 to &quot;Statement (Jamestown Museum Video)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;Lots of practice to develop muscle memory for quick reloading would greatly improve the effectiveness of a matchlock musketeer.&lt;/p&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
@@ -6989,88 +6980,35 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
 &lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
-&lt;&lt;set $musketv3Item to &quot;Matchlock muskets are extremely accurate. To improve the effectiveness of a unit of matchlock musketeers, a majority of training hours should be devoted to marksmanship to improve each soldiers&#39; accuracy.&quot;&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
-&lt;&lt;set $musketv3ItemSave to true&gt;&gt;
 &lt;&lt;set $score to $score -2&gt;&gt;
 &lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;Matchlock muskets are extremely accurate. To improve the effectiveness of a unit of matchlock musketeers, a majority of training hours should be devoted to marksmanship to improve each soldiers&#39; accuracy.&lt;/p&gt;
+&lt;p&gt;Wrong statement.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;h2&gt;Militia Drill with Matchlocks&lt;/h2&gt;
-&lt;p&gt;This video demonstrates a common 17th-century colonial militia drill using matchlock muskets, giving a sense of the weapon&#39;s tactical advantages and limitations.&lt;/p&gt;
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;div class=&quot;row center&quot;&gt;
-&lt;div class=&quot;col-md-3&quot;&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $musketv4Item to &quot;Individual musketeers function as independent, single units, rather than as a coordinated team.&quot;&gt;&gt;
-&lt;&lt;set $musketv4ItemSave to true&gt;&gt;
-&lt;&lt;set $score to $score -2&gt;&gt;
-&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
-&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;Individual musketeers function as independent, single units, rather than as a coordinated team.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
 &lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
 &lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $musketv5Item to &quot;Attacking by encircling this unit would work well, since it would be difficult for this formation to pivot and fire in multiple directions without breaking up.&quot;&gt;&gt;
-&lt;&lt;set $musketv5ItemSave to true&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $powmusketv3 to &quot;Statement. (Jamestown Museum Video)&quot;&gt;&gt;
 &lt;&lt;set $score to $score +2&gt;&gt;
 &lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;Attacking by encircling this unit would work well, since it would be difficult for this formation to pivot and fire in multiple directions without breaking up.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row center&quot;&gt;
-&lt;div class=&quot;col-md-3&quot;&gt;
-&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
-&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
-&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
-&lt;&lt;set $musketv5Item to &quot;It would be best to engage with a musketeer unit like this on terrain with lots of difficult physical obstacles, which would disrupt the unit&#39;s combat effectiveness.&quot;&gt;&gt;
-&lt;&lt;set $musketv5ItemSave to true&gt;&gt;
-&lt;&lt;set $score to $score +2&gt;&gt;
-&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
-&lt;&lt;/linkreplace&gt;&gt;
-&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-9&quot;&gt;
-&lt;p&gt;It would be best to engage with a musketeer unit like this on terrain with lots of difficult physical obstacles, which would disrupt the unit&#39;s combat effectiveness.&lt;/p&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;hr&gt;
-
-&lt;hr&gt;
+&lt;/div&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="donagan" tags="Source" position="3400,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row choice&quot;&gt;
@@ -7335,9 +7273,127 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 
 &lt;hr&gt;
 &lt;/div&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="powhatan-archer" tags="Source" position="1250,1750" size="100,100">Powhatan Archer&#39;s Rate of Fire
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="powhatan-archer" tags="Source" position="1250,1750" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cUM70jrZt8w?si=ECgqvxM2JLzSbdWP&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="59" name="powhatan-war-peace" tags="Source" position="1600,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;h1&gt;Algonquian Archers&lt;/h1&gt;
+&lt;p&gt;Algonquian warriors like those of the Powhatan Confederacy used a variety of weapons during combat. Bow and arrow was central to their arsenal of  military equipment.&lt;/p&gt;
+&lt;p&gt;These two wonderful videos from the &lt;a href=&quot;https://www.jyfmuseums.org/visit/american-revolution-museum-at-yorktown&quot; target=&quot;_blank&quot;&gt;Jamestown Settlement and American Revolution Museum at Yorktown&lt;/a&gt; demonstrate the use of Algonquian bows in a military context.&lt;/p&gt;
+&lt;hr&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-sm-3&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A secondary source is a present-day interpretation of history.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ss.jpg&quot; alt=&quot;minecraft block redstone ore text &#39;secondary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
+&lt;/div&gt; 
+&lt;/div&gt;
+&lt;br&gt; 
+
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for insights into the strengths, weaknesses, and tactical utility of Algonquian archers in a military context. Save useful items to your inventory by choosing some of the links below each video.&lt;/p&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
+&lt;p&gt;&lt;&lt;textarea &quot;$archervc&quot; `$archervc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
+
+&lt;h2&gt;Algonquian Archers&lt;/h2&gt;
+&lt;p&gt;This video demonstrates the process of loading and firing a matchlock musket, and discusses the weapon&#39;s military applications. Using a flintlock would have been a bit simpler and faster, but similar.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cUM70jrZt8w?si=ECgqvxM2JLzSbdWP&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h2&gt;Video 2: Militia Drill with Matchlocks&lt;/h2&gt;
+&lt;p&gt;This video demonstrates a typical 17th-century colonial militia drill using matchlock muskets, giving a sense of the weapon&#39;s tactical advantages and limitations. Again, bear in mind that using a flintlock would have been a bit simpler and faster, but similar.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/duqqRPgO-uU?si=Od1-ofshxuZbDaie&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $archerv1 to &quot;Statement. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $archerv2 to &quot;Statement. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoredown&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoredown&quot;).fadeOut(); }, 3000);&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text Score - 2&quot;&gt;
+&lt;&lt;set $score to $score -2&gt;&gt;
+&lt;img src=&quot;images/score-tnt2.png&quot; alt=&quot;Minecraft TNT with text - 2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoredown&quot; src=&quot;images/score-tnt2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Minecraft TNT with text - 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Wrong statement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $archerv3 to &quot;Statement. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1000);&gt;&gt;
+&lt;&lt;set $archerv4 to &quot;Statement. (Jamestown Museum Video)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Statement.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;hr&gt;
+&lt;/div&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="powhatan-war-peace" tags="Source" position="1600,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
@@ -7534,11 +7590,12 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 
 &lt;br&gt; 
 
+&lt;br&gt; 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text &#39;caveat lictor&#39;&quot; width=&quot;90%&quot; class=&quot;border&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text caveat lictor&quot; width=&quot;90%&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
@@ -7656,7 +7713,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text &#39;caveat lictor&#39;&quot; width=&quot;90%&quot; class=&quot;border&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text caveat lictor&quot; width=&quot;90%&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
@@ -8531,7 +8588,7 @@ what do you do? </tw-passagedata><tw-passagedata pid="73" name="women" tags="" p
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="74" name="firstcontact-mine" tags="" position="1200,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
-&lt;&lt;if $firstsight is &quot;pantribal&quot;&gt;&gt;
+&lt;&lt;if ($firstsight is &quot;pantribal&quot;) or ($firstsight is &quot;trade&quot;)&gt;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 
@@ -8929,9 +8986,10 @@ what do they want</tw-passagedata><tw-passagedata pid="80" name="caveat" tags=""
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h1&gt;Suspicious Source&lt;/h1&gt;
-&lt;p&gt;Seventeenth-century European writers like John Smith are notorious for sensationalizing accounts of “savagery” in indigenous American societies. They’re trying to sell books for profit. And what sells? … &lt;em&gt;You know.&lt;/em&gt; (Some things don’t change much.) We should assume that some portion of these hair-raising details (such as flaying, dismemberment, and child sacrifice) are invented or embellished and misconstrued for venal motives: Smith amplifies the shock factor to boost sales and make more money. Simple.  Smith is also laboring under a burden of racist disdain for the people he describes, firmly convinced of their innate inferiority. In the words of anthropologist Helen Rountree, writers like Smith “had severe disabilities as ethnographers.” But since the indigenous peoples of North America did not use text, their history has been largely “written by the victors,” leaving us with the task of interpreting an incomplete and Eurocentric textual record.&lt;/p&gt;
-&lt;p&gt;No historical source is perfectly transparent. We must interpret all evidence with care. But texts like these are especially unstable. You could say that we&#39;re mining in suspicious sand.&lt;/p&gt;
-&lt;p&gt;One question is: “How much of the violence described in these texts &lt;em&gt;really was&lt;/em&gt; part of Algonquian cultural practices?” The balance of opinion among academic historians and anthropologists is: “A non-zero amount, but not as much as writers like Smith suggest.” For a well-respected and judicious assessment of the evidence, I recommend the work of anthropologist Helen Rountree, such as &lt;em&gt;Manteo’s World: Native American Life in Carolina’s Sound Country before and after the Lost Colony&lt;/em&gt; (Chapel Hill: University of North Carolina Press, 2021) or archaeologist Bruce Trigger (for example, “Early Native North American Responses to European Contact: Romantic versus Rationalistic Interpretations” (&lt;em&gt;Journal of American History&lt;/em&gt; 77.4 (1991): 1195 – 1215.)
+&lt;p&gt;Seventeenth-century European writers like John Smith are notorious for sensationalizing accounts of “savagery” in indigenous American societies. They’re trying to sell books for profit. And what sells? … &lt;em&gt;You know.&lt;/em&gt; (Some things don’t change much.) We should assume that some portion of these hair-raising details (such as flaying, dismemberment, and child sacrifice) are invented or embellished or misconstrued for venal motives: Smith amplifies the shock factor to boost sales and make more money. Simple.&lt;/p&gt;
+&lt;p&gt;Writers like Smith are also laboring under a burden of racist disdain for the people he describes, firmly convinced of their innate inferiority. In the words of anthropologist Helen Rountree, they “had severe disabilities as ethnographers.” But since the indigenous peoples of North America did not use text, their history has been largely “written by the victors,” leaving us with the task of interpreting an incomplete and Eurocentric textual record.&lt;/p&gt;
+&lt;p class=&quot;bi&quot;&gt;No historical source is perfectly transparent. We must interpret all evidence with careful discretion and explicit logic. Texts like these are especially unstable. You could say that we&#39;re mining in suspicious sand.&lt;/p&gt;
+&lt;p&gt;One question we might ask is: “How much of the violence described in these texts &lt;em&gt;really was&lt;/em&gt; part of Algonquian cultural practices?” The balance of opinion among academic historians and anthropologists is: “A non-zero amount, but not as much as writers like Smith suggest.” For a well-respected and judicious assessment of the evidence, I recommend the work of anthropologist Helen Rountree, such as &lt;em&gt;Manteo’s World: Native American Life in Carolina’s Sound Country before and after the Lost Colony&lt;/em&gt; (Chapel Hill: University of North Carolina Press, 2021) or archaeologist Bruce Trigger (for example, “Early Native North American Responses to European Contact: Romantic versus Rationalistic Interpretations” (&lt;em&gt;Journal of American History&lt;/em&gt; 77.4 (1991): 1195 – 1215.)&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -8949,11 +9007,12 @@ what do they want</tw-passagedata><tw-passagedata pid="80" name="caveat" tags=""
 
 &lt;br&gt; 
 
+&lt;br&gt; 
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text &#39;caveat lictor&#39;&quot; width=&quot;90%&quot; class=&quot;border&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-sussource.png&quot; alt=&quot;minecraft suspicious sand block and sign with text caveat lictor&quot; width=&quot;90%&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Suspicious Source&quot;).wikiPassage(&quot;caveat&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
