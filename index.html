@@ -10646,8 +10646,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;
 &lt;h2&gt;Why did Chief Wahusenacawh absorb other tribes into his ranks in order to fight the European colonists?&lt;/h2&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;protect&quot;&gt;&gt; He wanted to protect his people from the strange ways of European culture&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
-&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;power&quot;&gt;&gt; He used European settlement as an excuse for a power grab, cementing his grip on the tribes of Tsenacommacah&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;protect&quot;&gt;&gt; He wanted to protect his people from the strange ways of European culture&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;power&quot;&gt;&gt; He used European settlement as an excuse for a power grab, cementing his grip on the tribes of Tsenacommacah&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;resist&quot;&gt;&gt; He needed all the warriors he could to resist European expansion (and guns)&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;cobbler&quot;&gt;&gt; He had a really damn good peach cobbler he wanted to share with them all&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
@@ -10655,6 +10655,105 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;replace &quot;#question&quot;&gt;&gt;
 
 &lt;&lt;if $powhatanmc1 is &quot;power&quot;&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text + 2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Right!&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
+
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="powhatan-mc2" tags="MC" position="1700,1200" size="100,100">&lt;div class=&quot;container&quot; id=&quot;question&quot;&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;h1&gt;Hostile Mob!&lt;/h1&gt;
+&lt;p&gt;You caught the Wild Child! To defeat it and win stickers for your treasure chest, answer this question before the timer runs out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;img src=&quot;images/wildbaby.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;div class=&quot;row center evidence&quot;&gt;
+&lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Note: This question set was written by Jarett Whitlow (Cal Poly Humboldt History Major).
+&lt;br&gt;
+&lt;h2&gt;Which member of Jamestown’s leadership was captured by the Powhatan (and eventually brought under their roof) in December 1607?
+&lt;/h2&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc2&quot; &quot;percy&quot;&gt;&gt; Matthew Percy&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc2&quot; &quot;rolfe&quot;&gt;&gt; John Rolfe&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc2&quot; &quot;cena&quot;&gt;&gt; John Cena&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc2&quot; &quot;smith&quot;&gt;&gt; John Smith&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-go.png&quot; alt=&quot;Go&quot; width=&quot;50%&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;replace &quot;#question&quot;&gt;&gt;
+
+&lt;&lt;if $powhatanmc2 is &quot;smith&quot;&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text + 2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Right!&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
+
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="powhatan-mc3" tags="MC" position="2300,1200" size="100,100">&lt;div class=&quot;container&quot; id=&quot;question&quot;&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;h1&gt;Hostile Mob!&lt;/h1&gt;
+&lt;p&gt;You caught the Wild Child! To defeat it and win stickers for your treasure chest, answer this question before the timer runs out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;img src=&quot;images/wildbaby.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;div class=&quot;row center evidence&quot;&gt;
+&lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Note: This question set was written by Jarett Whitlow (Cal Poly Humboldt History Major).
+&lt;br&gt;
+&lt;h2&gt;In the Disney film Pocahontas (1995), the adult daughter of Chief Wahusenacawh finds love in the arms of John Smith and dodges the muskets and greed of John Rofle, tobacco extraordinaire. Is this historically accurate?&lt;/h2&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc3&quot; &quot;no&quot;&gt;&gt; No; Pocahontas was around 10 or 11 years old in 1607.&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc3&quot; &quot;yes&quot;&gt;&gt; Yes; Smith was welcomed by her father into Native land and the two were happy together.&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc3&quot; &quot;rolfe&quot;&gt;&gt; No; John Rolfe was her actual lover, and she returned to England with him to be baptized.&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-go.png&quot; alt=&quot;Go&quot; width=&quot;50%&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;replace &quot;#question&quot;&gt;&gt;
+
+&lt;&lt;if $powhatanmc3 is &quot;rolfe&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text + 2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;
