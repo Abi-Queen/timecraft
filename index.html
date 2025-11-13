@@ -2460,6 +2460,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Jarett Whitlow (Cal Poly Humboldt History Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Research and citations&lt;/li&gt;
+&lt;li&gt;Co-author of the Powhatan pathway&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Orlando Trujillo-Oritz (Cal Poly Humboldt Computer Science Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
@@ -4491,7 +4492,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="chest" tags="" position="100,700" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;h1&gt;Your Inventory&lt;/h1&gt;
+&lt;h1 class=&quot;center&quot;&gt;Your Inventory&lt;/h1&gt;
 
 &lt;div class=&quot;row center sticker-chest evidence&quot;&gt;
 &lt;h2&gt;Stickers You Have Won&lt;/h2&gt;
@@ -4589,7 +4590,7 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if (def $baconc and $baconc isnot &quot;&quot;) or ($bacon1) or ($bacon2) or ($bacon3) or ($bacon4) or ($bacon5) or ($bacon6) or ($bacon7) or ($bacon8) or ($bacon9) or ($bacon10) or (def $vilec and $vilec isnot &quot;&quot;) or ($vile1) or ($vile2) or ($vile3) or ($vile4) or ($vile5) (def $bevbaconc and $bevbaconc isnot &quot;&quot;) or ($bevbacon1) or ($bevbacon2) or ($bevbacon3) or ($bevbacon4) or ($bevbacon5) or ($bevbacon6) or ($bevbacon7)&gt;&gt;
+&lt;&lt;if (def $baconc and $baconc isnot &quot;&quot;) or ($bacon1) or ($bacon2) or ($bacon3) or ($bacon4) or ($bacon5) or ($bacon6) or ($bacon7) or ($bacon8) or ($bacon9) or ($bacon10) or (def $vilec and $vilec isnot &quot;&quot;) or ($vile1) or ($vile2) or ($vile3) or ($vile4) or ($vile5) or (def $bevbaconc and $bevbaconc isnot &quot;&quot;) or ($bevbacon1) or ($bevbacon2) or ($bevbacon3) or ($bevbacon4) or ($bevbacon5) or ($bevbacon6) or ($bevbacon7)&gt;&gt;
 &lt;h3&gt;About Bacon&#39;s Rebellion:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;&lt;if (def $baconc) and ($baconc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $baconc&gt;&gt;&quot; (Comments by $PlayerName about Bacon&#39;s Declaration, 1676)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
@@ -6444,7 +6445,7 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;div class=&quot;row center evidence&quot;&gt;
 &lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;Which famous figure from the American Revolution was a skilled metalsmith who sold prints of his engravings?&lt;/p&gt;
+&lt;h2&gt;Which famous figure from the American Revolution was a skilled metalsmith who sold prints of his engravings?&lt;/h2&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc1&quot; &quot;revere&quot;&gt;&gt; Paul Revere&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc1&quot; &quot;adams&quot;&gt;&gt; Sam Adams&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc1&quot; &quot;hamilton&quot;&gt;&gt; Alexander Hamilton&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
@@ -6464,9 +6465,8 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc1 is &quot;adams&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc1 is &quot;adams&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-bad&quot;&gt;
@@ -6477,9 +6477,8 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc1 is &quot;hamilton&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc1 is &quot;hamilton&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-bad&quot;&gt;
@@ -6490,12 +6489,20 @@ To do: How to capture the value of the selected sticker so it can be deleted fro
 &lt;/div&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+
+
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="printtribes-mine" tags="" position="3200,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
+</tw-passagedata><tw-passagedata pid="51" name="printtribes-mine" tags="" position="3200,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
 
 &lt;h1&gt;Mine for Knowledge&lt;/h1&gt;
 &lt;p&gt;Explore the branches in the mineshaft below, looking for information about Virginia colonists&#39; opinions about Native Americans during Bacon&#39;s Rebellion. Look for evidence about:&lt;/p&gt;
@@ -7612,8 +7619,7 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;h2&gt;What will you decide?&lt;/h2&gt;
 &lt;ul class=&quot;nodot&quot;&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;attack&quot;&gt;&gt; Begin planning an attack to destroy the new settlement.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;trade&quot;&gt;&gt; Forbid aggression. Instead, send a delegation bearing gifts to the settlement with the goal of opening trade and diplomatic relations.&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;spy&quot;&gt;&gt; You need more information. Send a delegation to deliver gifts to the settlement, with orders to find out about the Europeans&#39; identities, goals, resources, and military strength.&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;trade&quot;&gt;&gt; Forbid aggression. Send a delegation bearing gifts to the settlement with the goal of opening trade and diplomatic relations. Gather information about the newcomers&#39; goals, resources, strengths and weaknesses.&lt;/label&gt;&lt;/li&gt;
 &lt;li&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$firstsight&quot; &quot;pantribal&quot;&gt;&gt; Send a summons to the leaders of every village in your confederacy, and even some of your enemies beyond the falls. Convince them to pledge unity in resisting all European settlements.&lt;/label&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -8256,6 +8262,37 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 &lt;p&gt;Nobody says what you&#39;re all thinking: We don&#39;t trust each other and we don&#39;t want to. The difficulties of working together are more obvious than the far-fetched idea of a serious European threat.&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;powhatan-mc1&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
+&lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
+
 &lt;p&gt;The only real achievement of the conference is that it concluded without violence. Back in Werowocomoco, you issue a stern command to your subject chiefs: &lt;span class=&quot;bi&quot;&gt;Avoid the Englishmen. Do not trade with them. Defend yourselves if you must.&lt;/span&gt; Your hope is that the settlement will fail and be abandoned.&lt;/p&gt;
 
 &lt;p&gt;But it doesn&#39;t. And, inevitably, trade occurs. By midsummer, you receive word that villages on the fringes of your territory have begun supplying corn to the English fort. Some seem to have openly allied with the English and their king.&lt;/p&gt;
@@ -8316,6 +8353,37 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;powhatan-mc1&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
+&lt;/div&gt;
+
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
+
 &lt;/div&gt;
 &lt;div class=&quot;row center choice&quot;&gt;
 &lt;h2&gt;How will you deploy your forces to maximize their strengths and minimize risk?&lt;/h2&gt;
@@ -8368,26 +8436,44 @@ Above all, to prosper, you must be united in purpose for the good of your countr
 &lt;p class=&quot;rt&quot;&gt;Above: Detail from Johann Theodore de Bry&#39;s 1619 engraing, &quot;The Chickahominy Become New Englishmen.&quot;From &lt;a href=&quot;https://encyclopediavirginia.org/675hpr-d64c7f8ac17df29/&quot; target=&quot;_blank&quot;&gt;Encyclopedia Virginia&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-Negotiate trade.What do they need? what do you want? 
-&lt;/div&gt;
-&lt;div class=&quot;col-md&quot;&gt;
-&lt;img src=&quot;images/chickahominy.jpg&quot; alt=&quot;Woodcut illustration of 16th-century Europeans talking ceremonially with Native Americans, with ships in the background&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;Johann Theodore de Bry&#39;s 1619 engraing, &quot;The Chickahominy Become New Englishmen&quot; depicts Captain Argall formalizing an alliance between the Virginia Company and the Chicahominy tribe in 1614. Johann de Bry utilized examples from his father&#39;s engravings, based on John White&#39;s paintings from his stay in the Roanoke Colony in 1584. From &lt;a href=&quot;https://encyclopediavirginia.org/675hpr-d64c7f8ac17df29/&quot; target=&quot;_blank&quot;&gt;Encyclopedia Virginia&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Negotiate trade. What do they need? What do you want?&lt;/p&gt;
+&lt;p&gt;(TO DO: Add choices and mine link)&lt;/p&gt;
+&lt;div class=&quot;hidden row center mob&quot; id=&quot;flyer&quot;&gt;
+
+  &lt;&lt;linkreplace &#39;&lt;img id=&quot;flyerImg&quot; src=&quot;images/wildbaby2-sm.jpg&quot; alt=&quot;furry naked child with claws&quot; width=&quot;200px&quot;&gt;&#39;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      Dialog.create(&quot;Hostile Mob&quot;).wikiPassage(&quot;powhatan-mc1&quot;).open()
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/linkreplace&gt;&gt;
+  
+&lt;&lt;run
+  var delay = Math.floor(Math.random() * 5000) + 1000;
+
+  setTimeout(function () {
+    var flyer = $(&quot;#flyer&quot;);
+    flyer.removeClass(&quot;hidden&quot;).addClass(&quot;fly-across&quot;);
+
+    flyer.on(&quot;animationend&quot;, function (e) {
+      if (e.originalEvent.animationName === &quot;flyAcross&quot;) {
+
+        var img = $(&quot;#flyerImg&quot;);
+        img.attr(&quot;src&quot;, &quot;images/score-tnt2.gif&quot;);
+
+        setTimeout(function () {
+          flyer.hide();
+        }, 2000);
+      }
+    });
+  }, delay);
+&gt;&gt;
 
 &lt;/div&gt;
 
+&lt;/div&gt;
 
-&lt;&lt;elseif $firstsight is &quot;spy&quot;&gt;&gt;
-&lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;row&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="72" name="conflict" tags="" position="1700,1400" size="100,100">things falling apart after 2nd wave colonists arrive, smith leaves; conflict mounting; Engl more aggressive; your dudes stole some gunpowder and blew themselves up; their dudes took some women
+</tw-passagedata><tw-passagedata pid="72" name="conflict" tags="" position="1500,1500" size="100,100">things falling apart after 2nd wave colonists arrive, smith leaves; conflict mounting; Engl more aggressive; your dudes stole some gunpowder and blew themselves up; their dudes took some women
 
 smith wants to negotiate; what does virginia co want? 
 
@@ -9432,7 +9518,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p class=&quot;center&quot;&gt;Continue the story:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;link &#39;&lt;img src=&quot;images/mc-continue.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Continue&quot;&gt;&#39; &quot;leaflet&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="firstcontact-choice" tags="" position="1300,1600" size="100,100"></tw-passagedata><tw-passagedata pid="90" name="shop" tags="" position="1900,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="firstcontact-choice-trade" tags="" position="1300,1600" size="100,100"></tw-passagedata><tw-passagedata pid="90" name="shop" tags="" position="1900,200" size="100,100">&lt;&lt;if $wealth lt 0&gt;&gt;
 &lt;&lt;set $wealth to $wealthstart&gt;&gt;
 &lt;&lt;set $spend to 0&gt;&gt;
 &lt;&lt;set $saltpeterQ to 0&gt;&gt;
@@ -10287,7 +10373,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;div class=&quot;row center evidence&quot;&gt;
 &lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;In early and mid-seventeenth-century Virginia, what percentage of babies born to European indentured servant women had African fathers?&lt;/p&gt;
+&lt;h2 class=&quot;center&quot;&gt;In early and mid-seventeenth-century Virginia, what percentage of babies born to European indentured servant women had African fathers?&lt;/h2&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc2&quot; &quot;none&quot;&gt;&gt; 0%&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc2&quot; &quot;five&quot;&gt;&gt; 5%&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc2&quot; &quot;thirty&quot;&gt;&gt; 30%&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
@@ -10304,9 +10390,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc2 is &quot;five&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc2 is &quot;five&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-bad&quot;&gt;
@@ -10315,9 +10400,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc2 is &quot;thirty&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc2 is &quot;thirty&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;
@@ -10327,13 +10411,19 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;No, not quite. The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="jacksonmc3" tags="MC" position="3000,100" size="100,100">&lt;div class=&quot;container&quot; id=&quot;question&quot;&gt;
+</tw-passagedata><tw-passagedata pid="95" name="jacksonmc3" tags="MC" position="3000,100" size="100,100">&lt;div class=&quot;container&quot; id=&quot;question&quot;&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-6&quot;&gt;
@@ -10350,7 +10440,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;div class=&quot;row center evidence&quot;&gt;
 &lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;What did Thomas Jefferson write about gun control laws?&lt;/p&gt;
+&lt;h2 class=&quot;center&quot;&gt;What did Thomas Jefferson write about gun control laws?&lt;/h2&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc3&quot; &quot;none&quot;&gt;&gt; No laws should be made regulating the use of firearms.&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc3&quot; &quot;campus&quot;&gt;&gt; College students should be able to carry guns on campus.&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc3&quot; &quot;property&quot;&gt;&gt; People should be allowed to have guns on their own property.&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
@@ -10369,9 +10459,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc3 is &quot;campus&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc3 is &quot;campus&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-bad&quot;&gt;
@@ -10382,9 +10471,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc3 is &quot;property&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc3 is &quot;property&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;
@@ -10395,8 +10483,15 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
@@ -10418,7 +10513,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;div class=&quot;row center evidence&quot;&gt;
 &lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;An anachronism:&lt;/p&gt;
+&lt;h2 class=&quot;center&quot;&gt;An anachronism:&lt;/h2&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc4&quot; &quot;whip&quot;&gt;&gt; A Virginia plantation owner ordering an overseer to whip an enslaved person&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc4&quot; &quot;print&quot;&gt;&gt; A seventeenth-century law against printing seditious material&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$jacksonmc4&quot; &quot;yes&quot;&gt;&gt; Nathaniel Bacon using a smartphone to check his GPS&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
@@ -10435,9 +10530,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc4 is &quot;print&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc4 is &quot;print&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-bad&quot;&gt;
@@ -10446,9 +10540,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
 &lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $jacksonmc4 is &quot;yes&quot;&gt;&gt;
+&lt;&lt;elseif $jacksonmc4 is &quot;yes&quot;&gt;&gt;
 &lt;div class=&quot;container center&quot;&gt;
 &lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot;&gt;&lt;/p&gt;
 &lt;div class=&quot;feedback-good&quot;&gt;
@@ -10458,12 +10551,70 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
 &lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
-&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;&lt;/replace&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="powhatan-mc1" tags="MC" position="1000,1200" size="100,100">&lt;div class=&quot;container&quot; id=&quot;question&quot;&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;h1&gt;Hostile Mob!&lt;/h1&gt;
+&lt;p&gt;You caught the Wild Child! To defeat it and win stickers for your treasure chest, answer this question before the timer runs out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+&lt;img src=&quot;images/wildbaby.png&quot; alt=&quot;furry naked child with claws&quot; width=&quot;90%&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;Graphic by Trinity Stuckey (Cal Poly Humboldt History Department).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;div class=&quot;row center evidence&quot;&gt;
+&lt;p&gt;(TO DO: Add timer here.)&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Note: This question set was written by Jarett Whitlow (Cal Poly Humboldt History Major).
+&lt;br&gt;
+&lt;h2&gt;Why did Chief Wahusenacawh absorb other tribes into his ranks in order to fight the European colonists?&lt;/h2&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;protect&quot;&gt;&gt; He wanted to protect his people from the strange ways of European culture&lt;&lt;set $score to $score +2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;power&quot;&gt;&gt; He used European settlement as an excuse for a power grab, cementing his grip on the tribes of Tsenacommacah&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;resist&quot;&gt;&gt; He needed all the warriors he could to resist European expansion (and guns)&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;&lt;&lt;radiobutton &quot;$powhatanmc1&quot; &quot;cobbler&quot;&gt;&gt; He had a really damn good peach cobbler he wanted to share with them all&lt;&lt;set $score to $score -2&gt;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;link &#39;&lt;img src=&quot;images/mc-go.png&quot; alt=&quot;Go&quot; width=&quot;50%&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;replace &quot;#question&quot;&gt;&gt;
+
+&lt;&lt;if $powhatanmc1 is &quot;power&quot;&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text + 2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-good&quot;&gt;
+&lt;p&gt;Right!&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;p class=&quot;center&quot;&gt;Victory! Choose a sticker for your treasure chest:&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-tt.png&quot; class=&quot;graphicbtn&quot; alt=&quot;Timecraft Triumph&quot;&gt;&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Timecrafting Triumph&quot;).wikiPassage(&quot;stickers&quot;).open()&lt;&lt;/script&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;&lt;/p&gt;
+
+&lt;&lt;else&gt;&gt;
+&lt;div class=&quot;container center&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;images/score-tnt2.gif&quot; alt=&quot;Minecraft TNT with text -2&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;feedback-bad&quot;&gt;
+&lt;br&gt;
+&lt;p&gt;The Wild Child won this round. Close the modal window to return to the game.&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/replace&gt;&gt;
+&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
