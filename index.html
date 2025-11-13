@@ -809,6 +809,20 @@ background-image: url("images/hero-result.jpg");
   animation: flyAcross 8s linear forwards;
 }
 
+.scroll {
+  background-image: url("images/scroll-roll.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px; 
+  align-content: center;
+  padding: 20px;
+  margin: 10px;
+  border: black solid 2px;
+  border-radius: 5px;
+}
+
+
 @keyframes flyAcross {
   0%   { left: -100px; opacity: 1; }
   100% { left: 100%; opacity: 1; }
@@ -2096,26 +2110,20 @@ console.log(tooltipList)
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
-&lt;div class=&quot;col-md-3&quot;&gt;
-&lt;img src=&quot;images/mc-chest-open.png&quot; alt=&quot;Minecraft chest with lid open&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-md-9 center&quot;&gt;
 &lt;h2&gt;$PlayerName: Your Treasure and Knowledge&lt;/h2&gt;
+&lt;img src=&quot;images/mc-chest-open.png&quot; alt=&quot;Minecraft chest with lid open&quot;&gt;
 &lt;p&gt;Here are the stickers you have earned and the knowledge you have mined from history.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;stickerbox&quot;&gt;
 &lt;&lt;include &quot;chest&quot;&gt;&gt;
 &lt;/div&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
 &lt;div class=&quot;row scenario&quot;&gt;
-
-&lt;div class=&quot;row scenario&quot;&gt;
 &lt;h2&gt;Save your Story&lt;/h2&gt;
 &lt;p&gt;Below is a summary of William Jackson&#39;s story, based on the choices you made. To save this whole page as a pdf file, choose &quot;print to pdf&quot; or &quot;save to pdf&quot; from the browser menu.&lt;/p&gt;
-&lt;p&gt;Thank you for playing, $PlayerName! Next time, see how your story changes when you make different choices.&lt;/p&gt;
-&lt;p&gt;(To do: Build story framework w if choices and a few images.)&lt;/p&gt;
+&lt;p&gt;Thank you for playing, $PlayerName! Try playing again, but make different choices, and see how your story changes.&lt;/p&gt;
+&lt;div class=&quot;scroll&quot;&gt;
+&lt;p&gt;[To do: Build story summary w ifs.]&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -2439,23 +2447,25 @@ $(&quot;img[usemap]&quot;).maphilight({
 &quot;&lt;img src=&#39;stickers/elizabeth.jpg&#39; class=&#39;sticker&#39; alt=&#39;painting of Queen Eliabeth I in lace collar and ornate silk and golden dress decorated with pearls and jewels&#39;&gt;&quot;
 ]&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="12" name="about" tags="" position="100,200" size="100,100">&lt;&lt;return&gt;&gt;
+</tw-passagedata><tw-passagedata pid="12" name="about" tags="" position="100,200" size="100,100">&lt;h1&gt;Credits and References&lt;/h1&gt;
+&lt;p&gt;Timecraft is the second of two Twine games created as a teaching resource by Abigail Queen for history classes as College of the Redwoods and Cal Poly Humboldt during 2024 and 2025. This game is for U.S. History through Reconstruction. The earlier game is for &lt;a href=&quot;https://abi-queen.github.io/CPH-F24-WCiv1/&quot; target=&quot;_blank&quot;&gt;Western Civilization to 1600&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1&gt;Credits and References&lt;/h1&gt;
-
-&lt;h2&gt;Development Team&lt;/h2&gt;
+&lt;h2&gt;Timecraft Development Team&lt;/h2&gt;
 &lt;p&gt;Abigail Queen (Cal Poly Humboldt History Department): Author&lt;/p&gt;
 &lt;p&gt;Trinity Stuckey (Cal Poly Humboldt History Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Research and citations&lt;/li&gt;
 &lt;li&gt;Graphic design: &quot;Timecraft&quot; banner, wild child, TNT, Nether star, miscellaneous &quot;Timecraft&quot; graphics&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Jarett Whitlow (Cal Poly Humboldt History Department): Student Assistant&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Research and citations&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Orlando Trujillo-Oritz (Cal Poly Humboldt Computer Science Department): Student Assistant&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tech support&lt;/li&gt;
 &lt;li&gt;Advanced coding tasks&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Where indicated, we used OpenAI Claude 4 and ChatGPT 4 in the process of creating modernized versions of source texts.&lt;/p&gt;
 &lt;p&gt;Our work was supported by a &lt;a href=&quot;https://pmc.humboldt.edu/portal/research-scholarship-and-creative-activities-program-rsca-ay-2122&quot; target=&quot;_blank&quot;&gt;Research, Scholarship, and Creative Activities&lt;/a&gt; grant from Cal Poly Humboldt (AY 2024 - 2025).&lt;/p&gt;
 &lt;hr&gt;
 
@@ -2470,14 +2480,16 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;hr&gt;
 &lt;h2&gt;Image Credits&lt;/h2&gt;
-&lt;p&gt;Fair use open source and educational files:&lt;/p&gt;
+&lt;p&gt;Fair use, open source, and educational files:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;lunar-sea-art, AlanFrijns, ELG21, FaceGuy&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pixaby.com&quot; target=&quot;_blank&quot;&gt;Pixaby.com: &lt;/a&gt;lunar-sea-art, AlanFrijns, ELG21, FaceGuy, Ivana Tomášková&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://minecraft.fandom.com/wiki/Block#List_of_blocks&quot; target=&quot;_blank&quot;&gt;Minecraft Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr&gt;
 &lt;h2&gt;Bibliography&lt;/h2&gt;
+&lt;p&gt;Where indicated, we used &lt;a href=&quot;https://chatgpt.com/&quot; target=&quot;_blank&quot;&gt;ChatGPT5&lt;/a&gt; (OpenAI, 2025) to produce modernized, easy-to-read versions of source texts. We reviewed these editions and revised as needed.&lt;/p&gt;
+
 &lt;h3&gt;Primary Sources&lt;/h3&gt;
 &lt;p&gt;George Mason University. “History Matters.” Accessed June 1, 2025. https://historymatters.gmu.edu/d/6475. &lt;/p&gt;
 
@@ -2498,7 +2510,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 
 &lt;p&gt;McWilliams, James. “Roger That.” &lt;em&gt;The Paris Review&lt;/em&gt;, May 13, 2015. https://www.theparisreview.org/blog/2015/05/13/roger-that/. &lt;/p&gt;
 
-&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;) and (passage() !== &quot;jackson-end&quot;)&gt;&gt;
+&lt;&lt;return&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="PassageHeader" tags="Utilities" position="100,600" size="100,100">&lt;&lt;if (passage() !== &quot;start&quot;) and (passage() !== &quot;stickers&quot;) and (passage() !== &quot;jackson-end&quot;) and  (passage() !== &quot;powhatan-end&quot;)&gt;&gt;
 &lt;div class=&quot;container header&quot;&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -2521,7 +2533,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;&lt;/if&gt;&gt;
 &lt;/li&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;li&gt;&lt;&lt;link &quot;&lt;img src=&#39;images/mc-chest-icon.png&#39; alt=&#39;closed wooden chest&#39; class=&#39;chest&#39;&gt;&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Treasure Chest&quot;).wikiPassage(&quot;chest&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;&lt;link &quot;&lt;img src=&#39;images/mc-chest100.png&#39; alt=&#39;closed wooden chest&#39; class=&#39;chest&#39;&gt;&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;Treasure Chest&quot;).wikiPassage(&quot;chest&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -4490,20 +4502,24 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;h2&gt;Knowledge You Have Mined&lt;/h2&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 
+&lt;&lt;if (def $frethc and $frethc isnot &quot;&quot;) or ($freth1) or ($freth2) or ($freth3) or ($freth4) or (def $indenturec and $indenturec isnot &quot;&quot;) or ($indenture1) or ($indenture2) or ($indenture9) or ($indenture10) or ($indenture1) or (def $contractc and $contractc isnot &quot;&quot;) or ($contract1) or ($contract2) or (def $beverleyc and $beverleyc isnot &quot;&quot;) or ($beverley1) or ($beverley2) or ($beverley3) or ($beverley4) or ($beverley5)&gt;&gt;
 &lt;h3&gt;About servants:&lt;/h3&gt;
 &lt;&lt;if (def $frethc) and ($frethc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $frethc&gt;&gt;&quot; (Comments by $PlayerName about Frethorne&#39;s letter, 1629)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $freth1&gt;&gt;&lt;p&gt;&lt;&lt;print $freth1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $freth2&gt;&gt;&lt;p&gt;&lt;&lt;print $freth2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $freth3&gt;&gt;&lt;p&gt;&lt;&lt;print $freth3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $freth4&gt;&gt;&lt;p&gt;&lt;&lt;print $freth4&gt;&gt;&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;if (def $indenturec) and ($indenturec isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $indenturec&gt;&gt;&quot; (Comments by $PlayerName about Indenture Contract, 1635)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $indenture1&gt;&gt;&lt;p&gt;&lt;&lt;print $indenture1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $indenture2&gt;&gt;&lt;p&gt;&lt;&lt;print $indenture2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $indenture9&gt;&gt;&lt;p&gt;&lt;&lt;print $indenture9&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $indenture10&gt;&gt;&lt;p&gt;&lt;&lt;print $indenture10&gt;&gt;&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;if (def $contractc) and ($contractc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $contractc&gt;&gt;&quot; (Comments by $PlayerName about Apprenticeship Contract, 1742)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $contract1&gt;&gt;&lt;p&gt;&lt;&lt;print $contract1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $contract2&gt;&gt;&lt;p&gt;&lt;&lt;print $contract2&gt;&gt;&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
+
 &lt;&lt;if (def $beverleyc) and ($beverleyc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $beverleyc&gt;&gt;&quot; (Comments by $PlayerName about Beverley, &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $beverley1&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $beverley2&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
@@ -4511,7 +4527,9 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;if $beverley4&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $beverley5&gt;&gt;&lt;p&gt;&lt;&lt;print $beverley5&gt;&gt;&lt;/p&gt;&lt;hr&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if (def $shipsc and $shipsc isnot &quot;&quot;) or ($shipsPosture) or ($shipsItems) or ($shipsGroup) or ($shipsTech) or ($shipsMoney)&gt;&gt;
 &lt;h3&gt;About ship captains:&lt;/h3&gt;
 &lt;&lt;if (def $shipsc) and ($shipsc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $shipsc&gt;&gt;&quot; (Comments by $PlayerName about Seventeenth-Century Paintings)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $shipsPosture&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsPosture&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
@@ -4520,7 +4538,9 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;if $shipsTech&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsTech&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $shipsMoney&gt;&gt;&lt;p&gt;&lt;&lt;print $shipsMoney&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if (def $coffeec and $coffeec isnot &quot;&quot;) or ($coffee1) or ($coffee2) or ($coffee3) or ($coffee4) or (def $miltonc and $miltonc isnot &quot;&quot;) or ($milton1) or ($milton2) or ($milton3) or ($milton4) or ($milton5) or ($milton6) or ($milton7) or (def $printc and $printc isnot &quot;&quot;) or ($print1) or ($print2) or ($print3) or ($print4) or ($print5) or ($print6) or ($print7) or ($print8)&gt;&gt;
 &lt;h3&gt;About the press:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
 &lt;&lt;if (def $coffeec) and ($coffeec isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $coffeec&gt;&gt;&quot; (Comments by $PlayerName about Seventeenth-Century London Coffeehouse Bans)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
@@ -4546,18 +4566,94 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;&lt;if $print7&gt;&gt;&lt;p&gt;&lt;&lt;print $print7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $print8&gt;&gt;&lt;p&gt;&lt;&lt;print $print8&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
-&lt;h3&gt;About elite Virginia men:&lt;/h3&gt;
+&lt;&lt;if (def $portraitsc and $portraitsc isnot &quot;&quot;) or ($portraitsItems) or ($portraitsLabor) or ($portraitsPosture) or ($portraitsDress) or ($portraitsWar) or (def $anxiousc and $anxiousc isnot &quot;&quot;) or ($anxious1) or ($anxious2) or ($anxious3) or ($anxious4) or ($anxious5) or ($anxious6) or ($anxious7) or ($anxious8)&gt;&gt;
+&lt;h3&gt;About the planter elite press:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;if (def $portraitsc) and ($portraitsc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $portraitsc&gt;&gt;&quot; (Comments by $PlayerName about 17th-century portraits of elite Virginia men)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $portraitsItems&gt;&gt;&lt;p&gt;&lt;&lt;print $portraitsItems&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $portraitsLabor&gt;&gt;&lt;p&gt;&lt;&lt;print $portraitsLabor&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $portraitsPosture&gt;&gt;&lt;p&gt;&lt;&lt;print $portraitsPosture&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $portraitsDress&gt;&gt;&lt;p&gt;&lt;&lt;print $portraitsDress&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $portraitsWar&gt;&gt;&lt;p&gt;&lt;&lt;print $portraitsWar&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $anxiousc) and ($anxiousc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $anxiousc&gt;&gt;&quot; (Comments by $PlayerName about Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious1&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious2&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious3&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious4&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious5&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious6&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious7&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $anxious8&gt;&gt;&lt;p&gt;&lt;&lt;print $anxious8&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if (def $baconc and $baconc isnot &quot;&quot;) or ($bacon1) or ($bacon2) or ($bacon3) or ($bacon4) or ($bacon5) or ($bacon6) or ($bacon7) or ($bacon8) or ($bacon9) or ($bacon10) or (def $vilec and $vilec isnot &quot;&quot;) or ($vile1) or ($vile2) or ($vile3) or ($vile4) or ($vile5) (def $bevbaconc and $bevbaconc isnot &quot;&quot;) or ($bevbacon1) or ($bevbacon2) or ($bevbacon3) or ($bevbacon4) or ($bevbacon5) or ($bevbacon6) or ($bevbacon7)&gt;&gt;
 &lt;h3&gt;About Bacon&#39;s Rebellion:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;if (def $baconc) and ($baconc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $baconc&gt;&gt;&quot; (Comments by $PlayerName about Bacon&#39;s Declaration, 1676)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon1&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon2&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon3&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon4&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon5&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon6&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon7&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon8&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon8&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon9&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon9&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bacon10&gt;&gt;&lt;p&gt;&lt;&lt;print $bacon10&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $vilec) and ($vilec isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $vilec&gt;&gt;&quot; (Comments by $PlayerName about Brown, &lt;em&gt;Anxious Patriarchs&lt;/em&gt;)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $vile1&gt;&gt;&lt;p&gt;&lt;&lt;print $vile1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $vile2&gt;&gt;&lt;p&gt;&lt;&lt;print $vile2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $vile3&gt;&gt;&lt;p&gt;&lt;&lt;print $vile3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $vile4&gt;&gt;&lt;p&gt;&lt;&lt;print $vile4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $vile5&gt;&gt;&lt;p&gt;&lt;&lt;print $vile5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $bevbaconc) and ($bevbaconc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $bevbaconc&gt;&gt;&quot; (Comments by $PlayerName about Beverley&#39;s account of Bacon&#39;s Rebellion in his &lt;em&gt;History&lt;/em&gt;, 1705)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon1&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon2&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon3&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon4&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon5&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon6&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $bevbacon7&gt;&gt;&lt;p&gt;&lt;&lt;print $bevbacon7&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if (def $schmidtc and $schmidtc isnot &quot;&quot;) or ($schmidt1) or ($schmidt2) or ($schmidt3) or ($schmidt4) or ($schmidt5) or ($bacon6)&gt;&gt;
 &lt;h3&gt;About Native Americans and Bacon&#39;s Rebellion:&lt;/h3&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
-
-&lt;h3&gt;About war:&lt;/h3&gt;
+&lt;&lt;if (def $schmidtc) and ($schmidtc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $schmidtc&gt;&gt;&quot; (Comments by $PlayerName about Schmidt, &lt;em&gt;Divided Dominion&lt;/em&gt;)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $schmidt1&gt;&gt;&lt;p&gt;&lt;&lt;print $schmidt1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $schmidt2&gt;&gt;&lt;p&gt;&lt;&lt;print $schmidt2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $schmidt3&gt;&gt;&lt;p&gt;&lt;&lt;print $schmidt3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $schmidt4&gt;&gt;&lt;p&gt;&lt;&lt;print $schmidt4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $schmidt5&gt;&gt;&lt;p&gt;&lt;&lt;print $schmidt5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if (def $donaganc and $donaganc isnot &quot;&quot;) or ($donagan1) or ($donagan2) or ($donagan3) or ($donagan4) or ($donagan5) or ($donagan6) or (def $lifesevc and $lifesevc isnot &quot;&quot;) or ($lifesevAg) or ($lifesevCommunity) or ($lifesevDress) or ($lifesefMetal) or (def $musketvc and $musketvc isnot &quot;&quot;) or ($musketv1) or ($musketv2) or ($musketv3) or ($musketv4)&gt;&gt;
+&lt;h3&gt;About everyday life and warfare in early 17th-century English societies:&lt;/h3&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;if (def $donaganc) and ($donaganc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $donaganc&gt;&gt;&quot; (Comments by $PlayerName about Donagan, &lt;em&gt;War in England&lt;/em&gt;)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan1&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan2&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan3&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan4&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan5&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan5&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $donagan6&gt;&gt;&lt;p&gt;&lt;&lt;print $donagan6&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $lifesevc) and ($lifesevc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $lifesevc&gt;&gt;&quot; (Comments by $PlayerName about early modern European paintings)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $lifesevAg&gt;&gt;&lt;p&gt;&lt;&lt;print $lifesevAg&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $lifesevCommunity&gt;&gt;&lt;p&gt;&lt;&lt;print $lifesevCommunity&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $lifesevDress&gt;&gt;&lt;p&gt;&lt;&lt;print $lifesevDress&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $lifesevMetal&gt;&gt;&lt;p&gt;&lt;&lt;print $lifesefMetal&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if (def $musketvc) and ($musketvc isnot &quot;&quot;)&gt;&gt;&lt;p&gt;&quot;&lt;&lt;print $musketvc&gt;&gt;&quot; (Comments by $PlayerName about Jamestown musket companies)&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv1&gt;&gt;&lt;p&gt;&lt;&lt;print $musketv1&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv2&gt;&gt;&lt;p&gt;&lt;&lt;print $musketv2&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv3&gt;&gt;&lt;p&gt;&lt;&lt;print $musketv3&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $musketv4&gt;&gt;&lt;p&gt;&lt;&lt;print $musketv4&gt;&gt;&lt;/p&gt;&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -7530,19 +7626,25 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="63" name="powhatan-gov" tags="Source" position="1100,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
-
-&lt;div class=&quot;row center choice&quot;&gt;
+&lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-lg-10&quot;&gt;
-&lt;h1&gt;John Smith Describes Powhatan&#39;s Regime (1624)&lt;/h1&gt;
-&lt;p&gt;Drawing on his experiences as leader of the original Jamestown settlement from 1607 - 1609, John Smith published his &lt;em&gt;The Generall Historie of New England, and the Summer Isles&lt;/em&gt; in 1624. In Virginia, Smith interacted frequently with Powhatan. The following excerpts were selected by the authors and edited for enhanced readability with the help of ChatGPT from the edition at the University of North Carolina at Chapel Hill&#39;s collection, &lt;a href=&quot;https://docsouth.unc.edu/southlit/smith/smith.html&quot; target=&quot;_blank&quot;&gt;Documenting the American South&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;John Smith Describes Powhatan&#39;s Regime&lt;/h1&gt;
+&lt;p class=&quot;subtitle&quot;&gt;England, 1624&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Drawing on his experiences as leader of the original Jamestown settlement from 1607 - 1609, John Smith published his &lt;em&gt;The Generall Historie of New England, and the Summer Isles&lt;/em&gt; in 1624. In Virginia, Smith interacted frequently with Powhatan.&lt;/p&gt;
+&lt;p&gt;The following excerpts were selected by the authors and edited for enhanced readability with the help of ChatGPT from the edition at the University of North Carolina at Chapel Hill&#39;s collection, &lt;a href=&quot;https://docsouth.unc.edu/southlit/smith/smith.html&quot; target=&quot;_blank&quot;&gt;Documenting the American South&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-sm-2&quot;&gt;
-&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;primary source label&#39;&quot; width=&quot;90%&quot;&gt;
+&lt;div class=&quot;col-sm-2 center&quot;&gt;
+&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt; 
+&lt;hr&gt;
+&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
+&lt;p&gt;Look for information about the political landscape of the Powhatan Confederacy, including Powhatan&#39;s powers and status, the foundations and limits of his sovereignty, and his exercise of authority.&lt;/p&gt;
+&lt;p&gt;Select the links to save the text to your inventory.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Trigger Warning: This text contains descriptions of violence.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;br&gt; 
-
 &lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;/div&gt;
@@ -7554,58 +7656,192 @@ Turning away, Captain Davis then took the queen ashore with two soldiers and put
 &lt;/div&gt;
 
 &lt;br&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
-&lt;p&gt;Look for information about the political landscape of the Powhatan Confederacy, including Powhatan&#39;s powers and status, the foundations and limits of his sovereignty, and his exercise of authority. Select the links to save the text to your inventory.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;em&gt;Trigger Warning: This text contains descriptions of violence.&lt;/em&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about this source here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$powgovc&quot; `$powgovc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3&gt;Powhatan&#39;s Rule&lt;/h3&gt;
+&lt;div class=&quot;row&quot;&gt;
 &lt;p&gt;Although the country people may seem barbarous, they actually possess a form of government in which their rulers govern well, and the people show obedience and subjection better than many so-called “civilized” nations.&lt;/p&gt;
-&lt;p&gt;Their commonwealth is monarchist or imperial: one great ruler governs many smaller kings or governors. This chief ruler is known as &quot;Powhatan,&quot; named after his principal place of residence (though his original personal name is &quot;Wahunsonacock&quot;). &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link  &quot;Some of Powhatan&#39;s territory came to him through inheritance, and some through conquest.&quot;&gt;&gt;&lt;&lt;set $powgov1 to &quot;&#39;Some of Powhatan&#39;s territory came to him through inheritance, and some through conquest.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov1Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link  &quot;His kingdom does not pass to his sons or children, but to his brothers and then to his sisters, and then to their children.&quot;&gt;&gt;&lt;&lt;set $powgov2 to &quot;&#39;His kingdom does not pass to his sons or children, but to his brothers and then to his sisters, and then to their children.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov2Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt; 
-
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;In his inherited villages&quot;&gt;&gt;&lt;&lt;set $powgov4 to &quot;Powhatan&#39;s authority in inherited villages may be stronger than in conquered villages.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov4Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;, Powhatan has houses built, about 30 to 40 yards long. At each location, food and supplies are kept ready for his arrival, suited to the season. His main residence during my captivity was at Werowocomoco, on the north side of the Pamunkey River, about 14 miles from Jamestown. Though often found there, he eventually &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link  &quot;grew weary of our colony being so near and withdrew to Orapakes, a more remote area between Chickahominy and Youghtanund.&quot;&gt;&gt;&lt;&lt;set $powgov3 to &quot;Powhatan&#39;s home was 14 miles from Jamestown, but he relocated farther away because he was tired of being so close.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov3Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;br&gt;
-
-&lt;h3&gt;Powhatan&#39;s Personality&lt;/h3&gt;
-&lt;p&gt;Powhatan was a tall and well-proportioned man with a stern expression. His hair had begun to gray, and his beard was so thin it looked like none at all. He was about sixty years old—yet strong and hardy, able to endure labor and hardship.&lt;/p&gt;
-&lt;p&gt;He kept a close guard of 40 to 50 of his tallest and strongest men. Every night, four of them stood watch at the corners of his house. Every half-hour, one of the guards from the central watch would call out by making a loud, lip-shaking sound. Each sentinel was required to answer in turn from his post. If any failed to respond, an officer was immediately dispatched to &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;beat him severely.&quot;&gt;&gt;&lt;&lt;set $powgov5 to &quot;Powhatan&#39;s warriors are disciplined with harsh beatings.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov5Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Powhatan kept as many women as he pleased. When lying down, one would sit at his head and another at his feet. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;When seated, one woman would sit on his right side, another on his left.&quot;&gt;&gt;&lt;&lt;set $powgov6 to &quot;Powhatan was often surrounded with female attendants.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov6Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; If he grew tired of any of them, &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;he would gift them to men who had served him well.&quot;&gt;&gt;&lt;&lt;set $powgov7 to &quot;Powhatan may have commanded women to enter marriage or concubinage as a means of gaining loyalty from his warriors.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov7Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; At meals, one of his women would bring him water in a wooden dish to wash his hands before and after eating. Another would dry his hands using feathers instead of a towel. The feathers were reused after being dried again.&lt;/p&gt;
-&lt;br&gt;
-
-&lt;h3&gt;Government and Law in Powhatan&#39;s Empire&lt;/h3&gt;
-&lt;p&gt;Neither Powhatan nor his people knew how to read or write. The only law is tradition and custom. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;When Powhatan gave a command, it was as law. His people obeyed him not just as a king but almost as a god.&quot;&gt;&gt;&lt;&lt;set $powgov8 to &quot;&#39;When Powhatan gave a command, it was as law. His people obeyed him not just as a king but almost as a god.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov8Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Lesser chiefs called &quot;werowances&quot; ruled their tribes according to custom and &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;had the power of life and death.&quot;&gt;&gt;&lt;&lt;set $powgov9 to &quot;Powhatan and subject chiefs held power of life and death over their people.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov9Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; “Werowance” is a general term meaning &quot;commander&quot; or &quot;leader.&quot; Their language has few words and little need for ranks beyond a single leader.&lt;/p&gt;
-
-&lt;p&gt;Each tribe knew its own land and hunting grounds, but &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;all land ultimately belonged to Powhatan. They paid him tribute in skins, beads, copper, pearls, deer, turkeys, wild game, and corn.&quot;&gt;&gt;&lt;&lt;set $powgov10 to &quot;&#39;Powhatan and subject chiefs held power of life and death over their people.all land ultimately belonged to Powhatan. They paid him tribute in skins, beads, copper, pearls, deer, turkeys, wild game, and corn.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov10Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;No one dared disobey him, not even in the smallest matter. The fear and reverence they held for Powhatan was immense.&quot;&gt;&gt;&lt;&lt;set $powgov11 to &quot;&#39;No one dared disobey him, not even in the smallest matter. The fear and reverence they held for Powhatan was immense.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov11Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; Whatever he demanded, they placed at his feet, and even his slightest frown made the boldest among them tremble.&lt;/p&gt;
-
-&lt;p&gt;&lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;Powhatan punished offenses harshly and cruelly.&quot;&gt;&gt;&lt;&lt;set $powgov12 to &quot;&#39;Powhatan punished offenders harshly and cruelly,&#39; including gruesome torture.&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov12Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt;In one case, he had wrongdoers tied hand and foot, then threw them into a pit of hot coals to burn to death. Sometimes he had people laid across a stone altar and beaten to death with clubs. For serious crimes or enemies, he had men tied to trees and slowly mutilated by cutting off joints one by one with mussel shells or sharp reeds, throwing each piece into the fire. Then they would peel the skin from the face and head, rip open the belly, and finally burn the body tied to the tree. This, we were told, was how they executed George Cassen [captured in 1609]. Their usual punishment was to beat offenders with sticks.&lt;/p&gt;
-&lt;br&gt;
-
-&lt;h3&gt;Powhatan&#39;s Use of Military Force&lt;/h3&gt;
-&lt;p&gt;In 1608, Powhatan attacked the Payankatank people—his neighbors and subjects. We never learned the reason, but this is how he did it: &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;First, he sent his men to stay with them overnight as guests. Then, hidden warriors surrounded the village. At the chosen time, they attacked, killing 24 men.&quot;&gt;&gt;&lt;&lt;set $powgov13 to &quot;To attack one of his villages, Powhatan &#39;first, he sent his men to stay with them overnight as guests. Then, hidden warriors surrounded the village. At the chosen time, they attacked, killing 24 men.&#39;&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov13Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; They took the long hair and scalp from one side of each man&#39;s head using shells or reeds. They also captured the women, children, and the local Werowance (chief), and brought them all to Powhatan. &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Save to inventory?&quot;&gt;&lt;&lt;link &quot;The captives were forced to serve him, and he hung the bloody scalps and hair between two trees as a gruesome trophy of his victory&quot;&gt;&gt;&lt;&lt;set $powgov15 to &quot;After defeating a village by surprise attack, the men were killed and the women and children were captured and &#39;were forced to serve [Powhatan], and he hung the bloody scalps and hair between two trees as a gruesome trophy of his victory&quot;&gt;&gt;&lt;&lt;set $score to $score + 2&gt;&gt;&lt;&lt;set $powgov15Save to true&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/span&gt; at Werowocomoco.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;Their commonwealth is monarchist or imperial: one great ruler governs many smaller kings or governors. This chief ruler is known as &quot;Powhatan,&quot; named after his principal place of residence (though his original personal name is &quot;Wahunsonacock&quot;).&lt;/p&gt;
 
 &lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;set $powgov1 to &quot;Some of Powhatan&#39;s territory came to him through inheritance, and some through conquest. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Some of Powhatan&#39;s territory came to him through inheritance, and some through conquest.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov2 to &quot;His kingdom does not pass to his sons or children, but to his brothers and then to his sisters, and then to their children. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;His kingdom does not pass to his sons or children, but to his brothers and then to his sisters, and then to their children.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Powhatan has houses built, about 30 to 40 yards long. At each location, food and supplies are kept ready for his arrival, suited to the season. His main residence during my captivity was at Werowocomoco, on the north side of the Pamunkey River, about 14 miles from Jamestown.&lt;p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov3 to &quot;Though often found there, he eventually grew weary of our colony being so near and withdrew to Orapakes, a more remote area between Chickahominy and Youghtanund. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Though often found there, he eventually grew weary of our colony being so near and withdrew to Orapakes, a more remote area between Chickahominy and Youghtanund.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Powhatan was a tall and well-proportioned man with a stern expression. His hair had begun to gray, and his beard was so thin it looked like none at all. He was about sixty years old—yet strong and hardy, able to endure labor and hardship.&lt;/p&gt;
+&lt;p&gt;He kept a close guard of 40 to 50 of his tallest and strongest men. Every night, four of them stood watch at the corners of his house. Every half-hour, one of the guards from the central watch would call out by making a loud, lip-shaking sound. Each sentinel was required to answer in turn from his post.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov4 to &quot;If any failed to respond, an officer was immediately dispatched to beat him severely. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;If any failed to respond, an officer was immediately dispatched to beat him severely.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov5 to &quot;Powhatan kept as many women as he pleased. When lying down, one would sit at his head and another at his feet. At meals, one of his women would bring him water in a wooden dish to wash his hands before and after eating. Another would dry his hands using feathers instead of a towel. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Powhatan kept as many women as he pleased. When lying down, one would sit at his head and another at his feet. At meals, one of his women would bring him water in a wooden dish to wash his hands before and after eating. Another would dry his hands using feathers instead of a towel.&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;Neither Powhatan nor his people knew how to read or write. The only law is tradition and custom.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov6 to &quot;When Powhatan gave a command, it was as law. His people obeyed him not just as a king but almost as a god. No one dared disobey him, not even in the smallest matter. The fear and reverence they held for Powhatan was immense. Whatever he demanded, they placed at his feet, and even his slightest frown made the boldest among them tremble. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;When Powhatan gave a command, it was as law. His people obeyed him not just as a king but almost as a god. No one dared disobey him, not even in the smallest matter. The fear and reverence they held for Powhatan was immense. Whatever he demanded, they placed at his feet, and even his slightest frown made the boldest among them tremble.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;There are lesser chiefs called &quot;werowance,&quot; which is a general term meaning &quot;commander&quot; or &quot;leader.&quot; Their language has few words and little need for ranks beyond a single leader.&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov7 to &quot;Chiefs ruled their tribes according to custom. Werowances and Powhatan have the power of life and death over their people. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Chiefs ruled their tribes according to custom. Werowances and Powhatan have the power of life and death over their people. &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;hr&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov8 to &quot;Each tribe knew its own land and hunting grounds, but all land ultimately belonged to Powhatan. They paid him tribute in skins, beads, copper, pearls, deer, turkeys, wild game, and corn. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Each tribe knew its own land and hunting grounds, but all land ultimately belonged to Powhatan. They paid him tribute in skins, beads, copper, pearls, deer, turkeys, wild game, and corn.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;p&gt;In one case, he had wrongdoers tied hand and foot, then threw them into a pit of hot coals to burn to death. Sometimes he had people laid across a stone altar and beaten to death with clubs. For serious crimes or enemies, he had men tied to trees and slowly mutilated by cutting off joints one by one with mussel shells or sharp reeds, throwing each piece into the fire. Then they would peel the skin from the face and head, rip open the belly, and finally burn the body tied to the tree. This, we were told, was how they executed George Cassen [captured in 1609]. Their usual punishment was to beat offenders with sticks.&lt;/p&gt;
+&lt;div class=&quot;row center&quot;&gt;
+&lt;div class=&quot;col-md-3&quot;&gt;
+&lt;&lt;linkreplace &#39;&lt;img src=&quot;images/mc-chest-save.png&quot; alt=&quot;Minecraft chest with text Save to inventory?&quot; class=&quot;h200&quot;&gt;&#39;&gt;&gt;
+&lt;&lt;run $(&quot;#scoreup&quot;).fadeIn();&gt;&gt;
+&lt;&lt;run setTimeout(function() { $(&quot;#scoreup&quot;).fadeOut(); }, 1500);&gt;&gt;
+&lt;&lt;set $powgov9 to &quot;Powhatan was known to punish the disobedient with harsh cruelty. (Smith, &lt;em&gt;Historie&lt;/em&gt;, 1624)&quot;&gt;&gt;
+&lt;&lt;set $score to $score +2&gt;&gt;
+&lt;img src=&quot;images/score-star2.gif&quot; alt=&quot;Nether star with text +2&quot; class=&quot;h200&quot; width=&quot;90%&quot;&gt;
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;img id=&quot;scoreup&quot; src=&quot;images/score-star2.gif&quot; style=&quot;display: none;&quot; alt=&quot;Nether star with text + 2&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-md-9&quot;&gt;
+&lt;p&gt;Powhatan was known to punish the disobedient with harsh cruelty.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="white-villages" tags="Source" position="2000,1900" size="100,100">John White Pomeioc, Secoton, Dance
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="64" name="white-villages" tags="Source" position="2000,1900" size="100,100">John White Pomeioc, Secoton, Dance
 </tw-passagedata><tw-passagedata pid="65" name="white" tags="Source" position="2000,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-10&quot;&gt;
 &lt;h1&gt;John White&#39;s Paintings of Indigenous People in North Carolina, 1585&lt;/h1&gt;
 &lt;/div&gt;
 &lt;p&gt;As a member of England&#39;s Roanoke settlement in 1584, John White painted numerous representations of indigenous peoples he encountered. He returned to England in 1585 where his art became the basis of versions printed by Theodor de Bry and others.&lt;/p&gt; 
+&lt;p&gt;These images are from the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25869001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;col-md-2&quot;&gt;
 &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
@@ -8894,7 +9130,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p&gt;We can call Virginia the first successful English colony in North America if we use the term &quot;successful&quot; lightly. The original Virginia Company went bankrupt. Colonists starved and died in high numbers - most of them were young &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A common form of employment. Servants agreed to work for a number of years, during which time they were bound to serve obediently, and the master was bound to house and pay the servant. Indentured servants in the colonies typically signed a 5 to 7 year contract (whereas terms of service in England were typically only 6 months to 2 years.&quot;&gt;&lt;/span&gt;. There were &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Meaning the population grew very slowly. Most estimates set the woman : man ratio at something like 1 : 6.&quot;&gt;hardly any women&lt;/span&gt;. The wealthy planter elite owned vast estates and monopolized government and access to land. In 1676, a wealthy newcomer named Nathaniel Bacon united a wide swath of the colony in violent rebellion against Governor Berkeley and the status quo. They demanded an end to unfair taxation and corrupt government, and launched a brutal war of territorial expansion against the neighboring tribes. Berkeley regained control within a year, but the rebellion marked a major turning point for the southern colonies. It taught the wealthy planters to fear a population of discontented laborers. They soon built a labor force of African slaves &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;Before Bacon&#39;s Rebellion, the ratio of African slaves : European servants was 1 : 4. By 20 years after, it was 4 : 1.&quot;&gt;rather than&lt;/span&gt; European indentured servants.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;img src=&quot;images/map-virginia.jpg&quot; alt=&quot;map showing location of Jamestown&quot; width=&quot;90%&quot;&gt;
+&lt;img src=&quot;images/map-virginia.jpg&quot; alt=&quot;map showing location of Jamestown&quot; width=&quot;90%&quot; class=&quot;border&quot;&gt;
 &lt;p class=&quot;caption&quot;&gt;A map showing the location of the Virginia Company&#39;s original base at Jamestown. From E. Foner, &lt;em&gt;Give Me Liberty! An American History. Volume 1: to 1877&lt;/em&gt;, Third Edition (New York: Norton, 2012).&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -8911,16 +9147,22 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;&lt;set $wealth to 1000&gt;&gt;
 &lt;&lt;set $score to 0&gt;&gt;
 
-&lt;&lt;set $capt to &quot;&quot;&gt;&gt;
-&lt;&lt;set $serv to &quot;&quot;&gt;&gt;
-&lt;&lt;set $bed to &quot;&quot;&gt;&gt;
-&lt;&lt;set $gov to &quot;&quot;&gt;&gt;
-&lt;&lt;set $council to &quot;&quot;&gt;&gt;
-&lt;&lt;set $test to &quot;&quot;&gt;&gt;
+&lt;&lt;set $firstsight to &quot;&quot;&gt;&gt;
+
 
 &lt;&lt;unset $powmc1&gt;&gt;
 
 &lt;&lt;unset $powgovc&gt;&gt;
+&lt;&lt;unset $powgov1&gt;&gt;
+&lt;&lt;unset $powgov2&gt;&gt;
+&lt;&lt;unset $powgov3&gt;&gt;
+&lt;&lt;unset $powgov4&gt;&gt;
+&lt;&lt;unset $powgov5&gt;&gt;
+&lt;&lt;unset $powgov6&gt;&gt;
+&lt;&lt;unset $powgov7&gt;&gt;
+&lt;&lt;unset $powgov8&gt;&gt;
+&lt;&lt;unset $powgov9&gt;&gt;
+
 
 
 &lt;div class=&quot;container&quot;&gt;
@@ -8929,8 +9171,8 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;p&gt;In 1607, when the Virginia Company founded England&#39;s first successful colony in North America, it planted itself in the midst of Tsenacomoco - a powerful Powhatan Confederacy of some 30 villages and 15,000 people ruled by the Paramount Chief Powhatan. Now in his 60s, Powhatan strives to maintain his hegemony in the region as the Jamestown settlement expands. With bitter enemies like the powerful Iroquois north of the falls, the Spanish and Dutch probing inward from the coast, and his own fractious subjects, Powhatan&#39;s options are limited as he navigates this new English threat in his own heartland. His success in navigating these challenges will earn him nicknames like &quot;the subtle old fox&quot; from his foes at the Virginia Company.&lt;/p&gt;&lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
-&lt;img src=&quot;images/map-virginia.jpg&quot; alt=&quot;map showing location of Jamestown&quot; width=&quot;90%&quot;&gt;
-&lt;p class=&quot;caption&quot;&gt;A map showing the location of the Virginia Company&#39;s original base at Jamestown. From E. Foner, &lt;em&gt;Give Me Liberty! An American History. Volume 1: to 1877&lt;/em&gt;, Third Edition (New York: Norton, 2012).&lt;/p&gt;
+&lt;img src=&quot;images/white-pomeioc.jpg&quot; alt=&quot;painting of small group of reed and log structures, fire at center, perimeter fence of sharpened spikes&quot; width=&quot;90%&quot; class=&quot;border&quot;&gt;
+&lt;p class=&quot;caption&quot;&gt;John White&#39;s painting of the village of Pomeioc, 1585. From the &lt;a href=&quot;https://www.britishmuseum.org/collection/image/25869001&quot; target=&quot;_blank&quot;&gt;British Museum&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -8946,7 +9188,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;div class=&quot;container header&quot;&gt;
 &lt;br&gt;
 &lt;div class=&quot;row center&quot;&gt;
-&lt;p&gt;&lt;&lt;link &quot;About&quot; &quot;about&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&lt;link &quot;About&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.create(&quot;About&quot;).wikiPassage(&quot;about&quot;).open()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
