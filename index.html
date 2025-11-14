@@ -816,6 +816,7 @@ background-image: url("images/hero-result.jpg");
   background-repeat: no-repeat;
   min-height: 300px; 
   align-content: center;
+  text-align: center;
   padding: 20px;
   margin: 10px;
   border: black solid 2px;
@@ -2111,7 +2112,7 @@ console.log(tooltipList)
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;h2&gt;$PlayerName: Your Treasure and Knowledge&lt;/h2&gt;
-&lt;img src=&quot;images/mc-chest-open.png&quot; alt=&quot;Minecraft chest with lid open&quot;&gt;
+&lt;img src=&quot;images/mc-chest-open2.png&quot; alt=&quot;Minecraft chest with lid open&quot;&gt;
 &lt;p&gt;Here are the stickers you have earned and the knowledge you have mined from history.&lt;/p&gt;
 &lt;&lt;include &quot;chest&quot;&gt;&gt;
 &lt;/div&gt;
@@ -2125,6 +2126,8 @@ console.log(tooltipList)
 &lt;p&gt;[To do: Build story summary w ifs.]&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;h1&gt;[[Start over |portals]] &lt;/h1&gt;
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="8" name="serv-mine" tags="" position="1100,300" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -2448,7 +2451,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 ]&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="12" name="about" tags="" position="100,200" size="100,100">&lt;h1&gt;Credits and References&lt;/h1&gt;
-&lt;p&gt;Timecraft is the second of two Twine games created as a teaching resource by Abigail Queen for history classes as College of the Redwoods and Cal Poly Humboldt during 2024 and 2025. This game is for U.S. History through Reconstruction. The earlier game is for &lt;a href=&quot;https://abi-queen.github.io/CPH-F24-WCiv1/&quot; target=&quot;_blank&quot;&gt;Western Civilization to 1600&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Timecraft is the second of two Twine games created as a teaching resource by Abigail Queen for history classes as College of the Redwoods and Cal Poly Humboldt during 2024 and 2025.&lt;/p&gt;
 
 &lt;h2&gt;Timecraft Development Team&lt;/h2&gt;
 &lt;p&gt;Abigail Queen (Cal Poly Humboldt History Department): Author&lt;/p&gt;
@@ -2658,6 +2661,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;John stokes the forge and prepares to make the daily supply of nails and horseshoe blanks.&lt;/p&gt;
 &lt;p&gt;You turn to your workspace from yesterday: clusters of matchlock pieces strewn across the workbench. Hoping to strengthen the fort&#39;s defenses against Bacon&#39;s Rebellion, the governor has ordered ten new muskets. He&#39;s still asking for the old matchlock pattern of the Civil War days. You shake your head and shrug. &lt;em&gt;Ah well, they&#39;re cheap and easy.&lt;/em&gt;&lt;/p&gt; 
 &lt;p&gt;On the other side of the workbench is a  there&#39;s a wheellock a wealthy planter has asked you to repair. It&#39;s his favorite fowling piece, and has been misfiring arbitrarily. &quot;Nothing is arbitrary,&quot; you think, and reach for the gun, beginning to puzzle through potential fixes ... but an angry shout makes you turn around. Tom is messily splitting kindling all over the clean space around the forge, which John has just swept. They&#39;re squaring off, about to fight. &lt;em&gt;Here we go again ...&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;John is still holding the hammer, and behind him at the forge, you see a heap of crooked, lumpy nails. He&#39;s having a bad morning.&lt;/p&gt; 
 &lt;/div&gt;
 &lt;div class=&quot;col-md&quot;&gt;
 &lt;img class=&quot;border&quot; src=&quot;images/diderot-nails.jpeg&quot; alt=&quot;sketch of workers making nails and types of nails&quot; width=&quot;90%&quot;&gt;
@@ -3121,8 +3125,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;p&gt;Look for insights into the behaviors and character of ship captains in the seventeenth-century Atlantic system. Save useful items to your inventory.&lt;/p&gt;
 &lt;/div&gt;
 &lt;br&gt;
-&lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;
-&lt;br&gt;
+
 &lt;hr&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
@@ -3186,6 +3189,7 @@ $(&quot;img[usemap]&quot;).maphilight({
 &lt;br&gt;
 &lt;hr&gt;
 &lt;br&gt;
+
 &lt;h2&gt;What evidence from these paintings will you save to your inventory?&lt;/h2&gt;
 &lt;div class=&quot;row center&quot;&gt;
 &lt;div class=&quot;col-md-3&quot;&gt;
@@ -4108,6 +4112,75 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;br&gt;
 
 &lt;div class=&quot;row center&quot;&gt;
+&lt;html&gt;
+&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
+  &lt;div class=&quot;carousel-indicators&quot;&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
+&lt;h2&gt;Lely, William Berkeley, Governor of Virginia (c. 1640 - 1670)&lt;/h2&gt;
+&lt;p&gt;Copy by Hariotte Montague c. 1900, after an original seveneenth-century portrait by Sir Peter Lely. From Encyclopedia Virginia.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen-berkeley.jpg&quot; alt=&quot;Portrait of man resting hand on hip and a cane, wearing grey wig, dark red coat and trousers, white frilled collar and cuffs.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+    
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Unknown artist, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://colonialvirginiaportraits.org/portrait/robert-king-carter-ca-1664-1732/&quot; target=&quot;_blank&quot;&gt;Shirley Plantation&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen1.jpg&quot; alt=&quot;Portrait of man wearing red jacket and waistcoat, and a wig with a ponytail&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Minnigrode Andrews, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
+&lt;p&gt;Original ca. 1690-1720, copy ca. 1900, oil on canvas, 152.4 x 111.76 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1973.15&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen2.jpg&quot; alt=&quot;Portrait of man leaning on a carved wooden table. He wears a long dark red coat and a white wig, with a dress sword on his hip.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Kneller, William Byrd II (c. 1700-1704)&lt;/h2&gt;
+&lt;p&gt;Oil on canvas, 125.7 x 101 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/14025/portrait-of--william-byrd-ii-16741744&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen3.jpg&quot; alt=&quot;Portrait of man wearing long dark wig, dark blue jacket with jeweled embellishments and red drape around his waist. There is a dress sword on his hip, and he stands outdoors.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Closterman, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
+&lt;p&gt;Oil on canvas, 101.6 x 76.2 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1985.35&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture.&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen4.jpg&quot; alt=&quot;Portrait of man wearing gray wig, orange coat, embroidered blue waistcoat, gold brocade sash around his waist. Miniature portrait of Queen Anne hangs on his neck.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Kneller, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
+&lt;p&gt;Oil on canvas, 125.41 x 101.6 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/33395/portrait-of-daniel-parke-ii-16641710?ctx=e4ac1f325f314e4b956b6893549e6db52f78fc28&amp;idx=0&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen5.jpg&quot; alt=&quot;Portrait of man wearing gray wig and full suit of armor. Miniature portrait of Queen Anne hangs on his neck, and a sword is at his waist.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Hysing, William Byrd II (c. 1720 - 1726)&lt;/h2&gt;
+&lt;p&gt;Oil on canvas, 127 x 106.68 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/portal.aspx?lang=en-US&amp;g_AABS=1973.6.&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/gentlemen6.jpg&quot; alt=&quot;Portrait of man wearing long dark wig with ponytail and blue jacket with gold frogging.&quot; class=&quot;border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
 &lt;p&gt;&lt;&lt;textarea &quot;$bportraitsc&quot; `$bportraitsc ?? &#39;&#39;`&gt;&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -4247,76 +4320,6 @@ Books are like the legendary dragon’s teeth: when scattered, they can grow int
 &lt;p&gt;The portraits present their subjects as people who are free from physical labor. The clothing, items, and scenery are incongruous with the performance physical labor.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row center&quot;&gt;
-&lt;html&gt;
-&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
-  &lt;div class=&quot;carousel-indicators&quot;&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
-      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
-
-  &lt;/div&gt;
-  &lt;div class=&quot;carousel-inner&quot;&gt;
-    &lt;div class=&quot;carousel-item active&quot;&gt;
-&lt;h2&gt;Lely, William Berkeley, Governor of Virginia (c. 1640 - 1670)&lt;/h2&gt;
-&lt;p&gt;Copy by Hariotte Montague c. 1900, after an original seveneenth-century portrait by Sir Peter Lely. From Encyclopedia Virginia.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen-berkeley.jpg&quot; alt=&quot;Portrait of man resting hand on hip and a cane, wearing grey wig, dark red coat and trousers, white frilled collar and cuffs.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-    
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Unknown artist, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://colonialvirginiaportraits.org/portrait/robert-king-carter-ca-1664-1732/&quot; target=&quot;_blank&quot;&gt;Shirley Plantation&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen1.jpg&quot; alt=&quot;Portrait of man wearing red jacket and waistcoat, and a wig with a ponytail&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Minnigrode Andrews, Portrait of Robert “King” Carter (c. 1690-1726)&lt;/h2&gt;
-&lt;p&gt;Original ca. 1690-1720, copy ca. 1900, oil on canvas, 152.4 x 111.76 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1973.15&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen2.jpg&quot; alt=&quot;Portrait of man leaning on a carved wooden table. He wears a long dark red coat and a white wig, with a dress sword on his hip.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Kneller, William Byrd II (c. 1700-1704)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 125.7 x 101 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/14025/portrait-of--william-byrd-ii-16741744&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen3.jpg&quot; alt=&quot;Portrait of man wearing long dark wig, dark blue jacket with jeweled embellishments and red drape around his waist. There is a dress sword on his hip, and he stands outdoors.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Closterman, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 101.6 x 76.2 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/Portal/Default.aspx?lang=en-US&amp;g_AABS=1985.35&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture.&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen4.jpg&quot; alt=&quot;Portrait of man wearing gray wig, orange coat, embroidered blue waistcoat, gold brocade sash around his waist. Miniature portrait of Queen Anne hangs on his neck.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Kneller, Daniel Parke II (c. 1704-1706)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 125.41 x 101.6 cm. From &lt;a href=&quot;https://emuseum.history.org/objects/33395/portrait-of-daniel-parke-ii-16641710?ctx=e4ac1f325f314e4b956b6893549e6db52f78fc28&amp;idx=0&quot; target=&quot;_blank&quot;&gt;Colonial Williamsburg Foundation&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen5.jpg&quot; alt=&quot;Portrait of man wearing gray wig and full suit of armor. Miniature portrait of Queen Anne hangs on his neck, and a sword is at his waist.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Hysing, William Byrd II (c. 1720 - 1726)&lt;/h2&gt;
-&lt;p&gt;Oil on canvas, 127 x 106.68 cm. From &lt;a href=&quot;http://museumcatalog.virginiahistory.org/final/portal.aspx?lang=en-US&amp;g_AABS=1973.6.&amp;g_AADW=%7bs%3aAADT%7d&amp;d=d&quot; target=&quot;_blank&quot;&gt;Virginia Museum of History and Culture&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/gentlemen6.jpg&quot; alt=&quot;Portrait of man wearing long dark wig with ponytail and blue jacket with gold frogging.&quot; class=&quot;border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-  &lt;/div&gt;
-  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
-    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
-    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/html&gt;
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="licensing-order" tags="Source" position="2100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -10059,6 +10062,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="everyday17thc" tags="Source" position="3100,600" size="100,100">&lt;div class=&quot;container&quot;&gt;
+
 &lt;div class=&quot;row choice&quot;&gt;
 &lt;div class=&quot;col-md-9&quot;&gt;
 &lt;h1&gt;Visions of a Good Life&lt;/h1&gt;
@@ -10068,6 +10072,7 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;span data-bs-toggle=&quot;tooltip&quot; title=&quot;A primary source is an artifact from history. It was created and used during the time period you are studying.&quot;&gt;&lt;img class=&quot;center&quot; src=&quot;images/ps.jpg&quot; alt=&quot;minecraft block gold ore text &#39;primary source&#39;&quot; width=&quot;90%&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;hr&gt;
 &lt;h2&gt;How to Mine in this Source&lt;/h2&gt;
 &lt;p&gt;These 17th-century genre paintings give us an idea of what ordinary colonists would have envisioned for themselves when they thought of living a good life. Look for insights into:&lt;/p&gt;
@@ -10079,6 +10084,113 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;li&gt;What resources they typically consume or utilize (e.g., natural resources, tools and technology)?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
+
+&lt;div class=&quot;row center&quot;&gt;
+&lt;html&gt;
+&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
+  &lt;div class=&quot;carousel-indicators&quot;&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
+    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;8&quot; aria-label=&quot;Slide 9&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;9&quot; aria-label=&quot;Slide 10&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;10&quot; aria-label=&quot;Slide 11&quot;&gt;&lt;/button&gt;
+       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;11&quot; aria-label=&quot;Slide 12&quot;&gt;&lt;/button&gt;  
+  &lt;/div&gt;
+  
+    &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;carousel-item active&quot;&gt;
+&lt;h2&gt;Joos de Momper and Brueghel the Elder, &lt;em&gt;Summer Landscape with Harvesters&lt;/em&gt; (Netherlands, c. 1610)&lt;/h2&gt;
+&lt;p&gt;From (Source).&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1610.jpg&quot; alt=&quot;harvest scene with villages, grain harvest, men and women working&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Paul Peter Rubens, &lt;em&gt;Family of Jan Brueghel the Elder&lt;/em&gt; (Netherlands, 1613)&lt;/h2&gt;
+&lt;p&gt;From (Source).&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1613.jpg&quot; alt=&quot;father, mother, and two children cluster closely wearing dark and rich clothing&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Peter Wtewael, &lt;em&gt;Kitchen Scene&lt;/em&gt; (Netherlands, 1620s) &lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437956&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1620.jpg&quot; alt=&quot;man and woman in ordinary clothing smile at each other surrounded by food in a kitchen&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Hals, &lt;em&gt;The Laughing Cavalier&lt;/em&gt;(Netherlands, 1624)&lt;/h2&gt;
+&lt;p&gt;From (Source).&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1624.jpg&quot; alt=&quot;man with large mustache and black hat smirks, wearing lavish, ornately slashed and embroidered coat and sword&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Adrean Brouwer, &lt;em&gt;The Smokers&lt;/em&gt;(Belgium, c. 1636)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/435807&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1636.jpg&quot; alt=&quot;group of seated men with comical expressions smoke pipes&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Rembrandt van Rijn, &lt;em&gt;The Night Watch&lt;/em&gt;(Netherlands, 1642)&lt;/h2&gt;
+&lt;p&gt;From (Source).&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1642.jpg&quot; alt=&quot;parade of brightly-dressed men armed with swords, pikes, halberds, muskets surrounded by shadows and a crowd&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+    &lt;/div&gt;
+    
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Jan Siberechts, &lt;em&gt;Pasture with Sleeping Shepherdesses&lt;/em&gt;(England, c. 1650)&lt;/h2&gt;
+&lt;p&gt;From (Source).&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1650.jpg&quot; alt=&quot;parade of brightly-dressed men armed with swords, pikes, halberds, muskets surrounded by shadows and a crowd&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Nicolaes Maes, &lt;em&gt;The Lacemaker&lt;/em&gt;(Netherlands, 1656)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/436932&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1656.jpg&quot; alt=&quot;seated woman wearing red and white dress makes lace while child plays in carved seat nearby&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Jan Steen, &lt;em&gt;Merry Company on the Terrace&lt;/em&gt;(Netherlands, c. 1670)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437749&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1670.jpg&quot; alt=&quot;happy men and women share talk, music, food, drink seated on a covered outdoor terrace&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Jacob Ochtervelt, &lt;em&gt;The Love Letter&lt;/em&gt;(Netherlands, 1670s)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437227&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1670s.jpg&quot; alt=&quot;young woman in a bedchamber, wearing fine white dress partially fastened reads a note while another dresses her hair and another in darker clothing walks away carrying a basket&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Jan Siberechts, &lt;em&gt;Landscape with Rainbow, Henley-on-Thames&lt;/em&gt;(England, c. 1690)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.tate.org.uk/art/artworks/siberechts-landscape-with-rainbow-henley-on-thames-t00899&quot; target=&quot;_blank&quot;&gt;Tate Museum of Modern Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1690.jpg&quot; alt=&quot;rural scene with hedgerows and open fields, cattle and horses grazing, tall stone buildings and a town on the river&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;carousel-item&quot;&gt;
+&lt;h2&gt;Jan Siberechts, &lt;em&gt;View of a House and its Estate in Middlesex&lt;/em&gt;(England, 1696)&lt;/h2&gt;
+&lt;p&gt;From &lt;a href=&quot;https://www.tate.org.uk/art/artworks/siberechts-view-of-a-house-and-its-estate-in-belsize-middlesex-t06996&quot; target=&quot;_blank&quot;&gt;Tate Museum of Modern Art&lt;/a&gt;.&lt;/p&gt;
+&lt;img src=&quot;images/lifesev1696.jpg&quot; alt=&quot;aerial view of a expansive, palatial residence with orderly gardens and a carriage and peasants on the road&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
 
 &lt;div class=&quot;row center&quot;&gt;
 &lt;p&gt;Optional: Save your own comments about these images here.&lt;/p&gt;
@@ -10218,109 +10330,6 @@ Sir Thomas Dale, making further invasions and excursions upon the Savages, had m
 &lt;p&gt;Gender divisions are strict. Men and women are seldom seen together, especially in casual encounters.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;hr&gt;
-
-&lt;div class=&quot;row center&quot;&gt;
-&lt;html&gt;
-&lt;div id=&quot;carouselExampleIndicators&quot; class=&quot;carousel slide&quot;&gt;
-  &lt;div class=&quot;carousel-indicators&quot;&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;0&quot; class=&quot;active&quot; aria-current=&quot;true&quot; aria-label=&quot;Slide 1&quot;&gt;&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;1&quot; aria-label=&quot;Slide 2&quot;&gt;&lt;/button&gt;
-    &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;2&quot; aria-label=&quot;Slide 3&quot;&gt;&lt;/button&gt;
-      &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;3&quot; aria-label=&quot;Slide 4&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;4&quot; aria-label=&quot;Slide 5&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;5&quot; aria-label=&quot;Slide 6&quot;&gt;&lt;/button&gt;
-              &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;6&quot; aria-label=&quot;Slide 7&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;7&quot; aria-label=&quot;Slide 8&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;8&quot; aria-label=&quot;Slide 9&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;9&quot; aria-label=&quot;Slide 10&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;10&quot; aria-label=&quot;Slide 11&quot;&gt;&lt;/button&gt;
-       &lt;button type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide-to=&quot;11&quot; aria-label=&quot;Slide 12&quot;&gt;&lt;/button&gt;  
-  &lt;/div&gt;
-  
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Joos de Momper and Brueghel the Elder, &lt;em&gt;Summer Landscape with Harvesters&lt;/em&gt; (Netherlands, c. 1610)&lt;/h2&gt;
-&lt;p&gt;From (Source).&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1610.jpg&quot; alt=&quot;harvest scene with villages, grain harvest, men and women working&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Paul Peter Rubens, &lt;em&gt;Family of Jan Brueghel the Elder&lt;/em&gt; (Netherlands, 1613)&lt;/h2&gt;
-&lt;p&gt;From (Source).&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1613.jpg&quot; alt=&quot;father, mother, and two children cluster closely wearing dark and rich clothing&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Peter Wtewael, &lt;em&gt;Kitchen Scene&lt;/em&gt; (Netherlands, 1620s) &lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437956&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1620.jpg&quot; alt=&quot;man and woman in ordinary clothing smile at each other surrounded by food in a kitchen&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Hals, &lt;em&gt;The Laughing Cavalier&lt;/em&gt;(Netherlands, 1624)&lt;/h2&gt;
-&lt;p&gt;From (Source).&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1624.jpg&quot; alt=&quot;man with large mustache and black hat smirks, wearing lavish, ornately slashed and embroidered coat and sword&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Adrean Brouwer, &lt;em&gt;The Smokers&lt;/em&gt;(Belgium, c. 1636)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/435807&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1636.jpg&quot; alt=&quot;group of seated men with comical expressions smoke pipes&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Rembrandt van Rijn, &lt;em&gt;The Night Watch&lt;/em&gt;(Netherlands, 1642)&lt;/h2&gt;
-&lt;p&gt;From (Source).&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1642.jpg&quot; alt=&quot;parade of brightly-dressed men armed with swords, pikes, halberds, muskets surrounded by shadows and a crowd&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-    &lt;/div&gt;
-    
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Jan Siberechts, &lt;em&gt;Pasture with Sleeping Shepherdesses&lt;/em&gt;(England, c. 1650)&lt;/h2&gt;
-&lt;p&gt;From (Source).&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1650.jpg&quot; alt=&quot;parade of brightly-dressed men armed with swords, pikes, halberds, muskets surrounded by shadows and a crowd&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Nicolaes Maes, &lt;em&gt;The Lacemaker&lt;/em&gt;(Netherlands, 1656)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/436932&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1656.jpg&quot; alt=&quot;seated woman wearing red and white dress makes lace while child plays in carved seat nearby&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Jan Steen, &lt;em&gt;Merry Company on the Terrace&lt;/em&gt;(Netherlands, c. 1670)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437749&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1670.jpg&quot; alt=&quot;happy men and women share talk, music, food, drink seated on a covered outdoor terrace&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Jacob Ochtervelt, &lt;em&gt;The Love Letter&lt;/em&gt;(Netherlands, 1670s)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.metmuseum.org/art/collection/search/437227&quot; target=&quot;_blank&quot;&gt;The Metropolitan Museum of Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1670s.jpg&quot; alt=&quot;young woman in a bedchamber, wearing fine white dress partially fastened reads a note while another dresses her hair and another in darker clothing walks away carrying a basket&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Jan Siberechts, &lt;em&gt;Landscape with Rainbow, Henley-on-Thames&lt;/em&gt;(England, c. 1690)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.tate.org.uk/art/artworks/siberechts-landscape-with-rainbow-henley-on-thames-t00899&quot; target=&quot;_blank&quot;&gt;Tate Museum of Modern Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1690.jpg&quot; alt=&quot;rural scene with hedgerows and open fields, cattle and horses grazing, tall stone buildings and a town on the river&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;carousel-item&quot;&gt;
-&lt;h2&gt;Jan Siberechts, &lt;em&gt;View of a House and its Estate in Middlesex&lt;/em&gt;(England, 1696)&lt;/h2&gt;
-&lt;p&gt;From &lt;a href=&quot;https://www.tate.org.uk/art/artworks/siberechts-view-of-a-house-and-its-estate-in-belsize-middlesex-t06996&quot; target=&quot;_blank&quot;&gt;Tate Museum of Modern Art&lt;/a&gt;.&lt;/p&gt;
-&lt;img src=&quot;images/lifesev1696.jpg&quot; alt=&quot;aerial view of a expansive, palatial residence with orderly gardens and a carriage and peasants on the road&quot; class=&quot;d-block w-100 border img-fluid&quot;&gt;
-&lt;/div&gt;
-
-  &lt;/div&gt;
-  &lt;button class=&quot;carousel-control-prev&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;prev&quot;&gt;
-    &lt;span class=&quot;carousel-control-prev-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;visually-hidden&quot;&gt;Previous&lt;/span&gt;
-  &lt;/button&gt;
-  &lt;button class=&quot;carousel-control-next&quot; type=&quot;button&quot; data-bs-target=&quot;#carouselExampleIndicators&quot; data-bs-slide=&quot;next&quot;&gt;
-    &lt;span class=&quot;carousel-control-next-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
-    &lt;span class=&quot;visually-hidden&quot;&gt;Next&lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-&lt;/html&gt;
 
 &lt;hr&gt;
 &lt;p class=&quot;center&quot;&gt;&lt;&lt;return &quot;Return to the mineshaft&quot;&gt;&gt;&lt;/p&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="leaflet" tags="" position="3350,200" size="100,100">&lt;div class=&quot;container&quot;&gt;
